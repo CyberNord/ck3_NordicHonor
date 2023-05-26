@@ -1,0 +1,53 @@
+﻿last_duel_decision = {
+	picture = "gfx/interface/illustrations/decisions/nh_decision_duel.dds"
+	
+	sort_order = 81
+
+	
+	selection_tooltip = last_duel_decision_tooltip
+
+	ai_check_interval = 60
+
+	is_shown = {
+		first_valid = {
+			AND = {
+				triggered_desc = {
+					trigger = { age >= 60 }
+					desc = last_duel_decision_desc_old
+				}
+				faith = faith:norse_pagan
+			}
+			AND = {
+				triggered_desc = {
+					trigger = { has_trait = cancer }
+					desc = last_duel_decision_desc_cancer
+				}
+				faith = faith:norse_pagan
+			}
+		}
+	}
+
+	cooldown = { days = 5 }
+
+	is_valid_showing_failures_only = {
+		is_imprisoned = no
+	}
+
+	effect = {
+		add_gold = 70
+		add_prestige = -500
+
+		# 01_fp1_interactions -->  fp1_tbc.0101 (Trial-by-Combat)
+	}
+	
+	ai_potential = {
+		highest_held_title_tier > tier_barony
+		is_landed = yes
+		# Todo
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}
+
