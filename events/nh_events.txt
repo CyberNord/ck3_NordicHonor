@@ -10,7 +10,6 @@ nh.0001 = {
 	}
 
 	desc = nh.0001.reason.desc
-
 	theme = battle
 
 	right_portrait = {
@@ -97,10 +96,28 @@ nh.0001 = {
 
 	option = { 
 		name = nh.0001.option.nevermind.desc
+		custom_tooltip = nh.0001.option.nevermind_tooltip.desc
 	}
 
 	option = { 
 		name = nh.0001.option.duel_player_heir.desc
+		custom_tooltip = nh.0001.option.duel_player_heir_tooltip.desc
+
+		single_combat_apply_default_shirtlessness_effect = {
+			ATTACKER = root
+			DEFENDER = root.player_heir
+		}
+
+		configure_start_single_combat_effect = {
+				SC_INITIATOR = root
+				SC_ATTACKER = root
+				SC_DEFENDER = root.player_heir	
+				FATALITY = always
+				FIXED = no
+				LOCALE = terrain_scope
+				OUTPUT_EVENT = nh.0011
+				INVALIDATION_EVENT = nh.0021
+		}
 	}
 
 	option = { 
@@ -108,10 +125,136 @@ nh.0001 = {
 			exists = scope:player_rival_option
 		}
 		name = nh.0001.option.duel_player_rival.desc
+		custom_tooltip = nh.0001.option.duel_player_rival_tooltip.desc
 	}
 
 	option = { 
-		name = nh.0001.option.player_vassal_option
+		trigger = {
+			exists = scope:player_vassal_option
+		}
+		name = nh.0001.option.player_vassal_option.desc
+		custom_tooltip = nh.0001.option.player_vassal_option_tooltip.desc
 	}
 
+}
+
+
+#####
+# Adapted from dlc/fp1
+#####
+
+# BIG TODO - Adapt
+
+
+nh.0011 = {
+	hidden = yes
+
+	immediate = {
+		# If any clothes were stripped, put 'em back on.
+		single_combat_clean_shirtlessness_effect = {
+			ATTACKER = scope:actor
+			DEFENDER = scope:champion
+		}
+		# Did scope:actor win?
+		if = {
+			limit = { scope:sc_victor = scope:actor }
+			# Apply effects; we do this separately so that there's not a weird day's delay.
+			fp1_tbc_non_lethal_results_effect = yes
+			# And send out the ending events.
+			scope:actor = {
+				trigger_event = {
+					id = fp1_tbc.0041
+					days = 1
+				}
+			}
+			scope:recipient = {
+				trigger_event = {
+					id = fp1_tbc.0121
+					days = 1
+				}
+			}
+		}
+		# Or was it scope:champion?
+		else_if = {
+			limit = { scope:sc_victor = scope:champion }
+			# If scope:actor is still alive, they gain stress.
+			if = {
+				limit = {
+					scope:actor = { is_alive = yes }
+				}
+				fp1_tbc_actor_defeated_effect = { TBC_LOSER = scope:actor }
+			}
+			# And send out the ending events.
+			scope:actor = {
+				trigger_event = {
+					id = fp1_tbc.0051
+					days = 1
+				}
+			}
+			scope:recipient = {
+				trigger_event = {
+					id = fp1_tbc.0111
+					days = 1
+				}
+			}
+		}
+		# If both parties are alive, and aren't good losers/don't have good reasons to forgive each other, then we mark them as potential rivals.
+		if = {
+			limit = {
+				scope:actor = {
+					is_alive = yes
+					NOR = {
+						has_trait = humble
+						has_trait = content
+						has_trait = just
+						has_trait = forgiving
+					}
+				}
+				scope:recipient = {
+					is_alive = yes
+					NOR = {
+						has_trait = humble
+						has_trait = content
+						has_trait = just
+						has_trait = forgiving
+					}
+					can_set_relation_potential_rival_trigger = { CHARACTER = scope:actor }
+				}
+			}
+			scope:actor = { set_relation_potential_rival = scope:recipient }
+		}
+	}
+}
+
+fp1_tbc.0021 = {
+	hidden = yes
+
+	immediate = {
+		# Put your shirts back on.
+		single_combat_clean_shirtlessness_effect = {
+			ATTACKER = scope:actor
+			DEFENDER = scope:recipient
+		}
+		# Inform both parties that the duel has invalidated.
+		scope:actor = {
+			send_interface_toast = {	
+				title = fp1_tbc.0021.trigger_failure.actor
+				left_icon = scope:recipient
+			}
+		}
+		scope:recipient = {
+			send_interface_toast = {	
+				title = fp1_tbc.0021.trigger_failure.recipient
+				left_icon = scope:actor
+			}
+		}
+		# Reset scope:actor's cooldowns against scope:recipient.
+		scope:actor = {
+			remove_interaction_cooldown = challenge_to_trial_by_combat_interaction
+			remove_interaction_cooldown_against = {
+				interaction = challenge_to_trial_by_combat_interaction
+				target = scope:recipient
+			}
+		}
+	}
 }
