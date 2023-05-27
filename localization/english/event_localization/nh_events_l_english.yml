@@ -1,0 +1,7 @@
+﻿l_english:
+ nh.0001.t:0 "ToDo nh_0001_title"
+ nh.0001.reason.desc:0 "ToDo nh_0001_reason description"
+ nh.0001.option.nevermind.desc:0 "Todo option_nevermind description"
+ nh.0001.option.duel_player_heir.desc:0 "Todo option_duel_player_heir description"
+ nh.0001.option.duel_player_rival.desc:0 "Todo option_duel_player_rival description"
+ nh.0001.option.duel_player_vassal.desc:0 "Todo option_duel_player_vassal description"

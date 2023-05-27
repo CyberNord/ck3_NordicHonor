@@ -1,0 +1,117 @@
+﻿#Events for Nordic Honor
+
+namespace = nh
+
+#Ruler picking his opponent for last duel
+nh.0001 = {
+	type = character_event
+	title = {
+		desc = nh.0001.t
+	}
+
+	desc = nh.0001.reason.desc
+
+	theme = battle
+
+	right_portrait = {
+		character = root
+ 		animation = aggressive_axe
+	}
+
+	lower_right_portrait = root.player_heir					# player heir is expected to fight
+	lower_center_portrait = scope:player_rival_option
+	lower_left_portrait = scope:player_vassal_option
+	
+	immediate = {
+		
+		# player_vassal_option (either Vassal or a honorable knight)
+		random_vassal = {
+			limit = { 
+					OR = { 
+						prowess > 20
+						has_trait = brave
+						has_trait = gallant
+					}
+					AND = {
+						NOR = {
+							has_trait = craven
+							has_trait = cynical
+						}
+						OR = {
+							is_male = yes
+							AND = {
+								is_female = yes
+								has_trait = shieldmaiden
+								NOT = {
+									has_trait = pregnant
+								}
+							}
+						}
+					}
+				}
+
+		save_scope_as = player_vassal_option
+		}
+
+		if = { 
+			limit = { not = { exists = scope:player_vassal_option } }
+			random_knight = { 
+				limit = { 
+					OR = { 
+						prowess > 20
+						has_trait = brave
+						has_trait = gallant
+					}
+					AND = {
+						NOR = {
+							has_trait = craven
+							has_trait = cynical
+						}
+						OR = {
+							is_male = yes
+							AND = {
+								is_female = yes
+								has_trait = shieldmaiden
+								NOT = {
+									has_trait = pregnant
+								}
+							}
+						}
+					}
+				}   
+			save_scope_as = player_vassal_option 
+			}
+		}
+		
+		# player rival option
+		random_relation = { 
+				type = rival
+				limit = { 
+					NOR = { 
+						has_trait = craven
+					}
+				}
+				save_scope_as = player_rival_option
+			}
+	}
+
+	option = { 
+		name = nh.0001.option.nevermind.desc
+	}
+
+	option = { 
+		name = nh.0001.option.duel_player_heir.desc
+	}
+
+	option = { 
+		trigger = {
+			exists = scope:player_rival_option
+		}
+		name = nh.0001.option.duel_player_rival.desc
+	}
+
+	option = { 
+		name = nh.0001.option.player_vassal_option
+	}
+
+}

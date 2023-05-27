@@ -34,10 +34,10 @@
 	}
 
 	effect = {
-		add_gold = 70
-		add_prestige = -500
-
-		# 01_fp1_interactions -->  fp1_tbc.0101 (Trial-by-Combat)
+		trigger_event = {
+			id = nh.0001
+			days = 1
+		}
 	}
 	
 	ai_potential = {
