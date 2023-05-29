@@ -131,13 +131,13 @@ nh.0001 = {
 
 		single_combat_apply_default_shirtlessness_effect = {
 			ATTACKER = root
-			DEFENDER = player_rival_option
+			DEFENDER = scope:player_rival_option
 		}
 
 		configure_start_single_combat_effect = {
 				SC_INITIATOR = root
 				SC_ATTACKER = root
-				SC_DEFENDER = player_rival_option
+				SC_DEFENDER = scope:player_rival_option
 				FATALITY = always
 				FIXED = no
 				LOCALE = terrain_scope
@@ -157,13 +157,13 @@ nh.0001 = {
 
 		single_combat_apply_default_shirtlessness_effect = {
 			ATTACKER = root
-			DEFENDER = player_vassal_option
+			DEFENDER = scope:player_vassal_option
 		}
 
 		configure_start_single_combat_effect = {
 				SC_INITIATOR = root
 				SC_ATTACKER = root
-				SC_DEFENDER = player_vassal_option	
+				SC_DEFENDER = scope:player_vassal_option	
 				FATALITY = always
 				FIXED = no
 				LOCALE = terrain_scope
