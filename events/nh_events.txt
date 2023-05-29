@@ -17,7 +17,7 @@ nh.0001 = {
  		animation = aggressive_axe
 	}
 
-	lower_right_portrait = root.player_heir					# player heir is expected to fight
+	lower_right_portrait = root.player_heir				# player heir is always expected to fight
 	lower_center_portrait = scope:player_rival_option
 	lower_left_portrait = scope:player_vassal_option
 	
@@ -90,8 +90,8 @@ nh.0001 = {
 						has_trait = craven
 					}
 				}
-				save_scope_as = player_rival_option
-			}
+			save_scope_as = player_rival_option
+		}
 	}
 
 	option = { 
@@ -99,6 +99,7 @@ nh.0001 = {
 		custom_tooltip = nh.0001.option.nevermind_tooltip.desc
 	}
 
+	# duel heir
 	option = { 
 		name = nh.0001.option.duel_player_heir.desc
 		custom_tooltip = nh.0001.option.duel_player_heir_tooltip.desc
@@ -111,7 +112,7 @@ nh.0001 = {
 		configure_start_single_combat_effect = {
 				SC_INITIATOR = root
 				SC_ATTACKER = root
-				SC_DEFENDER = root.player_heir	
+				SC_DEFENDER = root.player_heir
 				FATALITY = always
 				FIXED = no
 				LOCALE = terrain_scope
@@ -120,20 +121,55 @@ nh.0001 = {
 		}
 	}
 
+	# duel rival
 	option = { 
 		trigger = {
 			exists = scope:player_rival_option
 		}
 		name = nh.0001.option.duel_player_rival.desc
 		custom_tooltip = nh.0001.option.duel_player_rival_tooltip.desc
+
+		single_combat_apply_default_shirtlessness_effect = {
+			ATTACKER = root
+			DEFENDER = player_rival_option
+		}
+
+		configure_start_single_combat_effect = {
+				SC_INITIATOR = root
+				SC_ATTACKER = root
+				SC_DEFENDER = player_rival_option
+				FATALITY = always
+				FIXED = no
+				LOCALE = terrain_scope
+				OUTPUT_EVENT = nh.0011
+				INVALIDATION_EVENT = nh.0021
+		}
+
 	}
 
+	# duel vassal/knight
 	option = { 
 		trigger = {
 			exists = scope:player_vassal_option
 		}
 		name = nh.0001.option.player_vassal_option.desc
 		custom_tooltip = nh.0001.option.player_vassal_option_tooltip.desc
+
+		single_combat_apply_default_shirtlessness_effect = {
+			ATTACKER = root
+			DEFENDER = player_vassal_option
+		}
+
+		configure_start_single_combat_effect = {
+				SC_INITIATOR = root
+				SC_ATTACKER = root
+				SC_DEFENDER = player_vassal_option	
+				FATALITY = always
+				FIXED = no
+				LOCALE = terrain_scope
+				OUTPUT_EVENT = nh.0011
+				INVALIDATION_EVENT = nh.0021
+		}
 	}
 
 }
@@ -145,7 +181,7 @@ nh.0001 = {
 
 # BIG TODO - Adapt
 
-
+# Bout has ended, inform affected parties. 
 nh.0011 = {
 	hidden = yes
 
@@ -155,26 +191,23 @@ nh.0011 = {
 			ATTACKER = scope:actor
 			DEFENDER = scope:champion
 		}
+
 		# Did scope:actor win?
 		if = {
 			limit = { scope:sc_victor = scope:actor }
-			# Apply effects; we do this separately so that there's not a weird day's delay.
-			fp1_tbc_non_lethal_results_effect = yes
+
 			# And send out the ending events.
 			scope:actor = {
 				trigger_event = {
-					id = fp1_tbc.0041
+					id = nh.0041
 					days = 1
 				}
 			}
-			scope:recipient = {
-				trigger_event = {
-					id = fp1_tbc.0121
-					days = 1
-				}
-			}
+
+			# other died --> no event for other
 		}
-		# Or was it scope:champion?
+
+		# Or was it the other
 		else_if = {
 			limit = { scope:sc_victor = scope:champion }
 			# If scope:actor is still alive, they gain stress.
@@ -185,48 +218,22 @@ nh.0011 = {
 				fp1_tbc_actor_defeated_effect = { TBC_LOSER = scope:actor }
 			}
 			# And send out the ending events.
-			scope:actor = {
-				trigger_event = {
-					id = fp1_tbc.0051
-					days = 1
-				}
-			}
+			
+			# actor died --> no event for actor
+
+
 			scope:recipient = {
 				trigger_event = {
-					id = fp1_tbc.0111
+					id = nh.0111
 					days = 1
 				}
 			}
-		}
-		# If both parties are alive, and aren't good losers/don't have good reasons to forgive each other, then we mark them as potential rivals.
-		if = {
-			limit = {
-				scope:actor = {
-					is_alive = yes
-					NOR = {
-						has_trait = humble
-						has_trait = content
-						has_trait = just
-						has_trait = forgiving
-					}
-				}
-				scope:recipient = {
-					is_alive = yes
-					NOR = {
-						has_trait = humble
-						has_trait = content
-						has_trait = just
-						has_trait = forgiving
-					}
-					can_set_relation_potential_rival_trigger = { CHARACTER = scope:actor }
-				}
-			}
-			scope:actor = { set_relation_potential_rival = scope:recipient }
 		}
 	}
 }
 
-fp1_tbc.0021 = {
+# Bout has invalidated, inform affected parties.
+nh.0021 = {
 	hidden = yes
 
 	immediate = {
@@ -235,26 +242,114 @@ fp1_tbc.0021 = {
 			ATTACKER = scope:actor
 			DEFENDER = scope:recipient
 		}
+
 		# Inform both parties that the duel has invalidated.
 		scope:actor = {
 			send_interface_toast = {	
-				title = fp1_tbc.0021.trigger_failure.actor
+				title = nh.0021.trigger_failure.actor
 				left_icon = scope:recipient
 			}
 		}
 		scope:recipient = {
 			send_interface_toast = {	
-				title = fp1_tbc.0021.trigger_failure.recipient
+				title = nh.0021.trigger_failure.recipient
 				left_icon = scope:actor
 			}
 		}
 		# Reset scope:actor's cooldowns against scope:recipient.
-		scope:actor = {
-			remove_interaction_cooldown = challenge_to_trial_by_combat_interaction
-			remove_interaction_cooldown_against = {
-				interaction = challenge_to_trial_by_combat_interaction
-				target = scope:recipient
+		# Todo
+	}
+}
+
+# Scope:actor has won the duel.
+nh.0041 = {
+	type = character_event
+	title = nh.0041.t
+
+	desc = {
+		desc = nh.0041.desc.intro
+		# Scope:champion died in the fighting
+		triggered_desc = {
+			trigger = {
+				scope:champion = { is_alive = no }
 			}
+			desc = nh.0041.desc.opponent_died
+		}
+		desc = nh.0041.desc.outro
+	}
+
+	theme = prison
+	left_portrait = {
+		character = scope:actor
+		animation = personality_bold
+	}
+	right_portrait = {
+		character = scope:recipient
+		animation = shock
+	}
+	override_background = { reference = throne_room }
+
+	trigger = {
+		# DLC check.
+		has_fp1_dlc_trigger = yes
+		# Juuuust need to double-check that they're actually alive.
+		is_alive = yes
+	}
+
+	# The bout closes.
+	option = {
+		name = nh.0041.a
+
+		# No stress for single-option events.
+		ai_chance = {
+			# AI will always choose single option.
+			base = 100
+		}
+	}
+}
+
+# Scope:recipient has won the duel.
+nh.0111 = {
+	type = character_event
+	title = nh.0111.t
+	desc = {
+		desc = nh.0111.desc.intro
+		# Scope:actor died in the fighting; we don't account for
+		triggered_desc = {
+			trigger = {
+				scope:actor = { is_alive = no }
+			}
+			desc = nh.0111.desc.opponent_died.recipient_fighting
+		}
+		
+		desc = nh.0111.desc.outro
+	}
+	theme = prison
+	left_portrait = {
+		character = scope:recipient
+		animation = personality_bold
+	}
+	right_portrait = {
+		character = scope:actor
+		animation = shock
+	}
+	override_background = { reference = throne_room }
+
+	trigger = {
+		# DLC check.
+		has_fp1_dlc_trigger = yes
+		# Juuuust need to double-check that they're actually alive.
+		is_alive = yes
+	}
+
+	# The bout closes.
+	option = {
+		name = nh.0111.a
+
+		# No stress for single-option events.
+		ai_chance = {
+			# AI will always choose single option.
+			base = 100
 		}
 	}
 }
