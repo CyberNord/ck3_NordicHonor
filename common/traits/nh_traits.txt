@@ -1,0 +1,21 @@
+﻿einherjar = {
+	category = fame
+	
+	prowess = 2
+	same_faith_opinion = 10
+	short_reign_duration_mult = -0.5
+	intrigue = -3
+	
+	# shown_in_ruler_designer = no 
+
+	culture_modifier = {
+		parameter = strong_traits_more_valued
+		monthly_prestige = 1
+	}
+	
+	ruler_designer_cost = 100
+	
+	desc = trait_einherjar_desc
+
+	ai_energy = 20
+}
