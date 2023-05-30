@@ -10,17 +10,22 @@
 
 	is_shown = {
 		first_valid = {
+
+			AND = {
+				triggered_desc = {
+					trigger = { 
+						has_trait = cancer
+						age >= 18
+				 }
+					desc = last_duel_decision_desc_cancer
+				}
+				faith = faith:norse_pagan
+			}
+
 			AND = {
 				triggered_desc = {
 					trigger = { age >= 60 }
 					desc = last_duel_decision_desc_old
-				}
-				faith = faith:norse_pagan
-			}
-			AND = {
-				triggered_desc = {
-					trigger = { has_trait = cancer }
-					desc = last_duel_decision_desc_cancer
 				}
 				faith = faith:norse_pagan
 			}
