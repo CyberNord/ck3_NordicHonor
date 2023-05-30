@@ -17,7 +17,7 @@ nh.0001 = {
  		animation = aggressive_axe
 	}
 
-	lower_right_portrait = scope:player_heir_option			# player heir is always expected to fight
+	lower_right_portrait = scope:player_heir_option			# grown up player heir is always expected to fight
 	lower_center_portrait = scope:player_rival_option
 	lower_left_portrait = scope:player_vassal_option
 	
@@ -109,18 +109,28 @@ nh.0001 = {
 
 	# duel heir
 	option = { 
+		trigger = { 
+			root.player_heir = {
+				age >= 18
+			}
+		}
+
 		name = nh.0001.option.duel_player_heir.desc
 		custom_tooltip = nh.0001.option.duel_player_heir_tooltip.desc
 
-		single_combat_apply_default_shirtlessness_effect = {
-			ATTACKER = scope:actor
-			DEFENDER = scope:player_heir_option	
+		hidden_effect = {
+			scope:player_heir_option = { save_scope_as = champion }
 		}
 
+		single_combat_apply_default_shirtlessness_effect = {
+			ATTACKER = scope:actor
+			DEFENDER = scope:champion
+		}
+		
 		configure_start_single_combat_effect = {
 				SC_INITIATOR = scope:actor
 				SC_ATTACKER = scope:actor
-				SC_DEFENDER = scope:player_heir_option	
+				SC_DEFENDER = scope:champion
 				FATALITY = always
 				FIXED = no
 				LOCALE = terrain_scope
@@ -137,15 +147,19 @@ nh.0001 = {
 		name = nh.0001.option.duel_player_rival.desc
 		custom_tooltip = nh.0001.option.duel_player_rival_tooltip.desc
 
+		hidden_effect = {
+			scope:player_rival_option = { save_scope_as = champion }
+		}
+
 		single_combat_apply_default_shirtlessness_effect = {
 			ATTACKER = scope:actor
-			DEFENDER = scope:player_rival_option
+			DEFENDER = scope:champion
 		}
 
 		configure_start_single_combat_effect = {
 				SC_INITIATOR = scope:actor
 				SC_ATTACKER = scope:actor
-				SC_DEFENDER = scope:player_rival_option
+				SC_DEFENDER = scope:champion
 				FATALITY = always
 				FIXED = no
 				LOCALE = terrain_scope
@@ -163,15 +177,19 @@ nh.0001 = {
 		name = nh.0001.option.player_vassal_option.desc
 		custom_tooltip = nh.0001.option.player_vassal_option_tooltip.desc
 
+		hidden_effect = {
+			scope:player_vassal_option = { save_scope_as = champion }
+		}
+
 		single_combat_apply_default_shirtlessness_effect = {
 			ATTACKER = scope:actor
-			DEFENDER = scope:player_vassal_option
+			DEFENDER = scope:champion
 		}
 
 		configure_start_single_combat_effect = {
 				SC_INITIATOR = scope:actor
 				SC_ATTACKER = scope:actor
-				SC_DEFENDER = scope:player_vassal_option	
+				SC_DEFENDER = scope:champion	
 				FATALITY = always
 				FIXED = no
 				LOCALE = terrain_scope
@@ -187,10 +205,7 @@ nh.0001 = {
 # Adapted from dlc/fp1
 #####
 
-# Todo
-# scope:actor / scope:champion causes error --> not known lol
-
-# Bout has ended, inform affected parties. 
+# Duel has ended, inform affected parties. 
 nh.0011 = {
 	hidden = yes
 
@@ -228,14 +243,14 @@ nh.0011 = {
 			scope:recipient = {
 				trigger_event = {
 					id = nh.0111
-					days = 1
+					days = 3
 				}
 			}
 		}
 	}
 }
 
-# Bout has invalidated, inform affected parties.
+# Duel has invalidated, inform affected parties.
 nh.0021 = {
 	hidden = yes
 
@@ -259,8 +274,6 @@ nh.0021 = {
 				left_icon = scope:actor
 			}
 		}
-		# Reset scope:actor's cooldowns against scope:recipient.
-		# Todo
 	}
 }
 
@@ -311,7 +324,8 @@ nh.0041 = {
 	}
 }
 
-# Scope:recipient has won the duel.
+# Scope:recipient has won the duel. 
+# Todo: does not fire if heir is winner..
 nh.0111 = {
 	type = character_event
 	title = nh.0111.t
