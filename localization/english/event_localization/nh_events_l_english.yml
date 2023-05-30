@@ -4,7 +4,7 @@
  nh.0001.option.nevermind.desc:0 "I have to think about it once more..."
  nh.0001.option.nevermind_tooltip.desc:0 "You will ponder and reconsider your options for some time. The decision will remain unavailable until then."
  nh.0001.option.duel_player_heir.desc:0 "The day has come to prove yourself as a worthy successor."
- nh.0001.option.duel_player_heir_tooltip.desc:0 "You will duel your heir, [player_heir_option.GetFirstNameNoTooltip], in a battle for life and death./n As the old ways demand it, he will get the chance to prove himself as worthy or die trying."
+ nh.0001.option.duel_player_heir_tooltip.desc:0 "You will duel your heir, [player_heir_option.GetFirstNameNoTooltip], in a battle for life and death. As the old ways demand it, he will get the chance to prove himself as worthy or die trying."
  nh.0001.option.duel_player_rival.desc:0 "[player_rival_option.GetFirstNameNoTooltip]! Let us settle our dispute with honor!"
  nh.0001.option.duel_player_rival_tooltip.desc:0 "You will duel your rival, [player_rival_option.GetFirstName], in a battle for life and death."
  nh.0001.option.player_vassal_option.desc:0 "[player_vassal_option.GetFirstNameNoTooltip] would be an honorable choice aswell..."
@@ -25,7 +25,7 @@
 
  # Challenger Won [nh.0111]
  nh.0111.t:0 "$germanic_positive_afterlife$"
- nh.0111.desc.intro:0 "[recipient.GetFaith.PantheonTerm|U] smiled heartily on us yesterday!"
- nh.0111.desc.opponent_died.recipient_fighting:0 "[actor.GetFirstName] is now in $germanic_positive_afterlife$ for sure. [actor.GetTitledFirstNamePossessive] fought valiantly, our battle bloody, lengthy, and honorable. Surely, the gods look upon us with pride, for our valorous duel shall be remembered through the ages."
+ nh.0111.desc.intro:0 "$germanic_high_god_she_he$, $germanic_high_god_alternate$ smiled heartily on us yesterday!\n\n"
+ nh.0111.desc.opponent_died.recipient_fighting:0 "[actor.GetFirstName] is now undoubtedly entered by the embrace of $germanic_positive_afterlife$. His brave spirit and unwavering courage have left an indelible mark on our hearts.\nOur battle was a symphony of steel and blood, a testament to the warrior's code we held dear. $germanic_war_god_name$, $germanic_good_god_thor$ and $germanic_high_god_alternate$  themselves bear witness to our triumph, their approving gaze shining upon us.\nMay the echoes of our valorous duel resound through the annals of history, forever immortalizing [actor.GetFirstName] as a true $germanic_religion_adherent$ legend.\n\n\n"
  nh.0111.desc.outro:0 "See you in $germanic_positive_afterlife$ [actor.GetFirstName]!"
  nh.0111.a:0 "These are our honored traditions..."
