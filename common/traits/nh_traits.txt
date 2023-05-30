@@ -10,7 +10,7 @@
 
 	culture_modifier = {
 		parameter = strong_traits_more_valued
-		monthly_prestige = 1
+		monthly_prestige = 0.5
 	}
 	
 	ruler_designer_cost = 100

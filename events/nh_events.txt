@@ -258,7 +258,7 @@ nh.0021 = {
 				left_icon = scope:champion
 			}
 		}
-		scope:recipient = {
+		scope:champion = {
 			send_interface_toast = {	
 				title = nh.0021.trigger_failure.recipient
 				left_icon = scope:actor
@@ -328,7 +328,7 @@ nh.0111 = {
 		
 		desc = nh.0111.desc.outro
 	}
-	theme = prison
+	theme = battle
 	left_portrait = {
 		character = scope:champion
 		animation = personality_bold
@@ -344,14 +344,14 @@ nh.0111 = {
 		is_alive = yes
 	}
 
-	# The bout closes.
+	# event closes.
 	option = {
 		name = nh.0111.a
-
-		# No stress for single-option events.
-		ai_chance = {
-			# AI will always choose single option.
-			base = 100
+		if = { 
+			limit = { scope:champion = scope:player_heir_option } 
+			scope:champion = { add_trait = einherjar } 
 		}
+		
+		ai_chance = {base = 100}
 	}
 }
