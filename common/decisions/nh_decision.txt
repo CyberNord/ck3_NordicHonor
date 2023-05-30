@@ -19,7 +19,7 @@
 			}
 			
 			triggered_desc = {
-				trigger = { faith = faith:norse_pagan }
+				trigger = { religion = religion:germanic_religion }
 				desc = last_duel_decision_desc	
 			}
 		}
@@ -29,12 +29,12 @@
 		OR= {
 			AND = {
 				age >= 60
-				faith = faith:norse_pagan
+				religion = religion:germanic_religion
 				triggered_desc = { desc = last_duel_decision_desc_old}
 			}
 			AND = {
 				age >= 18
-				faith = faith:norse_pagan
+				religion = religion:germanic_religion
 				has_trait = cancer
 				triggered_desc = { desc = last_duel_decision_desc_cancer}
 			}
