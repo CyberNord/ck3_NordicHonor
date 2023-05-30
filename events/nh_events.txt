@@ -13,16 +13,24 @@ nh.0001 = {
 	theme = battle
 
 	right_portrait = {
-		character = root
+		character = scope:actor
  		animation = aggressive_axe
 	}
 
-	lower_right_portrait = root.player_heir				# player heir is always expected to fight
+	lower_right_portrait = scope:player_heir_option			# player heir is always expected to fight
 	lower_center_portrait = scope:player_rival_option
 	lower_left_portrait = scope:player_vassal_option
 	
 	immediate = {
 		
+		root = {
+			save_scope_as = actor
+		}
+
+		root.player_heir = {
+			save_scope_as = player_heir_option
+		}
+
 		# player_vassal_option (either Vassal or a honorable knight)
 		random_vassal = {
 			limit = { 
@@ -105,14 +113,14 @@ nh.0001 = {
 		custom_tooltip = nh.0001.option.duel_player_heir_tooltip.desc
 
 		single_combat_apply_default_shirtlessness_effect = {
-			ATTACKER = root
-			DEFENDER = root.player_heir
+			ATTACKER = scope:actor
+			DEFENDER = scope:player_heir_option	
 		}
 
 		configure_start_single_combat_effect = {
-				SC_INITIATOR = root
-				SC_ATTACKER = root
-				SC_DEFENDER = root.player_heir
+				SC_INITIATOR = scope:actor
+				SC_ATTACKER = scope:actor
+				SC_DEFENDER = scope:player_heir_option	
 				FATALITY = always
 				FIXED = no
 				LOCALE = terrain_scope
@@ -130,13 +138,13 @@ nh.0001 = {
 		custom_tooltip = nh.0001.option.duel_player_rival_tooltip.desc
 
 		single_combat_apply_default_shirtlessness_effect = {
-			ATTACKER = root
+			ATTACKER = scope:actor
 			DEFENDER = scope:player_rival_option
 		}
 
 		configure_start_single_combat_effect = {
-				SC_INITIATOR = root
-				SC_ATTACKER = root
+				SC_INITIATOR = scope:actor
+				SC_ATTACKER = scope:actor
 				SC_DEFENDER = scope:player_rival_option
 				FATALITY = always
 				FIXED = no
@@ -156,13 +164,13 @@ nh.0001 = {
 		custom_tooltip = nh.0001.option.player_vassal_option_tooltip.desc
 
 		single_combat_apply_default_shirtlessness_effect = {
-			ATTACKER = root
+			ATTACKER = scope:actor
 			DEFENDER = scope:player_vassal_option
 		}
 
 		configure_start_single_combat_effect = {
-				SC_INITIATOR = root
-				SC_ATTACKER = root
+				SC_INITIATOR = scope:actor
+				SC_ATTACKER = scope:actor
 				SC_DEFENDER = scope:player_vassal_option	
 				FATALITY = always
 				FIXED = no
@@ -179,7 +187,8 @@ nh.0001 = {
 # Adapted from dlc/fp1
 #####
 
-# BIG TODO - Adapt
+# Todo
+# scope:actor / scope:champion causes error --> not known lol
 
 # Bout has ended, inform affected parties. 
 nh.0011 = {
@@ -210,14 +219,8 @@ nh.0011 = {
 		# Or was it the other
 		else_if = {
 			limit = { scope:sc_victor = scope:champion }
-			# If scope:actor is still alive, they gain stress.
-			if = {
-				limit = {
-					scope:actor = { is_alive = yes }
-				}
-				fp1_tbc_actor_defeated_effect = { TBC_LOSER = scope:actor }
-			}
-			# And send out the ending events.
+		
+			# Send out the ending events.
 			
 			# actor died --> no event for actor
 
