@@ -3,7 +3,7 @@
 	
 	sort_order = 81
 	selection_tooltip = last_duel_decision_tooltip
-	ai_check_interval = 60
+	ai_check_interval = 300
 
 	desc = {
 		first_valid = {
@@ -41,7 +41,7 @@
 		}
 	}
 
-	cooldown = { days = 5 }
+	cooldown = { days = 150 }
 
 	is_valid_showing_failures_only = {
 		is_imprisoned = no
@@ -52,18 +52,48 @@
 	effect = {
 		trigger_event = {
 			id = nh.0001
-			days = 1
+			days = {5 10}
 		}
 	}
 	
 	ai_potential = {
 		highest_held_title_tier > tier_barony
 		is_landed = yes
-		# Todo
+		faith = faith:norse_pagan
 	}
 
 	ai_will_do = {
-		base = 100
+		base = 10
+
+		modifier = {
+            add = 70
+            has_trait = faith_warrior
+        }
+
+		modifier = {
+            add = 30
+            has_trait = brave
+        }
+
+		modifier = {
+            add = 15
+            has_trait = zealous
+        }
+
+		modifier = {
+            add = 15
+            has_trait = holy_warrior
+        }
+
+		modifier = {
+            add = 10
+            prowess >= 25
+        }
+
+		modifier = {
+            add = -100
+            has_trait = craven
+        }
 	}
 }
 
