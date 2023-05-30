@@ -200,15 +200,9 @@ nh.0001 = {
 
 }
 
-
-#####
-# Adapted from dlc/fp1
-#####
-
 # Duel has ended, inform affected parties. 
 nh.0011 = {
 	hidden = yes
-
 	immediate = {
 		# If any clothes were stripped, put 'em back on.
 		single_combat_clean_shirtlessness_effect = {
@@ -227,7 +221,6 @@ nh.0011 = {
 					days = 1
 				}
 			}
-
 			# other died --> no event for other
 		}
 
@@ -238,7 +231,6 @@ nh.0011 = {
 			# Send out the ending events.
 			
 			# actor died --> no event for actor
-
 
 			scope:champion = {
 				trigger_event = {
@@ -253,14 +245,12 @@ nh.0011 = {
 # Duel has invalidated, inform affected parties.
 nh.0021 = {
 	hidden = yes
-
 	immediate = {
 		# Put your shirts back on.
 		single_combat_clean_shirtlessness_effect = {
 			ATTACKER = scope:actor
 			DEFENDER = scope:champion
 		}
-
 		# Inform both parties that the duel has invalidated.
 		scope:actor = {
 			send_interface_toast = {	
@@ -306,8 +296,6 @@ nh.0041 = {
 	override_background = { reference = throne_room }
 
 	trigger = {
-		# DLC check.
-		has_fp1_dlc_trigger = yes
 		# Juuuust need to double-check that they're actually alive.
 		is_alive = yes
 	}
@@ -352,8 +340,8 @@ nh.0111 = {
 	override_background = { reference = throne_room }
 
 	trigger = {
-		# DLC check.
-		has_fp1_dlc_trigger = yes
+		# Juuuust need to double-check that they're actually alive.
+		is_alive = yes
 	}
 
 	# The bout closes.
