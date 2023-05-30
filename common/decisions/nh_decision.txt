@@ -2,32 +2,41 @@
 	picture = "gfx/interface/illustrations/decisions/nh_decision_duel.dds"
 	
 	sort_order = 81
-
-	
 	selection_tooltip = last_duel_decision_tooltip
-
 	ai_check_interval = 60
 
-	is_shown = {
+	desc = {
 		first_valid = {
 
-			AND = {
-				triggered_desc = {
-					trigger = { 
-						has_trait = cancer
-						age >= 18
-				 }
-					desc = last_duel_decision_desc_cancer
-				}
-				faith = faith:norse_pagan
+			triggered_desc = {
+				trigger = { has_trait = cancer}
+				desc = last_duel_decision_desc_cancer		
 			}
+	
+			triggered_desc = {
+				trigger = { age >= 60 }
+				desc = last_duel_decision_desc_old	
+			}
+			
+			triggered_desc = {
+				trigger = { faith = faith:norse_pagan }
+				desc = last_duel_decision_desc	
+			}
+		}
+	}
 
+	is_shown = {
+		OR= {
 			AND = {
-				triggered_desc = {
-					trigger = { age >= 60 }
-					desc = last_duel_decision_desc_old
-				}
+				age >= 60
 				faith = faith:norse_pagan
+				triggered_desc = { desc = last_duel_decision_desc_old}
+			}
+			AND = {
+				age >= 18
+				faith = faith:norse_pagan
+				has_trait = cancer
+				triggered_desc = { desc = last_duel_decision_desc_cancer}
 			}
 		}
 	}
@@ -36,6 +45,8 @@
 
 	is_valid_showing_failures_only = {
 		is_imprisoned = no
+		is_at_war = no
+		not = { exists = involved_activity }
 	}
 
 	effect = {
