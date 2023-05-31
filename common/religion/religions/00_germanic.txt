@@ -36,7 +36,7 @@
 	doctrine = doctrine_pilgrimage_encouraged
 
 	traits = {
-		virtues = { brave wrathful vengeful poet one_eyed }
+		virtues = { brave wrathful vengeful poet one_eyed einherjar}
 		sins = { craven deceitful forgiving }
 	}
 
@@ -249,27 +249,31 @@
 		}
 
 		forn_sidr_pagan = {
-			color = { 0.4 0.4 0.3 }
+			color = { 0.4 0.4 0.8 }
 			icon = forn_sidr
 			reformed_icon = forn_sidr_reformed
 
-			# todo change holysites
 			holy_site = uppsala
-			holy_site = jorvik
 			holy_site = paderborn
-			holy_site = nerthus
-			holy_site = oium
-
+			holy_site = heiligenberg 
+			holy_site = gniezno
+			holy_site = hallstatt
+		
 			doctrine = unreformed_faith_doctrine
 			doctrine = special_faith_has_germanic_heritage
 
-			doctrine = tenet_ancestor_worship
 			doctrine = tenet_sanctity_of_nature
 			# Gruesome Festivals, else Human Sacrifice.
 			doctrine_selection_pair = {
 				requires_dlc_flag = the_northern_lords
 				doctrine = tenet_gruesome_festivals
 				fallback_doctrine = tenet_human_sacrifice
+			}
+			doctrine = tenet_esotericism
+
+			traits = {
+				virtues = { brave wrathful vengeful one_eyed einherjar}
+				sins = { craven deceitful forgiving weak }
 			}
 
 			localization = {
@@ -312,6 +316,44 @@
 				PriestFemalePlural = forn_sidr_priest_female_plural
 				PriestNeuter = forn_sidr_priest_neuter
 				PriestNeuterPlural = forn_sidr_priest_neuter_plural
+			}	
+		}
+
+		ginnregla_pagan = {
+			color = { 0.4 0.8 0.4 }
+			icon = ginnregla
+			reformed_icon = ginnregla_reformed
+
+			holy_site = thingvellir
+			holy_site = uppsala
+			holy_site = zeeland
+			holy_site = jorvik
+			holy_site = ranaheim
+		
+			doctrine = unreformed_faith_doctrine
+
+			doctrine = tenet_astrology
+			# Bhakti, else Ancestor Worship.
+			doctrine_selection_pair = {
+				requires_dlc_flag = the_northern_lords
+				doctrine = tenet_bhakti
+				fallback_doctrine = tenet_ancestor_worship
+			}
+			doctrine = tenet_communal_identity
+
+			# other tenets  
+			doctrine = doctrine_clerical_function_alms_and_pacification
+			doctrine = doctrine_pluralism_righteous
+			doctrine = doctrine_pilgrimage_forbidden
+
+			localization = {
+				
+				PriestMale = ginnregla_priest_male
+				PriestMalePlural = ginnregla_priest_male_plural
+				PriestFemale = ginnregla_priest_female
+				PriestFemalePlural = ginnregla_priest_female_plural
+				PriestNeuter = ginnregla_priest_neuter
+				PriestNeuterPlural = ginnregla_priest_neuter_plural
 			}	
 		}
 	}
