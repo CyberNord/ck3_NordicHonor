@@ -1,0 +1,115 @@
+﻿#####################
+# Eurasian Pagan	#
+#####################
+
+# Norse
+## Uppsala
+	# Site of Scandinavia's pre-eminent temple, both pre & post Christianisation.
+## Lejre
+	# (Retired) Hrólfr's Hall, a legendary king.
+## Paderborn
+	# Site of Saxon Irminsul.
+## Zeeland
+	# (Retired) Focal point for an old major Germanic cult. Probably.
+## Ranaheim
+	# Important religious site in assorted sagas.
+## York
+	# Focal point for Norse activities in the British Isles, place of Ragnar's "martyrdom" (and subsequently suddenly genealogically important for half of Scandinavia's nobility).
+## Kiev
+	# Focal point for Norse activities in Russia & symbolic of their influence in the east.
+
+
+# Finnish
+
+#raivola 
+
+#hiiumaa 
+
+#akkel 
+
+
+# rome-germanic (no real holy site, but sure a trophy for some pagans)
+joromaborg = {
+	county = c_roma
+	barony = b_vaticano
+	
+	character_modifier = {
+		name = holy_site_rome_effect_name
+		development_growth_factor = 0.1
+		stewardship = 1
+	}
+}
+
+# constantinople-germanic (no real holy site, but sure a trophy for some pagans)
+miklagard = {
+	county = c_byzantion
+	character_modifier = {
+		name = holy_site_constantinople_effect_name
+		cultural_head_fascination_mult = 0.15
+	}
+}
+
+# Trelleborg - These fortresses likely had religious importance, serving as regional centers for religious activities.
+trelleborg = {
+	county = c_skane
+	barony = b_trelleborg
+	character_modifier = {
+		name = holy_site_trelleborg_effect_name
+		build_speed = -0.15
+		diplomacy_per_prestige_level = 2
+	}
+}
+
+# Thingvellir, held great importance in Norse culture. It was the site of the Alþingi, the national assembly of Iceland. It was also a gathering place for religious and cultural events.
+thingvellir = {
+	county = c_sudurland
+	character_modifier = {
+		name = holy_site_thingvellir_effect_name
+		development_growth_factor = 0.2
+		defender_advantage = 10
+		stewardship_per_piety_level = 2
+	}
+}
+
+# Heiligenberg, was an ancient hilltop settlement with evidence of Germanic occupation. It was considered a sacred site and likely had religious and ceremonial significance.
+heiligenberg = {
+	county = c_grunningen
+	barony = b_heiligenbergd
+	character_modifier = {
+		name = holy_site_heiligenberg_effect_name
+		martial = 3
+		knight_effectiveness_mult = 0.05
+	}
+}
+
+
+# Gniezno, was an important religious center during the early medieval period. It is associated with both Slavic and Germanic influences.
+gniezno ={
+	county = c_gnieznienska
+	character_modifier = {
+		name = holy_site_gniezno_effect_name
+		stewardship = 2
+		monthly_prestige_gain_mult = 0.05
+	}
+}
+
+# Břeclav, is believed to have been a significant early medieval center associated with both Germanic and Slavic influences.
+breclav = {
+	county = c_znojmo
+	barony = b_breclav
+	character_modifier = {
+		name = holy_site_breclav_effect_name
+		different_culture_opinion = 15
+		different_faith_opinion = 15
+	}
+}
+
+# Hallstatt, is an ancient village which thrived in the region during the early Iron Age. While the Hallstatt culture predates the Germanic and Norse periods, it is considered an important site for understanding the prehistoric cultures of Central Europe.
+hallstatt = {
+	county = c_hallstatt
+	character_modifier = {
+		name = holy_site_hallstatt_effect_name
+		mountains_development_growth_factor = 0.2
+		mountains_advantage = 10
+	}
+}
