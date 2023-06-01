@@ -1,5 +1,8 @@
 ﻿#Events for Nordic Honor
 
+# nh.0xxx  .... Last Duel
+# nh.1xxx  
+
 namespace = nh
 
 #Ruler picking his opponent for last duel
@@ -355,3 +358,7 @@ nh.0111 = {
 		ai_chance = {base = 100}
 	}
 }
+
+##############################################################################################
+
+

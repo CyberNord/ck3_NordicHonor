@@ -5,3 +5,8 @@
  last_duel_decision_tooltip:0 "You will seek death in battle by challenging a worthy opponent. The duel will continue until one of you falls, and through this honorable sacrifice, you shall reach the gates of $germanic_positive_afterlife$."
  last_duel_decision_desc_cancer:0 "The unseen enemy has infiltrated my body, like a relentless foe lurking in the shadows. It is a malady that devours from within, an insidious force that weakens the very essence of life.\n $last_duel_decision_desc$"
  last_duel_decision_confirm:0 "I choose death in battle rather than this..."
+
+ nh_rome_hs_decision:0 "Add Rome as holysite."
+ nh_rome_hs_decision_desc:0 "TODO"
+ nh_rome_hs_decision_tooltip:0 "Nützlicher Tooltipp :)"
+ nh_rome_hs_decision_confirm:0 "Joromaborg shall be Odin's seat."

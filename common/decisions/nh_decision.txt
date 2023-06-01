@@ -1,4 +1,5 @@
-﻿last_duel_decision = {
+﻿
+last_duel_decision = {
 	picture = "gfx/interface/illustrations/decisions/nh_decision_duel.dds"
 	
 	sort_order = 81
@@ -95,5 +96,162 @@
             has_trait = craven
         }
 	}
+}
+
+nh_rome_hs_decision = {
+	picture = "gfx/interface/illustrations/decisions/nh_decision_rome_hs.dds"
+	
+	desc = nh_rome_hs_decision_desc
+	selection_tooltip = nh_rome_hs_decision_tooltip
+	major = yes
+
+	sort_order = 81
+	
+	ai_check_interval = 300
+
+	# only shown if faith is unreformed
+	is_shown = {
+		is_landed = yes
+		OR = {
+			faith = faith:norse_pagan
+			faith = forn_sidr_pagan
+			faith = faith:ginnregla_pagan
+			faith = faith:natturugudtruar_pagan
+			faith = faith:odinstru_pagan
+			faith = faith:heidinn_pagan
+		}
+		NOR = {
+			AND = {
+				faith = faith:norse_pagan
+				is_target_in_global_variable_list = {
+					name = unavailable_unique_decisions
+					target = flag:nh_rome_hs_norse_decision
+				}
+			}
+			AND = {
+				faith = faith:forn_sidr_pagan
+				is_target_in_global_variable_list = {
+					name = unavailable_unique_decisions
+					target = flag:nh_rome_hs_forn_sidr_decision
+				}
+			}
+			AND = {
+				faith = faith:ginnregla_pagan
+				is_target_in_global_variable_list = {
+					name = unavailable_unique_decisions
+					target = flag:nh_rome_hs_ginnregla_decision
+				}
+			}
+			AND = {
+				faith = faith:natturugudtruar_pagan
+				is_target_in_global_variable_list = {
+					name = unavailable_unique_decisions
+					target = flag:nh_rome_hs_natturugudtruar_decision
+				}
+			}
+			AND = {
+				faith = faith:odinstru_pagan
+				is_target_in_global_variable_list = {
+					name = unavailable_unique_decisions
+					target = flag:nh_rome_hs_odinstru_decision
+				}
+			}
+			AND = {
+				faith = faith:heidinn_pagan
+				is_target_in_global_variable_list = {
+					name = unavailable_unique_decisions
+					target = flag:nh_rome_hs_heidinn_decision
+				}
+			}
+		}
+	}
+
+	is_valid ={
+		highest_held_title_tier >= tier_kingdom
+		completely_controls = title:d_latium
+		piety_level >= 5
+		OR ={
+			has_trait = zealous
+			has_trait = theologian
+			has_trait = faith_warrior
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		is_capable_adult = yes
+		is_imprisoned = no
+		is_independent_ruler = yes
+		is_at_war = no
+		not = { exists = involved_activity }
+	}
+
+	cost = {
+		gold = 1000
+		prestige = 5000
+		piety = 2000
+	}
+
+	effect = {
+		# show_as_tooltip = {
+		# 	 nh_rome_hs_scripted_effect = yes
+		# }
+
+		# trigger_event = {
+		# 	id = nh.1000		
+		# }
+
+		dynasty = {
+			add_dynasty_prestige = 10000
+		}
+
+		#Can only happen once per faith
+		if = {
+			limit = { faith = faith:norse_pagan }
+			add_to_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:nh_rome_hs_norse_decision
+			}
+		}
+		else_if = {
+			limit = { faith = faith:forn_sidr_pagan }
+			add_to_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:nh_rome_hs_forn_sidr_decision
+			}
+		}
+		else_if = {
+			limit = { faith = faith:ginnregla_pagan }
+			add_to_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:nh_rome_hs_ginnregla_decision
+			}
+		}
+		else_if = {
+			limit = { faith = faith:natturugudtruar_pagan }
+			add_to_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:nh_rome_hs_natturugudtruar_decision
+			}
+		}
+		else_if = {
+			limit = { faith = faith:odinstru_pagan }
+			add_to_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:nh_rome_hs_odinstru_decision
+			}
+		}
+		else_if = {
+			limit = { faith = faith:heidinn_pagan }
+			add_to_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:nh_rome_hs_heidinn_decision
+			}
+		}
+
+	}
+	
+	ai_potential = {always = yes}
+
+	ai_will_do = {base = 100}
 }
 
