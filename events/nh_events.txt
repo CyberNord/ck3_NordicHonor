@@ -1,6 +1,6 @@
 ﻿#Events for Nordic Honor
 
-# nh.0xxx  .... Last Duel
+# nh.0xxx  .... Last Duel (messy)
 # nh.1xxx  
 
 namespace = nh
@@ -361,4 +361,32 @@ nh.0111 = {
 
 ##############################################################################################
 
+nh.1001 ={
+	type = character_event
+	title = nh.1001.t
+	desc = nh.1001.desc
+	theme = faith
 
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+
+	right_portrait = {
+		character = root
+		animation = shock
+	}
+
+	immediate = {
+		play_music_cue = "mx_cue_epic_sacral_moment"
+		root = {
+			give_nickname = nick_monarch_of_dice
+		}
+	}
+
+	option = {
+		name = nh.1001.option.accept.desc
+
+		ai_chance = {base = 100}
+	}
+}

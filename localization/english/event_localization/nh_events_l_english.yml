@@ -29,3 +29,8 @@
  nh.0111.desc.opponent_died.recipient_fighting:0 "[actor.GetFirstName] is now undoubtedly entered by the embrace of $germanic_positive_afterlife$. His brave spirit and unwavering courage have left an indelible mark on our hearts.\nOur battle was a symphony of steel and blood, a testament to the warrior's code we held dear. $germanic_war_god_name$, $germanic_good_god_thor$ and $germanic_high_god_alternate$  themselves bear witness to our triumph, their approving gaze shining upon us.\nMay the echoes of our valorous duel resound through the annals of history, forever immortalizing [actor.GetFirstName] as a true $germanic_religion_adherent$ legend.\n\n\n"
  nh.0111.desc.outro:0 "See you in $germanic_positive_afterlife$ [actor.GetFirstName]!"
  nh.0111.a:0 "These are our honored traditions..."
+
+ # Joromaborg [nh.1001]
+ nh.1001.t:0 "Divine Conquest"
+ nh.1001.desc:0 "Todo"
+ nh.1001.option.accept.desc:0 "Todo"

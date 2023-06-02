@@ -196,12 +196,12 @@ nh_rome_hs_decision = {
 		# 	 nh_rome_hs_scripted_effect = yes
 		# }
 
-		# trigger_event = {
-		# 	id = nh.1000		
-		# }
+		trigger_event = {
+			id = nh.1001		
+		}
 
 		dynasty = {
-			add_dynasty_prestige = 10000
+			add_dynasty_prestige = 1000
 		}
 
 		root.faith = { activate_holy_site = joromaborg }
