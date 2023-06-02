@@ -1,0 +1,20 @@
+﻿# Called from code after history generation
+# Empty scope
+on_game_start = {
+	events = {
+	}
+	on_actions = {
+		nh_on_game_start
+	}
+}
+
+nh_on_game_start = {
+	effect = {
+		faith:norse_pagan = { deactivate_holy_site = joromaborg }
+		faith:forn_sidr_pagan = { deactivate_holy_site = joromaborg }
+		faith:ginnregla_pagan = { deactivate_holy_site = joromaborg }
+		faith:natturugudtruar_pagan = { deactivate_holy_site = joromaborg }
+		faith:odinstru_pagan = { deactivate_holy_site = joromaborg }
+		faith:heidinn_pagan = { deactivate_holy_site = joromaborg }
+	}
+}

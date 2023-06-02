@@ -114,7 +114,7 @@ nh_rome_hs_decision = {
 		is_landed = yes
 		OR = {
 			faith = faith:norse_pagan
-			faith = forn_sidr_pagan
+			faith = faith:forn_sidr_pagan
 			faith = faith:ginnregla_pagan
 			faith = faith:natturugudtruar_pagan
 			faith = faith:odinstru_pagan
@@ -203,6 +203,8 @@ nh_rome_hs_decision = {
 		dynasty = {
 			add_dynasty_prestige = 10000
 		}
+
+		root.faith = { activate_holy_site = joromaborg }
 
 		#Can only happen once per faith
 		if = {
