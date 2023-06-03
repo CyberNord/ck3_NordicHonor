@@ -115,10 +115,7 @@ nh_rome_hs_decision = {
 		OR = {
 			faith = faith:norse_pagan
 			faith = faith:forn_sidr_pagan
-			faith = faith:ginnregla_pagan
-			faith = faith:natturugudtruar_pagan
 			faith = faith:odinstru_pagan
-			faith = faith:heidinn_pagan
 		}
 		NOR = {
 			AND = {
@@ -136,31 +133,10 @@ nh_rome_hs_decision = {
 				}
 			}
 			AND = {
-				faith = faith:ginnregla_pagan
-				is_target_in_global_variable_list = {
-					name = unavailable_unique_decisions
-					target = flag:nh_rome_hs_ginnregla_decision
-				}
-			}
-			AND = {
-				faith = faith:natturugudtruar_pagan
-				is_target_in_global_variable_list = {
-					name = unavailable_unique_decisions
-					target = flag:nh_rome_hs_natturugudtruar_decision
-				}
-			}
-			AND = {
 				faith = faith:odinstru_pagan
 				is_target_in_global_variable_list = {
 					name = unavailable_unique_decisions
 					target = flag:nh_rome_hs_odinstru_decision
-				}
-			}
-			AND = {
-				faith = faith:heidinn_pagan
-				is_target_in_global_variable_list = {
-					name = unavailable_unique_decisions
-					target = flag:nh_rome_hs_heidinn_decision
 				}
 			}
 		}
@@ -192,10 +168,6 @@ nh_rome_hs_decision = {
 	}
 
 	effect = {
-		# show_as_tooltip = {
-		# 	 nh_rome_hs_scripted_effect = yes
-		# }
-
 		trigger_event = {
 			id = nh.1001		
 		}
@@ -222,31 +194,10 @@ nh_rome_hs_decision = {
 			}
 		}
 		else_if = {
-			limit = { faith = faith:ginnregla_pagan }
-			add_to_global_variable_list = {
-				name = unavailable_unique_decisions
-				target = flag:nh_rome_hs_ginnregla_decision
-			}
-		}
-		else_if = {
-			limit = { faith = faith:natturugudtruar_pagan }
-			add_to_global_variable_list = {
-				name = unavailable_unique_decisions
-				target = flag:nh_rome_hs_natturugudtruar_decision
-			}
-		}
-		else_if = {
 			limit = { faith = faith:odinstru_pagan }
 			add_to_global_variable_list = {
 				name = unavailable_unique_decisions
 				target = flag:nh_rome_hs_odinstru_decision
-			}
-		}
-		else_if = {
-			limit = { faith = faith:heidinn_pagan }
-			add_to_global_variable_list = {
-				name = unavailable_unique_decisions
-				target = flag:nh_rome_hs_heidinn_decision
 			}
 		}
 

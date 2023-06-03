@@ -32,5 +32,5 @@
 
  # Joromaborg [nh.1001]
  nh.1001.t:0 "Divine Conquest"
- nh.1001.desc:0 "Todo"
- nh.1001.option.accept.desc:0 "Todo"
+ nh.1001.desc:0 "After endless battles and bloodshed, Rome, the eternal city, now lies at our feet. Its once mighty walls crumble beneath the weight of our triumph, as the echoes of our victories reverberate through its streets. It is time to rebuild the big temple for the glory of [ROOT.Char.GetFaith.HighGodName]! This temple, rising like a beacon of glory, shall be a sanctuary where the faithful [ROOT.Char.GetFaith.PantheonTerm] gather, witnessing the dawn of a new era, where the gods themselves walk among us, and the radiance of Joromaborg illuminates the path to [ROOT.Char.GetFaith.PositiveAfterLife]."
+ nh.1001.option.accept.desc:0 "The ancient City is ours now!"

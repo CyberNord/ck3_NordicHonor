@@ -1,0 +1,3 @@
+﻿l_english:
+ nick_nh_joromaborg:0 "Rome's Scourge"
+ nick_nh_joromaborg_desc:0 "This name was bestowed upon this warrior for their relentless and devastating assault on the mighty city of Rome, reducing it to ruins and establishing it as a revered temple dedicated to [ROOT.Char.GetFaith.HighGodName]."

@@ -361,26 +361,23 @@ nh.0111 = {
 
 ##############################################################################################
 
+# joromaborg event
 nh.1001 ={
 	type = character_event
 	title = nh.1001.t
 	desc = nh.1001.desc
-	theme = faith
+	theme = dynasty
 
 	left_portrait = {
 		character = root
 		animation = personality_bold
 	}
 
-	right_portrait = {
-		character = root
-		animation = shock
-	}
-
 	immediate = {
 		play_music_cue = "mx_cue_epic_sacral_moment"
+		
 		root = {
-			give_nickname = nick_monarch_of_dice
+			give_nickname = nick_nh_joromaborg
 		}
 	}
 

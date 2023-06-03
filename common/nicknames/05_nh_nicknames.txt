@@ -1,0 +1,4 @@
+﻿
+# NordicHonorNicknames
+nick_nh_joromaborg = {}
+
