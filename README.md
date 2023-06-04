@@ -12,7 +12,7 @@
 It represents the ancient Germanic pantheon of gods, with the supreme deity being Odin. This religion has become extinct at the beginning of the game.\
 Tenets
 - **Sanctity of Nature**
-- **Blðt**
+- **Blót**
 - **Esotericism**
 
 #### Giñnregla
@@ -27,7 +27,7 @@ It represents the slavic-germanic pantheon of gods, when the scandinavians settl
 Tenets
 - **Sanctity of Nature**
 - **Warmonger** 
-- **Blðt**
+- **Blót**
 
 #### Náttúruguðtrúar
 It represents the sami-norse pantheon which is focused on nature. Its completely fictional. Some counties in Sami will follow this religion.(todo)\
@@ -40,7 +40,7 @@ Tenets
 It represents a very fundamental pantheon which accepts no peace with the abrahamic religions. Its completely fictional. It will spawn via an event. (todo)\
 Tenets
 - **Warmonger** 
-- **Blðt**
+- **Blót**
 - **Unrelenting Faith**
 
 #### Vanatrú
