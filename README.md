@@ -36,6 +36,9 @@ Tenets
 - **Blðt**
 - **Sanctity of Nature**
 
+[u]Todos[/u]: 
+- **alternative Götternamen & localization** 
+
 #### Óðinstru
 It represents a very fundamental pantheon which accepts no peace with the abrahamic religions. Its completely fictional. It will spawn via an event. (todo)\
 Tenets
