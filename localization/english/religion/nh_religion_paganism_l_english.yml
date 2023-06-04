@@ -116,3 +116,5 @@
  heidinn_knowledge_god_name_possessive:0 "$heidinn_high_god_name_possessive$"
  heidinn_war_god_name:0 "Tīvs"					
  heidinn_war_god_name_possessive:0 "Tīvs's"
+ heidinn_good_god_freyja:0 "$heidinn_fertility_god_name$"
+ heidinn_good_god_tyr:0 "$heidinn_war_god_name$"

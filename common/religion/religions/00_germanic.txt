@@ -464,6 +464,8 @@
 				#WarGod
 				WarGodName = heidinn_war_god_name
 				WarGodNamePossessive = heidinn_war_god_name_possessive
+
+				GoodGodNames = { heidinn_good_god_thor germanic_good_god_baldr heidinn_good_god_freyja heidinn_good_god_tyr germanic_good_god_sif}
 			}
 		}
 	}
