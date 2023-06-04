@@ -149,7 +149,7 @@ nh_rome_hs_decision = {
 		OR ={
 			has_trait = zealous
 			has_trait = theologian
-			has_trait = faith_warrior
+			has_trait = holy_warrior
 		}
 	}
 
