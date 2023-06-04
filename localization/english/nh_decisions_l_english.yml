@@ -7,6 +7,11 @@
  last_duel_decision_confirm:0 "I choose death in battle rather than this..."
 
  nh_rome_hs_decision:0 "Add Rome as holysite."
- nh_rome_hs_decision_desc:0 "TODO"
- nh_rome_hs_decision_tooltip:0 "Nützlicher Tooltipp :)"
- nh_rome_hs_decision_confirm:0 "Joromaborg shall be Odin's seat."
+ nh_rome_hs_decision_desc:0 "As we stand triumphant amidst the ruins of Rome, we Vikings shall breathe new purpose into this ancient city, elevating it to a realm of divine significance. Rome shall become a sacred pilgrimage site where the gods themselves shall be venerated, and our pagan brethren from across the lands shall gather to offer homage to our shared beliefs. Let the eternal city bear witness to our unwavering devotion, for Rome shall rise again, bathed in the glory of our pagan heritage."
+ nh_rome_hs_decision_tooltip:0 "This action will grant your faith an additional Holysite."
+ nh_rome_hs_decision_confirm:0 "Joromaborg shall be [ROOT.Char.GetFaith.HighGodName]'s seat."
+
+ nh_constantinople_hs_decision:0 "Add Constantinople as holysite."
+ nh_constantinople_hs_decision_desc:0 "With our banners unfurled and our victorious hearts aflame, we Vikings shall transform this newly conquered city into a hallowed ground, where the gods shall be exalted and worshipped with utmost reverence. Constantinople, now under our dominion, shall bear witness to a grand awakening, as pagan rituals and ancient traditions breathe new life into its sacred halls."
+ nh_constantinople_hs_decision_tooltip:0 "This action will grant your faith an additional Holysite."
+ nh_constantinople_hs_decision_confirm:0 "Joromaborg shall be [ROOT.Char.GetFaith.HighGodName]'s seat."

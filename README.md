@@ -36,7 +36,7 @@ Tenets
 - **Blðt**
 - **Sanctity of Nature**
 
-[u]Todos[/u]: 
+*Todos*: 
 - **alternative Götternamen & localization** 
 
 #### Óðinstru
@@ -63,6 +63,10 @@ If the heir (expected) give him the honor and succeed, he will get a unique Trai
 ### Divine Conquest 
 Add Rome as Holysite\
 Avaliable for: Forn Siðr, Asatru, Óðinstru
+
+### Constantinople's New Order 
+Add Rome as Holysite\
+Avaliable for: Forn Siðr, Asatru, Heiðinn
 
 
 

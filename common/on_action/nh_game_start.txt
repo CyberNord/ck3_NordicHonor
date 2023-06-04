@@ -10,11 +10,22 @@ on_game_start = {
 
 nh_on_game_start = {
 	effect = {
-		faith:norse_pagan = { deactivate_holy_site = joromaborg }
+		faith:norse_pagan = { 
+			deactivate_holy_site = joromaborg 
+			deactivate_holy_site = miklagard 
+		}
+
 		faith:forn_sidr_pagan = { deactivate_holy_site = joromaborg }
-		faith:ginnregla_pagan = { deactivate_holy_site = joromaborg }
-		faith:natturugudtruar_pagan = { deactivate_holy_site = joromaborg }
-		faith:odinstru_pagan = { deactivate_holy_site = joromaborg }
-		faith:heidinn_pagan = { deactivate_holy_site = joromaborg }
+
+		faith:ginnregla_pagan = { }
+
+		faith:natturugudtruar_pagan = { }
+
+		faith:odinstru_pagan = { 
+			deactivate_holy_site = joromaborg
+			deactivate_holy_site = miklagard 
+		}
+		
+		faith:heidinn_pagan = { }
 	}
 }

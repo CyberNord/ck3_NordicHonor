@@ -1,3 +1,5 @@
 ﻿l_english:
  nick_nh_joromaborg:0 "Rome's Scourge"
  nick_nh_joromaborg_desc:0 "This name was bestowed upon this warrior for their relentless and devastating assault on the mighty city of Rome, reducing it to ruins and establishing it as a revered temple dedicated to [ROOT.Char.GetFaith.HighGodName]."
+ nick_nh_miklagard:0 "The Varangian Storm"
+ nick_nh_miklagard_desc:0 "This Character earned his fearsome nickname through relentless campaigns and ferocious battles, leading his Viking warriors to conquer Constantinople with unparalleled might. His indomitable spirit and tactical brilliance made him a force to be reckoned with, leaving a trail of victory and awe in his wake. Tales of his audacity and prowess in battle spread far and wide, forever etching his name into the annals of Norse history."

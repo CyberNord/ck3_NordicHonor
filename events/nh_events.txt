@@ -378,11 +378,40 @@ nh.1001 ={
 		
 		root = {
 			give_nickname = nick_nh_joromaborg
+			# TODO trait for conquering 
 		}
 	}
 
 	option = {
 		name = nh.1001.option.accept.desc
+
+		ai_chance = {base = 100}
+	}
+}
+
+# miklagard event
+nh.1002 ={
+	type = character_event
+	title = nh.1002.t
+	desc = nh.1002.desc
+	theme = dynasty
+
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+
+	immediate = {
+		play_music_cue = "mx_cue_epic_sacral_moment"
+		
+		root = {
+			give_nickname = nick_nh_miklagard
+			# TODO trait for conquering 
+		}
+	}
+
+	option = {
+		name = nh.1002.option.accept.desc
 
 		ai_chance = {base = 100}
 	}
