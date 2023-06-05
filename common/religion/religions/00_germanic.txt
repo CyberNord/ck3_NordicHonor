@@ -40,13 +40,24 @@
 		sins = { craven deceitful forgiving weak }
 	}
 
+	# yes Íí Áá ð Úú Þ
+	# no o
 	reserved_male_names = {
-		Anund AsbjO_rn Aslak Audun Bagge Balder Brage Egil Emund Frej Gnupa Gorm Gudmund GudrO_d Hardeknud Helge Odd Orm
-		Orvar Ottar Rikulfr Rurik SigbjO_rn StyrbjO_rn Starkad Styrkar SA_mund SO_lve SO_rkver Thorolf Tjudmund Toke Tolir
-		TorbjO_rn Torbrand Torfinn Torgeir Toste Tyke
+		Ásgeirr Arni Arnarr Anund AsbjO_rn Aslak Audun Ásmundr Bagge Balder Brage Birgir Brandr 
+		Eyvindr Einar Einriði Egil Eiríkr Eilífr Emund Eysteinn Eydal Fjolnir Frej Fróði 
+		Gunnarr Gnupa Gorm Gudmund GudrO_d Geirr Guðmundr Gísl Grímr Geirmundr Gauti Geirfinnr Gestr
+		Haraldr Hardeknud Helge Hjálmarr Hákon Háki Hálfdanr Hrólfr Horðr Hogni Hrafnar Hjortur Huginn Hjalti
+		Ívarr Ingvarr Ingi Knútr Kolbeinn Kári Ketill Leifr Magni Njorðr 
+		Odd Orm Orvar Ottar Óláfr Ormr Oddr Óskar Ógmundr Þorsteinn Þorkell Þorvarðr Þorbjorn Rikulfr Rurik Rognvaldr Reginn Ragnar
+		Sigurðr SigbjO_rn StyrbjO_rn Starkad Styrkar Stígandr SA_mund SO_lve SO_rkver Sveinn Steinn Sigmundr Skúli Sindri Skapti
+		Tryggvi Thorolf Tjudmund Toke Tolir TorbjO_rn Torbrand Torfinn Torgeir Toste Tyke Úlfr Ubbe Víðarr Viðurr Váli Valdamarr Vífill
 	}
 	reserved_female_names = {
-		Aslaug Bothild BjO_rg Freja Grima Gytha KrA_ka Malmfrid Thora Thordis Thyra Ragnfrid Ragnhild Svanhild Ulvhilde
+		Aslaug Áslaug Ástríðr Ásdís Álfhildr Bothild BjO_rg Brynhildr Dagrún Drífðr Eiríka Eydís 
+		Freja Fríða Gulla Grima Gísla Gytha Gudrún Guðný Guðríðr Gunnhildr Gullrond Geirhildr Gæiða Geirríðr Gyða Geirlaug Gróa Gyða Gísladís
+		Hallgerðr Hildr Hildigunnr Hallveig Helga Herbjorg Honn Hervor Hold Herbjorg Ingridr Ingibjorg Ísgerðr Inga JO_runn Jorð KrA_ka Katla Lína Malmfrid 
+		Ólof Ósk Þóra Þórdís Þuríðr Þorbjorg Þórveig Þorgerðr Þórgunnr Þórhildr Ragnfrid Ragnfríðr Ragnhild Ragnhildr Rannveig Rognhildr Rán Rúna Rósa
+		Svanhild Sigridr Sigríðr Sigurðr Solveig Sólveig Steinvor Thora Thordis Thyra Tófa Thorgunna Ulvhilde Unnr Vilhjálmr Yrsa Ylfa
 	}
 
 	custom_faith_icons = {
