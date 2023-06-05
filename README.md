@@ -5,6 +5,8 @@
 ## Faiths 
 ### Germanic Religion Group
 
+- **added more religion specific names**
+
 #### Ásatrú (Vanilla)
 (no Changes) 
 
