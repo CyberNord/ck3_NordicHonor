@@ -378,13 +378,13 @@ nh.1001 ={
 		
 		root = {
 			give_nickname = nick_nh_joromaborg
-			# TODO trait for conquering 
+			add_trait = crusader_king
 		}
 	}
 
 	option = {
 		name = nh.1001.option.accept.desc
-
+		
 		ai_chance = {base = 100}
 	}
 }
@@ -406,7 +406,7 @@ nh.1002 ={
 		
 		root = {
 			give_nickname = nick_nh_miklagard
-			# TODO trait for conquering 
+			add_trait = crusader_king
 		}
 	}
 
