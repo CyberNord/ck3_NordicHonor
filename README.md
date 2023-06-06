@@ -5,8 +5,8 @@
 ## Faiths 
 ### Germanic Religion Group
 
-- **added more religion specific names**
-- **added special doctrine for germanic faiths**
+- **more religion specific names**
+- **special doctrine for germanic faiths**
 
 #### Ásatrú (Vanilla)
 (no Changes) 
