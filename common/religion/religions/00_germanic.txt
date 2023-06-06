@@ -259,6 +259,9 @@
 				doctrine = tenet_bhakti
 				fallback_doctrine = tenet_ancestor_worship
 			}
+
+			# germanic faith group
+			doctrine = special_faith_has_germanic_heritage
 		}
 
 		# Forn Siðr (North German)
@@ -284,6 +287,9 @@
 				fallback_doctrine = tenet_human_sacrifice
 			}
 			doctrine = tenet_esotericism
+
+			# germanic faith group
+			doctrine = special_faith_has_germanic_heritage
 
 			localization = {
 				#HighGodName
@@ -343,13 +349,16 @@
 			doctrine = unreformed_faith_doctrine
 
 			doctrine = tenet_astrology
+			doctrine = tenet_communal_identity
 			# Bhakti, else Ancestor Worship.
 			doctrine_selection_pair = {
 				requires_dlc_flag = the_northern_lords
 				doctrine = tenet_bhakti
 				fallback_doctrine = tenet_ancestor_worship
 			}
-			doctrine = tenet_communal_identity
+
+			# germanic faith group
+			doctrine = special_faith_has_germanic_heritage
 
 			# other tenets  
 			doctrine = doctrine_clerical_function_alms_and_pacification
@@ -391,6 +400,9 @@
 			}
 			doctrine = tenet_sanctity_of_nature
 
+			# germanic faith group
+			doctrine = special_faith_stadfast_heritage
+
 			# other tenets
 			doctrine = doctrine_clerical_function_alms_and_pacification
 			doctrine = doctrine_witchcraft_accepted
@@ -421,6 +433,9 @@
 				fallback_doctrine = tenet_human_sacrifice
 			}
 			doctrine = tenet_unrelenting_faith	
+
+			# germanic faith group
+			doctrine = special_faith_stadfast_heritage
 
 			#Main Group
 			doctrine = doctrine_pluralism_fundamentalist
@@ -460,6 +475,10 @@
 				doctrine = tenet_gruesome_festivals
 				fallback_doctrine = tenet_human_sacrifice
 			}
+
+			# germanic faith group
+			doctrine = special_faith_has_germanic_heritage
+
 			localization = {
 				#HighGodName
 				HighGodName = heidinn_high_god_name

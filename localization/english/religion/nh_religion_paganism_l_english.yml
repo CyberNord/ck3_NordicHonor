@@ -17,6 +17,21 @@
  holy_site_hallstatt_name:0 "Hallstatt"
  holy_site_hallstatt_effect_name:0 "From [holy_site|E] #weak ($holy_site_hallstatt_name$)#!"
 
+# Heritages
+ has_special_heritage_name:0 "Nordic Similarity"
+ special_faith_has_germanic_heritage_name:0 "Nordic Faith"
+ special_faith_has_germanic_heritage_desc:0 "We praise the same gods with different names, so we shall not spill the blood of our brothers in faith."
+ doctrine_parameter_hostility_override_special_faith_has_germanic_heritage: "Considers, and is considered by, other [faiths|E] with the #V $special_faith_has_germanic_heritage_name$#! [doctrine|E] as [GetHostilityLevelName( TOKEN_PARAMETER.GetIntValue )|V]"
+ 
+ special_faith_stadfast_heritage_name:0 "Staðfast"
+ special_faith_stadfast_heritage_desc:0 "In our unwavering conviction, we proudly assert our path as the sole truth, looking down to those who deviate from our way"
+ doctrine_parameter_fervor_per_holy_site:0 "Holy sites increase fervor." 
+ doctrine_parameter_hostility_override_special_faith_stadfast_heritage: "Considers, and is considered by, other [faiths|E] with the #V $special_faith_stadfast_heritage_name$#! [doctrine|E] as [GetHostilityLevelName( TOKEN_PARAMETER.GetIntValue )|V]"
+ 
+ special_faith_no_special_heritage_name:0 "None"
+ special_faith_no_special_heritage_desc:0 "End the bond to other believers of the Allfather."
+ doctrine_parameter_no_effect_removed_upon_creation:0 "The nordic similarity will be removed upon creation."
+
 # Forn Siðr (North German)
  forn_sidr_pagan:0 "Forn Siðr"
  forn_sidr_pagan_adj:0 "Forn Siðr"
