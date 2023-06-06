@@ -6,6 +6,7 @@
 ### Germanic Religion Group
 
 - **added more religion specific names**
+- **added special doctrine for germanic faiths**
 
 #### Ásatrú (Vanilla)
 (no Changes) 
