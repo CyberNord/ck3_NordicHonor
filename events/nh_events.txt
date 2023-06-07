@@ -375,11 +375,11 @@ nh.1001 ={
 
 	immediate = {
 		play_music_cue = "mx_cue_epic_sacral_moment"
-		
 		root = {
 			give_nickname = nick_nh_joromaborg
 			add_trait = crusader_king
-		}
+			save_scope_as = actor		#loc
+		} 
 	}
 
 	option = {
@@ -407,6 +407,7 @@ nh.1002 ={
 		root = {
 			give_nickname = nick_nh_miklagard
 			add_trait = crusader_king
+			save_scope_as = actor		#loc
 		}
 	}
 

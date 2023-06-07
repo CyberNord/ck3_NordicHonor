@@ -232,21 +232,21 @@ nh_constantinople_hs_decision = {
 				faith = faith:norse_pagan
 				is_target_in_global_variable_list = {
 					name = unavailable_unique_decisions
-					target = flag:nh_rome_hs_norse_decision
+					target = flag:nh_constantinople_hs_norse_decision
 				}
 			}
 			AND = {
 				faith = faith:heidinn_pagan
 				is_target_in_global_variable_list = {
 					name = unavailable_unique_decisions
-					target = flag:nh_rome_hs_heidinn_decision
+					target = flag:nh_constantinople_hs_heidinn_decision
 				}
 			}
 			AND = {
 				faith = faith:odinstru_pagan
 				is_target_in_global_variable_list = {
 					name = unavailable_unique_decisions
-					target = flag:nh_rome_hs_odinstru_decision
+					target = flag:nh_constantinople_hs_odinstru_decision
 				}
 			}
 		}
@@ -293,21 +293,21 @@ nh_constantinople_hs_decision = {
 			limit = { faith = faith:norse_pagan }
 			add_to_global_variable_list = {
 				name = unavailable_unique_decisions
-				target = flag:nh_rome_hs_norse_decision
+				target = flag:nh_constantinople_hs_norse_decision
 			}
 		}
 		else_if = {
 			limit = { faith = faith:heidinn_pagan }
 			add_to_global_variable_list = {
 				name = unavailable_unique_decisions
-				target = flag:nh_rome_hs_heidinn_decision
+				target = flag:nh_constantinople_hs_heidinn_decision
 			}
 		}
 		else_if = {
 			limit = { faith = faith:odinstru_pagan }
 			add_to_global_variable_list = {
 				name = unavailable_unique_decisions
-				target = flag:nh_rome_hs_odinstru_decision
+				target = flag:nh_constantinople_hs_odinstru_decision
 			}
 		}
 
