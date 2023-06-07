@@ -108,6 +108,8 @@ nh.0001 = {
 	option = { 
 		name = nh.0001.option.nevermind.desc
 		custom_tooltip = nh.0001.option.nevermind_tooltip.desc
+
+		ai_chance = {base = 5}
 	}
 
 	# duel heir
@@ -120,6 +122,9 @@ nh.0001 = {
 
 		name = nh.0001.option.duel_player_heir.desc
 		custom_tooltip = nh.0001.option.duel_player_heir_tooltip.desc
+
+		ai_chance = {base = 50}	
+
 
 		hidden_effect = {
 			scope:player_heir_option = { save_scope_as = champion }
@@ -150,6 +155,9 @@ nh.0001 = {
 		name = nh.0001.option.duel_player_rival.desc
 		custom_tooltip = nh.0001.option.duel_player_rival_tooltip.desc
 
+
+		ai_chance = {base = 15}
+
 		hidden_effect = {
 			scope:player_rival_option = { save_scope_as = champion }
 		}
@@ -177,6 +185,9 @@ nh.0001 = {
 		trigger = {
 			exists = scope:player_vassal_option
 		}
+
+		ai_chance = {base = 30}
+
 		name = nh.0001.option.player_vassal_option.desc
 		custom_tooltip = nh.0001.option.player_vassal_option_tooltip.desc
 
