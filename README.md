@@ -53,9 +53,26 @@ Tenets
 (not implemented)
 
 ## Holy Sites
-Joromaborg = Rome\
-Mikladard = Constantinople
+New holy sites were added to fit the theme of the new added iteration of germanic faith.
 
+- **Joromaborg**\
+	(Rome) obtainable for some germanic faiths in a special event. 	
+- **Mikladard**\
+	(Constantinople) obtainable for some germanic faiths in a special event.	
+- **Trelleborg**\
+	(Skane, Sweden)  These fortresses likely had religious importance, serving as regional centers for religious activities.	
+- **Thingvellir**\
+	(Island) Thingvellir, held great importance in Norse culture. It was the site of the Alþingi, the national assembly of Iceland. It was also a gathering place for religious and cultural events.	
+- **Heiligenberg**\
+	(Grünningen, Bayern) Heiligenberg, was an ancient hilltop settlement with evidence of Germanic occupation. It was considered a sacred site and likely had religious and ceremonial significance.	
+- **Gniezno**\
+	(Poland) Gniezno, was an important religious center during the early medieval period. It is associated with both Slavic and Germanic influences.	
+- **Břeclav**\
+	(Znojmo,Czech) Břeclav, is believed to have been a significant early medieval center associated with both Germanic and Slavic influences.	
+- **Hallstatt**\
+	(Hallstadt, Austria) Hallstatt, is an ancient village which thrived in the region during the early Iron Age. While the Hallstatt culture predates the Germanic and Norse periods, it is considered an important site for understanding the prehistoric cultures of Central Europe.
+	
+				
 ## Decisions
 
 ### Last Duel
