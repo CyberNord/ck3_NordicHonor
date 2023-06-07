@@ -4,7 +4,7 @@ last_duel_decision = {
 	
 	sort_order = 81
 	selection_tooltip = last_duel_decision_tooltip
-	ai_check_interval = 300
+	ai_check_interval = 600
 
 	desc = {
 		first_valid = {
@@ -42,7 +42,7 @@ last_duel_decision = {
 		}
 	}
 
-	cooldown = { days = 150 }
+	cooldown = { days = 300 }
 
 	is_valid_showing_failures_only = {
 		is_imprisoned = no
