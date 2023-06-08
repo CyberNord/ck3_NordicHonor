@@ -428,3 +428,36 @@ nh.1002 ={
 		ai_chance = {base = 100}
 	}
 }
+
+# Náttúruguðtrúar christian peace event
+nh.1003 ={
+	type = character_event
+	title = nh.1003.t
+	desc = nh.1003.desc
+	theme = diplomacy
+
+	left_portrait = {
+		character = root
+		animation = personality_forgiving
+	}
+
+	immediate = {
+		play_music_cue = "mx_cue_epic_sacral_moment"
+		
+		root = {
+			give_nickname = nick_nh_peace
+			save_scope_as = actor		#loc
+		}
+
+		faith = {
+			remove_doctrine = special_faith_stadfast_heritage
+			add_doctrine = special_faith_christian_heritage
+		}
+	}
+
+	option = {
+		name = nh.1003.option.accept.desc
+
+		ai_chance = {base = 100}
+	}
+}
