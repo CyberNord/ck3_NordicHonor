@@ -332,15 +332,17 @@ nh_peace_christianity_decision = {
 	# only shown if faith is unreformed
 	is_shown = {
 		is_landed = yes	
-		faith = natturugudtruar_pagan
+		faith = faith:natturugudtruar_pagan
 		
 		#Not repeatable.
 		NOT = {
-			faith = natturugudtruar_pagan
-			is_target_in_global_variable_list = {
-				name = unavailable_unique_decisions
-				target = flag:nh_peace_christianity_decision
-			}	
+			AND = {
+				faith = faith:natturugudtruar_pagan
+				is_target_in_global_variable_list = {
+					name = unavailable_unique_decisions
+					target = flag:nh_peace_christianity_decision
+				}	
+			}
 		}
 	}
 
@@ -348,7 +350,7 @@ nh_peace_christianity_decision = {
 		highest_held_title_tier >= tier_kingdom
 
 		# unreformed
-		faith = natturugudtruar_pagan
+		faith = faith:natturugudtruar_pagan
 
 		# strong faith
 		piety_level >= 5
@@ -388,5 +390,10 @@ nh_peace_christianity_decision = {
 			name = unavailable_unique_decisions
 			target = flag:nh_peace_christianity_decision
 		}	
+	}
+
+	ai_potential = {always = yes}
+
+	ai_will_do = {base = 100}
 }
 
