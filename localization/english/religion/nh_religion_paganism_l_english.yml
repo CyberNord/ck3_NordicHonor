@@ -32,6 +32,9 @@
  special_faith_no_special_heritage_desc:0 "End the bond to other believers of the Allfather."
  doctrine_parameter_no_effect_removed_upon_creation:0 "The nordic similarity will be removed upon creation."
 
+ special_faith_christian_heritage_name:0 "Christian Acceptance"
+ special_faith_christian_heritage_desc:0 "We have to accept that Jesus Christ is indeed a powerful beeing."
+
 # Forn Siðr (North German)
  forn_sidr_pagan:0 "Forn Siðr"
  forn_sidr_pagan_adj:0 "Forn Siðr"

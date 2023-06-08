@@ -39,3 +39,8 @@
  nh.1002.t:0 "Constantinople's New Order"
  nh.1002.desc:0 "As I stand amidst the fallen walls of Constantinople, a sense of triumph and reverence consumes me.\n This great city, once adorned with Varangian warriors, shall now be claimed as our own.\n\n The Hagia Sophia, a symbol of Byzantine might, shall become a grand temple where [actor.GetFaith.GetName] from far and wide will gather to honor [actor.GetFaith.HighGodName]. Constantinople, now baptized in the light of [actor.GetFaith.PantheonTerm], now shall be known as Mikligarðr, a testament to the resurgence of our Norse traditions. Now and forever!"
  nh.1002.option.accept.desc:0 "The ancient City is ours now!"
+
+ # Peace with Christianity [nh.1003]
+ nh.1003.t:0 "A Pact of Coexistence"
+ nh.1003.desc:0 "In a bold move towards religious harmony, [actor.GetFirstName], the [actor.GetTitle] of [actor.GetRealm], has decided to forge a historic pact of coexistence with the Christian faith. Through diplomatic negotiations and mutual respect, a declaration of peace and tolerance has been proclaimed. This momentous occasion marks a turning point in the religious landscape, as the realm embraces a newfound era of harmony between Norse traditions and the Christian beliefs. The future holds the promise of shared prosperity and understanding, as the realm sets forth on a path of unity and cooperation."
+ nh.1003.option.accept.desc:0 "Ragnarök no more."
