@@ -2,4 +2,5 @@
 # NordicHonorNicknames
 nick_nh_joromaborg = {}
 nick_nh_miklagard = {}
+nick_nh_peace = {}
 
