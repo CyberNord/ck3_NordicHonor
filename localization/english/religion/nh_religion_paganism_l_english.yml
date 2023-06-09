@@ -35,6 +35,9 @@
  special_faith_christian_heritage_name:0 "Christian Acceptance"
  special_faith_christian_heritage_desc:0 "We have to accept that Jesus Christ is indeed a powerful beeing."
 
+ special_faith_traitor_heritage_name:0 "Siðbrytari"
+ special_faith_traitor_heritage_desc:0 "The world is changing and so do we, the christians could be powerful Allies if we accept some of their traditions"
+
 # Forn Siðr (North German)
  forn_sidr_pagan:0 "Forn Siðr"
  forn_sidr_pagan_adj:0 "Forn Siðr"
