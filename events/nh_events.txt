@@ -450,8 +450,18 @@ nh.1003 ={
 		}
 
 		faith = {
+
 			remove_doctrine = special_faith_stadfast_heritage
-			add_doctrine = special_faith_christian_heritage
+			add_doctrine = special_faith_traitor_heritage
+
+			if = {
+				limit = {has_doctrine = tenet_bhakti}
+				remove_doctrine = tenet_bhakti
+			} else = {
+				remove_doctrine = tenet_astrology
+			}
+			add_doctrine = tenet_christian_syncretism
+			pagan_roots = yes
 		}
 	}
 

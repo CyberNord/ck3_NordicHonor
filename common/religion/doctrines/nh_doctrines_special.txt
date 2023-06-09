@@ -23,7 +23,7 @@
 	
 	# Staðfast
 	special_faith_stadfast_heritage = {
-		is_shown = {
+		OR = {
 			has_doctrine = special_faith_has_germanic_heritage
 			has_doctrine = special_faith_stadfast_heritage
 		}
@@ -36,9 +36,28 @@
 			hostility_override_special_faith_stadfast_heritage = 3
 		}
 	}
+
+	special_faith_no_special_heritage = {
+			is_shown = {
+				OR = {
+					has_doctrine = special_faith_has_germanic_heritage
+					has_doctrine = special_faith_stadfast_heritage
+				}
+			}
+			parameters = {
+				no_effect_removed_upon_creation = yes
+			}
+	}
 	
-	# hidden heritage activated via event
+	# hidden heritage (currently not working as intended )
 	special_faith_christian_heritage = {
+		is_shown = {
+			has_doctrine = special_faith_has_germanic_heritage
+			has_doctrine = special_faith_stadfast_heritage
+		} 
+		piety_cost = {
+			value = 200000
+		}
 		parameters = {
 			hostility_override_special_doctrine_is_christian_faith = 2
 			#For loc:
@@ -48,17 +67,28 @@
 			#Sync this to syncretic_mutual_opinion_bonus_value
 			opinion_of_christian_syncretic_recipient_opinion_active = 30
 			
-			# TODO intermarriage 
+			# does not work faith inter marriage
+			# hostility_others = 0 
 
 			hostility_override_special_faith_has_germanic_heritage = 3
 			hostility_override_special_faith_stadfast_heritage = 3
 		}
 	}
 
-
-	special_faith_no_special_heritage = {
+	# hidden heritage 
+	special_faith_traitor_heritage = {
+		is_shown = {
+			has_doctrine = special_faith_has_germanic_heritage
+			has_doctrine = special_faith_stadfast_heritage
+		} 
+		piety_cost = {
+			value = 200000
+		}
 		parameters = {
-			no_effect_removed_upon_creation = yes
+			hostility_override_special_faith_has_germanic_heritage = 3
+			hostility_override_special_faith_stadfast_heritage = 3
+			mendicant_preachers_conversion_active = yes
+			tenet_adaptive_conversion_resistance = yes
 		}
 	}
 }
