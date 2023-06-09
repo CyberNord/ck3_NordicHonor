@@ -88,6 +88,10 @@ Avaliable for: Forn Siðr, Asatru, Óðinstru
 Add Rome as Holysite\
 Avaliable for: Forn Siðr, Asatru, Heiðinn
 
+### Religious Coexistence
+Make peace with christian faith\
+Avaliable for: Náttúruguðtrúar
+
 
 
 
