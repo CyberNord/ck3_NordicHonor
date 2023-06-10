@@ -4,11 +4,12 @@ on_game_start = {
 	events = {
 	}
 	on_actions = {
-		nh_on_game_start
+		nh_on_game_start_hs
+		nh_on_game_start_faith
 	}
 }
 
-nh_on_game_start = {
+nh_on_game_start_hs = {
 	effect = {
 		faith:norse_pagan = { 
 			deactivate_holy_site = joromaborg 
@@ -27,5 +28,36 @@ nh_on_game_start = {
 		}
 		
 		faith:heidinn_pagan = { }
+	}
+}
+
+nh_on_game_start_faith = {
+	effect = {
+		if = {
+			limit = {
+				game_start_date <= 993.1.1
+			}
+
+			# Náttúruguðtrúar start holdings
+			title:c_sjeltie = { set_county_faith = faith:natturugudtruar_pagan }
+			title:c_ubmejeiednuo = { set_county_faith = faith:natturugudtruar_pagan }
+			title:c_pite = { set_county_faith = faith:natturugudtruar_pagan }
+			title:c_jahkamakke = { set_county_faith = faith:natturugudtruar_pagan }
+			title:c_biton = { set_county_faith = faith:natturugudtruar_pagan }
+			title:c_angermanland = { set_county_faith = faith:natturugudtruar_pagan }
+
+			# Giñnregla
+			title:c_sudurland = { set_county_faith = faith:ginnregla_pagan }
+			title:c_vestisland = { set_county_faith = faith:ginnregla_pagan }
+			title:c_austisland = { set_county_faith = faith:ginnregla_pagan }
+			title:c_nordrland = { set_county_faith = faith:ginnregla_pagan }
+
+			# Heiðinn
+			title:c_korsun = { set_county_faith = faith:heidinn_pagan }
+			title:c_kiev = { set_county_faith = faith:heidinn_pagan }
+			title:c_chornobyl = { set_county_faith = faith:heidinn_pagan }
+			title:c_zvyahel = { set_county_faith = faith:heidinn_pagan }
+			title:c_zhytomyr = { set_county_faith = faith:heidinn_pagan }
+		}
 	}
 }
