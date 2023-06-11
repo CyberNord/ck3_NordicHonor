@@ -20,3 +20,9 @@
  nh_peace_christianity_decision_desc:0 "With careful consideration and wisdom, [ROOT.Char.GetFirstName], the [ROOT.Char.GetTitle] of [ROOT.Char.GetRealm], has made the momentous decision to enact a Religious Coexistence Edict. This groundbreaking decree establishes a framework for peaceful coexistence between the Norse traditions and the Christian faith. It guarantees the freedom of religious practice and protects the rights of both believers, fostering an environment of mutual respect and understanding. By embracing this edict, the realm takes a significant step towards religious harmony, setting an example for future generations and ensuring a prosperous and tolerant future for all."
  nh_peace_christianity_decision_tooltip:0 "You will make peace with the Christians and enable interfaith marriages. Other nordic pagans might not like it"
  nh_peace_christianity_decision_confirm:0 "Call the priests!"
+
+ nh_convert_whole_realm_to_feudalism_decision:0 "Another way to adopt [ROOT.Char.Custom('GetTribalReformGovernment')|U]ism."
+ nh_convert_whole_realm_to_feudalism_decision_desc:0 "For [ROOT.Char.GetPrimaryTitle.GetNameNoTierNoTooltip] to keep expanding and developing we must leave some of the old ways behind and adopt a new method of governance, together."
+ nh_convert_whole_realm_to_feudalism_decision_confirm:0 "Adopt [ROOT.Char.Custom('GetTribalReformGovernment')|U] Ways"
+ nh_convert_whole_realm_to_feudalism_decision_tooltip:0 "Change [government|E] type by adopting [feudalism|E]"
+

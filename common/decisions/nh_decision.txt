@@ -397,3 +397,98 @@ nh_peace_christianity_decision = {
 	ai_will_do = {base = 100}
 }
 
+nh_convert_whole_realm_to_feudalism_decision = {
+	picture = "gfx/interface/illustrations/decisions/nh_pagan_feudalize.dds"
+	major = yes
+	desc = nh_convert_whole_realm_to_feudalism_decision_desc
+
+	ai_check_interval = 36
+
+	is_shown = {
+		AND ={
+			government_has_flag = government_is_tribal
+			faith = { has_doctrine_parameter = unreformed }
+		}
+		OR = {
+			culture = { has_cultural_pillar = heritage_central_germanic }
+			culture = { has_cultural_pillar = heritage_west_germanic }
+			culture = { has_cultural_pillar = heritage_north_germanic }
+		}
+		OR = {
+			is_independent_ruler = yes
+			AND = {
+				is_independent_ruler = no
+				liege = {
+					NOR = {
+						government_has_flag = government_is_feudal
+						government_has_flag = government_is_clan
+					}
+				}
+			}
+		}
+	}
+
+	is_valid = {
+		has_realm_law = tribal_authority_3
+		custom_description = {
+			text = nh_faith_is_unreformed
+			subject = root
+			faith = { has_doctrine_parameter = unreformed }
+		}
+		prestige_level >= 5
+		capital_province.county = {
+			development_level >= nh_convert_to_feudalism_development_requirement
+		}
+
+		custom_description = { #You need to have 85% of all (non-regional/unique) tribal innovations!
+			text = nh_has_all_tribal_innovation
+			subject = root.culture
+			culture = {
+				calc_true_if = {
+					amount >= 12
+					has_innovation = innovation_motte
+					has_innovation = innovation_catapult
+					has_innovation = innovation_barracks
+					has_innovation = innovation_mustering_grounds
+					has_innovation = innovation_bannus
+					has_innovation = innovation_quilted_armor
+					has_innovation = innovation_gavelkind
+					has_innovation = innovation_crop_rotation
+					has_innovation = innovation_city_planning
+					has_innovation = innovation_casus_belli
+					has_innovation = innovation_plenary_assemblies
+					has_innovation = innovation_ledger
+					has_innovation = innovation_development_01
+					has_innovation = innovation_currency_01
+				}
+			}
+		}
+	}
+
+	cost = {
+		prestige = 8000
+	}
+
+	effect = {
+		trigger_event = major_decisions.0001
+		save_scope_as = actor
+		convert_whole_realm_to_feudalism_effect = yes
+		hidden_effect = {
+			every_vassal = {
+				trigger_event = {
+					id = major_decisions.0002
+					days = 3
+				}
+			}
+		}
+	}
+
+	ai_potential = {
+		NOT = { has_title = title:e_mongol_empire } #Stop the Mongols from slowing their conquest.
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}
+
