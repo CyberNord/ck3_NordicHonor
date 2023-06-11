@@ -123,7 +123,7 @@ nh.0001 = {
 		name = nh.0001.option.duel_player_heir.desc
 		custom_tooltip = nh.0001.option.duel_player_heir_tooltip.desc
 
-		ai_chance = {base = 50}	
+		ai_chance = {base = 75}	
 
 
 		hidden_effect = {
@@ -186,7 +186,7 @@ nh.0001 = {
 			exists = scope:player_vassal_option
 		}
 
-		ai_chance = {base = 30}
+		ai_chance = {base = 5}
 
 		name = nh.0001.option.player_vassal_option.desc
 		custom_tooltip = nh.0001.option.player_vassal_option_tooltip.desc
