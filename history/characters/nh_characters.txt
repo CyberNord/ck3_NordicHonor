@@ -17,3 +17,21 @@
 		}
 	}
 }
+
+180257 = {
+	867.1.1 = {
+		effect = {
+			# Give some troops 
+			spawn_army = {
+				name = event_troop_default_name
+				men_at_arms = {
+					type = huscarl
+					stacks = 5
+				}
+				location = province:4
+				origin = province:4
+				inheritable = no
+			}
+		}
+	}
+}

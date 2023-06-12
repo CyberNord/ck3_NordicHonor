@@ -59,8 +59,9 @@ nh_on_game_start_conversion = {
 			title:c_austisland = { set_county_faith = faith:ginnregla_pagan }
 			title:c_nordrland = { set_county_faith = faith:ginnregla_pagan }
 
-			character:180257 = {set_character_faith = faith:ginnregla_pagan}
+			character:180257 = {set_character_faith = faith:ginnregla_pagan}	# pagan
 			character:180258 = {set_character_faith = faith:ginnregla_pagan}
+			character:168609 = {set_character_faith = faith:ginnregla_pagan}	# needs christ decision
 			character:168331 = {set_character_faith = faith:ginnregla_pagan}
 			character:168332 = {set_character_faith = faith:ginnregla_pagan}
 			character:168333 = {set_character_faith = faith:ginnregla_pagan}
@@ -90,7 +91,6 @@ nh_on_game_start_conversion = {
 				}
 			title:c_west_riding = { 
 				set_county_faith = faith:norse_pagan
-				set_county_culture = culture:norse 
 				}	
 			title:c_inner_hebrides = { 
 				set_county_faith = faith:norse_pagan
@@ -98,13 +98,13 @@ nh_on_game_start_conversion = {
 				}	
 			title:c_argyll = { 
 				set_county_faith = faith:norse_pagan
-				set_county_culture = culture:norse 
+				# set_county_culture = culture:norse 
 				}
 
 			# Brittany
 			title:c_french_leon = { 
 				set_county_faith = faith:norse_pagan
-				set_county_culture = culture:norse 
+				# set_county_culture = culture:norse 
 				}
 		}
 	}
