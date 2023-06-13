@@ -501,39 +501,32 @@ nh_convert_to_christianity_iceland_decision = {
 	ai_check_interval = 6
 
 	is_shown = {
-		is_landed = yes
-		exists = dynasty
-		OR = {
-			religion = religion:ginnregla_pagan
-			religion = religion:norse_pagan
-		}
-		OR = {
+		is_lowborn = no
+		NAND = {
 			AND = {
-					exists = character:168609
-					this = character:168609
+				exists = character:168609
+				this = character:168609
 			}
 			AND = {
-					exists = character:180257
-					this = character:180257
+				exists = character:180257
+				this = character:180257
 			}
 		}
 
 		#Not repeatable.
-		NOT = {
-			NOR = {
-				AND = {
-					this = character:168609
-					is_target_in_global_variable_list = {
-						name = unavailable_unique_decisions
-						target = flag:nh_convert_to_christianity_iceland_fletnefir_decision
-					}
-				}	
-				AND = {
-					this = character:180257
-					is_target_in_global_variable_list = {
-						name = unavailable_unique_decisions
-						target = flag:nh_convert_to_christianity_iceland_svarson_decision
-					}
+		NOR = {
+			AND = {
+				this = character:168609
+				is_target_in_global_variable_list = {
+					name = unavailable_unique_decisions
+					target = flag:nh_convert_to_christianity_iceland_fletnefir_decision
+				}
+			}	
+			AND = {
+				this = character:180257
+				is_target_in_global_variable_list = {
+					name = unavailable_unique_decisions
+					target = flag:nh_convert_to_christianity_iceland_svarson_decision
 				}
 			}
 		}
@@ -553,6 +546,10 @@ nh_convert_to_christianity_iceland_decision = {
 	effect = {
 		trigger_event = nh.1004
 		save_scope_as = actor
+
+		dynasty = {
+			add_dynasty_prestige = 250
+		}
 		
 		if = {
 			limit = { this = character:168609 }
