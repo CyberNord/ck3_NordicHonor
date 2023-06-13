@@ -7,6 +7,7 @@
 
 - **more religion specific names**
 - **special doctrine for germanic faiths**
+- **unique way to go feudal without reforming the faith**
 
 #### Ásatrú (Vanilla)
 (no Changes) 
@@ -19,28 +20,25 @@ Tenets
 - **Esotericism**
 
 #### Giñnregla
-It represents the Iclandic pantheon of gods, it endured until the 11th century. This religion will be the dominant religion in Iceland. (todo)\
+It represents the Iclandic pantheon of gods, it endured until the 11th century. This religion will be the dominant religion in Iceland.\
 Tenets
 - **Astrology**
 - **Personal Deities** 
 - **Ancestor Worship**
 
 #### Heiðinn
-It represents the slavic-germanic pantheon of gods, when the scandinavians settled the Rus it intermixed. This religion will be the dominant religion in Kiev. (todo)\
+It represents the slavic-germanic pantheon of gods, when the scandinavians settled the Rus it intermixed. This religion will be the dominant religion in Kiev.\
 Tenets
 - **Sanctity of Nature**
 - **Warmonger** 
 - **Blót**
 
 #### Náttúruguðtrúar
-It represents the sami-norse pantheon which is focused on nature. Its completely fictional. Some counties in Sami will follow this religion.(todo)\
+It represents the sami-norse pantheon which is focused on nature. Its completely fictional. Some counties in Sami will follow this religion.\
 Tenets
 - **Ancestor Worship** 
 - **Blðt**
 - **Sanctity of Nature**
-
-*Todos*: 
-- **alternative Götternamen & localization** 
 
 #### Óðinstru
 It represents a very fundamental pantheon which accepts no peace with the abrahamic religions. Its completely fictional. It will spawn via an event. (todo)\
@@ -91,6 +89,10 @@ Avaliable for: Forn Siðr, Asatru, Heiðinn
 ### Religious Coexistence
 Make peace with christian faith\
 Avaliable for: Náttúruguðtrúar
+
+### Deciding the religious future
+Decide whether Iceland become Christian or stays true to the old ways.\ 
+Avaliable for: Giñnregla
 
 
 
