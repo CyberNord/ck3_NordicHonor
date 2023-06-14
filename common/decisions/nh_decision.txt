@@ -502,6 +502,10 @@ nh_convert_to_christianity_iceland_decision = {
 
 	is_shown = {
 		is_lowborn = no
+		OR = {
+     		faith = faith:ginnregla_pagan
+     		faith = faith:norse_pagan
+		}
 		NAND = {
 			AND = {
 				exists = character:168609

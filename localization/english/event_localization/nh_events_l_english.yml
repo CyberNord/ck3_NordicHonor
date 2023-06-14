@@ -47,7 +47,7 @@
 
   # Iceland pagan/christianity [nh.1004 to .1006]
  nh.1003.t:0 "Deciding the religious future"
- nh.1003.desc:0 "Todo"
- nh.1004.option.pagan.desc:0 "stay pagan"
- nh.1004.option.catholic.desc:0 "become catholic"
- nh.1004.option.insular.desc:0 "become insular"
+ nh.1003.desc:0 "A momentous choice stands before us, stirring the depths of our souls. The winds carry whispers of a new deity and the power it holds. Yet, to tread this path means forsaking the ancient ways, bidding farewell to Odin and the gods who have guided us. Will we embrace this new faith, or remain steadfast in the traditions of our forefathers?"
+ nh.1004.option.pagan.desc:0 "Remain Pagan"
+ nh.1004.option.catholic.desc:0 "Convert to Catholicism"
+ nh.1004.option.insular.desc:0 "Convert to Insular Christianity"
