@@ -472,7 +472,7 @@ nh.1003 ={
 	}
 }
 
-#
+# Giñnregla Deciding the religious future
 nh.1004 = {
 	type = character_event
 	title = nh.1004.t
