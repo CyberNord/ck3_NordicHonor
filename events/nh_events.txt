@@ -474,7 +474,46 @@ nh.1003 ={
 
 #
 nh.1004 = {
-	TODO
+	type = character_event
+	title = nh.1004.t
+	desc = nh.1004.desc
+	theme = dynasty
+
+	right_portrait = {
+		character = actor
+		animation = personality_forgiving # ToDo
+	}
+
+	left_portrait = {
+		character = faith:catholic.religious_head
+		animation = personality_forgiving # ToDo
+	}
+
+	immediate = {
+		root.faith = {
+			save_scope_as = old_faith
+		}
+	}
+
+	option = {
+		name = nh.1004.option.pagan.desc
+		ai_chance = {base = 30}
+	}
+
+	option = {
+		name = nh.1004.option.catholic.desc
+		ai_chance = {base = 0}
+		root = {set_character_faith = faith:catholic}
+		trigger_event = {on_faith_conversion}
+	}
+
+	option = {
+		name = nh.1004.option.insular.desc
+		ai_chance = {base = 0}
+		root = {set_character_faith = faith:insular_celtic}
+		trigger_event = {on_faith_conversion}
+	}
+
 }
 
 nh.1005 = {
