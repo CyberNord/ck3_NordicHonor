@@ -91,8 +91,9 @@ Make peace with christian faith\
 Avaliable for: Náttúruguðtrúar
 
 ### Deciding the religious future
-Decide whether Iceland become Christian or stays true to the old ways.\ 
-Avaliable for: Giñnregla
+Decide whether Iceland become Christian or stays true to the old ways.\
+Avaliable for: Giñnregla\
+878 start "Chieftes Auðr af Vestland" and "Chieftain Garðar af Austrland"
 
 
 
