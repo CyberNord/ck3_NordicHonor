@@ -44,3 +44,10 @@
  nh.1003.t:0 "A Pact of Coexistence"
  nh.1003.desc:0 "In a bold move towards religious harmony, [actor.GetFirstName], the [actor.GetTitle] of [actor.GetRealm], has decided to forge a historic pact of coexistence with the Christian faith. Through diplomatic negotiations and mutual respect, a declaration of peace and tolerance has been proclaimed. This momentous occasion marks a turning point in the religious landscape, as the realm embraces a newfound era of harmony between Norse traditions and the Christian beliefs. The future holds the promise of shared prosperity and understanding, as the realm sets forth on a path of unity and cooperation."
  nh.1003.option.accept.desc:0 "Ragnarök no more."
+
+  # Iceland pagan/christianity [nh.1004 to .1006]
+ nh.1003.t:0 "Deciding the religious future"
+ nh.1003.desc:0 "A momentous choice stands before us, stirring the depths of our souls. The winds carry whispers of a new deity and the power it holds. Yet, to tread this path means forsaking the ancient ways, bidding farewell to Odin and the gods who have guided us. Will we embrace this new faith, or remain steadfast in the traditions of our forefathers?"
+ nh.1004.option.pagan.desc:0 "Remain Pagan"
+ nh.1004.option.catholic.desc:0 "Convert to Catholicism"
+ nh.1004.option.insular.desc:0 "Convert to Insular Christianity"

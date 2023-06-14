@@ -3,4 +3,8 @@
 nick_nh_joromaborg = {}
 nick_nh_miklagard = {}
 nick_nh_peace = {}
+nick_nh_pagan_special = {}
+nick_nh_catholic_special = {}
+nick_nh_insular_special = {}
+nick_nh_empty = {}
 

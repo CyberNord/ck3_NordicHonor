@@ -471,3 +471,165 @@ nh.1003 ={
 		ai_chance = {base = 100}
 	}
 }
+
+#
+nh.1004 = {
+	type = character_event
+	title = nh.1004.t
+	desc = nh.1004.desc
+	theme = dynasty
+
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}
+
+	right_portrait = {
+		character = faith:catholic.religious_head
+		animation = personality_zealous
+	}
+
+	immediate = {
+		root.faith = {
+			save_scope_as = old_faith
+		}
+	}
+
+	option = {
+		name = nh.1004.option.pagan.desc
+		ai_chance = {base = 30}
+		give_nickname = nick_nh_pagan_special
+		if = {
+			limit = { has_trait = cynical }
+			remove_trait = cynical
+		} 
+		add_trait = zealous
+		dynasty = {
+			add_dynasty_prestige = 250
+		}
+		ai_chance = {
+			base = 0
+			modifier = { 
+				add = -40
+				has_trait = chaste
+			}
+			modifier = { 
+				add = -40
+				has_trait = compassionate
+			}
+			modifier = { 
+				add = -40
+				has_trait = forgiving
+			}
+			modifier = { 
+				add = 60
+				has_trait = brave
+			}
+			modifier = { 
+				add = 60
+				has_trait = vengeful
+			}
+			modifier = { 
+				add = 60
+				has_trait = wrathful
+			}
+			modifier = { 
+				add = 100
+				has_trait = zealous
+			}
+			modifier = { 
+				add = -50
+				has_trait = cynical
+			}
+		}
+	}
+
+	option = {
+		name = nh.1004.option.catholic.desc
+		give_nickname = nick_nh_catholic_special
+		root = {set_character_faith = faith:catholic}
+		trigger_event = { on_action = on_faith_conversion }
+		ai_chance = {
+			base = 0
+			modifier = { 
+				add = 60
+				has_trait = craven
+			}
+			modifier = { 
+				add = 30
+				has_trait = chaste
+			}
+			modifier = { 
+				add = 30
+				has_trait = compassionate
+			}
+			modifier = { 
+				add = 30
+				has_trait = forgiving
+			}
+			modifier = { 
+				add = -40
+				has_trait = brave
+			}
+			modifier = { 
+				add = -40
+				has_trait = vengeful
+			}
+			modifier = { 
+				add = -40
+				has_trait = wrathful
+			}
+			modifier = { 
+				add = -90
+				has_trait = zealous
+			}
+			modifier = { 
+				add = -10
+				has_trait = cynical
+			}
+		}
+
+	}
+
+	option = {
+		name = nh.1004.option.insular.desc
+		give_nickname = nick_nh_insular_special
+		root = {set_character_faith = faith:insular_celtic}
+		trigger_event = { on_action = on_faith_conversion }
+		ai_chance = {
+			base = 0
+			modifier = { 
+				add = 30
+				has_trait = calm
+			}
+			modifier = { 
+				add = 30
+				has_trait = humble
+			}
+			modifier = { 
+				add = 30
+				has_trait = temperate
+			}
+			modifier = { 
+				add = -40
+				has_trait = brave
+			}
+			modifier = { 
+				add = -40
+				has_trait = vengeful
+			}
+			modifier = { 
+				add = -40
+				has_trait = wrathful
+			}
+			modifier = { 
+				add = -90
+				has_trait = zealous
+			}
+			modifier = { 
+				add = -10
+				has_trait = cynical
+			}
+		}
+	}
+}
