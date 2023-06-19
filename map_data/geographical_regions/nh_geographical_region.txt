@@ -1,0 +1,6 @@
+﻿custom_old_saxia = {
+	duchies = {
+		#k_east_francia
+		d_holstein d_ostfalen d_angria d_westfalen d_anhalt
+	}
+}

@@ -30,3 +30,9 @@
  nh_convert_to_christianity_iceland_decision_desc:0 "It is time to decide wheter we accept or abolish the christian god"
  nh_convert_to_christianity_iceland_decision_confirm:0 "Gather the goðar"
  nh_convert_to_christianity_iceland_decision_tooltip:0 "You will be able to decide between christian faiths and staying true tue the gods"
+
+ nh_form_old_saxia_kingdom_decision: "Form Old Saxia Kingdom"
+ nh_form_old_saxia_kingdom_decision_desc: "Establish the ancient pagan kingdom of Saxia and restore the traditions of our ancestors."
+ nh_form_old_saxia_kingdom_decision_confirm: "Create Old Saxia Kingdom"
+ nh_form_old_saxia_kingdom_decision_tooltip: "This decision will create the Old Saxia Kingdom and revive the ancient pagan ways of our people."
+

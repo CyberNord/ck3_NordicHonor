@@ -465,6 +465,13 @@ nh_convert_whole_realm_to_feudalism_decision = {
 		}
 	}
 
+	is_valid_showing_failures_only = {
+		is_capable_adult = yes
+		is_imprisoned = no
+		is_at_war = no
+		not = { exists = involved_activity }
+	}
+
 	cost = {
 		prestige = 8000
 	}
@@ -494,11 +501,14 @@ nh_convert_whole_realm_to_feudalism_decision = {
 
 nh_convert_to_christianity_iceland_decision = {
 	picture = "gfx/interface/illustrations/decisions/decision_personal_religious.dds"
-	major = yes
+	
 	desc = nh_convert_to_christianity_iceland_decision_desc
 	selection_tooltip = nh_convert_to_christianity_iceland_decision_tooltip
+	major = yes
+	ai_goal = yes
 
-	ai_check_interval = 6
+	ai_check_interval = 2
+
 
 	is_shown = {
 		is_lowborn = no
@@ -537,12 +547,19 @@ nh_convert_to_christianity_iceland_decision = {
 	}
 
 	is_valid = {
-		has_realm_law = tribal_authority_2
+		# has_realm_law = tribal_authority_2
 		custom_description = {
 			text = nh_faith_is_unreformed
 			subject = root
 			faith = { has_doctrine_parameter = unreformed }
 		}
+	}
+
+	is_valid_showing_failures_only = {
+		is_capable_adult = yes
+		is_imprisoned = no
+		is_at_war = no
+		not = { exists = involved_activity }
 	}
 
 	cost = { prestige = 500 }
@@ -575,6 +592,124 @@ nh_convert_to_christianity_iceland_decision = {
 
 	ai_will_do = {
 		base = 100
+	}
+}
+
+nh_form_old_saxia_kingdom_decision = {
+	picture = "gfx/interface/illustrations/decisions/nh_form_old_saxia_kingdom_decision.dds" # todo
+
+	desc = nh_form_old_saxia_kingdom_decision_desc 
+	selection_tooltip = nh_form_old_saxia_kingdom_decision_tooltip 
+	major = yes
+	ai_check_interval = 36
+
+	is_shown = {
+		is_landed = yes
+		NOT = { exists = title:k_old_saxia.holder }
+		NOT = {  #Can only do it once.
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:flag_formed_old_saxia_kingdom
+			}
+		}
+		highest_held_title_tier <= tier_duchy
+		#Must hold land within the relevant areas directly.
+		any_held_title = {
+			tier = tier_county
+			title_province = { geographical_region = custom_old_saxia }
+		}
+	}
+
+	is_valid = {
+		#Must be suitably prestigious.
+		prestige_level >= high_prestige_level
+		#Must control saxia
+		completely_controls_region = custom_old_saxia
+		#Must be done within/near Viking age
+		NOT = {
+			culture = { has_cultural_era_or_later = culture_era_high_medieval }
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		is_capable_adult = yes
+		is_imprisoned = no
+		is_at_war = no
+		not = { exists = involved_activity }
+		#Must not be of the Karling dynasty
+		custom_description = {
+			text = "nh_form_old_saxia_dynasty_trigger"  
+			NOT = { dynasty = dynn_Karling }
+		}
+	}
+
+	cost = {
+		faith = 2000
+		prestige = 5000
+	}
+
+	effect = {
+		show_as_tooltip = {
+			form_nh_old_saxony_scripted_effect = yes
+		}
+
+		dynasty = {
+			add_dynasty_prestige = 1000
+		}
+
+		trigger_event = {
+			id = nh.1005
+		}
+		hidden_effect = {
+			add_to_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:flag_formed_old_saxia_kingdom
+			}
+			set_global_variable = {
+				name = flag_formed_old_saxia_kingdom
+				value = root
+			}
+		}
+	}
+	
+	ai_potential = {
+		prestige_level >= high_prestige_level
+	}
+
+	ai_will_do = {
+		base = 0
+		
+		modifier = {
+			add = 20
+			capital_county.title_province = { geographical_region = custom_old_saxia }
+		}
+		modifier = { 
+				add = -40
+				has_trait = chaste
+			}
+		modifier = { 
+				add = -40
+				has_trait = compassionate
+			}
+		modifier = { 
+				add = -40
+				has_trait = forgiving
+			}
+		modifier = { 
+				add = 60
+				has_trait = brave
+				capital_county.title_province = { geographical_region = custom_old_saxia }
+			}
+		modifier = { 
+				add = 60
+				has_trait = vengeful
+				capital_county.title_province = { geographical_region = custom_old_saxia }
+			}
+		modifier = { 
+				add = 60
+				has_trait = wrathful
+				capital_county.title_province = { geographical_region = custom_old_saxia }
+			}
 	}
 }
 

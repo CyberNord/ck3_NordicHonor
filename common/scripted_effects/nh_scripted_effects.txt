@@ -1,0 +1,27 @@
+﻿form_nh_old_saxony_scripted_effect ={
+	save_scope_as = scoped_ruler
+	title:k_old_saxia = { save_scope_as = old_saxia }
+	
+	#De jure shifts. 
+	title:d_holstein = { set_de_jure_liege_title = title:k_old_saxia }
+	title:d_ostfalen = { set_de_jure_liege_title = title:k_old_saxia }
+	title:d_angria = { set_de_jure_liege_title = title:k_old_saxia }
+	title:d_westfalen = { set_de_jure_liege_title = title:k_old_saxia }
+	title:d_anhalt = { set_de_jure_liege_title = title:k_old_saxia }
+	
+
+	title:k_old_saxia = { set_de_jure_liege_title = root.top_liege.primary_title }
+	create_title_and_vassal_change = {
+		type = created
+		save_scope_as = change
+		add_claim_on_loss = no
+	}
+	title:k_old_saxia = {
+		change_title_holder = {
+			holder = root
+			change = scope:change
+		}
+	}
+	resolve_title_and_vassal_change = scope:change
+	hidden_effect = { set_primary_title_to = title:k_old_saxia }
+}

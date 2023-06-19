@@ -1,0 +1,7 @@
+k_old_saxia = {
+	color = {233 150 122}
+
+	capital = c_minden
+
+	#roman = "Saxonia"
+}

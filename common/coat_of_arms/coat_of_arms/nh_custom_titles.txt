@@ -1,0 +1,10 @@
+k_old_saxia = {
+	pattern = "pattern_horizontal_split_01.dds"
+	color1 = "white"
+	color2 = "green"
+	colored_emblem = {
+		texture = "ce_norse_walknut_stora_hammars.dds"
+		color1 = "black"
+		color2 = "yellow"
+	}
+}

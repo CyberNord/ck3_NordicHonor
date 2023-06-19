@@ -46,8 +46,12 @@
  nh.1003.option.accept.desc:0 "Ragnarök no more."
 
   # Iceland pagan/christianity [nh.1004 to .1006]
- nh.1003.t:0 "Deciding the religious future"
- nh.1003.desc:0 "A momentous choice stands before us, stirring the depths of our souls. The winds carry whispers of a new deity and the power it holds. Yet, to tread this path means forsaking the ancient ways, bidding farewell to Odin and the gods who have guided us. Will we embrace this new faith, or remain steadfast in the traditions of our forefathers?"
+ nh.1004.t:0 "Deciding the religious future"
+ nh.1004.desc:0 "A momentous choice stands before us, stirring the depths of our souls. The winds carry whispers of a new deity and the power it holds. Yet, to tread this path means forsaking the ancient ways, bidding farewell to Odin and the gods who have guided us. Will we embrace this new faith, or remain steadfast in the traditions of our forefathers?"
  nh.1004.option.pagan.desc:0 "Remain Pagan"
  nh.1004.option.catholic.desc:0 "Convert to Catholicism"
  nh.1004.option.insular.desc:0 "Convert to Insular Christianity"
+
+ nh.1005.t:0 "Recreate Old Saxony"
+ nh.1005.desc:0 "Inspired by the valorous spirit of Widukind and the undying determination of our people, we shall embark on the path of recreating the glorious kingdom of Old Saxony. With hearts ablaze and spirits untamed, we shall cast off the shackles of foreign influence imposed upon us by Charlemagne's conquest. Our ancestors call upon us to restore our ancestral traditions, to honor Wotan, the Allfather, as the supreme deity of our land. Let the world bear witness to the triumphant resurgence of our pagan roots, as we forge a new destiny, united under the watchful eye of our divine patron."
+ nh.1005.option.a.desc:0 "And Wotan will guide us to Victory!"
