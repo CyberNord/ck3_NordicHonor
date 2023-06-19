@@ -36,8 +36,8 @@ joromaborg = {
 	character_modifier = {
 		name = holy_site_rome_effect_name
 		development_growth_factor = 0.1
-		flag = jerusalem_conversion_bonus
 	}
+	flag = jerusalem_conversion_bonus # +20% County Conversion
 }
 
 # constantinople-germanic (no real holy site, but sure a trophy for some pagans)
@@ -67,6 +67,7 @@ thingvellir = {
 		name = holy_site_thingvellir_effect_name
 		development_growth_factor = 0.2
 		defender_advantage = 10
+		monthly_piety_gain_mult = 0.2
 		stewardship_per_piety_level = 2
 	}
 }
@@ -74,7 +75,7 @@ thingvellir = {
 # Heiligenberg, was an ancient hilltop settlement with evidence of Germanic occupation. It was considered a sacred site and likely had religious and ceremonial significance.
 heiligenberg = {
 	county = c_grunningen
-	barony = b_heiligenbergd
+	barony = b_heiligenberg
 	character_modifier = {
 		name = holy_site_heiligenberg_effect_name
 		martial = 3

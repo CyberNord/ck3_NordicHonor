@@ -461,7 +461,6 @@ nh.1003 ={
 				remove_doctrine = tenet_astrology
 			}
 			add_doctrine = tenet_christian_syncretism
-			pagan_roots = yes
 		}
 	}
 

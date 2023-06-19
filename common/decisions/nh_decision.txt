@@ -565,7 +565,7 @@ nh_convert_to_christianity_iceland_decision = {
 		}
 	}
 
-	cost = { prestige = 500 }
+	cost = { piety = 400 }
 
 	effect = {
 		trigger_event = nh.1004
@@ -614,6 +614,11 @@ nh_form_old_saxia_kingdom_decision = {
 				target = flag:flag_formed_old_saxia_kingdom
 			}
 		}
+		OR = {
+			culture = { has_cultural_pillar = heritage_central_germanic }
+			culture = { has_cultural_pillar = heritage_west_germanic }
+			culture = { has_cultural_pillar = heritage_north_germanic }
+		}
 		highest_held_title_tier <= tier_duchy
 		#Must hold land within the relevant areas directly.
 		any_held_title = {
@@ -631,6 +636,7 @@ nh_form_old_saxia_kingdom_decision = {
 		NOT = {
 			culture = { has_cultural_era_or_later = culture_era_high_medieval }
 		}
+		NOT = { dynasty = dynasty:25061 }
 	}
 
 	is_valid_showing_failures_only = {
@@ -641,12 +647,12 @@ nh_form_old_saxia_kingdom_decision = {
 		#Must not be of the Karling dynasty
 		custom_description = {
 			text = "nh_form_old_saxia_dynasty_trigger"  
-			NOT = { dynasty = dynn_Karling }
+			NOT = { dynasty = dynasty:25061 }
 		}
 	}
 
 	cost = {
-		faith = 2000
+		piety = 2000
 		prestige = 5000
 	}
 

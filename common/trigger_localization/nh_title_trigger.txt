@@ -1,4 +1,4 @@
-nh_form_old_saxia_dynasty_trigger = {
+﻿nh_form_old_saxia_dynasty_trigger = {
 	first = NH_NOT_KARLING 
 	first_not = NH_IS_KARLING 
 }

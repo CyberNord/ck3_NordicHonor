@@ -1,4 +1,4 @@
-# NH Adopt Feudalism
+﻿# NH Adopt Feudalism
 nh_convert_to_feudalism_development_requirement = {
 	value = 20
 	if = {

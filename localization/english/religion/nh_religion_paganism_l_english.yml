@@ -43,6 +43,7 @@
  forn_sidr_pagan_adj:0 "Forn Siðr"
  forn_sidr_pagan_adherent:0 "Forn Siðrist"
  forn_sidr_pagan_adherent_plural:0 "Forn Siðrists"
+ forn_sidr_pagan_desc: 0 "The ancient Germanic pantheon of Forn Siðr was characterized by a close connection to nature and a deep reverence for the natural elements. They worshipped Wotan, the Allfather, as the supreme deity and believed in the existence of a multitude of divine beings who influenced the world around them. The heathens practiced rituals and ceremonies to establish a spiritual connection with their gods, offering sacrifices and seeking support and blessings in all aspects of life. Their beliefs also encompassed a belief in fate and a strong bond with their ancestors. Overall, the pagan faith of the Saxons in northern Germany embodied a profound connection to nature, a strong sense of community, and a belief in the power and wisdom of their gods."
  
  forn_sidr_pagan_old:0 "Old Forn Siðr"
  forn_sidr_pagan_old_adj:0 "Old Forn Siðr"
@@ -76,6 +77,7 @@
  ginnregla_pagan_adj:0 "Giñnregla"
  ginnregla_pagan_adherent:0 "Giñnreglur"
  ginnregla_pagan_adherent_plural:0 "Giñnreglur"
+ ginnregla_pagan_desc:0 "The heathens in Iceland, here called as Giñnregla, who followed the faith in Odin and the Old Norse pantheon, had a deep spiritual connection with nature and the gods. Their beliefs were closely tied to the Allthing, the assembly of all free men, and the community. They sought truth and guidance in the stars and practiced a form of astrological observation to interpret the signs of the gods. Despite their warlike past, they placed great value on peaceful communities and sought to foster harmonious coexistence. Their religious practice included offerings, rituals, and festivals to honor the gods and seek their blessings. Overall, the heathens in Iceland embodied a profound spirituality shaped by their belief in Odin, the significance of the Allthing, the pursuit of truth in the stars, and their commitment to peaceful community."
  
  ginnregla_pagan_old:0 "Old Giñnregla"
  ginnregla_pagan_old_adj:0 "Old Giñnregla"
@@ -94,6 +96,7 @@
  natturugudtruar_pagan_adj:0 "Náttúruguðtrúar"
  natturugudtruar_pagan_adherent:0 "Náttúruguðtrúarmaður"
  natturugudtruar_pagan_adherent_plural:0 "Náttúruguðtrúarmenn"
+ natturugudtruar_pagan_desc:0 "The nature-oriented expression known as Náttúruguðtrúarmenn, which has blended with some elements of Finno-Ugric customs, embodies a deeply rooted connection to the natural world and witchcraft. This belief system honors the Norse gods and combines them with the traditional practices of the Finno-Ugric peoples. Through the application of witchcraft and shamanistic practices, the followers of this belief seek spiritual insight and harmony with the natural forces. They find inspiration in the spirits of forests, rivers, and mountains and celebrate rituals to strengthen their connection to nature. With deep respect for the diversity of nature and the interplay of elements, they strive for a balanced and harmonious existence in alignment with the Divine and nature spirits."
  
  natturugudtruar_pagan_old:0 "Old Náttúruguðtrúar"
  natturugudtruar_pagan_old_adj:0 "Old Náttúruguðtrúar"
@@ -105,6 +108,7 @@
  odinstru_pagan_adj:0 "Óðinnstrú"
  odinstru_pagan_adherent:0 "Óðinnstrú"
  odinstru_pagan_adherent_plural:0 "Óðinnstrúar"
+ odinstru_pagan_desc:0 "The fanatically fundamentalist expression of the Norse pantheon, known as Óðinnstrú worships the gods with unwavering faith, placing particular emphasis on Odin and Tyr. This path of belief is characterized by an extreme warrior mentality. The followers see themselves as chosen warriors and view battle as a sacred duty. They firmly believe that it is their task to defend the honor of the gods on the bloody battlefield and to overcome their enemies. Their rituals are marked by martial elements, in which they offer sacrifices and seek divine favor for upcoming battles. The fanatically fundamentalist version of the Norse pantheon considers war as the ultimate path to attain glory and honor, both in the earthly realm and in Valhalla."
  
  odinstru_pagan_old:0 "Old Óðinnstrú"
  odinstru_pagan_old_adj:0 "Old Óðinnstrú"
@@ -116,6 +120,7 @@
  heidinn_pagan_adj:0 "heiðinn"
  heidinn_pagan_adherent:0 "Heiðinn"
  heidinn_pagan_adherent_plural:0 "Heiðnir"
+ heidinn_pagan_desc:0 "The Skando-Slavic pantheon of Heiðinn has, in a way, adapted to the rugged customs of the Slavic peoples. It venerates the Norse gods with a blend of Norse and Slavic traditions. Followers of this belief value their connection to nature and practice rituals that encompass both the wild elements of Norse mythology and the natural cycles of Slavic traditions. They see the Norse gods as powerful protectors and seek their favor in matters of fertility, harvest, and survival in the harsh Slavic regions. The Kiever version of Asatru thus retains its Norse essence but integrates elements of Slavic culture and customs to form a unique community of faith."
  
  heidinn_pagan_old:0 "Old Heiðinn"
  heidinn_pagan_old_adj:0 "Old heiðinn"
