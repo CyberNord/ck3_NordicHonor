@@ -19,7 +19,7 @@
  # Duel Won [nh.0041]
  nh.0041.t:0 "Victory"
  nh.0041.desc.intro:0 "Resting easy back in [actor.GetCapitalLocation.GetTitle.GetNameNoTierNoTooltip], I exult in my success, my [actor.Custom('signature_weapon')] laid across my lap.\n\n"
- nh.0041.desc.opponent_died:0 "[champion.GetTitledFirstNamePossessive] blood still cakes in fresh grooves and notches along the weapon's [actor.Custom('SignatureWeaponEndType')], reminding me of the [recipient.GetWomanMan]'s last moments. Yet, despite my victory, $germanic_positive_afterlife$'s embrace eludes me. Time is running out, and I must seek an honorable death to prove my worthiness..."
+ nh.0041.desc.opponent_died:0 "[champion.GetTitledFirstNamePossessive] blood still cakes in fresh grooves and notches along the weapon's [actor.Custom('SignatureWeaponEndType')], reminding me of the [champion.GetWomanMan]'s last moments. Yet, despite my victory, $germanic_positive_afterlife$'s embrace eludes me. Time is running out, and I must seek an honorable death to prove my worthiness..."
  nh.0041.desc.outro:0 "\n\nYesterday, I tried to enter $germanic_positive_afterlife$ with honor, and $germanic_high_god_name$ favored [champion.GetTitledFirstNamePossessive]."
  nh.0041.a: "My journey continues."
 

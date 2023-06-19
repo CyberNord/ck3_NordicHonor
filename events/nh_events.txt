@@ -521,19 +521,19 @@ nh.1004 = {
 				has_trait = forgiving
 			}
 			modifier = { 
-				add = 60
+				add = 100
 				has_trait = brave
 			}
 			modifier = { 
-				add = 60
+				add = 100
 				has_trait = vengeful
 			}
 			modifier = { 
-				add = 60
+				add = 100
 				has_trait = wrathful
 			}
 			modifier = { 
-				add = 100
+				add = 200
 				has_trait = zealous
 			}
 			modifier = { 

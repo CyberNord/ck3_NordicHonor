@@ -144,12 +144,12 @@ nh_rome_hs_decision = {
 
 	is_valid ={
 		highest_held_title_tier >= tier_kingdom
-		completely_controls = title:d_latium
-		piety_level >= 5
+		completely_controls = title:d_latium		
 		OR ={
 			has_trait = zealous
 			has_trait = theologian
 			has_trait = holy_warrior
+			piety_level >= 5
 		}
 	}
 
@@ -255,11 +255,11 @@ nh_constantinople_hs_decision = {
 	is_valid ={
 		highest_held_title_tier >= tier_kingdom
 		completely_controls = title:d_thrace
-		piety_level >= 5
 		OR ={
 			has_trait = zealous
 			has_trait = theologian
 			has_trait = holy_warrior
+			piety_level >= 5
 		}
 	}
 
@@ -516,17 +516,16 @@ nh_convert_to_christianity_iceland_decision = {
      		faith = faith:ginnregla_pagan
      		faith = faith:norse_pagan
 		}
-		NAND = {
-			AND = {
-				exists = character:168609
-				this = character:168609
-			}
-			AND = {
-				exists = character:180257
-				this = character:180257
-			}
-		}
 
+		OR = {
+			this = character:168609
+			this = character:180257
+		}
+		OR = {
+			exists = character:168609
+			exists = character:180257
+		}
+	
 		#Not repeatable.
 		NOR = {
 			AND = {
@@ -560,6 +559,10 @@ nh_convert_to_christianity_iceland_decision = {
 		is_imprisoned = no
 		is_at_war = no
 		not = { exists = involved_activity }
+		OR = {
+			this = character:168609
+			this = character:180257
+		}
 	}
 
 	cost = { prestige = 500 }
@@ -591,13 +594,12 @@ nh_convert_to_christianity_iceland_decision = {
 	ai_potential = { always = yes }
 
 	ai_will_do = {
-		base = 100
+		base = 1000
 	}
 }
 
 nh_form_old_saxia_kingdom_decision = {
-	picture = "gfx/interface/illustrations/decisions/nh_form_old_saxia_kingdom_decision.dds" # todo
-
+	picture = "gfx/interface/illustrations/decisions/nh_form_old_saxia_kingdom_decision.dds"
 	desc = nh_form_old_saxia_kingdom_decision_desc 
 	selection_tooltip = nh_form_old_saxia_kingdom_decision_tooltip 
 	major = yes
