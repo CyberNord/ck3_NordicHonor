@@ -97,5 +97,5 @@ Avaliable for: Giñnregla\
 
 ### Form Old Saxia Kingdom
 Recreate Old Saxia and convert to the old pagan ways.\
-Avaliable for: Anyone
+Avaliable for: North,central,west germans except Karolinger-Dynasty 
 
