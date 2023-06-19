@@ -95,6 +95,7 @@ Decide whether Iceland become Christian or stays true to the old ways.\
 Avaliable for: Giñnregla\
 878 start "Chieftes Auðr af Vestland" and "Chieftain Garðar af Austrland"
 
-
-
+### Form Old Saxia Kingdom
+Recreate Old Saxia and convert to the old pagan ways.\
+Avaliable for: Anyone
 
