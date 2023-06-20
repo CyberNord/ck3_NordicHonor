@@ -482,7 +482,7 @@
 			localization = {
 				#HighGodName
 				HighGodName = heidinn_high_god_name
-				HighGodName2 = heidinn_high_god_name_2
+				HighGodName2 = heidinn_high_god_name
 				HighGodNamePossessive = heidinn_high_god_name_possessive
 				
 				#FertilityGod

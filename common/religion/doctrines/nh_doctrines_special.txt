@@ -23,14 +23,14 @@
 	
 	# Staðfast
 	special_faith_stadfast_heritage = {
-		is_available_on_create = {
+		is_shown = {
 			OR = {
 				has_doctrine = special_faith_has_germanic_heritage
 				has_doctrine = special_faith_stadfast_heritage
 			}
-			piety_cost = {
+		}
+		piety_cost = {
 				value = 2000
-			}
 		}
 		parameters = {
 			fervor_per_holy_site = 1
@@ -40,15 +40,18 @@
 	}
 
 	special_faith_no_special_heritage = {
-			is_shown = {
-				OR = {
-					has_doctrine = special_faith_has_germanic_heritage
-					has_doctrine = special_faith_stadfast_heritage
-				}
+		is_shown = {
+			OR = {
+				has_doctrine = special_faith_has_germanic_heritage
+				has_doctrine = special_faith_stadfast_heritage
 			}
-			parameters = {
-				no_effect_removed_upon_creation = yes
-			}
+		}
+		piety_cost = {
+				value = 1000
+		}
+		parameters = {
+			no_effect_removed_upon_creation = yes
+		}
 	}
 	
 	# hidden heritage (currently not working as intended )
