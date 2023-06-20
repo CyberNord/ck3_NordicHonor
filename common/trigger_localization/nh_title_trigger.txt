@@ -2,3 +2,8 @@
 	first = NH_NOT_KARLING 
 	first_not = NH_IS_KARLING 
 }
+
+nh_peace_christianity_trigger = {
+	first = NH_FULLFILLED_HS 
+	first_not = NH_MORE_HS_NEEDED
+}

@@ -353,8 +353,12 @@ nh_peace_christianity_decision = {
 		faith = faith:natturugudtruar_pagan
 
 		# strong faith
+		custom_description = {
+			text = "nh_peace_christianity_trigger"  
+			faith = { holy_sites_controlled = 3 }
+		}
 		piety_level >= 5
-		faith = { holy_sites_controlled = 3 }
+		
 
 		#Must be in/adjacent to the Viking Age.
 		NOT = {
