@@ -288,6 +288,9 @@
 			}
 			doctrine = tenet_esotericism
 
+			#Main Group
+			doctrine = doctrine_pluralism_righteous
+
 			# germanic faith group
 			doctrine = special_faith_has_germanic_heritage
 
@@ -378,7 +381,7 @@
 
 		# Náttúruguðtrúarmenn (Skando-Finnic)
 		natturugudtruar_pagan = {
-			color = { 0.0 0.3 0.1 }
+			color = { 0.1 0.3 0.1 }
 			icon = natturugudtruar
 			reformed_icon = natturugudtruar_reformed
 
