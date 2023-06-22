@@ -8,4 +8,5 @@ nick_nh_catholic_special = {}
 nick_nh_insular_special = {}
 nick_nh_empty = {}
 nick_nh_old_saxia = {}
+nick_nh_wise = {}
 
