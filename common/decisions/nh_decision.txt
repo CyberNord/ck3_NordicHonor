@@ -1,4 +1,5 @@
 ﻿
+# v1.0
 last_duel_decision = {
 	picture = "gfx/interface/illustrations/decisions/nh_decision_duel.dds"
 	
@@ -477,7 +478,13 @@ nh_convert_whole_realm_to_feudalism_decision = {
 	}
 
 	cost = {
-		prestige = 8000
+		prestige = {
+			value = 1000
+			if = {
+				limit = { is_ai = no }
+				add = 7000
+			}
+		}
 	}
 
 	effect = {
@@ -511,7 +518,7 @@ nh_convert_to_christianity_iceland_decision = {
 	major = yes
 	ai_goal = yes
 
-	ai_check_interval = 2
+	ai_check_interval = 3
 
 
 	is_shown = {
@@ -569,7 +576,15 @@ nh_convert_to_christianity_iceland_decision = {
 		}
 	}
 
-	cost = { piety = 400 }
+	cost = { 
+		piety = {
+			value = 0
+			if = {
+				limit = { is_ai = no }
+				add = 200
+			}
+		} 
+	}
 
 	effect = {
 		trigger_event = nh.1004
@@ -598,7 +613,7 @@ nh_convert_to_christianity_iceland_decision = {
 	ai_potential = { always = yes }
 
 	ai_will_do = {
-		base = 1000
+		base = 100
 	}
 }
 
@@ -655,9 +670,21 @@ nh_form_old_saxia_kingdom_decision = {
 		}
 	}
 
-	cost = {
-		piety = 2000
-		prestige = 5000
+	cost = {	#cheap for AI
+		piety = {
+			value = 500
+			if = {
+				limit = { is_ai = no }
+				add = 1500
+			}
+		}
+		prestige = {
+			value = 1000
+			if = {
+				limit = { is_ai = no }
+				add = 4000
+			}
+		}
 	}
 
 	effect = {
@@ -724,4 +751,5 @@ nh_form_old_saxia_kingdom_decision = {
 			}
 	}
 }
+
 
