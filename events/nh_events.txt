@@ -713,6 +713,27 @@ nh.1011 = {
 		title:c_middlesex.holder.top_liege = {
 			save_scope_as = opponent_essex_option
 		}
+
+		# Give Rollo an army
+		spawn_army = {
+			name = event_troop_rollo_name
+			levies = 500
+			men_at_arms = {
+				type = varangian_veterans
+				stacks = 5
+			}
+			men_at_arms = {
+				type = vigmen
+				stacks = 3
+			}
+			men_at_arms = {
+				type = bondi
+				stacks = 7
+			}
+			location = province:252
+			origin = province:252
+			inheritable = no
+		}
 	}
 
 	option = { 
@@ -753,5 +774,5 @@ nh.1011 = {
 		}
 		ai_chance = {base = 0}
 	}
-
 }
+
