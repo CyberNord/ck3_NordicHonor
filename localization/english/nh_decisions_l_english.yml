@@ -31,8 +31,12 @@
  nh_convert_to_christianity_iceland_decision_confirm:0 "Gather the goðar"
  nh_convert_to_christianity_iceland_decision_tooltip:0 "You will be able to decide between christian faiths and staying true tue the gods"
 
- nh_form_old_saxia_kingdom_decision: "Form Old Saxia Kingdom"
- nh_form_old_saxia_kingdom_decision_desc: "Establish the ancient pagan kingdom of Saxia and restore the traditions of our ancestors."
- nh_form_old_saxia_kingdom_decision_confirm: "Create Old Saxia Kingdom"
- nh_form_old_saxia_kingdom_decision_tooltip: "This decision will create the Old Saxia Kingdom and revive the ancient pagan ways of our people."
+ nh_form_old_saxia_kingdom_decision:0 "Form Old Saxia Kingdom"
+ nh_form_old_saxia_kingdom_decision_desc:0 "Establish the ancient pagan kingdom of Saxia and restore the traditions of our ancestors."
+ nh_form_old_saxia_kingdom_decision_confirm:0 "Create Old Saxia Kingdom"
+ nh_form_old_saxia_kingdom_decision_tooltip:0 "This decision will create the Old Saxia Kingdom and revive the ancient pagan ways of our people."
 
+ nh_rollos_adventure_decision:0 "Rollo's Path to Immortality"
+ nh_rollos_adventure_decision_desc:0 "In the depths of my soul, I feel a calling from [ROOT.Char.GetFaith.HighGodName], urging me to explore beyond the borders of Norway. Stories of faraway lands have reached me, filled with opportunities and greatness. It is time for me to embark on an epic Varangian Adventure that will leave a lasting mark on history."
+ nh_rollos_adventure_decision_confirm:0 "[ROOT.Char.GetFaith.HighGodName] will guide me."
+ nh_rollos_adventure_decision_tooltip:0 "Embark on a Varangian Adventure into a foreign land."

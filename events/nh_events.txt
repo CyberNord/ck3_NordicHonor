@@ -61,7 +61,7 @@ nh.0001 = {
 					}
 				}
 
-		save_scope_as = player_vassal_option
+			save_scope_as = player_vassal_option
 		}
 
 		if = { 
@@ -680,5 +680,78 @@ nh.1005 = {
 
 # Rollo's Adventure
 nh.1011 = {
-	
+	type = character_event
+	title = nh.1011.t
+	desc = nh.1011.desc
+	theme = war
+
+	right_portrait = {
+		character = scope:attacker
+ 		animation = aggressive_axe
+	}
+
+	lower_right_portrait = scope:opponent_normandy_option		
+	lower_center_portrait = scope:opponent_sardinia_option
+	lower_left_portrait = scope:opponent_essex_option
+
+	immediate = {
+		root = {
+			save_scope_as = attacker
+		}
+
+		# normandy 
+		title:c_rouen.holder.top_liege = {
+			save_scope_as = opponent_normandy_option
+		}
+		
+		# sardinia
+		title:c_cagliari.holder.top_liege = {
+			save_scope_as = opponent_sardinia_option
+		}
+
+		# essex
+		title:c_middlesex.holder.top_liege = {
+			save_scope_as = opponent_essex_option
+		}
+	}
+
+	option = { 
+		name = nh.1011.option.opponent_normandy_option.desc
+		custom_tooltip = nh.1011.option.opponent_normandy_option_tooltip.desc
+
+		trigger = {exists = scope:opponent_normandy_option}
+		start_war = {
+			cb = fp1_varangian_adventurer_conquest 
+			target = scope:opponent_normandy_option
+			target_title = title:d_normandy
+		}
+		ai_chance = {base = 100}
+	}
+
+	option = { 
+		name = nh.1011.option.opponent_sardinia_option.desc
+		custom_tooltip = nh.1011.option.opponent_sardinia_option_tooltip.desc
+
+		trigger = {exists = scope:opponent_sardinia_option}
+		start_war = {
+			cb = fp1_varangian_adventurer_conquest 
+			target = scope:opponent_sardinia_option
+			target_title = title:d_sardinia
+		}
+		ai_chance = {base = 0}
+	}
+
+	option = { 
+		name = nh.1011.option.opponent_essex_option.desc
+		custom_tooltip = nh.1011.option.opponent_essex_option_tooltip.desc
+
+		trigger = {exists = scope:opponent_essex_option}
+		start_war = {
+			cb = fp1_varangian_adventurer_conquest 
+			target = scope:opponent_essex_option
+			target_title = title:d_bedford
+		}
+		ai_chance = {base = 0}
+	}
+
 }

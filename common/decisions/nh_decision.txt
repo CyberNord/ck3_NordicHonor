@@ -784,7 +784,6 @@ nh_rollos_adventure_decision = {
 	}
 
 	is_valid = {
-		# has_realm_law = tribal_authority_2
 		custom_description = {
 			text = nh_faith_is_unreformed
 			subject = root
