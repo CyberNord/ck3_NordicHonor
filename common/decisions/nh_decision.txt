@@ -752,4 +752,87 @@ nh_form_old_saxia_kingdom_decision = {
 	}
 }
 
+# v1.1
+nh_rollos_adventure_decision = {
+	picture = "gfx/interface/illustrations/decisions/nh_rollos_adventure_decision.dds"
+	
+	desc = nh_rollos_adventure_decision_desc
+	selection_tooltip = nh_rollos_adventure_decision_tooltip
+	major = yes
+	ai_goal = yes
 
+	ai_check_interval = 36
+
+
+	is_shown = {
+		is_lowborn = no
+		religion = religion:germanic_religion
+		
+		exists = character:242
+		this = character:242
+	
+		#Not repeatable.
+		NOT = {
+			AND = {
+				this = character:242
+				is_target_in_global_variable_list = {
+					name = unavailable_unique_decisions
+					target = flag:nh_rollos_adventure_decision
+				}
+			}	
+		}
+	}
+
+	is_valid = {
+		# has_realm_law = tribal_authority_2
+		custom_description = {
+			text = nh_faith_is_unreformed
+			subject = root
+			faith = { has_doctrine_parameter = unreformed }
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		is_capable_adult = yes
+		is_imprisoned = no
+		is_at_war = no
+		not = { exists = involved_activity }
+		this = character:242
+	}
+
+	cost = { # only players pay a cost
+		gold = {
+			value = 0
+			if = {
+				limit = { is_ai = no }
+				add = 500
+			}
+		}
+		prestige = {
+			value = 0
+			if = {
+				limit = { is_ai = no }
+				add = 2000
+			}
+		}
+	}
+
+	effect = {
+		trigger_event = nh.1011
+		save_scope_as = actor
+		
+		if = {
+			limit = { this = character:242 }
+			add_to_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:nh_rollos_adventure_decision
+			}
+		}
+	}
+
+	ai_potential = { primary_title.tier < tier_kingdom }
+
+	ai_will_do = {
+		base = 100
+	}
+}
