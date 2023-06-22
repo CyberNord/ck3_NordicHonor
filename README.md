@@ -99,3 +99,7 @@ Avaliable for: Giñnregla\
 Recreate Old Saxia and convert to the old pagan ways.\
 Avaliable for: North,central,west germans except Karolinger-Dynasty 
 
+### Rollos Adventure
+Invade the dutchy of Normandy and start the legacy of the norman conquests.
+Avaliable for: Hrolfr (Rollo) in 878
+
