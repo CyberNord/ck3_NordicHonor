@@ -776,3 +776,153 @@ nh.1011 = {
 	}
 }
 
+nh.1012 = {
+	type = character_event
+	title = nh.1012.t
+	desc = nh.1012.desc
+	theme = army_camp
+
+	right_portrait = {
+		character = scope:actor
+ 		animation = diplomacy
+	}
+
+	left_portrait = {
+		character = scope:francish_king
+ 		animation = diplomacy
+	}
+
+	trigger = {
+		current_date > 860.1.1
+		title:d_normandy.holder ?= character:242
+	}
+
+	immediate = {
+		title:k_france.holder.top_liege = {
+			save_scope_as = francish_king
+		}
+
+		root = {
+			save_scope_as = actor
+		}
+
+	}
+
+	# historical (no conversion)
+	option = { 
+		trigger = { 
+			exists = character:90104 
+			title:k_france.holder.top_liege = character:90104
+		}
+
+		name = nh.1012.option.alternate_historical_agree.desc
+		custom_tooltip = nh.1012.option.alternate_historical_agree_tooltip.desc
+
+		if = {
+			limit = {exists = primary_spouse}
+			divorce = primary_spouse 
+		}
+
+		hidden_effect = { nh_marry_norman_historical_effect = yes }
+		nh_swear_fealty_effect = yes
+		hidden_effect = { nh_vassal_contract_religious_effect = yes }
+
+		dynasty = {
+			add_dynasty_prestige = 500
+		}
+
+		ai_chance = {base = 0 }
+	}
+
+	# historical with conversion
+	option = { 
+		trigger = { 
+			exists = character:90104 
+			title:k_france.holder.top_liege = character:90104
+		}
+
+		name = nh.1012.option.historical_agree.desc
+		custom_tooltip = nh.1012.option.historical_agree_tooltip.desc
+
+		if = {
+			limit = {exists = primary_spouse}
+			divorce = primary_spouse 
+		}	
+
+		root = {set_character_faith = faith:catholic}
+		trigger_event = { on_action = on_faith_conversion }
+
+		hidden_effect = { nh_marry_norman_historical_effect = yes }
+		nh_swear_fealty_effect = yes
+		hidden_effect = { nh_vassal_contract_march_effect = yes }
+
+		dynasty = {
+			add_dynasty_prestige = 500
+		}
+
+		ai_chance = {base = 100}
+	}
+
+	# alternate historical (no conversion)
+	option = { 
+		trigger = { 
+			NOT ={ title:k_france.holder.top_liege = character:90104 }
+		}
+		name = nh.1012.option.agree_alternative.desc
+		custom_tooltip = nh.1012.option.agree_alternative_tooltip.desc
+
+		if = {
+			limit = {exists = primary_spouse}
+			divorce = primary_spouse 
+		}
+
+		hidden_effect = { nh_marry_norman_alternate_effect = yes }
+		nh_swear_fealty_effect = yes
+		hidden_effect = { nh_vassal_contract_religious_effect = yes }
+
+		dynasty = {
+			add_dynasty_prestige = 500
+		}
+
+		ai_chance = {base = 0}
+	}
+
+	# alternate historical with conversion
+	option = { 
+		trigger = { 
+			NOT ={ title:k_france.holder.top_liege = character:90104 }
+		}
+		name = nh.1012.option.agree_alternative_convert.desc
+		custom_tooltip = nh.1012.option.agree_alternative_convert_tooltip.desc
+
+		if = {
+			limit = {exists = primary_spouse}
+			divorce = primary_spouse 
+		}
+
+		root = {set_character_faith = faith:catholic}
+		trigger_event = { on_action = on_faith_conversion }
+
+		hidden_effect = { nh_marry_norman_alternate_effect = yes }
+		nh_swear_fealty_effect = yes
+		hidden_effect = { nh_vassal_contract_religious_effect = yes }
+
+		dynasty = {
+			add_dynasty_prestige = 500
+		}
+
+		ai_chance = {base = 100}
+	}
+
+	option = { 
+		
+		name = nh.1012.option.refuse.desc
+		custom_tooltip = nh.1012.option.refuse_tooltip.desc
+
+		dynasty = {
+			add_dynasty_prestige = 250
+		}
+
+		ai_chance = {base = 0}
+	}
+}

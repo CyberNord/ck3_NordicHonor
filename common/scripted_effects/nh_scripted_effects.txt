@@ -25,3 +25,94 @@
 	resolve_title_and_vassal_change = scope:change
 	hidden_effect = { set_primary_title_to = title:k_old_saxia }
 }
+
+
+
+
+## Rollo Norman conquest events  
+
+nh_marry_norman_historical_effect = {
+	character:90104 = { save_scope_as = spouse_father }		#(King Charles the Bald)
+	character:167830 = { save_scope_as = spouse_mother }	#(Irminitrude of Orléans)
+
+	create_character = {
+		template = nh_gisele_character
+		dynasty = inherit
+		father = scope:spouse_father
+		mother = scope:spouse_mother
+		location = actor.capital_province
+		save_scope_as = norman_spouse
+	}
+
+	scope:actor = {marry = scope:norman_spouse}
+}
+
+nh_marry_norman_alternate_effect = {
+	create_character = {
+		template = nh_norman_character
+		dynasty = inherit
+		father = scope:francish_king
+		location = actor.capital_province
+		save_scope_as = norman_spouse
+	}
+
+	scope:actor = {marry = scope:norman_spouse}
+}
+
+nh_swear_fealty_effect = {
+	create_title_and_vassal_change = {
+		type = swear_fealty
+		save_scope_as = change
+	}
+
+	scope:actor = {
+		change_liege = {
+			liege = scope:francish_king
+			change = scope:change
+		}
+		add_opinion = {
+			modifier = became_vassal
+			target = scope:francish_king
+			opinion = 10
+		}
+	}
+	resolve_title_and_vassal_change = scope:change
+
+	# remove silly imprisonment reason
+	consume_all_criminal_reasons_effect = {
+		LIEGE = scope:francish_king
+		CRIMINAL = scope:actor
+	}
+}
+
+nh_vassal_contract_march_effect = {
+	scope:actor = {
+		if = {
+			limit = {
+				government_has_flag = government_is_feudal
+				is_vassal_of = scope:francish_king
+			}
+			vassal_contract_set_obligation_level = {
+				type = special_contract
+				level = 2
+			}
+			set_vassal_contract_modification_blocked = yes
+		}
+	}
+}
+
+nh_vassal_contract_religious_effect = {
+	scope:actor = {
+		if = {
+			limit = {
+				government_has_flag = government_is_feudal
+				is_vassal_of = scope:francish_king
+			}
+			vassal_contract_set_obligation_level = {
+				type = religious_rights
+				level = 1
+			}
+			set_vassal_contract_modification_blocked = yes
+		}
+	}
+}

@@ -141,7 +141,8 @@ nh_on_game_start_rollo = {
 	effect = {
 		if = {
 			limit = {
-				game_start_date <= 993.1.1
+				game_start_date <= 870.1.1
+				game_start_date >= 860.1.1
 			}
 			#Create the title
 			create_title_and_vassal_change = {

@@ -1,0 +1,71 @@
+﻿nh_gisele_character = {
+	name = "Gisele"
+	age = { 18 21 }
+	gender = female
+	dynasty = inherit
+
+	diplomacy = 8
+	martial = 4
+	stewardship = 8
+	intrigue = 9
+	learning = 5
+
+	faith = faith:catholic
+	culture = culture:french
+
+	random_traits_list = {
+		count = 2
+		honest = {}
+		compassionate = {}
+		stubborn = {}
+		generous = {}
+		wrathful = {}
+		humble = {}
+		calm = {}
+		patient = {}
+		trusting = {}
+	}
+		
+	random_traits_list = {
+		count = 1
+		education_diplomacy_3 = {}
+		education_diplomacy_4 = {}
+	}
+
+	trait = intellect_good_1
+}
+
+nh_norman_character = {
+	name = "Poppa"
+	age = { 18 25 }
+	gender = female
+	dynasty = inherit
+
+	diplomacy = 10
+	martial = 1
+	stewardship = 5
+	intrigue = 5
+	learning = 8
+
+	faith = faith:catholic
+	culture = culture:french
+
+	random_traits_list = {
+		count = 1
+		compassionate = {}
+		stubborn = {}
+		generous = {}
+		wrathful = {}
+		humble = {}
+		patient = {}
+		trusting = {}
+	}
+		
+	random_traits_list = {
+		count = 1
+		education_diplomacy_1 = {}
+		education_diplomacy_2 = {}
+		education_diplomacy_3 = {}
+		education_diplomacy_4 = {}
+	}
+}
