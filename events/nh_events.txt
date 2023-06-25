@@ -780,14 +780,14 @@ nh.1012 = {
 	type = character_event
 	title = nh.1012.t
 	desc = nh.1012.desc
-	theme = army_camp
+	theme = diplomacy_foreign_affairs_focus
 
-	right_portrait = {
+	left_portrait = {
 		character = scope:actor
  		animation = diplomacy
 	}
 
-	left_portrait = {
+	right_portrait = {
 		character = scope:francish_king
  		animation = diplomacy
 	}
