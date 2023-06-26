@@ -3,9 +3,9 @@
 last_duel_decision = {
 	picture = "gfx/interface/illustrations/decisions/nh_decision_duel.dds"
 	
-	sort_order = 81
+	sort_order = 1
 	selection_tooltip = last_duel_decision_tooltip
-	ai_check_interval = 600
+	ai_check_interval = 6
 
 	desc = {
 		first_valid = {
@@ -834,4 +834,67 @@ nh_rollos_adventure_decision = {
 	ai_will_do = {
 		base = 100
 	}
+}
+
+nh_gotland_policy_decision = {
+	picture = "gfx/interface/illustrations/decisions/nh_decision_duel.dds"
+	
+	sort_order = 2
+	selection_tooltip = nh_gotland_policy_decision_tooltip
+	desc = nh_gotland_policy_decision_desc
+	ai_check_interval = 12
+
+	cooldown = { years = 10 }
+
+	is_shown = {
+		religion = religion:germanic_religion
+		OR = {
+			culture = { has_cultural_pillar = heritage_north_germanic }
+			culture = { has_cultural_pillar = heritage_central_germanic }
+		}
+		
+	}
+
+	is_valid = {
+		custom_description = {
+			text = nh_faith_is_unreformed
+			subject = root
+			faith = { has_doctrine_parameter = unreformed }
+		}
+		completely_controls = title:d_gotland
+		custom_description = {
+			text = nh_within_viking_age
+			subject = root
+			NOT = {culture = { has_cultural_era_or_later = culture_era_high_medieval }}
+		}	
+	}
+
+	is_valid_showing_failures_only = {
+		is_capable_adult = yes
+		is_imprisoned = no
+		is_at_war = no
+		not = { exists = involved_activity }
+	}
+
+	cost = {	#cheap for AI
+		prestige = {
+			value = 500
+			if = {
+				limit = { is_ai = no }
+				add = 1500
+			}
+		}
+	}
+
+	effect = {
+		trigger_event = nh.1013
+		save_scope_as = actor
+	}
+
+	ai_potential = { always = yes }
+
+	ai_will_do = {
+		base = 100
+	}
+
 }
