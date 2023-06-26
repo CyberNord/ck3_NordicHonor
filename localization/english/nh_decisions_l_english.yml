@@ -40,3 +40,8 @@
  nh_rollos_adventure_decision_desc:0 "In the depths of my soul, I feel a calling from [ROOT.Char.GetFaith.HighGodName], urging me to explore beyond the borders of Norway. Stories of faraway lands have reached me, filled with opportunities and greatness. It is time for me to embark on an epic Varangian Adventure that will leave a lasting mark on history."
  nh_rollos_adventure_decision_confirm:0 "[ROOT.Char.GetFaith.HighGodName] will guide me."
  nh_rollos_adventure_decision_tooltip:0 "Embark on a Varangian Adventure into a foreign land."
+
+ nh_gotland_policy_decision:0 "Trade or Raid"
+ nh_gotland_policy_decision_desc:0 "As the ruler of Gotland, I face a crucial decision for the future of my realm. I can choose to prioritize trade and commerce, fostering economic growth and cultural exchange, or I can opt for raids and conquests, unleashing the Viking spirit to amass wealth and power through daring expeditions."
+ nh_gotland_policy_decision_confirm:0 "Confirm"
+ nh_gotland_policy_decision_tooltip:0 "This decision will shape our future actions. Choose carefully, as it will determine the path we will follow."
