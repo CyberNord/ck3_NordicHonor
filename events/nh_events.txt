@@ -741,11 +741,14 @@ nh.1011 = {
 		custom_tooltip = nh.1011.option.opponent_normandy_option_tooltip.desc
 
 		trigger = {exists = scope:opponent_normandy_option}
+
+		# if this cause problems for non DLC owners use fix in issue#5
 		start_war = {
 			cb = fp1_varangian_adventurer_conquest 
 			target = scope:opponent_normandy_option
 			target_title = title:d_normandy
 		}
+			
 		ai_chance = {base = 100}
 	}
 
