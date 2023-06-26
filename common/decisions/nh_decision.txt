@@ -848,6 +848,7 @@ nh_gotland_policy_decision = {
 
 	is_shown = {
 		religion = religion:germanic_religion
+		has_title = title:c_gutland
 		OR = {
 			culture = { has_cultural_pillar = heritage_north_germanic }
 			culture = { has_cultural_pillar = heritage_central_germanic }
@@ -878,10 +879,10 @@ nh_gotland_policy_decision = {
 
 	cost = {	#cheap for AI
 		prestige = {
-			value = 500
+			value = 200
 			if = {
 				limit = { is_ai = no }
-				add = 1500
+				add = 1800
 			}
 		}
 	}
