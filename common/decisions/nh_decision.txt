@@ -899,3 +899,78 @@ nh_gotland_policy_decision = {
 	}
 
 }
+
+nh_iceland_first_great_ting = {
+	picture = "gfx/interface/illustrations/decisions/nh_iceland_great_ting.dds"
+	
+	desc = nh_iceland_first_great_ting_desc
+	selection_tooltip = nh_iceland_first_great_ting_tooltip
+	major = yes
+	ai_goal = yes
+
+	ai_check_interval = 36
+
+	is_shown = {
+		is_lowborn = no
+		faith = faith:ginnregla_pagan
+		has_title = title:d_iceland
+		
+		#Not repeatable.
+		NOT = {
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:nh_iceland_first_great_ting
+			}		
+		}
+	}
+
+	is_valid = {
+		custom_description = {
+			text = nh_faith_is_unreformed
+			subject = root
+			faith = { has_doctrine_parameter = unreformed }
+		}
+		has_title = title:d_iceland
+		primary_title.tier < tier_kingdom
+	}
+
+	is_valid_showing_failures_only = {
+		is_capable_adult = yes
+		is_imprisoned = no
+		is_at_war = no
+		not = { exists = involved_activity }
+	}
+
+	cost = { # easy for AI
+		gold = {
+			value = 5
+			if = {
+				limit = { is_ai = no }
+				add = 495
+			}
+		}
+		prestige = {
+			value = 2000
+			if = {
+				limit = { is_ai = no }
+				add = 2000
+			}
+		}
+	}
+
+	effect = {
+		trigger_event = nh.1014
+		save_scope_as = actor
+		
+		add_to_global_variable_list = {
+			name = unavailable_unique_decisions
+			target = flag:nh_iceland_first_great_ting
+		}
+	}
+
+	ai_potential = { always = yes }
+
+	ai_will_do = {
+		base = 100
+	}
+}
