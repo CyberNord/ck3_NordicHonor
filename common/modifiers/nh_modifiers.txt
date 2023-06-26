@@ -1,0 +1,18 @@
+﻿nh_county_trade_modifier = {
+	icon = economy_positive
+	development_growth_factor = medium_development_growth_gain
+	tax_mult = 0.30
+}
+
+nh_county_raid_modifier = {
+	icon = martial_positive
+	monthly_county_control_change_add = 0.5
+	development_growth_factor = -0.1
+}
+
+nh_county_defence_modifier = {
+	icon = county_modifier_development_positive
+	additional_fort_level = 2
+	defender_holding_advantage = 5
+	county_opinion_add = 5
+}

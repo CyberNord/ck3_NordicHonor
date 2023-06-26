@@ -837,7 +837,7 @@ nh_rollos_adventure_decision = {
 }
 
 nh_gotland_policy_decision = {
-	picture = "gfx/interface/illustrations/decisions/nh_decision_duel.dds"
+	picture = "gfx/interface/illustrations/decisions/nh_gotland_policy_decision.dds"
 	
 	sort_order = 2
 	selection_tooltip = nh_gotland_policy_decision_tooltip
@@ -861,7 +861,7 @@ nh_gotland_policy_decision = {
 			subject = root
 			faith = { has_doctrine_parameter = unreformed }
 		}
-		completely_controls = title:d_gotland
+		has_title = title:d_gotland
 		custom_description = {
 			text = nh_within_viking_age
 			subject = root

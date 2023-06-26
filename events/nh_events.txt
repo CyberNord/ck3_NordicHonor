@@ -927,6 +927,72 @@ nh.1012 = {
 	}
 }
 
+# Gotland event
 nh.1013 = {
+	type = character_event
+	title = nh.1013.t
+	desc = nh.1013.desc
+	theme = realm
 
+	left_portrait = {
+		character = root
+		animation = marshal
+	}
+
+	immediate = {
+		play_music_cue = "mx_cue_positive_effect"
+
+	}
+
+	option = {
+		name = nh.1013.option.trade.desc
+		
+		title:c_gutland = {
+			add_county_modifier = {
+				modifier = nh_county_trade_modifier
+				years = 6
+			}
+		}
+		add_gold = medium_gold_value
+		
+		ai_chance = {base = 10}
+	}
+
+	option = {
+		name = nh.1013.option.raid.desc
+
+		spawn_army = {
+			name = event_troop_gotland_name
+			levies = 400
+			men_at_arms = {
+				type = huscarl
+				stacks = 1
+			}
+			location = province:369
+			origin = province:369
+			inheritable = no
+		}
+
+		title:c_gutland = {
+			add_county_modifier = {
+				modifier = nh_county_raid_modifier
+				years = 3
+			}
+		}
+
+		ai_chance = {base = 10}
+	}
+
+	option = {
+		name = nh.1013.option.defence.desc
+
+		title:c_gutland = {
+			add_county_modifier = {
+				modifier = nh_county_defence_modifier
+				years = 9
+			}
+		}
+
+		ai_chance = {base = 10}
+	}
 }
