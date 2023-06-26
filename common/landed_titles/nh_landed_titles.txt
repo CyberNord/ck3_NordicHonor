@@ -5,3 +5,9 @@
 
 	#roman = "Saxonia"
 }
+
+k_iceland = {
+	color = {128 128 128}
+
+	capital = c_vestisland
+}
