@@ -107,7 +107,25 @@ nh_on_game_start_conversion = {
 				}
 			}
 
-			# Aengland 
+			# Óðinnstrú
+			character:163111 = {set_character_faith = faith:odinstru_pagan}	# Ivar
+			character:306011 = {set_character_faith = faith:odinstru_pagan} # Feydis
+			character:168500 = {set_character_faith = faith:odinstru_pagan} 
+			character:6864 = {set_character_faith = faith:odinstru_pagan}
+			character:40608 = {set_character_faith = faith:odinstru_pagan}
+			character:40609 = {set_character_faith = faith:odinstru_pagan}
+			character:6814 = {set_character_faith = faith:odinstru_pagan}
+
+			title:c_inner_hebrides = { 
+				set_county_faith = faith:odinstru_pagan
+				set_county_culture = culture:norse
+				}	
+			title:c_argyll = { 
+				set_county_faith = faith:odinstru_pagan
+				# set_county_culture = culture:norse 
+				}
+
+			# Aengland - Asatrú
 			title:c_east_riding = { 
 				set_county_faith = faith:norse_pagan
 				set_county_culture = culture:norse
@@ -119,14 +137,6 @@ nh_on_game_start_conversion = {
 			title:c_west_riding = { 
 				set_county_faith = faith:norse_pagan
 				}	
-			title:c_inner_hebrides = { 
-				set_county_faith = faith:norse_pagan
-				set_county_culture = culture:norse
-				}	
-			title:c_argyll = { 
-				set_county_faith = faith:norse_pagan
-				# set_county_culture = culture:norse 
-				}
 
 			# Brittany
 			title:c_french_leon = { 

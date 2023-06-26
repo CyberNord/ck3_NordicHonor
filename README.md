@@ -30,7 +30,7 @@ It represents the Iclandic pantheon of gods, it endured until the 11th century. 
 **Tenets**
 - Astrology
 - Personal Deities
-- Ancestor Worshi
+- Ancestor Worship
 
 #### Heiðinn
 
@@ -52,7 +52,7 @@ It represents the sami-norse pantheon which is focused on nature. Its completely
 
 #### Óðinstru
 
-It represents a very fundamental pantheon which accepts no peace with the abrahamic religions. Its completely fictional. Ivar the Boneless is considered as brutal pagan\
+It represents a very fundamental pantheon which accepts no peace with the abrahamic religions. Its completely fictional. Ivar the Boneless is considered as brutal pagan and therefor follows this faith.\
 
 **Tenets**
 - Warmonger
@@ -120,15 +120,15 @@ Avaliable for: North,central,west germans except Karolinger-Dynasty
 ### Rollos Adventure
 
 Invade the dutchy of Normandy and start the legacy of the norman conquests.
-Avaliable for: Hrolfr (Rollo) in 867. After successfully conquering Normandy (as Rollo) a unique event happens 
+Avaliable for: Hrolfr (Rollo) in 867. After successfully conquering Normandy (as Rollo) a unique event happens
 
 ## Map
 
 ### Changes
 
- - Leon: Ásatrú spreaded
- - Jorvik: Ásatrú & Norse culture spreaded
- - Sudreyar: Ásatrú & Norse culture spreaded
- - Iceland: Giñnregla 
- - Aarjetje: Náttúruguðtrúar spreaded 
- - Kiev: Heiðinn spreaded
+- Leon: Ásatrú spreaded
+- Jorvik: Ásatrú & Norse culture spreaded
+- Sudreyar: Óðinnstrú & Norse culture spreaded
+- Iceland: Giñnregla
+- Aarjetje: Náttúruguðtrúar spreaded
+- Kiev: Heiðinn spreaded
