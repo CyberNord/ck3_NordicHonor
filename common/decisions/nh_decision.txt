@@ -761,7 +761,7 @@ nh_rollos_adventure_decision = {
 	major = yes
 	ai_goal = yes
 
-	ai_check_interval = 36
+	ai_check_interval = 6
 
 
 	is_shown = {
@@ -801,17 +801,17 @@ nh_rollos_adventure_decision = {
 
 	cost = { # only players pay a cost
 		gold = {
-			value = 0
+			value = 50
 			if = {
 				limit = { is_ai = no }
-				add = 500
+				add = 450
 			}
 		}
 		prestige = {
-			value = 0
+			value = 450
 			if = {
 				limit = { is_ai = no }
-				add = 2000
+				add = 1550
 			}
 		}
 	}
@@ -979,10 +979,9 @@ nh_iceland_first_great_ting = {
 		dynasty = {
 			add_dynasty_prestige = 250
 		}
-
-		trigger_event = {
-			trigger_event = nh.1014
-		}
+	
+		trigger_event = nh.1014
+		
 		hidden_effect = {
 			add_to_global_variable_list = {
 				name = unavailable_unique_decisions

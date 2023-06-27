@@ -81,7 +81,7 @@
  nh.1012.option.refuse_tooltip.desc:0 "By declining this offer, you will maintain your current status and decline the opportunity to form a new alliance or gain additional benefits."
 
 # Gotland event
- nh.1013.t:0 "Viðskipti eða herferð?"
+ nh.1013.t:0 "Viðskipti eða herferð"
  nh.1013.desc:0 "At this critical juncture, we have an opportunity to shape our future once again. With our ample manpower and resources, we can temporarily shift our focus to either creating trading posts and vessels for peaceful commerce, or arming our warriors with axes to embark on daring Viking expeditions. The decision we make now will influence our path for the next decade."
  nh.1013.option.trade.desc:0 "Invest in Trade"
  nh.1013.option.trade_tooltip.desc:0 "Allocate our resources towards creating trading posts and vessels, expanding our reach through peaceful commerce."
@@ -89,3 +89,8 @@
  nh.1013.option.raid_tooltip.desc:0 "Direct our resources towards arming our warriors and setting sail on bold Viking expeditions, seeking wealth and glory through conquest and plunder."
  nh.1013.option.defence.desc:0 "No, strenghten our defences instead!"
  nh.1013.option.defence_tooltip.desc:0 "Direct our resources towards fortifying our defenses by constructing temporary fortifications, such as wooden palisades, watchtowers, and defensive ditches."
+
+# First Alting
+nh.1014.t:0 "A important day"
+nh.1014.desc:0 "All the important men, women, and dignitaries have gathered. There is lengthy discussion and negotiation, but ultimately it becomes clear that from this day forward, Iceland will be recognized as its own kingdom. It is a significant step for the future of our land. It is time for others to acknowledge this claim, now and forever."
+nh.1014.option.a.desc:0 "Þetta reddast"

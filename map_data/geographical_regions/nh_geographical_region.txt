@@ -9,5 +9,6 @@ custom_iceland= {
 	duchies = {
 		# k_norway
 		d_iceland
+		d_northern_isles
 	}
 }

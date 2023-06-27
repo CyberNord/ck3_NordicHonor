@@ -734,6 +734,26 @@ nh.1011 = {
 			origin = province:252
 			inheritable = no
 		}
+		# make AI Rollo stronger
+		if = {
+			limit = { is_ai = yes }
+				add_character_modifier = {
+				modifier = nh_rollo_special_ai_modifier
+				years = 5
+			}
+			spawn_army = {
+				name = event_troop_rollo_name
+				levies = 500
+				men_at_arms = {
+					type = varangian_veterans
+					stacks = 5
+				}
+				location = province:252
+				origin = province:252
+				inheritable = no
+			}
+		}
+		
 	}
 
 	option = { 
@@ -997,5 +1017,28 @@ nh.1013 = {
 		}
 
 		ai_chance = {base = 10}
+	}
+}
+
+# first great Althing
+nh.1014 = {	
+	type = character_event
+	title = nh.1014.t
+	desc = nh.1014.desc
+	theme = realm
+
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+
+	immediate = {
+		play_music_cue = "mx_cue_epic_sacral_moment"
+		form_nh_iceland_scripted_effect = yes
+	}
+
+	option = {
+		name = nh.1014.option.a.desc
+		ai_chance = {base = 100}
 	}
 }
