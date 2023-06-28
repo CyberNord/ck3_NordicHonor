@@ -801,17 +801,17 @@ nh_rollos_adventure_decision = {
 
 	cost = { # only players pay a cost
 		gold = {
-			value = 50
+			value = 0
 			if = {
 				limit = { is_ai = no }
-				add = 450
+				add = 500
 			}
 		}
 		prestige = {
-			value = 450
+			value = 0
 			if = {
 				limit = { is_ai = no }
-				add = 1550
+				add = 2000
 			}
 		}
 	}
@@ -829,7 +829,7 @@ nh_rollos_adventure_decision = {
 		}
 	}
 
-	ai_potential = { primary_title.tier < tier_kingdom }
+	ai_potential = { prestige_level >= 2 }
 
 	ai_will_do = {
 		base = 100

@@ -21,10 +21,14 @@ nh_rollo_special_ai_modifier = {
 	icon = martial_positive
 	martial = 10
 	advantage = 30
-	min_combat_roll = 30
-	max_combat_roll = 30
-	health = 0.5
-	supply_duration = 1
-	hostile_county_attrition = -1
-	no_water_crossing_penalty = yes
+	
+	hidden_effect = {
+		min_combat_roll = 10
+		max_combat_roll = 10
+		knight_effectiveness_mult = 1.0
+		supply_duration = 1
+		hostile_county_attrition = -1
+		no_water_crossing_penalty = yes
+	}
+	
 }

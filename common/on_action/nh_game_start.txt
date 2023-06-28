@@ -165,9 +165,15 @@ nh_on_game_start_rollo = {
 				change_title_holder = {
 					holder = character:242
 					change = scope:title_change
-					}
 				}
+			}
 			resolve_title_and_vassal_change = scope:title_change
 		}
+		character:242 = {
+			dynasty = {
+				add_dynasty_prestige = 250
+				add_dynasty_perk = fp1_adventure_legacy_1
+			}
+		 }
 	}
 }
