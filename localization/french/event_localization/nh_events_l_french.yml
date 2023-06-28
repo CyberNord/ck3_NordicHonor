@@ -1,0 +1,50 @@
+﻿l_french:
+ nh.0001.t: "Dernier duel" #NT!
+ nh.0001.reason.desc: "La poursuite la plus cruciale pour un $norse_pagan_adherent$ est de lutter pour $germanic_positive_afterlife$. Cependant, comment l'atteindrai-je jamais si la mort au combat m'a échappé jusqu'à présent ? Je dois chercher un compagnon ou un rival de confiance et demander l'honneur d'un duel final, un combat à mort. Car si je devais mourir dans un vrai combat, une place à la table des guerriers me serait assurément assurée." #NT!
+ nh.0001.option.nevermind.desc: "Je dois y réfléchir encore une fois..." #NT!
+ nh.0001.option.nevermind_tooltip.desc: "Vous réfléchirez et reconsidérerez vos options pendant un certain temps. La décision restera indisponible jusque-là." #NT!
+ nh.0001.option.duel_player_heir.desc: "Le jour est venu de prouver que vous êtes un digne successeur." #NT!
+ nh.0001.option.duel_player_heir_tooltip.desc: "Vous affronterez votre héritier, [player_heir_option.GetFirstNameNoTooltip], dans une bataille pour la vie ou la mort. Comme les anciennes coutumes l'exigent, il aura la chance de prouver qu'il est digne ou de mourir en essayant." #NT!
+ nh.0001.option.duel_player_rival.desc: "[player_rival_option.GetFirstNameNoTooltip] ! Réglons notre différend avec honneur !" #NT!
+ nh.0001.option.duel_player_rival_tooltip.desc: "Vous affronterez votre rival, [player_rival_option.GetFirstName], dans une bataille pour la vie ou la mort." #NT!
+ nh.0001.option.player_vassal_option.desc: "[player_vassal_option.GetFirstNameNoTooltip] serait également un choix honorable..." #NT!
+ nh.0001.option.player_vassal_option_tooltip.desc: "Vous allez vous battre en duel, [player_vassal_option.GetFirstName], dans une bataille honorable pour la vie et la mort." #NT!
+  
+  # TbC has invalidated [nh.0021] 
+ nh.0021.trigger_failure.actor: "$nh.0001.trigger_failure.actor$" #NT!
+ nh.trigger_failure.recipient: "$nh.0001.trigger_failure.recipient$" #NT!
+ nh.0001.trigger_failure.actor: "Mon [trial_by_combat_trial|E] contre [recipient.GetFirstNameNoTooltip] a invalidé. C'est un présage..." #NT!
+ nh.0001.trigger_failure.recipient: "Mon [trial_by_combat_trial|E] contre [actor.GetFirstNameNoTooltip] a invalidé. C'est un présage..." #NT!
+  # Duel Won [nh.0041] 
+ nh.0041.t: "La victoire" #NT!
+ nh.0041.desc.intro: "Reposant tranquillement en [actor.GetCapitalLocation.GetTitle.GetNameNoTierNoTooltip], j'exulte de ma réussite, mon [actor.Custom('signature_weapon')] posé sur mes genoux.\n\n" #NT!
+ nh.0041.desc.opponent_died: "Le sang du [champion.GetTitledFirstNamePossessive] s'agglutine encore dans de nouvelles rainures et encoches le long du [actor.Custom('SignatureWeaponEndType')] de l'arme, me rappelant les derniers instants du [champion.GetWomanMan]. Pourtant, malgré ma victoire, l'étreinte de $germanic_positive_afterlife$ m'échappe. Le temps presse et je dois rechercher une mort honorable pour prouver ma valeur..." #NT!
+ nh.0041.desc.outro: "\n\nHier, j'ai essayé d'entrer $germanic_positive_afterlife$ avec honneur, et $germanic_high_god_name$ a préféré [champion.GetTitledFirstNamePossessive]." #NT!
+ nh.0041.a: "Mon voyage continue." #NT!
+  # Challenger Won [nh.0111] 
+ nh.0111.t: "$germanic_positive_afterlife$" #NT!
+ nh.0111.desc.intro: "$germanic_high_god_she_he$, $germanic_high_god_alternate$ nous ont souri chaleureusement hier !\n\n" #NT!
+ nh.0111.desc.opponent_died.recipient_fighting: "[actor.GetFirstName] est maintenant sans aucun doute saisi par l'étreinte de $germanic_positive_afterlife$. Son esprit courageux et son courage inébranlable ont laissé une marque indélébile dans nos cœurs.\nNotre bataille était une symphonie d'acier et de sang, un témoignage du code du guerrier qui nous était cher. Les $germanic_war_god_name$, $germanic_good_god_thor$ et $germanic_high_god_alternate$ témoignent eux-mêmes de notre triomphe, leur regard approbateur brillant sur nous.\nQue les échos de notre valeureux duel résonnent dans les annales de l'histoire, immortalisant à jamais [actor.GetFirstName] comme une véritable légende $germanic_religion_adherent$.\n \n\n" #NT!
+ nh.0111.desc.outro: "Rendez-vous au $germanic_positive_afterlife$ [actor.GetFirstName] !" #NT!
+ nh.0111.a: "Ce sont nos traditions honorées..." #NT!
+  # Joromaborg [nh.1001] 
+ nh.1001.t: "Conquête divine" #NT!
+ nh.1001.desc: "Après des batailles et des effusions de sang sans fin, Rome, la ville éternelle, se trouve désormais à nos pieds. Ses murs autrefois puissants s'effondrent sous le poids de notre triomphe, tandis que les échos de nos victoires se répercutent dans ses rues. Il est temps de reconstruire le grand temple pour la gloire de [actor.GetFaith.HighGodName] ! Ce temple, s'élevant comme un phare de gloire, sera un sanctuaire où les fidèles [actor.GetFaith.PantheonTerm] se rassemblent, témoins de l'aube d'une ère nouvelle, où les dieux eux-mêmes marchent parmi nous, et le rayonnement de Joromaborg illumine le chemin vers [actor.GetFaith.PositiveAfterLife]." #NT!
+ nh.1001.option.accept.desc: "L'ancienne ville est à nous maintenant !" #NT!
+  # Miklagard [nh.1002] 
+ nh.1002.t: "Nouvel ordre de Constantinople" #NT!
+ nh.1002.desc: "Alors que je me tiens au milieu des murs tombés de Constantinople, un sentiment de triomphe et de révérence me consume.\n Cette grande ville, autrefois ornée de guerriers varègues, sera désormais revendiquée comme la nôtre.\n\n La basilique Sainte-Sophie, symbole de La puissance byzantine deviendra un grand temple où les [actor.GetFaith.GetName] venus de loin se rassembleront pour honorer [actor.GetFaith.HighGodName]. Constantinople, désormais baptisée à la lumière du [actor.GetFaith.PantheonTerm], sera désormais connue sous le nom de Mikligarðr, témoignage de la résurgence de nos traditions nordiques. Maintenant et pour toujours!" #NT!
+ nh.1002.option.accept.desc: "L'ancienne ville est à nous maintenant !" #NT!
+  # Peace with Christianity [nh.1003] 
+ nh.1003.t: "Un pacte de coexistence" #NT!
+ nh.1003.desc: "Dans une démarche audacieuse vers l'harmonie religieuse, [actor.GetFirstName], le [actor.GetTitle] du [actor.GetRealm], a décidé de nouer un pacte historique de coexistence avec la foi chrétienne. Grâce à des négociations diplomatiques et au respect mutuel, une déclaration de paix et de tolérance a été proclamée. Cette occasion capitale marque un tournant dans le paysage religieux, alors que le royaume embrasse une nouvelle ère d'harmonie entre les traditions nordiques et les croyances chrétiennes. L'avenir est porteur de la promesse d'une prospérité et d'une compréhension partagées, alors que le royaume s'engage sur la voie de l'unité et de la coopération." #NT!
+ nh.1003.option.accept.desc: "Plus de Ragnarök." #NT!
+   # Iceland pagan/christianity [nh.1004 to .1006] 
+ nh.1004.t: "Décider de l'avenir religieux" #NT!
+ nh.1004.desc: "Un choix capital se dresse devant nous, remuant les profondeurs de nos âmes. Les vents portent des murmures d'une nouvelle divinité et du pouvoir qu'elle détient. Pourtant, emprunter ce chemin signifie abandonner les anciennes voies, dire adieu à Odin et aux dieux qui nous ont guidés. Allons-nous embrasser cette nouvelle foi ou rester fidèles aux traditions de nos ancêtres ?" #NT!
+ nh.1004.option.pagan.desc: "Restez païen" #NT!
+ nh.1004.option.catholic.desc: "Convertir au catholicisme" #NT!
+ nh.1004.option.insular.desc: "Convertir au christianisme insulaire" #NT!
+ nh.1005.t: "Recréez la vieille Saxe" #NT!
+ nh.1005.desc: "Inspirés par l'esprit valeureux de Widukind et la détermination indéfectible de notre peuple, nous nous embarquerons sur la voie de la recréation du glorieux royaume de la Vieille Saxe. Le cœur enflammé et l'esprit indompté, nous nous débarrasserons des chaînes de l'influence étrangère imposées par la conquête de Charlemagne. Nos ancêtres nous demandent de restaurer nos traditions ancestrales, d'honorer Wotan, le Père de tous, en tant que divinité suprême de notre terre. Que le monde témoigne de la résurgence triomphante de nos racines païennes, alors que nous forgeons un nouveau destin, unis sous l'œil vigilant de notre divin patron." #NT!
+ nh.1005.option.a.desc: "Et Wotan nous guidera vers la Victoire !" #NT!

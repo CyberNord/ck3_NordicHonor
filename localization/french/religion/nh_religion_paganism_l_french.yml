@@ -1,0 +1,127 @@
+﻿l_french:
+ # Holysites 
+ holy_site_joromaborg_name: "Jórómaborg" #NT!
+ holy_site_joromaborg_effect_name: "A partir de [holy_site|E] #weak ($holy_site_joromaborg_name$)#!" #NT!
+ holy_site_miklagard_name: "Mikligarðr" #NT!
+ holy_site_miklagard_effect_name: "A partir de [holy_site|E] #weak ($holy_site_miklagard_name$)#!" #NT!
+ holy_site_trelleborg_name: "Trelleborg" #NT!
+ holy_site_trelleborg_effect_name: "A partir de [holy_site|E] #weak ($holy_site_trelleborg_name$)#!" #NT!
+ holy_site_thingvellir_name: "Thingvellir" #NT!
+ holy_site_thingvellir_effect_name: "A partir de [holy_site|E] #weak ($holy_site_thingvellir_name$)#!" #NT!
+ holy_site_heiligenberg_name: "Heiligenberg" #NT!
+ holy_site_heiligenberg_effect_name: "A partir de [holy_site|E] #weak ($holy_site_heiligenberg_name$)#!" #NT!
+ holy_site_gniezno_name: "Gniezno" #NT!
+ holy_site_gniezno_effect_name: "A partir de [holy_site|E] #weak ($holy_site_gniezno_name$)#!" #NT!
+ holy_site_breclav_name: "Břeclav" #NT!
+ holy_site_breclav_effect_name: "A partir de [holy_site|E] #weak ($holy_site_breclav_name$)#!" #NT!
+ holy_site_hallstatt_name: "Hallstatt" #NT!
+ holy_site_hallstatt_effect_name: "A partir de [holy_site|E] #weak ($holy_site_hallstatt_name$)#!" #NT!
+  
+ # Heritages 
+ has_special_heritage_name: "Similitude nordique" #NT!
+ special_faith_has_germanic_heritage_name: "Foi nordique" #NT!
+ special_faith_has_germanic_heritage_desc: "Nous louons les mêmes dieux avec des noms différents, ainsi nous ne répandrons pas le sang de nos frères dans la foi." #NT!
+ doctrine_parameter_hostility_override_special_faith_has_germanic_heritage: "Considère, et est considéré par, les autres [faiths|E] avec les #V $special_faith_has_germanic_heritage_name$#! [doctrine|E] comme [GetHostilityLevelName( TOKEN_PARAMETER.GetIntValue )|V]" #NT!
+ special_faith_stadfast_heritage_name: "Staðfast" #NT!
+ special_faith_stadfast_heritage_desc: "Dans notre conviction inébranlable, nous affirmons fièrement notre chemin comme la seule vérité, regardant vers le bas ceux qui s'écartent de notre chemin" #NT!
+ doctrine_parameter_fervor_per_holy_site: "Les lieux saints augmentent la ferveur." #NT!
+ doctrine_parameter_hostility_override_special_faith_stadfast_heritage: "Considère, et est considéré par, les autres [faiths|E] avec les #V $special_faith_stadfast_heritage_name$#! [doctrine|E] comme [GetHostilityLevelName( TOKEN_PARAMETER.GetIntValue )|V]" #NT!
+ special_faith_no_special_heritage_name: "Aucun" #NT!
+ special_faith_no_special_heritage_desc: "Mettez fin au lien avec les autres croyants du Tout-Père." #NT!
+ doctrine_parameter_no_effect_removed_upon_creation: "La similitude nordique sera supprimée lors de la création." #NT!
+ special_faith_christian_heritage_name: "Acceptation chrétienne" #NT!
+ special_faith_christian_heritage_desc: "Nous devons accepter que Jésus-Christ est en effet un être puissant." #NT!
+ special_faith_traitor_heritage_name: "Siðbrytari" #NT!
+ special_faith_traitor_heritage_desc: "Le monde change et nous aussi, les chrétiens pourraient être de puissants alliés si nous acceptons certaines de leurs traditions" #NT!
+ # Forn Siðr (North German) 
+ forn_sidr_pagan: "Forn Siðr" #NT!
+ forn_sidr_pagan_adj: "Forn Siðr" #NT!
+ forn_sidr_pagan_adherent: "Forn Siðrist" #NT!
+ forn_sidr_pagan_adherent_plural: "Forn Siðrists" #NT!
+  forn_sidr_pagan_desc: 0 "L'ancien panthéon germanique de Forn Siðr se caractérisait par un lien étroit avec la nature et un profond respect pour les éléments naturels. Les païens vénéraient Wotan, le Tout-Père, comme divinité suprême et croyaient en l'existence d'une multitude d'êtres divins qui influençaient le monde qui les entourait. Les païens pratiquaient des rituels et des cérémonies pour établir un lien spirituel avec leurs dieux, offrant des sacrifices et recherchant soutien et bénédiction dans tous les aspects de la vie. Ils croyaient également au destin et entretenaient des liens étroits avec leurs ancêtres. Dans l'ensemble, la foi païenne des Saxons du nord de l'Allemagne se caractérisait par un lien profond avec la nature, un sens aigu de la communauté et une croyance dans le pouvoir et la sagesse de leurs dieux." #NT!
+ forn_sidr_pagan_old: "Vieux Forn Siðr" #NT!
+ forn_sidr_pagan_old_adj: "Vieux Forn Siðr" #NT!
+ forn_sidr_pagan_old_adherent: "Vieux Forn Siðrar" #NT!
+ forn_sidr_pagan_old_adherent_plural: "Vieux Forn Siðrar" #NT!
+ forn_sidr_high_god_name: "Wotan" #NT!
+ forn_sidr_high_god_name_possessive: "de Wotan" #NT!
+ forn_sidr_high_god_alternate: "Wotan" #NT!
+ forn_sidr_high_god_alternate_possessive: "de Wotan" #NT!
+ forn_sidr_good_god_fairguneis: "Frey" #NT!
+ forn_sidr_good_god_ingwaz: "$forn_sidr_fertility_god_name$" #NT!
+ forn_sidr_good_god_terwing: "$forn_sidr_war_god_name$" #NT!
+ forn_sidr_priest_male: "gothique" #NT!
+ forn_sidr_priest_male_plural: "Gothar" #NT!
+ forn_sidr_priest_female: "Gythie" #NT!
+ forn_sidr_priest_female_plural: "Gythjur" #NT!
+ forn_sidr_priest_neuter: "gothique" #NT!
+ forn_sidr_priest_neuter_plural: "Gothar" #NT!
+ forn_sidr_fertility_god_name: "Freyja" #NT!
+ forn_sidr_fertility_god_name_possessive: "de Freyja" #NT!
+ forn_sidr_knowledge_god_name: "$forn_sidr_high_god_name$" #NT!
+ forn_sidr_knowledge_god_name_possessive: "$forn_sidr_high_god_name_possessive$" #NT!
+ forn_sidr_war_god_name: "Tiwaz" #NT!
+ forn_sidr_war_god_name_possessive: "Tiwaz's" #NT!
+ forn_sidr_desc: "L'ancienne foi païenne germanique était enracinée dans une forte croyance en un panthéon de dieux et de déesses. Au centre de leur système de croyances se trouvait le culte de Wótan, la principale divinité associée à la guerre, à la sagesse et à la magie. Les adeptes de cette foi croyaient en l'interdépendance de la nature et du divin. Ils considéraient le monde naturel comme sacré et avaient une profonde révérence pour les éléments, les forêts et les rivières. Des rituels et des cérémonies étaient organisés pour honorer les dieux, souvent organisés dans des bosquets sacrés ou sur des sites naturels." #NT!
+  # Giñnregla (Icelandic) 
+ ginnregla_pagan: "Giñnregla" #NT!
+ ginnregla_pagan_adj: "Giñnregla" #NT!
+ ginnregla_pagan_adherent: "Giñnreglur" #NT!
+ ginnregla_pagan_adherent_plural: "Giñnreglur" #NT!
+ ginnregla_pagan_desc: "Les païens d'Islande, appelés ici Giñnregla, qui suivaient la foi en Odin et le panthéon vieux norrois, avaient un lien spirituel profond avec la nature et les dieux. Leurs croyances étaient étroitement liées au Tout, à l'assemblée de tous les hommes libres et à la communauté. Ils cherchaient la vérité et les conseils dans les astres et pratiquaient une forme d'observation astrologique pour interpréter les signes des dieux. Malgré leur passé guerrier, ils accordaient une grande valeur aux communautés pacifiques et cherchaient à favoriser une coexistence harmonieuse. Leur pratique religieuse comprenait des offrandes, des rituels et des festivals pour honorer les dieux et rechercher leurs bénédictions. Dans l'ensemble, les païens d'Islande incarnaient une profonde spiritualité façonnée par leur croyance en Odin, la signification du Tout, la poursuite de la vérité dans les étoiles et leur engagement envers une communauté pacifique." #NT!
+ ginnregla_pagan_old: "Vieux Giñnregla" #NT!
+ ginnregla_pagan_old_adj: "Vieux Giñnregla" #NT!
+ ginnregla_pagan_old_adherent: "Vieux Giñnreglur" #NT!
+ ginnregla_pagan_old_adherent_plural: "Vieux Giñnreglur" #NT!
+ ginnregla_priest_male: "Goði" #NT!
+ ginnregla_priest_male_plural: "Goðar" #NT!
+ ginnregla_priest_female: "Gythja" #NT!
+ ginnregla_priest_female_plural: "Gythjur" #NT!
+ ginnregla_priest_neuter: "Goði" #NT!
+ ginnregla_priest_neuter_plural: "Goðar" #NT!
+  # Náttúruguðtrúarmenn (Scando-Finnic) 
+ natturugudtruar_pagan: "Náttúruguðtrúar" #NT!
+ natturugudtruar_pagan_adj: "Náttúruguðtrúar" #NT!
+ natturugudtruar_pagan_adherent: "Náttúruguðtrúarmaður" #NT!
+ natturugudtruar_pagan_adherent_plural: "Náttúruguðtrúarmenn" #NT!
+ natturugudtruar_pagan_desc: "L'expression axée sur la nature connue sous le nom de Náttúruguðtrúarmenn, qui s'est mélangée à certains éléments des coutumes finno-ougriennes, incarne un lien profondément enraciné avec le monde naturel et la sorcellerie. Ce système de croyance honore les dieux nordiques et les combine avec les pratiques traditionnelles des peuples finno-ougriens. Grâce à l'application de la sorcellerie et des pratiques chamaniques, les adeptes de cette croyance recherchent la perspicacité spirituelle et l'harmonie avec les forces naturelles. Ils trouvent l'inspiration dans les esprits des forêts, des rivières et des montagnes et célèbrent des rituels pour renforcer leur lien avec la nature. Avec un profond respect pour la diversité de la nature et l'interaction des éléments, ils aspirent à une existence équilibrée et harmonieuse en alignement avec les esprits divins et de la nature." #NT!
+ natturugudtruar_pagan_old: "Vieux Náttúruguðtrúar" #NT!
+ natturugudtruar_pagan_old_adj: "Vieux Náttúruguðtrúar" #NT!
+ natturugudtruar_pagan_old_adherent: "Vieux Náttúruguðtrúarmaður" #NT!
+ natturugudtruar_pagan_old_adherent_plural: "Vieux Náttúruguðtrúarmenn" #NT!
+  # Óðinnstrú (Odinism) 
+ odinstru_pagan: "Óðinnstrú" #NT!
+ odinstru_pagan_adj: "Óðinnstrú" #NT!
+ odinstru_pagan_adherent: "Óðinnstrú" #NT!
+ odinstru_pagan_adherent_plural: "Óðinnstrúar" #NT!
+ odinstru_pagan_desc: "L'expression fanatiquement fondamentaliste du panthéon nordique, connue sous le nom d'Óðinnstrú, vénère les dieux avec une foi inébranlable, mettant un accent particulier sur Odin et Tyr. Ce chemin de croyance se caractérise par une mentalité guerrière extrême. Les partisans se considèrent comme des guerriers choisis et considèrent la bataille comme un devoir sacré. Ils croient fermement qu'il est de leur devoir de défendre l'honneur des dieux sur le champ de bataille sanglant et de vaincre leurs ennemis. Leurs rituels sont marqués par des éléments martiaux, dans lesquels ils offrent des sacrifices et recherchent la faveur divine pour les batailles à venir. La version fanatiquement fondamentaliste du panthéon nordique considère la guerre comme le chemin ultime pour atteindre la gloire et l'honneur, à la fois dans le royaume terrestre et au Valhalla." #NT!
+ odinstru_pagan_old: "Vieux Óðinnstrú" #NT!
+ odinstru_pagan_old_adj: "Vieux Óðinnstrú" #NT!
+ odinstru_pagan_old_adherent: "Vieux Óðinnstrú" #NT!
+ odinstru_pagan_old_adherent_plural: "Vieux Óðinnstrúar" #NT!
+  # Heiðinn (Scando-Baltic) 
+ heidinn_pagan: "Heiðinn" #NT!
+ heidinn_pagan_adj: "heiðinn" #NT!
+ heidinn_pagan_adherent: "Heiðinn" #NT!
+ heidinn_pagan_adherent_plural: "Heiðnir" #NT!
+ heidinn_pagan_desc: "Le panthéon skando-slave de Heiðinn s'est en quelque sorte adapté aux coutumes rudes des peuples slaves. Il vénère les dieux nordiques avec un mélange de traditions nordiques et slaves. Les adeptes de cette croyance apprécient leur lien avec la nature et pratiquent des rituels qui englobent à la fois les éléments sauvages de la mythologie nordique et les cycles naturels des traditions slaves. Ils voient les dieux nordiques comme de puissants protecteurs et recherchent leur faveur en matière de fertilité, de récolte et de survie dans les dures régions slaves. La version kiévienne d'Asatru conserve donc son essence nordique mais intègre des éléments de la culture et des coutumes slaves pour former une communauté de foi unique." #NT!
+ heidinn_pagan_old: "Vieux Heiðinn" #NT!
+ heidinn_pagan_old_adj: "Vieux heiðinn" #NT!
+ heidinn_pagan_old_adherent: "Vieux Heidnir" #NT!
+ heidinn_pagan_old_adherent_plural: "Vieux Heidnir" #NT!
+ heidinn_high_god_name: "cotes" #NT!
+ heidinn_high_god_name_possessive: "les cotes" #NT!
+ heidinn_high_god_alternate: "Odsn" #NT!
+ heidinn_high_god_alternate_possessive: "les cotes" #NT!
+ heidinn_good_god_thor: "Perkunas" #NT!
+ heidinn_good_god_fairguneis: "Laima" #NT!
+ heidinn_good_god_ingwaz: "$heidinn_fertility_god_name$" #NT!
+ heidinn_good_god_terwing: "$heidinn_war_god_name$" #NT!
+ heidinn_fertility_god_name: "Lauma" #NT!
+ heidinn_fertility_god_name_possessive: "Chez Lauma" #NT!
+ heidinn_knowledge_god_name: "$heidinn_high_god_name$" #NT!
+ heidinn_knowledge_god_name_possessive: "$heidinn_high_god_name_possessive$" #NT!
+ heidinn_war_god_name: "Tīvs" #NT!
+ heidinn_war_god_name_possessive: "Tīv's" #NT!
+ heidinn_good_god_freyja: "$heidinn_fertility_god_name$" #NT!
+ heidinn_good_god_tyr: "$heidinn_war_god_name$" #NT!
