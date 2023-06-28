@@ -381,7 +381,7 @@
 
 		# Náttúruguðtrúarmenn (Skando-Finnic)
 		natturugudtruar_pagan = {
-			color = { 0.1 0.3 0.1 }
+			color = { 0.25 0.64 0.21 }
 			icon = natturugudtruar
 			reformed_icon = natturugudtruar_reformed
 
