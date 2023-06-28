@@ -46,7 +46,12 @@
  nh_gotland_policy_decision_confirm:0 "Confirm"
  nh_gotland_policy_decision_tooltip:0 "This decision will shape our future actions. Choose carefully, as it will determine the path we will follow."
 
- nh_iceland_first_great_ting:0 "First Alþingi"
+ nh_iceland_first_great_ting:0 "Great Alþingi"
  nh_iceland_first_great_ting_desc:0 "The time has come for the establishment of the First Alþingi, a momentous gathering of the Icelandic people. As the ancient tradition dictates, it is here that the Íslandskonungsríki, the Kingdom of Iceland, shall be formally created. This historic event marks the beginning of a new era for our people, as we unite under a single banner and forge our own destiny. Let us gather together and lay the foundation of our proud nation, where the voices of all will be heard and the future of Iceland will be shaped."
  nh_iceland_first_great_ting_confirm:0 "Gather the goðar!"
  nh_iceland_first_great_ting_tooltip:0 "By initiating the First Alþingi (Althing), the Kingdom of Iceland will be officially established, solidifying the unity and sovereignty of our people."
+
+ nh_iceland_yearly_ting:0 "Alþingi"
+ nh_iceland_yearly_ting_desc:0 "At the annual ting, the people of Iceland gather to discuss and resolve matters of importance."
+ nh_iceland_yearly_ting_confirm:0 "Gather the goðar!"
+ nh_iceland_yearly_ting_tooltip:0 "A Ting - meeting is initiated, where all sort of stuff is discussed"

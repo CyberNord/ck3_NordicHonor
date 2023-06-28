@@ -1000,3 +1000,74 @@ nh_iceland_first_great_ting = {
 		base = 100
 	}
 }
+
+nh_iceland_yearly_ting = {
+	picture = "gfx/interface/illustrations/decisions/nh_iceland_great_ting.dds"
+	
+	desc = nh_iceland_yearly_ting_desc
+	selection_tooltip = nh_iceland_yearly_ting_tooltip
+
+	ai_check_interval = 36
+	cooldown = { years = 3 }
+
+	is_shown = {
+		is_lowborn = no
+		any_held_title = {
+			tier = tier_county
+			title_province = { geographical_region = custom_iceland}
+		}
+	}
+
+	is_valid = {
+		#restricted to norse icelandic folk
+		faith = faith:ginnregla_pagan
+		culture = { has_cultural_pillar = heritage_north_germanic }
+
+		# unreformed
+		custom_description = {
+			text = nh_faith_is_unreformed
+			subject = root
+			faith = { has_doctrine_parameter = unreformed }
+		}
+		# Thingvellir
+		has_title = title:c_sudurland
+	}
+
+	is_valid_showing_failures_only = {
+		is_capable_adult = yes
+		is_imprisoned = no
+		is_at_war = no
+		not = { exists = involved_activity }
+	}
+
+	cost = { # easy for AI
+		piety = {
+			value = 500
+			if = {
+				limit = { is_ai = no }
+				add = 500
+			}
+		}
+		prestige = {
+			value = 1000
+			if = {
+				limit = { is_ai = no }
+				add = 1000
+			}
+		}
+	}
+
+	effect = {
+		save_scope_as = actor
+		trigger_event = nh.1015
+		dynasty = {
+			add_dynasty_prestige = 25
+		}
+	}
+
+	ai_potential = { always = yes }
+
+	ai_will_do = {
+		base = 100
+	}
+}
