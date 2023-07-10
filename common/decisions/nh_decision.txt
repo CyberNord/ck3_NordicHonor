@@ -1029,8 +1029,9 @@ nh_iceland_yearly_ting = {
 			subject = root
 			faith = { has_doctrine_parameter = unreformed }
 		}
-		# Thingvellir
+		# Thingvellirhold relevant Titles
 		has_title = title:c_sudurland
+		has_title = title:d_iceland
 	}
 
 	is_valid_showing_failures_only = {

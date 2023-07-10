@@ -80,6 +80,10 @@
  nh.1012.option.refuse.desc:0 "No, I will not bend my knee to those [francish_king.GetFaith.GetAdherentNamePlural]"
  nh.1012.option.refuse_tooltip.desc:0 "By declining this offer, you will maintain your current status and decline the opportunity to form a new alliance or gain additional benefits."
 
+ nh.9000.opening:0 "The Norman solution"
+ nh.9000.desc:0 "[actor.GetTitledFirstName] has conquered Neustria. I am impressed by the norse strength and ambition, so I sent out emissaries to them with a remarkable proposition. I offered him to rule Neustria as duke and the hand of my daring daughter.\nHowever, in return, [actor.GetTitledFirstName] convert to Christianity and pledge loyalty to the Frankish crown."
+ nh.9000.a:0 "This will secure the coastlines from those raiders."
+
 # Gotland event
  nh.1013.t:0 "Viðskipti eða herferð"
  nh.1013.desc:0 "At this critical juncture, we have an opportunity to shape our future once again. With our ample manpower and resources, we can temporarily shift our focus to either creating trading posts and vessels for peaceful commerce, or arming our warriors with axes to embark on daring Viking expeditions. The decision we make now will influence our path for the next decade."
@@ -94,3 +98,30 @@
 nh.1014.t:0 "A important day"
 nh.1014.desc:0 "All the important men, women, and dignitaries have gathered. There is lengthy discussion and negotiation, but ultimately it becomes clear that from this day forward, Iceland will be recognized as its own kingdom. It is a significant step for the future of our land. It is time for others to acknowledge this claim, now and forever."
 nh.1014.option.a.desc:0 "Þetta reddast"
+
+nh.1015.t:0 "Thing"
+nh.1015.desc:0 "The annual gathering of the Icelandic people, known as the Thing, has commenced. As the ruler, you have the opportunity to shape the direction of the gathering and guide the future of your land."
+nh.0015.option.blot.desc:0 "Divine Reverence"
+nh.0015.option.blot_tooltip.desc:0  "Focus the Thing on the gods, conducting sacred rituals and offering sacrifices. Receive various religious buffs and favor from the divine."
+nh.0015.option.trade.desc:0 "Trade Expansion"
+nh.0015.option.trade_tooltip.desc:0 "Shift the focus of the Thing towards trade and commerce. Encourage economic growth, establish trade routes, and foster prosperity for your realm."
+nh.0015.option.build.desc:0 "County Development"
+nh.0015.option.build_tooltip.desc:0 "Emphasize the development of your counties and infrastructure. Invest in building projects, improve defenses, and enhance the prosperity of your lands."
+nh.0015.option.diplomacy.desc:0 "Diplomacy and Adventure"
+nh.0015.option.diplomacy_tooltip.desc:0 "Direct the Thing's attention towards diplomacy and adventure. Seek alliances, embark on expeditions, and expand your influence through strategic alliances and daring exploits."
+
+nh.9001.opening:0 "Esteemed attendees,"
+nh.9001.desc:0 "In the spirit of divine reverence, the ruler has chosen to focus the Thing on matters of religious significance. Prayers are offered, sacrifices made, and the gods are honored with utmost devotion. May their blessings be upon us."
+nh.9001.a:0 "Praise the Gods"
+
+nh.9002.opening:0 "Esteemed attendees,"
+nh.9002.desc:0 "The ruler has decided to prioritize trade expansion during this gathering of the Thing. Efforts are made to strengthen commercial ties, establish new trade routes, and attract merchants from distant lands. May prosperity and wealth flow into our realms."
+nh.9002.a:0 "Plunder New Shores"
+
+nh.9003.opening:0 "Esteemed attendees,"
+nh.9003.desc:0 "The ruler has placed a strong emphasis on county development in this assembly of the Thing. Resources are invested in infrastructure, construction projects are initiated, and the prosperity of our counties is nurtured. May our lands flourish and thrive."
+nh.9003.a:0 "Fortify Our Lands"
+
+nh.9004.opening:0 "Esteemed attendees,"
+nh.9004.desc:0 "The ruler has chosen to focus on diplomacy and adventure during this gathering of the Thing. Efforts are made to forge alliances, seek new opportunities, and embark on daring ventures. May our diplomatic endeavors and brave expeditions bring honor and glory to our realm."
+nh.9004.a:0 "Embark on Great Journeys"

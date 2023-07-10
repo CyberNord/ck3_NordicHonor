@@ -3,6 +3,7 @@
 # nh.0xxx  .... Last Duel (messy)
 # nh.100x  .... v1.0 Events
 # nh.101x  .... v1.1 Events
+# nh.9xxx  .... v1.1 Notification Events
 
 namespace = nh
 
@@ -883,6 +884,8 @@ nh.1012 = {
 			add_dynasty_prestige = 500
 		}
 
+		scope:francish_king = { trigger_event = nh.9000}
+
 		ai_chance = {base = 100}
 	}
 
@@ -933,6 +936,7 @@ nh.1012 = {
 		dynasty = {
 			add_dynasty_prestige = 500
 		}
+		scope:francish_king = { trigger_event = nh.9000}
 
 		ai_chance = {base = 100}
 	}
@@ -1042,3 +1046,280 @@ nh.1014 = {
 		ai_chance = {base = 100}
 	}
 }
+
+# repeatable thing 
+nh.1015 = {
+	type = character_event
+	title = nh.1015.t
+	desc = nh.1015.desc
+	theme = realm
+
+	left_portrait = {
+		character = root
+		animation = marshal
+	}
+
+	immediate = {
+		play_music_cue = "mx_cue_positive_effect"
+
+		root = {
+			save_scope_as = iceland_liege
+		}
+	}
+
+	# pray to the gods 
+	option = {
+		name = nh.0015.option.blot.desc
+		custom_tooltip = nh.0015.option.blot_tooltip.desc
+
+		hidden_effect = {
+			faith:ginnregla_pagan = {
+				every_faith_ruler = { 
+					random_list = { 
+						15 = {
+							add_character_modifier = {
+								modifier = nh_odins_blessing_modifier
+								years = 1
+							}
+						}
+						20 = {
+							add_character_modifier = {
+								modifier = nh_thors_blessing_modifier
+								years = 2
+							}
+						}
+						20 = {
+							add_character_modifier = {
+								modifier = nh_freyas_blessing_modifier
+								years = 2
+							}
+						}
+						15 = {
+							add_character_modifier = {
+								modifier = nh_tyr_blessing_modifier
+								years = 1
+							}
+						}
+						15 = {
+							add_character_modifier = {
+								modifier = nh_njords_blessing_modifier
+								years = 1
+							}
+						}
+						5 = {
+							add_character_modifier = {
+								modifier = nh_lokis_curse_modifier
+								years = 3
+							}
+						}
+						5 = {
+							add_character_modifier = {
+								modifier = nh_hels_curse_modifier
+								years = 3
+							}
+						}
+						5 = {
+							add_character_modifier = {
+								modifier = nh_suturs_curse_modifier
+								years = 3
+							}
+						}
+					}
+					trigger_event = nh.9001
+				}
+			}
+		}
+
+		title:c_sudurland = {
+			add_county_modifier = {
+				modifier = nh_tinvellir_county_modifier
+				years = 2
+			}
+		}
+
+		ai_chance = {
+			base = 25
+			modifier = { 
+				add = 75
+				has_trait = zealous
+			}
+		}
+	}
+
+	# trade
+	option = {
+		name = nh.0015.option.trade.desc
+		custom_tooltip = nh.0015.option.trade_tooltip.desc
+
+		hidden_effect = {
+			faith:ginnregla_pagan = {
+				every_faith_ruler = { 
+					add_character_modifier = {
+						modifier = nh_thing_trade_modifier
+						years = 2
+						}
+					trigger_event = nh.9002
+				}
+			}
+		}
+
+		title:c_sudurland = {
+			add_county_modifier = {
+				modifier = nh_tinvellir_county_modifier
+				years = 2
+			}
+		}
+
+		ai_chance = {
+			base = 15
+			modifier = { 
+				add = 75
+				has_trait = greedy
+			}
+		}
+	}
+
+	# build 
+	option = {
+		name = nh.0015.option.build.desc
+		custom_tooltip = nh.0015.option.build_tooltip.desc
+
+		hidden_effect = {
+			faith:ginnregla_pagan = {
+				every_faith_ruler = { 
+					add_character_modifier = {
+						modifier = nh_thing_build_modifier
+						years = 2
+						}
+					trigger_event = nh.9002
+				}
+			}
+		}
+
+		title:c_sudurland = {
+			add_county_modifier = {
+				modifier = nh_tinvellir_county_modifier
+				years = 2
+			}
+		}
+
+		ai_chance = {
+			base = 15
+			modifier = { 
+				add = 75
+				has_trait = diligent
+			}
+		}
+	}
+
+	# diplomacy
+	option = {
+		name = nh.0015.option.diplomacy.desc
+		custom_tooltip = nh.0015.option.diplomacy_tooltip.desc
+
+		hidden_effect = {
+			faith:ginnregla_pagan = {
+				every_faith_ruler = { 
+					add_character_modifier = {
+						modifier = nh_thing_diplomacy_modifier
+						years = 2
+						}
+					trigger_event = nh.9002
+				}
+			}
+		}
+
+		title:c_sudurland = {
+			add_county_modifier = {
+				modifier = nh_tinvellir_county_modifier
+				years = 2
+			}
+		}
+
+		ai_chance = {
+			base = 15
+			modifier = { 
+				add = 75
+				has_trait = compassionate
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+############################################ letters ##################################################
+# rollo
+nh.9000 = {
+	type = letter_event
+	opening = nh.9000.opening
+	desc = nh.9000.desc
+	sender = scope:actor
+
+	option = {
+		name = nh.9000.a
+	}
+}
+
+# repeatable thing
+nh.9001 = {
+	type = letter_event
+	opening = nh.9001.opening
+	desc = nh.9001.desc
+	sender = scope:iceland_liege
+
+	option = {
+		name = nh.9001.a
+	}
+}
+
+nh.9002 = {
+	type = letter_event
+	opening = nh.9002.opening
+	desc = nh.9002.desc
+	sender = scope:iceland_liege
+
+	option = {
+		name = nh.9002.a
+	}
+}
+
+nh.9003 = {
+	type = letter_event
+	opening = nh.9003.opening
+	desc = nh.9003.desc
+	sender = scope:iceland_liege
+
+	option = {
+		name = nh.9003.a
+	}
+}
+
+nh.9004 = {
+	type = letter_event
+	opening = nh.9004.opening
+	desc = nh.9004.desc
+	sender = scope:iceland_liege
+
+	option = {
+		name = nh.9004.a
+	}
+}
+
