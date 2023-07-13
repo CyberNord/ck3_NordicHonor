@@ -1191,7 +1191,7 @@ nh.1015 = {
 						modifier = nh_thing_build_modifier
 						years = 2
 						}
-					trigger_event = nh.9002
+					trigger_event = nh.9003
 				}
 			}
 		}
@@ -1224,7 +1224,7 @@ nh.1015 = {
 						modifier = nh_thing_diplomacy_modifier
 						years = 2
 						}
-					trigger_event = nh.9002
+					trigger_event = nh.9004
 				}
 			}
 		}
