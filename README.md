@@ -120,7 +120,24 @@ Avaliable for: North,central,west germans except Karolinger-Dynasty
 ### Rollos Adventure
 
 Invade the dutchy of Normandy and start the legacy of the norman conquests.
-Avaliable for: Hrolfr (Rollo) in 867. After successfully conquering Normandy (as Rollo) a unique event happens
+Avaliable for: Hrolfr (Rollo) now landed count in Rogaland in 867. After successfully conquering Normandy (as Rollo) a unique event happens.
+
+
+### Gotland 
+Gotland in the early middleages was a center for trade and piracy. 
+Rulers that control Gotland (dutchy) have a unique repeatable decision to decide whether to focus on trade or piracy. 
+Avaliable for: North and central germans with germanic faith. 
+
+### Alþingi
+In Iceland rulers can call all icelandic-faith brothers to an Thing to discuss the matters. 
+This simple decision will allow the ruler of Iceland to set the focus of the following years.
+Avaliable for: Northern germans with Giñnregla faith. 
+
+
+### Great Alþingi
+A Great unique decision to create the Kingdom of Iceland.
+Avaliable for: Northern germans with Giñnregla faith. 
+
 
 ## Map
 
