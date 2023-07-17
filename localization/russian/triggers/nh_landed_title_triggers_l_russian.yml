@@ -1,0 +1,5 @@
+﻿l_russian:
+ NH_NOT_KARLING:0 "Вы из династии [CHARACTER.GetDynastyName]."
+ NH_IS_KARLING:0 "Член династии [CHARACTER.GetDynastyName] никогда бы не оживлял своего старого врага."
+ NH_FULLFILLED_HS:0 "Вы контролируете три или более святых места."
+ NH_MORE_HS_NEEDED:0 "Вам необходимо контролировать три или более святых места."

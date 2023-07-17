@@ -1,32 +1,32 @@
 ﻿l_french:
- last_duel_decision: "Un dernier duel pour les dieux" #NT!
- last_duel_decision_desc: "La mortalité approche, pèse sur moi. En cette période sans guerre, j'aspire à une fin digne. Un duel final, un affrontement honorable, pour assurer ma place au $germanic_positive_afterlife$.\nJ'imagine un champ de bataille, un adversaire de valeur qui m'attend. Les lames s'entrechoquent, les guerriers dansent. Une mort glorieuse au combat, le désir de mon cœur.\n\nMais où trouver un tel ennemi ? Les guerriers se font rares en ces temps paisibles. Pourtant, ma résolution reste inébranlable. Je chercherai un adversaire digne jusqu'à la fin.\n\n La hache à la main, je trouverai mon dernier duel, un témoignage de mon esprit. $germanic_positive_afterlife$ m'attend, ma place légitime parmi les héros déchus. Il est donc temps de prendre une décision." #NT!
- last_duel_decision_desc_old: "Je me sens vieux,... engourdi. $last_duel_decision_desc$" #NT!
- last_duel_decision_tooltip: "Vous chercherez la mort au combat en défiant un adversaire de valeur. Le duel continuera jusqu'à ce que l'un de vous tombe, et par ce sacrifice honorable, vous atteindrez les portes de $germanic_positive_afterlife$." #NT!
- last_duel_decision_desc_cancer: "L'ennemi invisible s'est infiltré dans mon corps, comme un ennemi implacable tapi dans l'ombre. C'est une maladie qui dévore de l'intérieur, une force insidieuse qui affaiblit l'essence même de la vie.\n $last_duel_decision_desc$" #NT!
- last_duel_decision_confirm: "Je choisis la mort au combat plutôt que ça..." #NT!
+ last_duel_decision: "Un dernier duel pour les dieux"
+ last_duel_decision_desc: "La mortalité approche, pèse sur moi. En cette période sans guerre, j'aspire à une fin digne. Un duel final, un affrontement honorable, pour assurer ma place au $germanic_positive_afterlife$.\nJ'imagine un champ de bataille, un adversaire de valeur qui m'attend. Les lames s'entrechoquent, les guerriers dansent. Une mort glorieuse au combat, le désir de mon cœur.\n\nMais où trouver un tel ennemi ? Les guerriers se font rares en ces temps paisibles. Pourtant, ma résolution reste inébranlable. Je chercherai un adversaire digne jusqu'à la fin.\n\n La hache à la main, je trouverai mon dernier duel, un témoignage de mon esprit. $germanic_positive_afterlife$ m'attend, ma place légitime parmi les héros déchus. Il est donc temps de prendre une décision."
+ last_duel_decision_desc_old: "Je me sens vieux,... engourdi. $last_duel_decision_desc$"
+ last_duel_decision_tooltip: "Vous chercherez la mort au combat en défiant un adversaire de valeur. Le duel continuera jusqu'à ce que l'un de vous tombe, et par ce sacrifice honorable, vous atteindrez les portes de $germanic_positive_afterlife$."
+ last_duel_decision_desc_cancer: "L'ennemi invisible s'est infiltré dans mon corps, comme un ennemi implacable tapi dans l'ombre. C'est une maladie qui dévore de l'intérieur, une force insidieuse qui affaiblit l'essence même de la vie.\n $last_duel_decision_desc$"
+ last_duel_decision_confirm: "Je choisis la mort au combat plutôt que ça..."
   
- nh_rome_hs_decision: "Ajoutez Rome comme site sacré." #NT!
- nh_rome_hs_decision_desc: "Alors que nous triomphons au milieu des ruines de Rome, nous, les Vikings, insufflerons un nouveau but à cette ville antique, l'élevant à un royaume d'importance divine. Rome deviendra un lieu de pèlerinage sacré où les dieux eux-mêmes seront vénérés, et nos frères païens de tous les pays se rassembleront pour rendre hommage à nos croyances communes. Que la ville éternelle témoigne de notre dévouement inébranlable, car Rome renaîtra, baignée dans la gloire de notre héritage païen." #NT!
- nh_rome_hs_decision_tooltip: "Cette action accordera à votre foi un Holysite supplémentaire." #NT!
- nh_rome_hs_decision_confirm: "Joromaborg sera le siège de [ROOT.Char.GetFaith.HighGodName]." #NT!
- nh_constantinople_hs_decision: "Ajoutez Constantinople comme site sacré." #NT!
- nh_constantinople_hs_decision_desc: "Avec nos bannières déployées et nos cœurs victorieux enflammés, nous, les Vikings, transformerons cette ville nouvellement conquise en une terre sacrée, où les dieux seront exaltés et vénérés avec la plus grande révérence. Constantinople, maintenant sous notre domination, témoignera d'un grand réveil, alors que les rituels païens et les anciennes traditions insufflent une nouvelle vie à ses salles sacrées." #NT!
- nh_constantinople_hs_decision_tooltip: "Cette action accordera à votre foi un Holysite supplémentaire." #NT!
- nh_constantinople_hs_decision_confirm: "Joromaborg sera le siège de [ROOT.Char.GetFaith.HighGodName]." #NT!
- nh_peace_christianity_decision: "Coexistence religieuse" #NT!
- nh_peace_christianity_decision_desc: "Après mûre réflexion et sagesse, [ROOT.Char.GetFirstName], le [ROOT.Char.GetTitle] de [ROOT.Char.GetRealm], a pris la décision capitale de promulguer un édit de coexistence religieuse. Ce décret révolutionnaire établit un cadre pour une coexistence pacifique entre les traditions nordiques et la foi chrétienne. Elle garantit la liberté de pratique religieuse et protège les droits des deux croyants, favorisant un environnement de respect et de compréhension mutuels. En adoptant cet édit, le royaume franchit une étape importante vers l'harmonie religieuse, donnant l'exemple aux générations futures et assurant un avenir prospère et tolérant pour tous." #NT!
- nh_peace_christianity_decision_tooltip: "Vous ferez la paix avec les chrétiens et permettrez des mariages interreligieux. D'autres païens nordiques pourraient ne pas l'aimer" #NT!
- nh_peace_christianity_decision_confirm: "Appelez les prêtres !" #NT!
- nh_convert_whole_realm_to_feudalism_decision: "Une autre manière d'adopter le [ROOT.Char.Custom('GetTribalReformGovernment')|U]isme." #NT!
- nh_convert_whole_realm_to_feudalism_decision_desc: "Pour que [ROOT.Char.GetPrimaryTitle.GetNameNoTierNoTooltip] continue à s'étendre et à se développer, nous devons abandonner certaines des anciennes méthodes et adopter ensemble une nouvelle méthode de gouvernance." #NT!
- nh_convert_whole_realm_to_feudalism_decision_confirm: "Adoptez [ROOT.Char.Custom('GetTribalReformGovernment')|U] Façons" #NT!
- nh_convert_whole_realm_to_feudalism_decision_tooltip: "Changer le type [government|E] en adoptant [feudalism|E]" #NT!
- nh_convert_to_christianity_iceland_decision: "Décider de l'avenir religieux" #NT!
- nh_convert_to_christianity_iceland_decision_desc: "Il est temps de décider si nous acceptons ou abolissons le dieu chrétien" #NT!
- nh_convert_to_christianity_iceland_decision_confirm: "Rassemblez le goðar" #NT!
- nh_convert_to_christianity_iceland_decision_tooltip: "Vous pourrez choisir entre les religions chrétiennes et rester fidèle aux dieux" #NT!
- nh_form_old_saxia_kingdom_decision: "Former l'ancien royaume de Saxe" #NT!
- nh_form_old_saxia_kingdom_decision_desc: "Établissez l'ancien royaume païen de Saxe et restaurez les traditions de nos ancêtres." #NT!
- nh_form_old_saxia_kingdom_decision_confirm: "Créer l'ancien royaume de Saxe" #NT!
- nh_form_old_saxia_kingdom_decision_tooltip: "Cette décision créera l'ancien royaume de Saxe et fera revivre les anciennes coutumes païennes de notre peuple." #NT!
+ nh_rome_hs_decision: "Ajoutez Rome comme site sacré"
+ nh_rome_hs_decision_desc: "Alors que nous triomphons au milieu des ruines de Rome, nous, les Vikings, insufflerons un nouveau but à cette ville antique, l'élevant à un royaume d'importance divine. Rome deviendra un lieu de pèlerinage sacré où les dieux eux-mêmes seront vénérés, et nos frères païens de tous les pays se rassembleront pour rendre hommage à nos croyances communes. Que la ville éternelle témoigne de notre dévouement inébranlable, car Rome renaîtra, baignée dans la gloire de notre héritage païen."
+ nh_rome_hs_decision_tooltip: "Cette action accordera à votre foi un site sacré supplémentaire."
+ nh_rome_hs_decision_confirm: "Joromaborg sera le siège de [ROOT.Char.GetFaith.HighGodName]."
+ nh_constantinople_hs_decision: "Ajoutez Constantinople comme site sacré"
+ nh_constantinople_hs_decision_desc: "Avec nos bannières déployées et nos cœurs victorieux enflammés, nous, les Vikings, transformerons cette ville nouvellement conquise en une terre sacrée, où les dieux seront exaltés et vénérés avec la plus grande révérence. Constantinople, maintenant sous notre domination, témoignera d'un grand réveil, alors que les rituels païens et les anciennes traditions insufflent une nouvelle vie à ses salles sacrées."
+ nh_constantinople_hs_decision_tooltip: "Cette action accordera à votre foi un site sacré supplémentaire."
+ nh_constantinople_hs_decision_confirm: "Joromaborg sera le siège de [ROOT.Char.GetFaith.HighGodName]."
+ nh_peace_christianity_decision: "Coexistence religieuse"
+ nh_peace_christianity_decision_desc: "Après mûre réflexion et sagesse, [ROOT.Char.GetFirstName], le [ROOT.Char.GetTitle] de [ROOT.Char.GetRealm], a pris la décision capitale de promulguer un édit de coexistence religieuse. Ce décret révolutionnaire établit un cadre pour une coexistence pacifique entre les traditions nordiques et la foi chrétienne. Elle garantit la liberté de pratique religieuse et protège les droits des deux croyants, favorisant un environnement de respect et de compréhension mutuels. En adoptant cet édit, le royaume franchit une étape importante vers l'harmonie religieuse, donnant l'exemple aux générations futures et assurant un avenir prospère et tolérant pour tous."
+ nh_peace_christianity_decision_tooltip: "Vous ferez la paix avec les chrétiens et permettrez des mariages interreligieux. D'autres païens nordiques pourraient ne pas l'aimer"
+ nh_peace_christianity_decision_confirm: "Appelez les prêtres !"
+ nh_convert_whole_realm_to_feudalism_decision: "Une autre manière d'adopter le féodalisme"
+ nh_convert_whole_realm_to_feudalism_decision_desc: "Pour que le[ROOT.Char.GetPrimaryTitle.GetNameNoTierNoTooltip] continue à s'étendre et à se développer, nous devons abandonner certaines des anciennes méthodes et adopter une nouvelle méthode de gouvernance, ensemble."
+ nh_convert_whole_realm_to_feudalism_decision_confirm: "Adoptez le féodalisme"
+ nh_convert_whole_realm_to_feudalism_decision_tooltip: "Changer le type [government|E] en adoptant le féodalisme."
+ nh_convert_to_christianity_iceland_decision: "Décider de l'avenir religieux"
+ nh_convert_to_christianity_iceland_decision_desc: "Il est temps de décider si nous acceptons ou abolissons le dieu chrétien."
+ nh_convert_to_christianity_iceland_decision_confirm: "Rassemblez le goðar"
+ nh_convert_to_christianity_iceland_decision_tooltip: "Vous pourrez choisir entre les religions chrétiennes et rester fidèle aux dieux."
+ nh_form_old_saxia_kingdom_decision: "Former l'ancien royaume de Saxe"
+ nh_form_old_saxia_kingdom_decision_desc: "Établissez l'ancien royaume païen de Saxe et restaurez les traditions de nos ancêtres."
+ nh_form_old_saxia_kingdom_decision_confirm: "Créer l'ancien royaume de Saxe"
+ nh_form_old_saxia_kingdom_decision_tooltip: "Cette décision créera l'ancien royaume de Saxe et fera revivre les anciennes coutumes païennes de notre peuple."

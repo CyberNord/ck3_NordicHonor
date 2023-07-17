@@ -1,0 +1,146 @@
+﻿l_russian:
+# Holysites
+ holy_site_joromaborg_name:0 "Jórómaborg"
+ holy_site_joromaborg_effect_name:0 "[holy_site|E] #weak ($holy_site_joromaborg_name$)#!"
+ holy_site_miklagard_name:0 "Mikligarðr"
+ holy_site_miklagard_effect_name:0 "[holy_site|E] #weak ($holy_site_miklagard_name$)#!"
+ holy_site_trelleborg_name:0 "Треллеборг"
+ holy_site_trelleborg_effect_name:0 "[holy_site|E] #weak ($holy_site_trelleborg_name$)#!"
+ holy_site_thingvellir_name:0 "Скалахольт"
+ holy_site_thingvellir_effect_name:0 "[holy_site|E] #weak ($holy_site_thingvellir_name$)#!"
+ holy_site_heiligenberg_name:0 "Хейлигенберг"
+ holy_site_heiligenberg_effect_name:0 "[holy_site|E] #weak ($holy_site_heiligenberg_name$)#!"
+ holy_site_gniezno_name:0 "Гнезно"
+ holy_site_gniezno_effect_name:0 "[holy_site|E] #weak ($holy_site_gniezno_name$)#!"
+ holy_site_breclav_name:0 "Бржецлав"
+ holy_site_breclav_effect_name:0 "[holy_site|E] #weak ($holy_site_breclav_name$)#!"
+ holy_site_hallstatt_name:0 "Халльштатт"
+ holy_site_hallstatt_effect_name:0 "[holy_site|E] #weak ($holy_site_hallstatt_name$)#!"
+
+# Heritages
+ has_special_heritage_name:0 "Нордическое родство"
+ special_faith_has_germanic_heritage_name:0 "Нордическая Вера"
+ special_faith_has_germanic_heritage_desc:0 "Мы славим тех же богов под разными именами, поэтому мы не должны проливать кровь наших братьев по вере."
+ doctrine_parameter_hostility_override_special_faith_has_germanic_heritage: "Воспринимает другие #V $special_faith_has_germanic_heritage_name$#! [faiths|E] как [GetHostilityLevelName(TOKEN_PARAMETER.GetIntValue)|V]"
+ 
+ special_faith_stadfast_heritage_name:0 "Staðfast"
+ special_faith_stadfast_heritage_desc:0 "В нашей непоколебимой уверенности мы гордо заявляем о своем пути как о единственной истине, смотря свысока на тех, кто отклоняется от нашего пути."
+ doctrine_parameter_fervor_per_holy_site:0 "Священные места увеличивают рвение" 
+ doctrine_parameter_hostility_override_special_faith_stadfast_heritage: "Воспринимает другие #V $special_faith_stadfast_heritage_name$ [faiths|E]#! \nкак [GetHostilityLevelName( TOKEN_PARAMETER.GetIntValue )|V]"
+ 
+ special_faith_no_special_heritage_name:0 "Нет"
+ special_faith_no_special_heritage_desc:0 "Прекратите связь с другими верующими в Всеведущего."
+ doctrine_parameter_no_effect_removed_upon_creation:0 "Нордическое родство будет удалено."
+
+ special_faith_christian_heritage_name:0 "Принятие Христианства"
+ special_faith_christian_heritage_desc:0 "Мы должны принять, что Иисус Христос действительно мощное божество."
+
+ special_faith_traitor_heritage_name:0 "Siðbrytari"
+ special_faith_traitor_heritage_desc:0 "Мир меняется, и мы меняемся вместе с ним. Христиане могут стать мощными союзниками, если мы примем некоторые из их традиций."
+
+# Forn Siðr (North German)
+ forn_sidr_pagan:0 "Forn Siðr"
+ forn_sidr_pagan_adj:0 "Forn Siðr"
+ forn_sidr_pagan_adherent:0 "Forn Siðrist"
+ forn_sidr_pagan_adherent_plural:0 "Forn Siðrists"
+ forn_sidr_pagan_desc: 0 "Древний германский пантеон Forn Siðr характеризовался тесной связью с природой и глубоким почитанием естественных элементов. Они поклонялись Wótan в качестве верховного божества и верили в существование множества божеств, которые влияли на мир вокруг них. Для установления духовной связи с богами, язычники проводили ритуалы и церемонии, принося жертвы, они искренне просили поддержки и благословений во всех сферах своей жизни. Их верования также включали веру в судьбу и крепкую связь с предками. В целом, языческая вера саксов в северной Германии олицетворяла глубокую связь с природой, сильное чувство сообщества и веру в силу и мудрость их богов."
+ 
+ forn_sidr_pagan_old:0 "Old Forn Siðr"
+ forn_sidr_pagan_old_adj:0 "Old Forn Siðr"
+ forn_sidr_pagan_old_adherent:0 "Old Forn Siðrar"
+ forn_sidr_pagan_old_adherent_plural:0 "Old Forn Siðrar"
+
+ forn_sidr_high_god_name:0 "Wótan"
+ forn_sidr_high_god_name_possessive:0 "Wótan's"
+ forn_sidr_high_god_alternate:0 "Wótan"
+ forn_sidr_high_god_alternate_possessive:0 "Wótan's"
+ forn_sidr_good_god_fairguneis:0 "Frey"
+ forn_sidr_good_god_ingwaz:0 "$forn_sidr_fertility_god_name$"
+ forn_sidr_good_god_terwing:0 "$forn_sidr_war_god_name$"
+ forn_sidr_priest_male:0 "Gothi"			
+ forn_sidr_priest_male_plural:0 "Gothar"
+ forn_sidr_priest_female:0 "Gythia"
+ forn_sidr_priest_female_plural:0 "Gythjur"
+ forn_sidr_priest_neuter:0 "Gothi"
+ forn_sidr_priest_neuter_plural:0 "Gothar"
+
+ forn_sidr_fertility_god_name:0 "Freyja"
+ forn_sidr_fertility_god_name_possessive:0 "Freyja's"
+ forn_sidr_knowledge_god_name:0 "$forn_sidr_high_god_name$"
+ forn_sidr_knowledge_god_name_possessive:0 "$forn_sidr_high_god_name_possessive$"
+ forn_sidr_war_god_name:0 "Tiwaz"					# German Tyr
+ forn_sidr_war_god_name_possessive:0 "Tiwaz's"		# German Tyr
+ forn_sidr_desc:0 "Старое германское языческое вероисповедание было укоренено в прочной вере в пантеон богов и богинь. Центральным элементом их вероучения было поклонение Wótan, главному божеству, связанному с войной, мудростью и магией. Последователи этой веры верили в взаимосвязь природы и божественного. Они считали природный мир святым и испытывали глубокое почтение к элементам, лесам и рекам. Ритуалы и церемонии проводились для чтения богов, часто в священных рощах или на природных достопримечательностях."
+ 
+ # Giñnregla (Icelandic)
+ ginnregla_pagan:0 "Giñnregla"
+ ginnregla_pagan_adj:0 "Giñnregla"
+ ginnregla_pagan_adherent:0 "Giñnreglur"
+ ginnregla_pagan_adherent_plural:0 "Giñnreglur"
+ ginnregla_pagan_desc:0 "Язычники в Исландии, здесь называемые Giñnregla, исповедовали веру в Одина и древний скандинавский пантеон, тесно связывали свои верования с Alþingi, собранием всех свободных мужчин, и сообществом. Они искали правду и направление в звездах, практиковали астрологическое наблюдение, чтобы толковать знаки богов. Несмотря на свое воинственное прошлое, они придавали большое значение миролюбивым общинам и стремились к гармоничному сосуществованию. Их религиозная практика включала жертвоприношения, ритуалы и празднества для чтения богов и прославления их благословений. В целом, язычники в Исландии олицетворяли глубокую духовность, обусловленную их верой в Одина, важностью Alþingi (А́льтинг - «всеобщее собрание»), стремлением к истине в звездах и приверженностью мирному сообществу."
+ 
+ ginnregla_pagan_old:0 "Old Giñnregla"
+ ginnregla_pagan_old_adj:0 "Old Giñnregla"
+ ginnregla_pagan_old_adherent:0 "Old Giñnreglur"
+ ginnregla_pagan_old_adherent_plural:0 "Old Giñnreglur"
+
+ ginnregla_priest_male:0 "Goði"			
+ ginnregla_priest_male_plural:0 "Goðar"
+ ginnregla_priest_female:0 "Gythja"
+ ginnregla_priest_female_plural:0 "Gythjur"
+ ginnregla_priest_neuter:0 "Goði"
+ ginnregla_priest_neuter_plural:0 "Goðar"
+
+ # Náttúruguðtrúarmenn (Scando-Finnic)
+ natturugudtruar_pagan:0 "Náttúruguðtrúar"
+ natturugudtruar_pagan_adj:0 "Náttúruguðtrúar"
+ natturugudtruar_pagan_adherent:0 "Náttúruguðtrúarmaður"
+ natturugudtruar_pagan_adherent_plural:0 "Náttúruguðtrúarmenn"
+ natturugudtruar_pagan_desc:0 "Выражение, связанное с природой и известное как Náttúruguðtrúar, сочетает в себе элементы финно-угорских обычаев и олицетворяет глубокую связь с природным миром и колдовством. Эта система верований почитает скандинавских богов, соединяя их с традиционными практиками финно-угорских народов. Посредством колдовства и шаманских практик последователи этой веры стремятся к духовному прозрению и гармонии с природными силами. Их вдохновение находится в духах природы – леса, рек и гор. Они проводят ритуалы, чтобы укрепить связь с природой и подчеркнуть свое уважение к ее разнообразию и взаимодействию элементов. Суть их стремлений заключается в достижении сбалансированного и гармоничного существования в соответствии с Божественным и духами природы."
+ 
+ natturugudtruar_pagan_old:0 "Old Náttúruguðtrúar"
+ natturugudtruar_pagan_old_adj:0 "Old Náttúruguðtrúar"
+ natturugudtruar_pagan_old_adherent:0 "Old Náttúruguðtrúarmaður"
+ natturugudtruar_pagan_old_adherent_plural:0 "Old Náttúruguðtrúarmenn"
+
+ # Óðinnstrú (Odinism)
+ odinstru_pagan:0 "Óðinnstrú"
+ odinstru_pagan_adj:0 "Óðinnstrú"
+ odinstru_pagan_adherent:0 "Óðinnstrú"
+ odinstru_pagan_adherent_plural:0 "Óðinnstrúar"
+ odinstru_pagan_desc:0 "Высокодуховное проявление норвежского пантеона, известное как Óðinnstrú, поклоняется богам с непоколебимой верой, особое внимание уделяется Одину и Тюру. Этот путь веры характеризуется крайней воинской ментальностью. Последователи видят себя избранными воинами и рассматривают бой как священный долг. Они твердо верят, что их задача – защищать честь богов на кровавом поле битвы и одолевать своих врагов. Их ритуалы отмечены воинскими элементами, в которых они приносят жертвы и ищут божественного благосклонения перед предстоящими сражениями. Фанатический фундаменталистский вариант норвежского пантеона считает войну последним путем к славе и чести, как на земле, так и в Вальхалле."
+ 
+ odinstru_pagan_old:0 "Old Óðinnstrú"
+ odinstru_pagan_old_adj:0 "Old Óðinnstrú"
+ odinstru_pagan_old_adherent:0 "Old Óðinnstrú"
+ odinstru_pagan_old_adherent_plural:0 "Old Óðinnstrúar"
+
+ # Heiðinn (Scando-Baltic)
+ heidinn_pagan:0 "Heiðinn"
+ heidinn_pagan_adj:0 "heiðinn"
+ heidinn_pagan_adherent:0 "Heiðinn"
+ heidinn_pagan_adherent_plural:0 "Heiðnir"
+ heidinn_pagan_desc:0 "Скандинавско-славянский пантеон Heiðinn приспособился к грубым обычаям славянских народов. Он почитает скандинавских богов, сочетая скандинавские и славянские традиции. Последователи этой веры ценят свою связь с природой и практикуют ритуалы, объединяющие дикие элементы скандинавской мифологии и естественные циклы славянских традиций. Они видят скандинавских богов как могучих защитников и ищут их благосклонность в вопросах плодородия, урожая и выживания в суровых славянских регионах. Версия Асатру в Киеве таким образом сохраняет свою скандинавскую суть, но интегрирует элементы славянской культуры и обычаев, образуя уникальное сообщество верующих."
+ 
+ heidinn_pagan_old:0 "Old Heiðinn"
+ heidinn_pagan_old_adj:0 "Old heiðinn"
+ heidinn_pagan_old_adherent:0 "Old Heiðnir"
+ heidinn_pagan_old_adherent_plural:0 "Old Heiðnir"
+
+ heidinn_high_god_name:0 "Ods"
+ heidinn_high_god_name_possessive:0 "Ods's"
+ heidinn_high_god_alternate:0 "Odsn"
+ heidinn_high_god_alternate_possessive:0 "Ods's"
+ heidinn_good_god_thor:0 "Perkūnas"
+ heidinn_good_god_fairguneis:0 "Laima"
+ heidinn_good_god_ingwaz:0 "$heidinn_fertility_god_name$"
+ heidinn_good_god_terwing:0 "$heidinn_war_god_name$"
+
+ heidinn_fertility_god_name:0 "Lauma"
+ heidinn_fertility_god_name_possessive:0 "Lauma's"
+ heidinn_knowledge_god_name:0 "$heidinn_high_god_name$"
+ heidinn_knowledge_god_name_possessive:0 "$heidinn_high_god_name_possessive$"
+ heidinn_war_god_name:0 "Tīvs"					
+ heidinn_war_god_name_possessive:0 "Tīvs's"
+ heidinn_good_god_freyja:0 "$heidinn_fertility_god_name$"
+ heidinn_good_god_tyr:0 "$heidinn_war_god_name$"

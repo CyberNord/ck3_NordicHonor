@@ -1,17 +1,18 @@
 ﻿l_french:
- nick_nh_joromaborg: "Le fléau de Rome" #NT!
- nick_nh_joromaborg_desc: "Ce nom a été attribué à ce guerrier pour son assaut implacable et dévastateur sur la puissante ville de Rome, la réduisant en ruines et l'établissant comme un temple vénéré dédié à [ROOT.Char.GetFaith.HighGodName]." #NT!
- nick_nh_miklagard: "La tempête Varangienne" #NT!
- nick_nh_miklagard_desc: "Ce personnage a gagné son surnom redoutable à travers des campagnes incessantes et des batailles féroces, menant ses guerriers vikings à conquérir Constantinople avec une puissance inégalée. Son esprit indomptable et son génie tactique ont fait de lui une force avec laquelle il faut compter, laissant derrière lui une trace de victoire et de respect. Les récits de son audace et de ses prouesses au combat se sont répandus partout, gravant à jamais son nom dans les annales de l'histoire nordique." #NT!
- nick_nh_peace: "Kristurhersir" #NT!
- nick_nh_peace_desc: "Cœur chrétien - un surnom nordique accordé à un roi viking qui a embrassé le christianisme, affichant une coexistence harmonieuse des anciennes traditions nordiques et de la nouvelle foi." #NT!
- nick_nh_pagan_special: "Járnhandar" #NT!
- nick_nh_pagan_special_desc: "Pas de retour en arrière des dieux, [CHARACTER.GetFirstName] vit et meurt pour le Allfather" #NT!
- nick_nh_catholic_special: "L'esprit profond" #NT!
- nick_nh_catholic_special_desc: "[CHARACTER.GetFirstName] a compris la puissance contenue dans le nouveau dieu chrétien." #NT!
- nick_nh_insular_special: "Skynsömur" #NT!
- nick_nh_insular_special_desc: "Les chrétiens des îles du sud n'ont jamais aboli entièrement leurs anciennes coutumes, [CHARACTER.GetFirstName] l'a bien compris." #NT!
- nick_nh_empty: 
- nick_nh_old_saxia: "La renaissance du roi de Saxe" #NT!
- nick_nh_old_saxia_desc: "souverain qui a ressuscité l'ancien royaume de Saxe, embrassant les racines païennes et les traditions de leurs ancêtres. Avec leur lien étroit avec les anciens dieux et leur dévotion inébranlable à l'héritage germanique, ils conduisent leur peuple sur la voie d'un renouveau culturel et d'une résurgence religieuse." #NT!
- nick_nh_wise: "[CHARACTER.GetFirstName] a perdu son mari et pense beaucoup aux dieux et à leur pouvoir." #NT!
+ nick_nh_joromaborg:0 "Le fléau de Rome" 
+ nick_nh_joromaborg_desc:0 "Ce nom a été attribué à ce guerrier pour son assaut implacable et dévastateur sur la puissante ville de Rome, la réduisant en ruines et l'établissant comme un temple vénéré dédié à [ROOT.Char.GetFaith.HighGodName]." 
+ nick_nh_miklagard:0 "La tempête Varangienne" 
+ nick_nh_miklagard_desc:0 "Ce personnage a gagné son surnom redoutable à travers des campagnes incessantes et des batailles féroces, menant ses guerriers vikings à conquérir Constantinople avec une puissance inégalée. Son esprit indomptable et son génie tactique ont fait de lui une force avec laquelle il faut compter, laissant derrière lui une trace de victoire et de respect. Les récits de son audace et de ses prouesses au combat se sont répandus partout, gravant à jamais son nom dans les annales de l'histoire nordique." 
+ nick_nh_peace:0 "Kristurhersir" 
+ nick_nh_peace_desc:0 "Cœur chrétien - un surnom nordique accordé à un roi viking qui a embrassé le christianisme, affichant une coexistence harmonieuse des anciennes traditions nordiques et de la nouvelle foi." 
+ nick_nh_pagan_special:0 "Járnhandar" 
+ nick_nh_pagan_special_desc:0 "Pas de retour en arrière des dieux, [CHARACTER.GetFirstName] vit et meurt pour le Allfather" 
+ nick_nh_catholic_special:0 "L'esprit profond" 
+ nick_nh_catholic_special_desc:0 "[CHARACTER.GetFirstName] a compris la puissance contenue dans le nouveau dieu chrétien." 
+ nick_nh_insular_special:0 "Skynsömur" 
+ nick_nh_insular_special_desc:0 "Les chrétiens des îles du sud n'ont jamais aboli entièrement leurs anciennes coutumes, [CHARACTER.GetFirstName] l'a bien compris." 
+ nick_nh_empty:0 ""
+ nick_nh_old_saxia:0 "La renaissance du roi de Saxe" 
+ nick_nh_old_saxia_desc:0 "souverain qui a ressuscité l'ancien royaume de Saxe, embrassant les racines païennes et les traditions de leurs ancêtres. Avec leur lien étroit avec les anciens dieux et leur dévotion inébranlable à l'héritage germanique, ils conduisent leur peuple sur la voie d'un renouveau culturel et d'une résurgence religieuse." 
+ nick_nh_wise:0 "La Veuve"
+ nick_nh_wise:0 "[CHARACTER.GetFirstName] a perdu son mari et pense beaucoup aux dieux et à leur pouvoir." 

@@ -1,3 +1,3 @@
 ﻿l_french:
- nh_has_all_tribal_innovation: "A #V 85 %#! de toutes les époques tribales militaires et civiques [innovations|E]" #NT!
- nh_faith_is_unreformed: "[CHARACTER.GetFaith.GetName] est fidèle aux anciennes méthodes" #NT!
+ nh_has_all_tribal_innovation: "A #V 85 %#! de toutes les époques tribales militaires et civiques [innovations|E]"
+ nh_faith_is_unreformed: "[CHARACTER.GetFaith.GetName] est fidèle aux anciennes méthodes"
