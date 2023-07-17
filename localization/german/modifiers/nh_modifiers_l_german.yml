@@ -1,0 +1,43 @@
+﻿l_german:
+ nh_county_trade_modifier:0 "Kaupang"
+ nh_county_trade_modifier_desc:0 "The bustling trading center of Kaupang attracts merchants from far and wide, enhancing trade activities and fostering economic growth."
+ nh_county_raid_modifier:0 "Viking Stronghold"
+ nh_county_raid_modifier_desc:0 "As a formidable Viking stronghold, this county is known for its fearsome warriors and their daring raids, instilling fear in the hearts of neighboring lands."
+ nh_county_defence_modifier:0 "Fortified Defense"
+ nh_county_defence_modifier_desc:0 "With its robust defenses and fortified structures, this county stands as a bastion of protection against external threats, ensuring the safety of its inhabitants."
+ nh_tinvellir_county_modifier:0 "Tingvellir Assembly"
+ nh_tinvellir_county_modifier_desc:0 "The Tingvellir assembly has strengthened the bonds between the local communities, fostering a sense of happiness, unity, and security."
+ 
+
+
+
+
+
+ # character modifiers
+ nh_rollo_special_ai_modifier:0 "Rollo's destiny"
+ nh_rollo_special_ai_modifier_desc: "The gods favour him on his journey."
+
+ nh_odins_blessing_modifier:0 "Blessed by Odin"
+ nh_odins_blessing_modifier_desc:0 "This character has been blessed by Odin, granting them wisdom, courage, and the favor of the Allfather."
+ nh_thors_blessing_modifier:0 "Protected by Thor"
+ nh_thors_blessing_modifier_desc:0 "Under the protection of Thor, this character is shielded from harm and gains strength and resilience in battles."
+ nh_freyas_blessing_modifier:0 "Blessed by Freya"
+ nh_freyas_blessing_modifier_desc:0 "Freya's blessing bestows this character with fertility, charm, and good fortune, enhancing their diplomatic and personal endeavors."
+ nh_tyr_blessing_modifier:0 "Favored by Tyr"
+ nh_tyr_blessing_modifier_desc:0 "Tyr's favor shines upon this character, instilling them with bravery, justice, and a sense of honor."
+ nh_njords_blessing_modifier:0 "Blessed by Njord"
+ nh_njords_blessing_modifier_desc:0 "Njord's blessing brings prosperity, wealth, and success to this character, especially in matters of trade and maritime activities."
+ nh_lokis_curse_modifier:0 "Cursed by Loki"
+ nh_lokis_curse_modifier_desc:0 "This character bears the burden of Loki's curse, which brings unexpected challenges, deception, and trickery to their life."
+ nh_hels_curse_modifier:0 "Haunted by Hel"
+ nh_hels_curse_modifier_desc:0 "Hel's curse looms over this character, reminding them of the inevitability of death and the fleeting nature of life."
+ nh_suturs_curse_modifier:0 "Consumed by Surtur's Fury" 
+ nh_suturs_curse_modifier_desc:0 "Surtur's fiery fury consumes this character, bringing destruction, chaos, and turmoil to their path."
+ 
+ nh_thing_trade_modifier:0 "Kaupmaðr"
+ nh_thing_trade_modifier_desc:0 "The ruler has directed their efforts towards expanding trade networks, fostering economic growth, and reaping the benefits of prosperous commerce."
+ nh_thing_build_modifier:0 "Byggvir"
+ nh_thing_build_modifier_desc:0 "With a focus on building and development, the ruler aims to strengthen infrastructure, expand fortifications, and enhance the prosperity and stability of their realm."
+ nh_thing_diplomacy_modifier:0 "Sendiherra"
+ nh_thing_diplomacy_modifier_desc:0 "By prioritizing diplomacy and forging new alliances, the ruler seeks to establish strong diplomatic ties, secure valuable alliances, and ensure the safety and security of their realm."
+

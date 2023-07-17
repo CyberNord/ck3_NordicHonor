@@ -1,0 +1,57 @@
+﻿l_simp_chinese: 
+ last_duel_decision:0 "A last duel for the gods"
+ last_duel_decision_desc:0 "Mortality draws near, weighing upon me. In this time devoid of war, I yearn for a worthy end. A final duel, an honorable clash, to secure my place in $germanic_positive_afterlife$.\nI imagine a battlefield, a worthy opponent awaiting. Blades clash, warriors dance. A glorious death in combat, my heart's desire.\n\nBut where to find such a foe? Warriors are scarce in these peaceful times. Yet, my resolve remains unyielding. I will seek a worthy adversary until the end.\n\n With axe in hand, I shall find my final duel, a testament to my spirit. $germanic_positive_afterlife$ awaits, my rightful place among fallen heroes. So it is time to make a decision."
+ last_duel_decision_desc_old:0 "I feel old,.. numb. $last_duel_decision_desc$"
+ last_duel_decision_tooltip:0 "You will seek death in battle by challenging a worthy opponent. The duel will continue until one of you falls, and through this honorable sacrifice, you shall reach the gates of $germanic_positive_afterlife$."
+ last_duel_decision_desc_cancer:0 "The unseen enemy has infiltrated my body, like a relentless foe lurking in the shadows. It is a malady that devours from within, an insidious force that weakens the very essence of life.\n $last_duel_decision_desc$"
+ last_duel_decision_confirm:0 "I choose death in battle rather than this..."
+
+ nh_rome_hs_decision:0 "Add Rome as holysite."
+ nh_rome_hs_decision_desc:0 "As we stand triumphant amidst the ruins of Rome, we Vikings shall breathe new purpose into this ancient city, elevating it to a realm of divine significance. Rome shall become a sacred pilgrimage site where the gods themselves shall be venerated, and our pagan brethren from across the lands shall gather to offer homage to our shared beliefs. Let the eternal city bear witness to our unwavering devotion, for Rome shall rise again, bathed in the glory of our pagan heritage."
+ nh_rome_hs_decision_tooltip:0 "This action will grant your faith an additional Holysite."
+ nh_rome_hs_decision_confirm:0 "Joromaborg shall be [ROOT.Char.GetFaith.HighGodName]'s seat."
+
+ nh_constantinople_hs_decision:0 "Add Constantinople as holysite."
+ nh_constantinople_hs_decision_desc:0 "With our banners unfurled and our victorious hearts aflame, we Vikings shall transform this newly conquered city into a hallowed ground, where the gods shall be exalted and worshipped with utmost reverence. Constantinople, now under our dominion, shall bear witness to a grand awakening, as pagan rituals and ancient traditions breathe new life into its sacred halls."
+ nh_constantinople_hs_decision_tooltip:0 "This action will grant your faith an additional Holysite."
+ nh_constantinople_hs_decision_confirm:0 "Joromaborg shall be [ROOT.Char.GetFaith.HighGodName]'s seat."
+
+ nh_peace_christianity_decision:0 "Religious Coexistence"
+ nh_peace_christianity_decision_desc:0 "With careful consideration and wisdom, [ROOT.Char.GetFirstName], the [ROOT.Char.GetTitle] of [ROOT.Char.GetRealm], has made the momentous decision to enact a Religious Coexistence Edict. This groundbreaking decree establishes a framework for peaceful coexistence between the Norse traditions and the Christian faith. It guarantees the freedom of religious practice and protects the rights of both believers, fostering an environment of mutual respect and understanding. By embracing this edict, the realm takes a significant step towards religious harmony, setting an example for future generations and ensuring a prosperous and tolerant future for all."
+ nh_peace_christianity_decision_tooltip:0 "You will make peace with the Christians and enable interfaith marriages. Other nordic pagans might not like it"
+ nh_peace_christianity_decision_confirm:0 "Call the priests!"
+
+ nh_convert_whole_realm_to_feudalism_decision:0 "Another way to adopt [ROOT.Char.Custom('GetTribalReformGovernment')|U]ism."
+ nh_convert_whole_realm_to_feudalism_decision_desc:0 "For [ROOT.Char.GetPrimaryTitle.GetNameNoTierNoTooltip] to keep expanding and developing we must leave some of the old ways behind and adopt a new method of governance, together."
+ nh_convert_whole_realm_to_feudalism_decision_confirm:0 "Adopt [ROOT.Char.Custom('GetTribalReformGovernment')|U] Ways"
+ nh_convert_whole_realm_to_feudalism_decision_tooltip:0 "Change [government|E] type by adopting [feudalism|E]"
+
+ nh_convert_to_christianity_iceland_decision:0 "Deciding the religious future"
+ nh_convert_to_christianity_iceland_decision_desc:0 "It is time to decide wheter we accept or abolish the christian god"
+ nh_convert_to_christianity_iceland_decision_confirm:0 "Gather the goðar"
+ nh_convert_to_christianity_iceland_decision_tooltip:0 "You will be able to decide between christian faiths and staying true tue the gods"
+
+ nh_form_old_saxia_kingdom_decision:0 "Form Old Saxia Kingdom"
+ nh_form_old_saxia_kingdom_decision_desc:0 "Establish the ancient pagan kingdom of Saxia and restore the traditions of our ancestors."
+ nh_form_old_saxia_kingdom_decision_confirm:0 "Create Old Saxia Kingdom"
+ nh_form_old_saxia_kingdom_decision_tooltip:0 "This decision will create the Old Saxia Kingdom and revive the ancient pagan ways of our people."
+
+ nh_rollos_adventure_decision:0 "Rollo's Path to Immortality"
+ nh_rollos_adventure_decision_desc:0 "In the depths of my soul, I feel a calling from [ROOT.Char.GetFaith.HighGodName], urging me to explore beyond the borders of Norway. Stories of faraway lands have reached me, filled with opportunities and greatness. It is time for me to embark on an epic Varangian Adventure that will leave a lasting mark on history."
+ nh_rollos_adventure_decision_confirm:0 "[ROOT.Char.GetFaith.HighGodName] will guide me."
+ nh_rollos_adventure_decision_tooltip:0 "Embark on a Varangian Adventure into a foreign land."
+
+ nh_gotland_policy_decision:0 "Trade or Raid"
+ nh_gotland_policy_decision_desc:0 "As the ruler of Gotland, I face a crucial decision for the future of my realm. I can choose to prioritize trade and commerce, fostering economic growth and cultural exchange, or I can opt for raids and conquests, unleashing the Viking spirit to amass wealth and power through daring expeditions."
+ nh_gotland_policy_decision_confirm:0 "Confirm"
+ nh_gotland_policy_decision_tooltip:0 "This decision will shape our future actions. Choose carefully, as it will determine the path we will follow."
+
+ nh_iceland_first_great_ting:0 "Great Alþingi"
+ nh_iceland_first_great_ting_desc:0 "The time has come for the establishment of the First Alþingi, a momentous gathering of the Icelandic people. As the ancient tradition dictates, it is here that the Íslandskonungsríki, the Kingdom of Iceland, shall be formally created. This historic event marks the beginning of a new era for our people, as we unite under a single banner and forge our own destiny. Let us gather together and lay the foundation of our proud nation, where the voices of all will be heard and the future of Iceland will be shaped."
+ nh_iceland_first_great_ting_confirm:0 "Gather the goðar!"
+ nh_iceland_first_great_ting_tooltip:0 "By initiating the First Alþingi (Althing), the Kingdom of Iceland will be officially established, solidifying the unity and sovereignty of our people."
+
+ nh_iceland_yearly_ting:0 "Alþingi"
+ nh_iceland_yearly_ting_desc:0 "At the annual ting, the people of Iceland gather to discuss and resolve matters of importance."
+ nh_iceland_yearly_ting_confirm:0 "Gather the goðar!"
+ nh_iceland_yearly_ting_tooltip:0 "A Ting - meeting is initiated, where all sort of stuff is discussed"
