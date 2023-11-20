@@ -2,7 +2,7 @@
 # v1.0
 last_duel_decision = {
 	picture = "gfx/interface/illustrations/decisions/nh_decision_duel.dds"
-	
+
 	sort_order = 1
 	selection_tooltip = last_duel_decision_tooltip
 	ai_check_interval = 6
@@ -12,17 +12,17 @@ last_duel_decision = {
 
 			triggered_desc = {
 				trigger = { has_trait = cancer}
-				desc = last_duel_decision_desc_cancer		
+				desc = last_duel_decision_desc_cancer
 			}
-	
+
 			triggered_desc = {
 				trigger = { age >= 60 }
-				desc = last_duel_decision_desc_old	
+				desc = last_duel_decision_desc_old
 			}
-			
+
 			triggered_desc = {
 				trigger = { religion = religion:germanic_religion }
-				desc = last_duel_decision_desc	
+				desc = last_duel_decision_desc
 			}
 		}
 	}
@@ -57,7 +57,7 @@ last_duel_decision = {
 			days = {5 10}
 		}
 	}
-	
+
 	ai_potential = {
 		highest_held_title_tier > tier_barony
 		is_landed = yes
@@ -101,13 +101,13 @@ last_duel_decision = {
 
 nh_rome_hs_decision = {
 	picture = "gfx/interface/illustrations/decisions/nh_decision_rome_hs.dds"
-	
+
 	desc = nh_rome_hs_decision_desc
 	selection_tooltip = nh_rome_hs_decision_tooltip
 	major = yes
 
 	sort_order = 0
-	
+
 	ai_check_interval = 300
 
 	# only shown if faith is unreformed
@@ -145,7 +145,7 @@ nh_rome_hs_decision = {
 
 	is_valid ={
 		highest_held_title_tier >= tier_kingdom
-		completely_controls = title:d_latium		
+		completely_controls = title:d_latium
 		OR ={
 			has_trait = zealous
 			has_trait = theologian
@@ -170,7 +170,7 @@ nh_rome_hs_decision = {
 
 	effect = {
 		trigger_event = {
-			id = nh.1001		
+			id = nh.1001
 		}
 
 		dynasty = {
@@ -203,7 +203,7 @@ nh_rome_hs_decision = {
 		}
 
 	}
-	
+
 	ai_potential = {always = yes}
 
 	ai_will_do = {base = 100}
@@ -211,13 +211,13 @@ nh_rome_hs_decision = {
 
 nh_constantinople_hs_decision = {
 	picture = "gfx/interface/illustrations/decisions/nh_decision_constantinople_hs.dds"
-	
+
 	desc = nh_constantinople_hs_decision_desc
 	selection_tooltip = nh_constantinople_hs_decision_tooltip
 	major = yes
 
 	sort_order = 0
-	
+
 	ai_check_interval = 300
 
 	# only shown if faith is unreformed
@@ -280,7 +280,7 @@ nh_constantinople_hs_decision = {
 
 	effect = {
 		trigger_event = {
-			id = nh.1002		
+			id = nh.1002
 		}
 
 		dynasty = {
@@ -313,7 +313,7 @@ nh_constantinople_hs_decision = {
 		}
 
 	}
-	
+
 	ai_potential = {always = yes}
 
 	ai_will_do = {base = 100}
@@ -321,20 +321,20 @@ nh_constantinople_hs_decision = {
 
 nh_peace_christianity_decision = {
 	picture = "gfx/interface/illustrations/decisions/nh_peace_christianity_decision.dds"
-	
+
 	desc = nh_peace_christianity_decision_desc
 	selection_tooltip = nh_peace_christianity_decision_tooltip
 	major = yes
 
 	sort_order = 0
-	
-	ai_check_interval = 300
+
+	ai_check_interval = 10
 
 	# only shown if faith is unreformed
 	is_shown = {
-		is_landed = yes	
+		is_landed = yes
 		faith = faith:natturugudtruar_pagan
-		
+
 		#Not repeatable.
 		NOT = {
 			AND = {
@@ -342,7 +342,7 @@ nh_peace_christianity_decision = {
 				is_target_in_global_variable_list = {
 					name = unavailable_unique_decisions
 					target = flag:nh_peace_christianity_decision
-				}	
+				}
 			}
 		}
 	}
@@ -355,11 +355,11 @@ nh_peace_christianity_decision = {
 
 		# strong faith
 		custom_description = {
-			text = "nh_peace_christianity_trigger"  
+			text = "nh_peace_christianity_trigger"
 			faith = { holy_sites_controlled = 3 }
 		}
 		piety_level >= 5
-		
+
 
 		#Must be in/adjacent to the Viking Age.
 		NOT = {
@@ -375,14 +375,26 @@ nh_peace_christianity_decision = {
 		not = { exists = involved_activity }
 	}
 
-	cost = {
-		prestige = 5000
-		piety = 5000
+	cost = { # easy for AI
+		piety = {
+			value = 500
+			if = {
+				limit = { is_ai = no }
+				add = 4500
+			}
+		}
+		prestige = {
+			value = 1000
+			if = {
+				limit = { is_ai = no }
+				add = 4000
+			}
+		}
 	}
 
 	effect = {
 		trigger_event = {
-			id = nh.1003		
+			id = nh.1003
 		}
 
 		dynasty = {
@@ -390,11 +402,11 @@ nh_peace_christianity_decision = {
 		}
 
 
-		#Can only happen once 
+		#Can only happen once
 		add_to_global_variable_list = {
 			name = unavailable_unique_decisions
 			target = flag:nh_peace_christianity_decision
-		}	
+		}
 	}
 
 	ai_potential = {always = yes}
@@ -512,7 +524,7 @@ nh_convert_whole_realm_to_feudalism_decision = {
 
 nh_convert_to_christianity_iceland_decision = {
 	picture = "gfx/interface/illustrations/decisions/decision_personal_religious.dds"
-	
+
 	desc = nh_convert_to_christianity_iceland_decision_desc
 	selection_tooltip = nh_convert_to_christianity_iceland_decision_tooltip
 	major = yes
@@ -536,7 +548,7 @@ nh_convert_to_christianity_iceland_decision = {
 			exists = character:168609
 			exists = character:180257
 		}
-	
+
 		#Not repeatable.
 		NOR = {
 			AND = {
@@ -545,7 +557,7 @@ nh_convert_to_christianity_iceland_decision = {
 					name = unavailable_unique_decisions
 					target = flag:nh_convert_to_christianity_iceland_fletnefir_decision
 				}
-			}	
+			}
 			AND = {
 				this = character:180257
 				is_target_in_global_variable_list = {
@@ -576,14 +588,14 @@ nh_convert_to_christianity_iceland_decision = {
 		}
 	}
 
-	cost = { 
+	cost = {
 		piety = {
 			value = 0
 			if = {
 				limit = { is_ai = no }
-				add = 200
+				add = 500
 			}
-		} 
+		}
 	}
 
 	effect = {
@@ -593,7 +605,7 @@ nh_convert_to_christianity_iceland_decision = {
 		dynasty = {
 			add_dynasty_prestige = 250
 		}
-		
+
 		if = {
 			limit = { this = character:168609 }
 			add_to_global_variable_list = {
@@ -619,8 +631,8 @@ nh_convert_to_christianity_iceland_decision = {
 
 nh_form_old_saxia_kingdom_decision = {
 	picture = "gfx/interface/illustrations/decisions/nh_form_old_saxia_kingdom_decision.dds"
-	desc = nh_form_old_saxia_kingdom_decision_desc 
-	selection_tooltip = nh_form_old_saxia_kingdom_decision_tooltip 
+	desc = nh_form_old_saxia_kingdom_decision_desc
+	selection_tooltip = nh_form_old_saxia_kingdom_decision_tooltip
 	major = yes
 	ai_check_interval = 36
 
@@ -665,7 +677,7 @@ nh_form_old_saxia_kingdom_decision = {
 		not = { exists = involved_activity }
 		#Must not be of the Karling dynasty
 		custom_description = {
-			text = "nh_form_old_saxia_dynasty_trigger"  
+			text = "nh_form_old_saxia_dynasty_trigger"
 			NOT = { dynasty = dynasty:25061 }
 		}
 	}
@@ -710,41 +722,41 @@ nh_form_old_saxia_kingdom_decision = {
 			}
 		}
 	}
-	
+
 	ai_potential = {
 		prestige_level >= high_prestige_level
 	}
 
 	ai_will_do = {
 		base = 0
-		
+
 		modifier = {
 			add = 20
 			capital_county.title_province = { geographical_region = custom_old_saxia }
 		}
-		modifier = { 
+		modifier = {
 				add = -40
 				has_trait = chaste
 			}
-		modifier = { 
+		modifier = {
 				add = -40
 				has_trait = compassionate
 			}
-		modifier = { 
+		modifier = {
 				add = -40
 				has_trait = forgiving
 			}
-		modifier = { 
+		modifier = {
 				add = 60
 				has_trait = brave
 				capital_county.title_province = { geographical_region = custom_old_saxia }
 			}
-		modifier = { 
+		modifier = {
 				add = 60
 				has_trait = vengeful
 				capital_county.title_province = { geographical_region = custom_old_saxia }
 			}
-		modifier = { 
+		modifier = {
 				add = 60
 				has_trait = wrathful
 				capital_county.title_province = { geographical_region = custom_old_saxia }
@@ -755,7 +767,7 @@ nh_form_old_saxia_kingdom_decision = {
 # v1.1
 nh_rollos_adventure_decision = {
 	picture = "gfx/interface/illustrations/decisions/nh_rollos_adventure_decision.dds"
-	
+
 	desc = nh_rollos_adventure_decision_desc
 	selection_tooltip = nh_rollos_adventure_decision_tooltip
 	major = yes
@@ -767,10 +779,10 @@ nh_rollos_adventure_decision = {
 	is_shown = {
 		is_lowborn = no
 		religion = religion:germanic_religion
-		
+
 		exists = character:242
 		this = character:242
-	
+
 		#Not repeatable.
 		NOT = {
 			AND = {
@@ -779,7 +791,7 @@ nh_rollos_adventure_decision = {
 					name = unavailable_unique_decisions
 					target = flag:nh_rollos_adventure_decision
 				}
-			}	
+			}
 		}
 	}
 
@@ -819,7 +831,7 @@ nh_rollos_adventure_decision = {
 	effect = {
 		trigger_event = nh.1011
 		save_scope_as = actor
-		
+
 		if = {
 			limit = { this = character:242 }
 			add_to_global_variable_list = {
@@ -838,7 +850,7 @@ nh_rollos_adventure_decision = {
 
 nh_gotland_policy_decision = {
 	picture = "gfx/interface/illustrations/decisions/nh_gotland_policy_decision.dds"
-	
+
 	sort_order = 2
 	selection_tooltip = nh_gotland_policy_decision_tooltip
 	desc = nh_gotland_policy_decision_desc
@@ -853,7 +865,7 @@ nh_gotland_policy_decision = {
 			culture = { has_cultural_pillar = heritage_north_germanic }
 			culture = { has_cultural_pillar = heritage_central_germanic }
 		}
-		
+
 	}
 
 	is_valid = {
@@ -867,7 +879,7 @@ nh_gotland_policy_decision = {
 			text = nh_within_viking_age
 			subject = root
 			NOT = {culture = { has_cultural_era_or_later = culture_era_high_medieval }}
-		}	
+		}
 	}
 
 	is_valid_showing_failures_only = {
@@ -897,12 +909,11 @@ nh_gotland_policy_decision = {
 	ai_will_do = {
 		base = 100
 	}
-
 }
 
 nh_iceland_first_great_ting = {
 	picture = "gfx/interface/illustrations/decisions/nh_iceland_great_ting.dds"
-	
+
 	desc = nh_iceland_first_great_ting_desc
 	selection_tooltip = nh_iceland_first_great_ting_tooltip
 	major = yes
@@ -917,12 +928,13 @@ nh_iceland_first_great_ting = {
 			tier = tier_county
 			title_province = { geographical_region = custom_iceland}
 		}
+
 		#Not repeatable.
 		NOT = {
 			is_target_in_global_variable_list = {
 				name = unavailable_unique_decisions
 				target = flag:nh_iceland_first_great_ting
-			}		
+			}
 		}
 	}
 
@@ -934,10 +946,26 @@ nh_iceland_first_great_ting = {
 			faith = { has_doctrine_parameter = unreformed }
 		}
 
-		# hold relevant titles 
+		# hold relevant titles
 		has_title = title:d_iceland
 		highest_held_title_tier <= tier_duchy
-		completely_controls_region = custom_iceland
+		# completely_controls_region = custom_iceland
+		if = {
+			limit = { is_ai = yes }
+			any_held_title = {
+				tier = tier_county
+				title_province = { geographical_region = custom_iceland}
+			}
+		}
+
+		# easy for AI
+		if = {
+			limit = { is_ai = no }
+			any_held_title = {
+				tier = tier_county
+				title_province = { geographical_region = custom_ai_iceland}
+			}
+		}
 
 		#Must be done within/near Viking age
 		NOT = {
@@ -977,11 +1005,11 @@ nh_iceland_first_great_ting = {
 		}
 
 		dynasty = {
-			add_dynasty_prestige = 250
+			add_dynasty_prestige = 750
 		}
-	
+
 		trigger_event = nh.1014
-		
+
 		hidden_effect = {
 			add_to_global_variable_list = {
 				name = unavailable_unique_decisions
@@ -1003,7 +1031,7 @@ nh_iceland_first_great_ting = {
 
 nh_iceland_yearly_ting = {
 	picture = "gfx/interface/illustrations/decisions/nh_iceland_great_ting.dds"
-	
+
 	desc = nh_iceland_yearly_ting_desc
 	selection_tooltip = nh_iceland_yearly_ting_tooltip
 
@@ -1062,7 +1090,7 @@ nh_iceland_yearly_ting = {
 		save_scope_as = actor
 		trigger_event = nh.1015
 		dynasty = {
-			add_dynasty_prestige = 25
+			add_dynasty_prestige = 50
 		}
 	}
 
