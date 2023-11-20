@@ -1,5 +1,0 @@
-﻿l_french:
- NH_NOT_KARLING: "Vous êtes de la dynastie [CHARACTER.GetDynastyName]."
- NH_IS_KARLING: "Un membre de la dynastie [CHARACTER.GetDynastyName], ne ressusciterait jamais son vieil ennemi."
- NH_FULLFILLED_HS: "Vous contrôlez au moins trois lieux saints."
- NH_MORE_HS_NEEDED: "Vous devez contrôler au moins trois lieux saints."

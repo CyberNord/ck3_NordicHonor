@@ -1,4 +1,0 @@
-﻿l_russian:
- nh_has_all_tribal_innovation:0 "Имеет #V 85%#! всех военных и гражданских племенных инноваций эры [innovations|E]" 
- nh_faith_is_unreformed:0 "[CHARACTER.GetFaith.GetName] верен старым обычаям"
- nh_within_viking_age:0 "Вы находитесь в эпохе Викингов"
