@@ -25,9 +25,9 @@ nh.0001 = {
 	lower_right_portrait = scope:player_heir_option			# grown up player heir is always expected to fight
 	lower_center_portrait = scope:player_rival_option
 	lower_left_portrait = scope:player_vassal_option
-	
+
 	immediate = {
-		
+
 		root = {
 			save_scope_as = actor
 		}
@@ -38,8 +38,8 @@ nh.0001 = {
 
 		# player_vassal_option (either Vassal or a honorable knight)
 		random_vassal = {
-			limit = { 
-					OR = { 
+			limit = {
+					OR = {
 						prowess > 20
 						has_trait = brave
 						has_trait = gallant
@@ -65,11 +65,11 @@ nh.0001 = {
 			save_scope_as = player_vassal_option
 		}
 
-		if = { 
+		if = {
 			limit = { not = { exists = scope:player_vassal_option } }
-			random_knight = { 
-				limit = { 
-					OR = { 
+			random_knight = {
+				limit = {
+					OR = {
 						prowess > 20
 						has_trait = brave
 						has_trait = gallant
@@ -90,16 +90,16 @@ nh.0001 = {
 							}
 						}
 					}
-				}   
-			save_scope_as = player_vassal_option 
+				}
+			save_scope_as = player_vassal_option
 			}
 		}
-		
+
 		# player rival option
-		random_relation = { 
+		random_relation = {
 				type = rival
-				limit = { 
-					NOR = { 
+				limit = {
+					NOR = {
 						has_trait = craven
 					}
 				}
@@ -107,7 +107,7 @@ nh.0001 = {
 		}
 	}
 
-	option = { 
+	option = {
 		name = nh.0001.option.nevermind.desc
 		custom_tooltip = nh.0001.option.nevermind_tooltip.desc
 
@@ -115,8 +115,8 @@ nh.0001 = {
 	}
 
 	# duel heir
-	option = { 
-		trigger = { 
+	option = {
+		trigger = {
 			root.player_heir = {
 				age >= 18
 			}
@@ -125,7 +125,7 @@ nh.0001 = {
 		name = nh.0001.option.duel_player_heir.desc
 		custom_tooltip = nh.0001.option.duel_player_heir_tooltip.desc
 
-		ai_chance = {base = 75}	
+		ai_chance = {base = 75}
 
 
 		hidden_effect = {
@@ -136,7 +136,7 @@ nh.0001 = {
 			ATTACKER = scope:actor
 			DEFENDER = scope:champion
 		}
-		
+
 		configure_start_single_combat_effect = {
 				SC_INITIATOR = scope:actor
 				SC_ATTACKER = scope:actor
@@ -150,7 +150,7 @@ nh.0001 = {
 	}
 
 	# duel rival
-	option = { 
+	option = {
 		trigger = {
 			exists = scope:player_rival_option
 		}
@@ -183,7 +183,7 @@ nh.0001 = {
 	}
 
 	# duel vassal/knight
-	option = { 
+	option = {
 		trigger = {
 			exists = scope:player_vassal_option
 		}
@@ -205,7 +205,7 @@ nh.0001 = {
 		configure_start_single_combat_effect = {
 				SC_INITIATOR = scope:actor
 				SC_ATTACKER = scope:actor
-				SC_DEFENDER = scope:champion	
+				SC_DEFENDER = scope:champion
 				FATALITY = always
 				FIXED = no
 				LOCALE = terrain_scope
@@ -216,7 +216,7 @@ nh.0001 = {
 
 }
 
-# Duel has ended, inform affected parties. 
+# Duel has ended, inform affected parties.
 nh.0011 = {
 	hidden = yes
 	immediate = {
@@ -243,9 +243,9 @@ nh.0011 = {
 		# Or was it the other
 		else_if = {
 			limit = { scope:sc_victor = scope:champion }
-		
+
 			# Send out the ending events.
-			
+
 			# actor died --> no event for actor
 
 			scope:champion = {
@@ -269,13 +269,13 @@ nh.0021 = {
 		}
 		# Inform both parties that the duel has invalidated.
 		scope:actor = {
-			send_interface_toast = {	
+			send_interface_toast = {
 				title = nh.0021.trigger_failure.actor
 				left_icon = scope:champion
 			}
 		}
 		scope:champion = {
-			send_interface_toast = {	
+			send_interface_toast = {
 				title = nh.0021.trigger_failure.recipient
 				left_icon = scope:actor
 			}
@@ -320,6 +320,13 @@ nh.0041 = {
 	option = {
 		name = nh.0041.a
 
+		hidden_effect = {
+			add_character_modifier = {
+				modifier = nh_odins_blessing_modifier
+				years = 1
+			}
+		}
+
 		# No stress for single-option events.
 		ai_chance = {
 			# AI will always choose single option.
@@ -328,7 +335,7 @@ nh.0041 = {
 	}
 }
 
-# Scope:champion has won the duel. 
+# Scope:champion has won the duel.
 nh.0111 = {
 	type = character_event
 	title = nh.0111.t
@@ -341,7 +348,7 @@ nh.0111 = {
 			}
 			desc = nh.0111.desc.opponent_died.recipient_fighting
 		}
-		
+
 		desc = nh.0111.desc.outro
 	}
 	theme = battle
@@ -363,11 +370,35 @@ nh.0111 = {
 	# event closes.
 	option = {
 		name = nh.0111.a
-		if = { 
-			limit = { scope:champion = scope:player_heir_option } 
-			scope:champion = { add_trait = einherjar } 
+		if = {
+			limit = { scope:champion = scope:player_heir_option }
+			scope:champion = { add_trait = einherjar }
 		}
-		
+
+		# further bonuses
+		if = {
+			limit = { has_trait = craven }
+			remove_trait = craven
+		}
+		add_trait = brave
+
+		if = {
+			limit = { has_trait = cynical }
+			remove_trait = cynical
+		}
+		add_trait = zealous
+
+		dynasty = {
+			add_dynasty_prestige = 50
+		}
+
+		hidden_effect = {
+			add_character_modifier = {
+				modifier = nh_odins_blessing_modifier
+				years = 100
+			}
+		}
+
 		ai_chance = {base = 100}
 	}
 }
@@ -392,12 +423,12 @@ nh.1001 ={
 			give_nickname = nick_nh_joromaborg
 			add_trait = crusader_king
 			save_scope_as = actor		#loc
-		} 
+		}
 	}
 
 	option = {
 		name = nh.1001.option.accept.desc
-		
+
 		ai_chance = {base = 100}
 	}
 }
@@ -416,7 +447,7 @@ nh.1002 ={
 
 	immediate = {
 		play_music_cue = "mx_cue_epic_sacral_moment"
-		
+
 		root = {
 			give_nickname = nick_nh_miklagard
 			add_trait = crusader_king
@@ -445,7 +476,7 @@ nh.1003 ={
 
 	immediate = {
 		play_music_cue = "mx_cue_epic_sacral_moment"
-		
+
 		root = {
 			give_nickname = nick_nh_peace
 			save_scope_as = actor		#loc
@@ -498,46 +529,71 @@ nh.1004 = {
 
 	option = {
 		name = nh.1004.option.pagan.desc
+		custom_tooltip = nh.1004.option.pagan_tooltip.desc
 		give_nickname = nick_nh_pagan_special
+
 		if = {
 			limit = { has_trait = cynical }
 			remove_trait = cynical
-		} 
+		}
 		add_trait = zealous
 		dynasty = {
 			add_dynasty_prestige = 250
 		}
+
+		hidden_effect = {
+			add_character_modifier = {
+				modifier = nh_odins_blessing_modifier
+				years = 100
+			}
+		}
+
+		if = {
+			limit = { is_ai = yes }
+			spawn_army = {
+				name = event_troop_ginregla
+				levies = 1000
+				men_at_arms = {
+					type = varangian_veterans
+					stacks = 2
+				}
+				location = province:2
+				origin = province:2
+				inheritable = no
+			}
+		}
+
 		ai_chance = {
 			base = 0
-			modifier = { 
+			modifier = {
 				add = -40
 				has_trait = chaste
 			}
-			modifier = { 
+			modifier = {
 				add = -40
 				has_trait = compassionate
 			}
-			modifier = { 
+			modifier = {
 				add = -40
 				has_trait = forgiving
 			}
-			modifier = { 
+			modifier = {
 				add = 100
 				has_trait = brave
 			}
-			modifier = { 
+			modifier = {
 				add = 100
 				has_trait = vengeful
 			}
-			modifier = { 
+			modifier = {
 				add = 100
 				has_trait = wrathful
 			}
-			modifier = { 
+			modifier = {
 				add = 200
 				has_trait = zealous
 			}
-			modifier = { 
+			modifier = {
 				add = -50
 				has_trait = cynical
 			}
@@ -546,44 +602,61 @@ nh.1004 = {
 
 	option = {
 		name = nh.1004.option.catholic.desc
+		custom_tooltip = nh.1004.option.catholic_tooltip.desc
 		give_nickname = nick_nh_catholic_special
 		root = {set_character_faith = faith:catholic}
 		trigger_event = { on_action = on_faith_conversion }
+
+		if = {
+			limit = { has_trait = vengeful }
+			remove_trait = vengeful
+		}
+		add_trait = forgiving
+		dynasty = {
+			add_dynasty_prestige = 1000
+		}
+		hidden_effect = {
+			add_character_modifier = {
+				modifier = nh_odins_curse_modifier
+				years = 100
+			}
+		}
+
 		ai_chance = {
 			base = 0
-			modifier = { 
+			modifier = {
 				add = 60
 				has_trait = craven
 			}
-			modifier = { 
+			modifier = {
 				add = 30
 				has_trait = chaste
 			}
-			modifier = { 
+			modifier = {
 				add = 30
 				has_trait = compassionate
 			}
-			modifier = { 
+			modifier = {
 				add = 30
 				has_trait = forgiving
 			}
-			modifier = { 
+			modifier = {
 				add = -40
 				has_trait = brave
 			}
-			modifier = { 
+			modifier = {
 				add = -40
 				has_trait = vengeful
 			}
-			modifier = { 
+			modifier = {
 				add = -40
 				has_trait = wrathful
 			}
-			modifier = { 
+			modifier = {
 				add = -90
 				has_trait = zealous
 			}
-			modifier = { 
+			modifier = {
 				add = -10
 				has_trait = cynical
 			}
@@ -593,40 +666,57 @@ nh.1004 = {
 
 	option = {
 		name = nh.1004.option.insular.desc
+		custom_tooltip = nh.1004.option.insular_tooltip.desc
 		give_nickname = nick_nh_insular_special
 		root = {set_character_faith = faith:insular_celtic}
 		trigger_event = { on_action = on_faith_conversion }
+
+		if = {
+			limit = { has_trait = gluttonous }
+			remove_trait = gluttonous
+		}
+		add_trait = temperate
+		dynasty = {
+			add_dynasty_prestige = 1000
+		}
+		hidden_effect = {
+			add_character_modifier = {
+				modifier = nh_odins_curse_modifier
+				years = 100
+			}
+		}
+
 		ai_chance = {
 			base = 0
-			modifier = { 
+			modifier = {
 				add = 30
 				has_trait = calm
 			}
-			modifier = { 
+			modifier = {
 				add = 30
 				has_trait = humble
 			}
-			modifier = { 
+			modifier = {
 				add = 30
 				has_trait = temperate
 			}
-			modifier = { 
+			modifier = {
 				add = -40
 				has_trait = brave
 			}
-			modifier = { 
+			modifier = {
 				add = -40
 				has_trait = vengeful
 			}
-			modifier = { 
+			modifier = {
 				add = -40
 				has_trait = wrathful
 			}
-			modifier = { 
+			modifier = {
 				add = -90
 				has_trait = zealous
 			}
-			modifier = { 
+			modifier = {
 				add = -10
 				has_trait = cynical
 			}
@@ -663,11 +753,11 @@ nh.1005 = {
 	option = {
 		name = nh.1005.option.a.desc
 		give_nickname = nick_nh_old_saxia
-		
+
 		if = {
 			limit = { has_trait = cynical }
 			remove_trait = cynical
-		} 
+		}
 		add_trait = zealous
 
 		root = {set_character_faith = faith:forn_sidr_pagan}
@@ -691,7 +781,7 @@ nh.1011 = {
  		animation = aggressive_axe
 	}
 
-	lower_right_portrait = scope:opponent_normandy_option		
+	lower_right_portrait = scope:opponent_normandy_option
 	lower_center_portrait = scope:opponent_sardinia_option
 	lower_left_portrait = scope:opponent_essex_option
 
@@ -700,11 +790,11 @@ nh.1011 = {
 			save_scope_as = attacker
 		}
 
-		# normandy 
+		# normandy
 		title:c_rouen.holder.top_liege = {
 			save_scope_as = opponent_normandy_option
 		}
-		
+
 		# sardinia
 		title:c_cagliari.holder.top_liege = {
 			save_scope_as = opponent_sardinia_option
@@ -754,10 +844,10 @@ nh.1011 = {
 				inheritable = no
 			}
 		}
-		
+
 	}
 
-	option = { 
+	option = {
 		name = nh.1011.option.opponent_normandy_option.desc
 		custom_tooltip = nh.1011.option.opponent_normandy_option_tooltip.desc
 
@@ -765,34 +855,34 @@ nh.1011 = {
 
 		# if this cause problems for non DLC owners use fix in issue#5
 		start_war = {
-			cb = fp1_varangian_adventurer_conquest 
+			cb = fp1_varangian_adventurer_conquest
 			target = scope:opponent_normandy_option
 			target_title = title:d_normandy
 		}
-			
+
 		ai_chance = {base = 100}
 	}
 
-	option = { 
+	option = {
 		name = nh.1011.option.opponent_sardinia_option.desc
 		custom_tooltip = nh.1011.option.opponent_sardinia_option_tooltip.desc
 
 		trigger = {exists = scope:opponent_sardinia_option}
 		start_war = {
-			cb = fp1_varangian_adventurer_conquest 
+			cb = fp1_varangian_adventurer_conquest
 			target = scope:opponent_sardinia_option
 			target_title = title:d_sardinia
 		}
 		ai_chance = {base = 0}
 	}
 
-	option = { 
+	option = {
 		name = nh.1011.option.opponent_essex_option.desc
 		custom_tooltip = nh.1011.option.opponent_essex_option_tooltip.desc
 
 		trigger = {exists = scope:opponent_essex_option}
 		start_war = {
-			cb = fp1_varangian_adventurer_conquest 
+			cb = fp1_varangian_adventurer_conquest
 			target = scope:opponent_essex_option
 			target_title = title:d_bedford
 		}
@@ -833,9 +923,9 @@ nh.1012 = {
 	}
 
 	# historical (no conversion)
-	option = { 
-		trigger = { 
-			exists = character:90104 
+	option = {
+		trigger = {
+			exists = character:90104
 			title:k_france.holder.top_liege = character:90104
 		}
 
@@ -844,7 +934,7 @@ nh.1012 = {
 
 		if = {
 			limit = {exists = primary_spouse}
-			divorce = primary_spouse 
+			divorce = primary_spouse
 		}
 
 		hidden_effect = { nh_marry_norman_historical_effect = yes }
@@ -859,9 +949,9 @@ nh.1012 = {
 	}
 
 	# historical with conversion
-	option = { 
-		trigger = { 
-			exists = character:90104 
+	option = {
+		trigger = {
+			exists = character:90104
 			title:k_france.holder.top_liege = character:90104
 		}
 
@@ -870,8 +960,8 @@ nh.1012 = {
 
 		if = {
 			limit = {exists = primary_spouse}
-			divorce = primary_spouse 
-		}	
+			divorce = primary_spouse
+		}
 
 		root = {set_character_faith = faith:catholic}
 		trigger_event = { on_action = on_faith_conversion }
@@ -890,8 +980,8 @@ nh.1012 = {
 	}
 
 	# alternate historical (no conversion)
-	option = { 
-		trigger = { 
+	option = {
+		trigger = {
 			NOT ={ title:k_france.holder.top_liege = character:90104 }
 		}
 		name = nh.1012.option.agree_alternative.desc
@@ -899,7 +989,7 @@ nh.1012 = {
 
 		if = {
 			limit = {exists = primary_spouse}
-			divorce = primary_spouse 
+			divorce = primary_spouse
 		}
 
 		hidden_effect = { nh_marry_norman_alternate_effect = yes }
@@ -914,8 +1004,8 @@ nh.1012 = {
 	}
 
 	# alternate historical with conversion
-	option = { 
-		trigger = { 
+	option = {
+		trigger = {
 			NOT ={ title:k_france.holder.top_liege = character:90104 }
 		}
 		name = nh.1012.option.agree_alternative_convert.desc
@@ -923,7 +1013,7 @@ nh.1012 = {
 
 		if = {
 			limit = {exists = primary_spouse}
-			divorce = primary_spouse 
+			divorce = primary_spouse
 		}
 
 		root = {set_character_faith = faith:catholic}
@@ -941,8 +1031,8 @@ nh.1012 = {
 		ai_chance = {base = 100}
 	}
 
-	option = { 
-		
+	option = {
+
 		name = nh.1012.option.refuse.desc
 		custom_tooltip = nh.1012.option.refuse_tooltip.desc
 
@@ -973,7 +1063,7 @@ nh.1013 = {
 
 	option = {
 		name = nh.1013.option.trade.desc
-		
+
 		title:c_gutland = {
 			add_county_modifier = {
 				modifier = nh_county_trade_modifier
@@ -981,7 +1071,7 @@ nh.1013 = {
 			}
 		}
 		add_gold = medium_gold_value
-		
+
 		ai_chance = {base = 10}
 	}
 
@@ -1025,7 +1115,7 @@ nh.1013 = {
 }
 
 # first great Althing
-nh.1014 = {	
+nh.1014 = {
 	type = character_event
 	title = nh.1014.t
 	desc = nh.1014.desc
@@ -1047,7 +1137,7 @@ nh.1014 = {
 	}
 }
 
-# repeatable thing 
+# repeatable thing
 nh.1015 = {
 	type = character_event
 	title = nh.1015.t
@@ -1067,61 +1157,61 @@ nh.1015 = {
 		}
 	}
 
-	# pray to the gods 
+	# pray to the gods
 	option = {
 		name = nh.0015.option.blot.desc
 		custom_tooltip = nh.0015.option.blot_tooltip.desc
 
 		hidden_effect = {
 			faith:ginnregla_pagan = {
-				every_faith_ruler = { 
-					random_list = { 
+				every_faith_ruler = {
+					random_list = {
 						15 = {
 							add_character_modifier = {
 								modifier = nh_odins_blessing_modifier
-								years = 1
+								years = 2
 							}
 						}
 						20 = {
 							add_character_modifier = {
 								modifier = nh_thors_blessing_modifier
-								years = 2
+								years = 3
 							}
 						}
 						20 = {
 							add_character_modifier = {
 								modifier = nh_freyas_blessing_modifier
-								years = 2
+								years = 3
 							}
 						}
 						15 = {
 							add_character_modifier = {
 								modifier = nh_tyr_blessing_modifier
-								years = 1
+								years = 2
 							}
 						}
 						15 = {
 							add_character_modifier = {
 								modifier = nh_njords_blessing_modifier
-								years = 1
+								years = 2
 							}
 						}
 						5 = {
 							add_character_modifier = {
 								modifier = nh_lokis_curse_modifier
-								years = 3
+								years = 5
 							}
 						}
 						5 = {
 							add_character_modifier = {
 								modifier = nh_hels_curse_modifier
-								years = 3
+								years = 5
 							}
 						}
 						5 = {
 							add_character_modifier = {
 								modifier = nh_suturs_curse_modifier
-								years = 3
+								years = 5
 							}
 						}
 					}
@@ -1133,13 +1223,13 @@ nh.1015 = {
 		title:c_sudurland = {
 			add_county_modifier = {
 				modifier = nh_tinvellir_county_modifier
-				years = 2
+				years = 3
 			}
 		}
 
 		ai_chance = {
 			base = 25
-			modifier = { 
+			modifier = {
 				add = 75
 				has_trait = zealous
 			}
@@ -1153,10 +1243,10 @@ nh.1015 = {
 
 		hidden_effect = {
 			faith:ginnregla_pagan = {
-				every_faith_ruler = { 
+				every_faith_ruler = {
 					add_character_modifier = {
 						modifier = nh_thing_trade_modifier
-						years = 2
+						years = 3
 						}
 					trigger_event = nh.9002
 				}
@@ -1166,30 +1256,30 @@ nh.1015 = {
 		title:c_sudurland = {
 			add_county_modifier = {
 				modifier = nh_tinvellir_county_modifier
-				years = 2
+				years = 3
 			}
 		}
 
 		ai_chance = {
 			base = 15
-			modifier = { 
+			modifier = {
 				add = 75
 				has_trait = greedy
 			}
 		}
 	}
 
-	# build 
+	# build
 	option = {
 		name = nh.0015.option.build.desc
 		custom_tooltip = nh.0015.option.build_tooltip.desc
 
 		hidden_effect = {
 			faith:ginnregla_pagan = {
-				every_faith_ruler = { 
+				every_faith_ruler = {
 					add_character_modifier = {
 						modifier = nh_thing_build_modifier
-						years = 2
+						years = 3
 						}
 					trigger_event = nh.9003
 				}
@@ -1199,13 +1289,13 @@ nh.1015 = {
 		title:c_sudurland = {
 			add_county_modifier = {
 				modifier = nh_tinvellir_county_modifier
-				years = 2
+				years = 3
 			}
 		}
 
 		ai_chance = {
 			base = 15
-			modifier = { 
+			modifier = {
 				add = 75
 				has_trait = diligent
 			}
@@ -1219,10 +1309,10 @@ nh.1015 = {
 
 		hidden_effect = {
 			faith:ginnregla_pagan = {
-				every_faith_ruler = { 
+				every_faith_ruler = {
 					add_character_modifier = {
 						modifier = nh_thing_diplomacy_modifier
-						years = 2
+						years = 3
 						}
 					trigger_event = nh.9004
 				}
@@ -1232,13 +1322,13 @@ nh.1015 = {
 		title:c_sudurland = {
 			add_county_modifier = {
 				modifier = nh_tinvellir_county_modifier
-				years = 2
+				years = 3
 			}
 		}
 
 		ai_chance = {
 			base = 15
-			modifier = { 
+			modifier = {
 				add = 75
 				has_trait = compassionate
 			}
@@ -1322,4 +1412,3 @@ nh.9004 = {
 		name = nh.9004.a
 	}
 }
-

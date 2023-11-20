@@ -1,14 +1,14 @@
 ﻿form_nh_old_saxony_scripted_effect ={
 	save_scope_as = scoped_ruler
 	title:k_old_saxia = { save_scope_as = old_saxia }
-	
-	#De jure shifts. 
+
+	#De jure shifts.
 	title:d_holstein = { set_de_jure_liege_title = title:k_old_saxia }
 	title:d_ostfalen = { set_de_jure_liege_title = title:k_old_saxia }
 	title:d_angria = { set_de_jure_liege_title = title:k_old_saxia }
 	title:d_westfalen = { set_de_jure_liege_title = title:k_old_saxia }
 	title:d_anhalt = { set_de_jure_liege_title = title:k_old_saxia }
-	
+
 
 	title:k_old_saxia = { set_de_jure_liege_title = title:e_germany}
 	create_title_and_vassal_change = {
@@ -26,7 +26,7 @@
 	hidden_effect = { set_primary_title_to = title:k_old_saxia }
 }
 
-## Rollo Norman conquest events  
+## Rollo Norman conquest events
 nh_marry_norman_historical_effect = {
 	character:90104 = { save_scope_as = spouse_father }		#(King Charles the Bald)
 	character:167830 = { save_scope_as = spouse_mother }	#(Irminitrude of Orléans)
@@ -117,12 +117,15 @@ nh_vassal_contract_religious_effect = {
 form_nh_iceland_scripted_effect = {
 	save_scope_as = scoped_ruler
 	title:k_iceland = { save_scope_as = iceland }
-	
-	#De jure shifts. 
+
+	#De jure shifts.
 	title:d_iceland = { set_de_jure_liege_title = title:k_iceland }
 	title:d_northern_isles = { set_de_jure_liege_title = title:k_iceland }
 
-	title:k_iceland = { set_de_jure_liege_title = title:e_scandinavia }
+	hidden_effect = {
+		title:k_iceland = { set_de_jure_liege_title = title:e_scandinavia }
+	}
+
 	create_title_and_vassal_change = {
 		type = created
 		save_scope_as = change

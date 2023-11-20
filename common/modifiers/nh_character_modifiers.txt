@@ -3,6 +3,7 @@ nh_rollo_special_ai_modifier = {
 	icon = martial_positive
 	martial = 10
 	advantage = 30
+	health = 1.0
 	hidden_effect = {
 		min_combat_roll = 10
 		max_combat_roll = 10
@@ -10,7 +11,7 @@ nh_rollo_special_ai_modifier = {
 		supply_duration = 1
 		hostile_county_attrition = -1
 		no_water_crossing_penalty = yes
-	}	
+	}
 }
 
 # Thingvellir
@@ -22,7 +23,7 @@ nh_odins_blessing_modifier = {
 
 nh_thors_blessing_modifier = {
 	icon = asatru_raven_positive
-	prowess = 5
+	prowess = 10
 	health = 0.5
 }
 
@@ -35,7 +36,7 @@ nh_freyas_blessing_modifier = {
 nh_tyr_blessing_modifier = {
 	icon = asatru_raven_positive
 	martial = 5
-	knight_effectiveness_mult = 0.2
+	knight_effectiveness_mult = 0.3
 }
 
 nh_njords_blessing_modifier = {
@@ -50,15 +51,24 @@ nh_lokis_curse_modifier = {
 	diplomacy = major_skill_penalty
 	monthly_prestige = -0.5
 }
+
 nh_hels_curse_modifier = {
 	icon = asatru_raven_negative
 	monthly_piety_gain_mult = 0.5
 	health = -0.5
 }
+
 nh_suturs_curse_modifier = {
 	icon = asatru_raven_negative
-	dread_baseline_add = 25
-	general_opinion = -10
+	dread_baseline_add = 35
+	general_opinion = -20
+}
+
+nh_odins_curse_modifier = {
+	icon = asatru_raven_negative
+	monthly_prestige = -1
+	health = 0.5
+	general_opinion = -20
 }
 
 nh_thing_trade_modifier = {
@@ -77,10 +87,7 @@ nh_thing_build_modifier = {
 
 nh_thing_diplomacy_modifier = {
 	icon = letter_positive
-	different_culture_opinion = 25
-	monthly_diplomacy_lifestyle_xp_gain_mult = 0.3
+	different_culture_opinion = 35
+	monthly_diplomacy_lifestyle_xp_gain_mult = 0.5
 	monthly_intrigue_lifestyle_xp_gain_mult = -0.9
 }
-
-
-
