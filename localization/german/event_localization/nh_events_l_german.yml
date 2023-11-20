@@ -1,0 +1,127 @@
+﻿l_german:
+ nh.0001.t:0 "Last Duel"
+ nh.0001.reason.desc:0 "The most crucial pursuit for a $norse_pagan_adherent$ is to strive for $germanic_positive_afterlife$. However, how shall I ever attain it if death in battle has eluded me thus far? I ought to seek a trusted companion or rival and request the honor of a final duel, a fight to the death. For if I were to die in true combat, a place at the warriors' table would surely be secured for me."
+ nh.0001.option.nevermind.desc:0 "I have to think about it once more..."
+ nh.0001.option.nevermind_tooltip.desc:0 "You will ponder and reconsider your options for some time. The decision will remain unavailable until then."
+ nh.0001.option.duel_player_heir.desc:0 "The day has come to prove yourself as a worthy successor."
+ nh.0001.option.duel_player_heir_tooltip.desc:0 "You will duel your heir, [player_heir_option.GetFirstNameNoTooltip], in a battle for life and death. As the old ways demand it, he will get the chance to prove himself as worthy or die trying."
+ nh.0001.option.duel_player_rival.desc:0 "[player_rival_option.GetFirstNameNoTooltip]! Let us settle our dispute with honor!"
+ nh.0001.option.duel_player_rival_tooltip.desc:0 "You will duel your rival, [player_rival_option.GetFirstName], in a battle for life and death."
+ nh.0001.option.player_vassal_option.desc:0 "[player_vassal_option.GetFirstNameNoTooltip] would be an honorable choice aswell..."
+ nh.0001.option.player_vassal_option_tooltip.desc:0 "You will duel, [player_vassal_option.GetFirstName], in an honorable battle for life and death."
+ 
+ # TbC has invalidated [nh.0021]
+ nh.0021.trigger_failure.actor:0 "$nh.0001.trigger_failure.actor$" 
+ nh.trigger_failure.recipient:0 "$nh.0001.trigger_failure.recipient$"  
+ nh.0001.trigger_failure.actor:0 "My [trial_by_combat_trial|E] against [recipient.GetFirstNameNoTooltip] has invalidated. It's an omen..."
+ nh.0001.trigger_failure.recipient:0 "My [trial_by_combat_trial|E] against [actor.GetFirstNameNoTooltip] has invalidated. It's an omen..."
+
+ # Duel Won [nh.0041]
+ nh.0041.t:0 "Victory"
+ nh.0041.desc.intro:0 "Resting easy back in [actor.GetCapitalLocation.GetTitle.GetNameNoTierNoTooltip], I exult in my success, my [actor.Custom('signature_weapon')] laid across my lap.\n\n"
+ nh.0041.desc.opponent_died:0 "[champion.GetTitledFirstNamePossessive] blood still cakes in fresh grooves and notches along the weapon's [actor.Custom('SignatureWeaponEndType')], reminding me of the [champion.GetWomanMan]'s last moments. Yet, despite my victory, $germanic_positive_afterlife$'s embrace eludes me. Time is running out, and I must seek an honorable death to prove my worthiness..."
+ nh.0041.desc.outro:0 "\n\nYesterday, I tried to enter $germanic_positive_afterlife$ with honor, and $germanic_high_god_name$ favored [champion.GetTitledFirstNamePossessive]."
+ nh.0041.a: "My journey continues."
+
+ # Challenger Won [nh.0111]
+ nh.0111.t:0 "$germanic_positive_afterlife$"
+ nh.0111.desc.intro:0 "$germanic_high_god_she_he$, $germanic_high_god_alternate$ smiled heartily on us yesterday!\n\n"
+ nh.0111.desc.opponent_died.recipient_fighting:0 "[actor.GetFirstName] is now undoubtedly entered by the embrace of $germanic_positive_afterlife$. His brave spirit and unwavering courage have left an indelible mark on our hearts.\nOur battle was a symphony of steel and blood, a testament to the warrior's code we held dear. $germanic_war_god_name$, $germanic_good_god_thor$ and $germanic_high_god_alternate$  themselves bear witness to our triumph, their approving gaze shining upon us.\nMay the echoes of our valorous duel resound through the annals of history, forever immortalizing [actor.GetFirstName] as a true $germanic_religion_adherent$ legend.\n\n\n"
+ nh.0111.desc.outro:0 "See you in $germanic_positive_afterlife$ [actor.GetFirstName]!"
+ nh.0111.a:0 "These are our honored traditions..."
+
+ # Joromaborg [nh.1001]
+ nh.1001.t:0 "Divine Conquest"
+ nh.1001.desc:0 "After endless battles and bloodshed, Rome, the eternal city, now lies at our feet. Its once mighty walls crumble beneath the weight of our triumph, as the echoes of our victories reverberate through its streets. It is time to rebuild the big temple for the glory of [actor.GetFaith.HighGodName]! This temple, rising like a beacon of glory, shall be a sanctuary where the faithful [actor.GetFaith.PantheonTerm] gather, witnessing the dawn of a new era, where the gods themselves walk among us, and the radiance of Joromaborg illuminates the path to [actor.GetFaith.PositiveAfterLife]."
+ nh.1001.option.accept.desc:0 "The ancient City is ours now!"
+
+ # Miklagard [nh.1002]
+ nh.1002.t:0 "Constantinople's New Order"
+ nh.1002.desc:0 "As I stand amidst the fallen walls of Constantinople, a sense of triumph and reverence consumes me.\n This great city, once adorned with Varangian warriors, shall now be claimed as our own.\n\n The Hagia Sophia, a symbol of Byzantine might, shall become a grand temple where [actor.GetFaith.GetName] from far and wide will gather to honor [actor.GetFaith.HighGodName]. Constantinople, now baptized in the light of [actor.GetFaith.PantheonTerm], now shall be known as Mikligarðr, a testament to the resurgence of our Norse traditions. Now and forever!"
+ nh.1002.option.accept.desc:0 "The ancient City is ours now!"
+
+ # Peace with Christianity [nh.1003]
+ nh.1003.t:0 "A Pact of Coexistence"
+ nh.1003.desc:0 "In a bold move towards religious harmony, [actor.GetFirstName], the [actor.GetTitle] of [actor.GetRealm], has decided to forge a historic pact of coexistence with the Christian faith. Through diplomatic negotiations and mutual respect, a declaration of peace and tolerance has been proclaimed. This momentous occasion marks a turning point in the religious landscape, as the realm embraces a newfound era of harmony between Norse traditions and the Christian beliefs. The future holds the promise of shared prosperity and understanding, as the realm sets forth on a path of unity and cooperation."
+ nh.1003.option.accept.desc:0 "Ragnarök no more."
+
+ # Iceland pagan/christianity [nh.1004 to .1006]
+ nh.1004.t:0 "Deciding the religious future"
+ nh.1004.desc:0 "A momentous choice stands before us, stirring the depths of our souls. The winds carry whispers of a new deity and the power it holds. Yet, to tread this path means forsaking the ancient ways, bidding farewell to Odin and the gods who have guided us. Will we embrace this new faith, or remain steadfast in the traditions of our forefathers?"
+ nh.1004.option.pagan.desc:0 "Remain Pagan"
+ nh.1004.option.catholic.desc:0 "Convert to Catholicism"
+ nh.1004.option.insular.desc:0 "Convert to Insular Christianity"
+
+ # Old Saxony [nh.1005]
+ nh.1005.t:0 "Recreate Old Saxony"
+ nh.1005.desc:0 "Inspired by the valorous spirit of Widukind and the undying determination of our people, we shall embark on the path of recreating the glorious kingdom of Old Saxony. With hearts ablaze and spirits untamed, we shall cast off the shackles of foreign influence imposed upon us by Charlemagne's conquest. Our ancestors call upon us to restore our ancestral traditions, to honor Wotan, the Allfather, as the supreme deity of our land. Let the world bear witness to the triumphant resurgence of our pagan roots, as we forge a new destiny, united under the watchful eye of our divine patron."
+ nh.1005.option.a.desc:0 "And Wotan will guide us to Victory!"
+
+ # Rollo's Adventure [nh.1011 to  .1012]
+ nh.1011.t:0 "Choosing the Target"
+ nh.1011.desc:0 "As you set sail with your formidable warband, the question arises: where shall our Viking might be unleashed? The lands of Normandy, with their untapped riches and potential for conquest? Or perhaps the island of Sardinia, where plunder and glory await the fearless? Alternatively, the fertile lands of Essex, with its weak defenses, offer an enticing opportunity. "
+ nh.1011.option.opponent_normandy_option.desc:0 "Normandy: The fertile lands of the Franks shall tremble beneath our boots."
+ nh.1011.option.opponent_normandy_option_tooltip.desc:0 "Select this option to lead Rollo's forces to invade Normandy, seeking to establish a Viking stronghold in these fruitful lands."
+ nh.1011.option.opponent_sardinia_option.desc:0 "Sardinia: An island ripe for the taking, its shores shall bear witness to our Viking might."
+ nh.1011.option.opponent_sardinia_option_tooltip.desc:0 "Choose this option to guide Rollo's expedition to Sardinia, where riches and glory await in the bountiful Mediterranean lands."
+ nh.1011.option.opponent_essex_option.desc:0 "Essex: A vulnerable realm, it shall be a stepping stone to greater conquests."
+ nh.1011.option.opponent_essex_option_tooltip.desc:0 "Choose this option to lead Rollo's forces to Essex, exploiting the weak defenses of this fertile land as a springboard for further Viking campaigns."
+
+ nh.1012.t:0 "The Offer of Normandy"
+ nh.1012.desc:0 "As your Viking forces conquer the lands of Normandy, news of your swift victories reaches the French King. Impressed by your strength and ambition, [francish_king.GetTitledFirstName] sends emissaries with a remarkable proposition. They offer you vast lands, noble titles, and the chance to marry the King's daughter.\nHowever, in return, [actor.GetTitledFirstName] convert to Christianity and pledge loyalty to the Frankish crown. This decision carries great significance, as it means forsaking your ancient gods and traditions.\nHowever, after this victory I might be in the right position to alter the contract to my favor..."
+ nh.1012.option.alternate_historical_agree.desc:0 "I agree, but I won't renounce the gods..."
+ nh.1012.option.alternate_historical_agree_tooltip.desc:0 "You will remain pagan and marry the daughter of [francish_king.GetTitledFirstName], although this decision may lead to problems in the future."
+ nh.1012.option.historical_agree.desc:0 "I agree"
+ nh.1012.option.historical_agree_tooltip.desc:0 "You will leave the old ways and marry the daughter of [francish_king.GetTitledFirstName]."
+ nh.1012.option.agree_alternative.desc:0 "I agree, but I won't renounce the gods..."
+ nh.1012.option.agree_alternative_tooltip.desc:0 "You will remain pagan and marry a daughter of [francish_king.GetTitledFirstName], although this decision may lead to problems in the future."
+ nh.1012.option.agree_alternative_convert.desc:0 "I agree"
+ nh.1012.option.agree_alternative_convert_tooltip.desc:0 "You will leave the old ways and marry the daughter of [francish_king.GetTitledFirstName]."
+ nh.1012.option.refuse.desc:0 "No, I will not bend my knee to those [francish_king.GetFaith.GetAdherentNamePlural]"
+ nh.1012.option.refuse_tooltip.desc:0 "By declining this offer, you will maintain your current status and decline the opportunity to form a new alliance or gain additional benefits."
+
+ nh.9000.opening:0 "The Norman solution"
+ nh.9000.desc:0 "[actor.GetTitledFirstName] has conquered Neustria. I am impressed by the norse strength and ambition, so I sent out emissaries to them with a remarkable proposition. I offered him to rule Neustria as duke and the hand of my daring daughter.\nHowever, in return, [actor.GetTitledFirstName] convert to Christianity and pledge loyalty to the Frankish crown."
+ nh.9000.a:0 "This will secure the coastlines from those raiders."
+
+# Gotland event
+ nh.1013.t:0 "Viðskipti eða herferð"
+ nh.1013.desc:0 "At this critical juncture, we have an opportunity to shape our future once again. With our ample manpower and resources, we can temporarily shift our focus to either creating trading posts and vessels for peaceful commerce, or arming our warriors with axes to embark on daring Viking expeditions. The decision we make now will influence our path for the next decade."
+ nh.1013.option.trade.desc:0 "Invest in Trade"
+ nh.1013.option.trade_tooltip.desc:0 "Allocate our resources towards creating trading posts and vessels, expanding our reach through peaceful commerce."
+ nh.1013.option.raid.desc:0 "Give the man axes, we'll go raiding"
+ nh.1013.option.raid_tooltip.desc:0 "Direct our resources towards arming our warriors and setting sail on bold Viking expeditions, seeking wealth and glory through conquest and plunder."
+ nh.1013.option.defence.desc:0 "No, strenghten our defences instead!"
+ nh.1013.option.defence_tooltip.desc:0 "Direct our resources towards fortifying our defenses by constructing temporary fortifications, such as wooden palisades, watchtowers, and defensive ditches."
+
+# First Alting
+nh.1014.t:0 "A important day"
+nh.1014.desc:0 "All the important men, women, and dignitaries have gathered. There is lengthy discussion and negotiation, but ultimately it becomes clear that from this day forward, Iceland will be recognized as its own kingdom. It is a significant step for the future of our land. It is time for others to acknowledge this claim, now and forever."
+nh.1014.option.a.desc:0 "Þetta reddast"
+
+nh.1015.t:0 "Thing"
+nh.1015.desc:0 "The annual gathering of the Icelandic people, known as the Thing, has commenced. As the ruler, you have the opportunity to shape the direction of the gathering and guide the future of your land."
+nh.0015.option.blot.desc:0 "Divine Reverence"
+nh.0015.option.blot_tooltip.desc:0  "Focus the Thing on the gods, conducting sacred rituals and offering sacrifices. Receive various religious buffs and favor from the divine."
+nh.0015.option.trade.desc:0 "Trade Expansion"
+nh.0015.option.trade_tooltip.desc:0 "Shift the focus of the Thing towards trade and commerce. Encourage economic growth, establish trade routes, and foster prosperity for your realm."
+nh.0015.option.build.desc:0 "County Development"
+nh.0015.option.build_tooltip.desc:0 "Emphasize the development of your counties and infrastructure. Invest in building projects, improve defenses, and enhance the prosperity of your lands."
+nh.0015.option.diplomacy.desc:0 "Diplomacy and Adventure"
+nh.0015.option.diplomacy_tooltip.desc:0 "Direct the Thing's attention towards diplomacy and adventure. Seek alliances, embark on expeditions, and expand your influence through strategic alliances and daring exploits."
+
+nh.9001.opening:0 "Esteemed attendees,"
+nh.9001.desc:0 "In the spirit of divine reverence, the ruler has chosen to focus the Thing on matters of religious significance. Prayers are offered, sacrifices made, and the gods are honored with utmost devotion. May their blessings be upon us."
+nh.9001.a:0 "Praise the Gods"
+
+nh.9002.opening:0 "Esteemed attendees,"
+nh.9002.desc:0 "The ruler has decided to prioritize trade expansion during this gathering of the Thing. Efforts are made to strengthen commercial ties, establish new trade routes, and attract merchants from distant lands. May prosperity and wealth flow into our realms."
+nh.9002.a:0 "Plunder New Shores"
+
+nh.9003.opening:0 "Esteemed attendees,"
+nh.9003.desc:0 "The ruler has placed a strong emphasis on county development in this assembly of the Thing. Resources are invested in infrastructure, construction projects are initiated, and the prosperity of our counties is nurtured. May our lands flourish and thrive."
+nh.9003.a:0 "Fortify Our Lands"
+
+nh.9004.opening:0 "Esteemed attendees,"
+nh.9004.desc:0 "The ruler has chosen to focus on diplomacy and adventure during this gathering of the Thing. Efforts are made to forge alliances, seek new opportunities, and embark on daring ventures. May our diplomatic endeavors and brave expeditions bring honor and glory to our realm."
+nh.9004.a:0 "Embark on Great Journeys"
