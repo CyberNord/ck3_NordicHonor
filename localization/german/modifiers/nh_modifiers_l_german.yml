@@ -7,7 +7,7 @@
  nh_county_defence_modifier_desc:0 "With its robust defenses and fortified structures, this county stands as a bastion of protection against external threats, ensuring the safety of its inhabitants."
  nh_tinvellir_county_modifier:0 "Tingvellir Assembly"
  nh_tinvellir_county_modifier_desc:0 "The Tingvellir assembly has strengthened the bonds between the local communities, fostering a sense of happiness, unity, and security."
- 
+
 
 
 
@@ -31,13 +31,14 @@
  nh_lokis_curse_modifier_desc:0 "This character bears the burden of Loki's curse, which brings unexpected challenges, deception, and trickery to their life."
  nh_hels_curse_modifier:0 "Haunted by Hel"
  nh_hels_curse_modifier_desc:0 "Hel's curse looms over this character, reminding them of the inevitability of death and the fleeting nature of life."
- nh_suturs_curse_modifier:0 "Consumed by Surtur's Fury" 
+ nh_suturs_curse_modifier:0 "Consumed by Surtur's Fury"
  nh_suturs_curse_modifier_desc:0 "Surtur's fiery fury consumes this character, bringing destruction, chaos, and turmoil to their path."
- 
+ nh_odins_curse_modifier:0 "Cursed by Odin"
+ nh_odins_curse_modifier_desc:0 "By abandoning the faith of your forefathers, you have invoked the wrath of Odin. A dark curse hangs over you, casting shadows on your every endeavor. Be wary, for the Allfather's displeasure may manifest in unforeseen ways."
+
  nh_thing_trade_modifier:0 "Kaupmaðr"
  nh_thing_trade_modifier_desc:0 "The ruler has directed their efforts towards expanding trade networks, fostering economic growth, and reaping the benefits of prosperous commerce."
  nh_thing_build_modifier:0 "Byggvir"
  nh_thing_build_modifier_desc:0 "With a focus on building and development, the ruler aims to strengthen infrastructure, expand fortifications, and enhance the prosperity and stability of their realm."
  nh_thing_diplomacy_modifier:0 "Sendiherra"
  nh_thing_diplomacy_modifier_desc:0 "By prioritizing diplomacy and forging new alliances, the ruler seeks to establish strong diplomatic ties, secure valuable alliances, and ensure the safety and security of their realm."
-

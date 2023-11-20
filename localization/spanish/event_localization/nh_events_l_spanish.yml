@@ -9,10 +9,10 @@
  nh.0001.option.duel_player_rival_tooltip.desc:0 "You will duel your rival, [player_rival_option.GetFirstName], in a battle for life and death."
  nh.0001.option.player_vassal_option.desc:0 "[player_vassal_option.GetFirstNameNoTooltip] would be an honorable choice aswell..."
  nh.0001.option.player_vassal_option_tooltip.desc:0 "You will duel, [player_vassal_option.GetFirstName], in an honorable battle for life and death."
- 
+
  # TbC has invalidated [nh.0021]
- nh.0021.trigger_failure.actor:0 "$nh.0001.trigger_failure.actor$" 
- nh.trigger_failure.recipient:0 "$nh.0001.trigger_failure.recipient$"  
+ nh.0021.trigger_failure.actor:0 "$nh.0001.trigger_failure.actor$"
+ nh.trigger_failure.recipient:0 "$nh.0001.trigger_failure.recipient$"
  nh.0001.trigger_failure.actor:0 "My [trial_by_combat_trial|E] against [recipient.GetFirstNameNoTooltip] has invalidated. It's an omen..."
  nh.0001.trigger_failure.recipient:0 "My [trial_by_combat_trial|E] against [actor.GetFirstNameNoTooltip] has invalidated. It's an omen..."
 
@@ -51,6 +51,9 @@
  nh.1004.option.pagan.desc:0 "Remain Pagan"
  nh.1004.option.catholic.desc:0 "Convert to Catholicism"
  nh.1004.option.insular.desc:0 "Convert to Insular Christianity"
+ nh.1004.option.pagan_tooltip.desc:0 "Choose to remain true to the Old Ways and gain the opportunity to form the Kingdom of Iceland, along with other powerful bonuses."
+ nh.1004.option.catholic_tooltip.desc:0 "Convert to Catholicism and receive a substantial boost to dynasty prestige, but without unlocking further Nordic Honor content."
+ nh.1004.option.insular_tooltip.desc:0 "Convert to Insular Christianity and gain a significant increase in dynasty prestige, though without unlocking additional Nordic Honor content."
 
  # Old Saxony [nh.1005]
  nh.1005.t:0 "Recreate Old Saxony"

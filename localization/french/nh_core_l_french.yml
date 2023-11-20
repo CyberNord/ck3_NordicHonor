@@ -1,3 +1,4 @@
 ﻿l_french:
  event_troop_rollo_name:2 "[ROOT.Char.GetTitledFirstNamePossessiveNoTooltip] Normands"
- event_troop_gotland_name:2 "[ROOT.Char.GetTitledFirstNamePossessiveNoTooltip] Les Varangiens de Gotland"
+ event_troop_gotland_name:2 "[ROOT.Char.GetTitledFirstNamePossessiveNoTooltip] Varangiens du Gotland"
+ event_troop_ginregla:2 "[ROOT.Char.GetTitledFirstNamePossessiveNoTooltip] Guerriers d'Islande"
