@@ -949,10 +949,9 @@ nh_iceland_first_great_ting = {
 		# hold relevant titles
 		has_title = title:d_iceland
 		highest_held_title_tier <= tier_duchy
-
-		# players: completely_controls_region = custom_iceland
+		# completely_controls_region = custom_iceland
 		if = {
-			limit = { is_ai = no }
+			limit = { is_ai = yes }
 			any_held_title = {
 				tier = tier_county
 				title_province = { geographical_region = custom_iceland}
@@ -961,7 +960,7 @@ nh_iceland_first_great_ting = {
 
 		# easy for AI
 		if = {
-			limit = { is_ai = yes }
+			limit = { is_ai = no }
 			any_held_title = {
 				tier = tier_county
 				title_province = { geographical_region = custom_ai_iceland}
