@@ -4,15 +4,15 @@
  nh.0001.option.nevermind.desc:0 "Мне нужно подумать об этом еще раз..."
  nh.0001.option.nevermind_tooltip.desc:0 "Вам потребуется время, чтобы обдумать и пересмотреть свои варианты. Решение не будет доступно до тех пор, пока вы не примете окончательное решение."
  nh.0001.option.duel_player_heir.desc:0 "[player_heir_option.GetFirstNameNoTooltip], докажи всем, что ты достойный наследник!"
- nh.0001.option.duel_player_heir_tooltip.desc:0 "Тебе предстоит сразиться со своим наследником [player_heir_option.GetFirstNameNoTooltip] в честном поединке, где ставка будет высока – не сама жизнь, а смерть. Согласно старым традициям, ему будет предоставлена возможность доказать свою достойность или погибнуть, пытаясь это сделать." 
+ nh.0001.option.duel_player_heir_tooltip.desc:0 "Тебе предстоит сразиться со своим наследником [player_heir_option.GetFirstNameNoTooltip] в честном поединке, где ставка будет высока – не сама жизнь, а смерть. Согласно старым традициям, ему будет предоставлена возможность доказать свою достойность или погибнуть, пытаясь это сделать."
  nh.0001.option.duel_player_rival.desc:0 "[player_rival_option.GetFirstNameNoTooltip]! Давайте уладим наш спор с честью!"
  nh.0001.option.duel_player_rival_tooltip.desc:0 "Вы сразитесь со своим соперником, [player_rival_option.GetFirstName], в честном поединке не на жизнь, а на смерть."
  nh.0001.option.player_vassal_option.desc:0 "[player_vassal_option.GetFirstNameNoTooltip] также был бы достойным выбором..."
  nh.0001.option.player_vassal_option_tooltip.desc:0 "Вы будете сражаться с [player_vassal_option.GetFirstName], в честном поединке не на жизнь, а на смерть."
- 
+
  # TbC has invalidated [nh.0021]
- nh.0021.trigger_failure.actor:0 "$nh.0001.trigger_failure.actor$" 
- nh.trigger_failure.recipient:0 "$nh.0001.trigger_failure.recipient$"  
+ nh.0021.trigger_failure.actor:0 "$nh.0001.trigger_failure.actor$"
+ nh.trigger_failure.recipient:0 "$nh.0001.trigger_failure.recipient$"
  nh.0001.trigger_failure.actor:0 "Мой [trial_by_combat_trial|E] против [recipient.GetFirstNameNoTooltip] признан несостоявшимся. Это предзнаменование..."
  nh.0001.trigger_failure.recipient:0 "Мой [trial_by_combat_trial|E] против [actor.GetFirstNameNoTooltip] признан несостоявшимся. Это предзнаменование..."
 
@@ -26,7 +26,7 @@
  # Challenger Won [nh.0111]
  nh.0111.t:0 "$germanic_positive_afterlife$"
  nh.0111.desc.intro:0 "$germanic_high_god_alternate$ вчера искренне улыбался нам!\n\n"
- nh.0111.desc.opponent_died.recipient_fighting:0 "[actor.GetFirstName] теперь несомненно доблестно достиг чертогов что скрывает $germanic_positive_afterlife$. Его отважный дух и несгибаемая смелость оставили неизгладимый след в наших сердцах.\nНаша битва была симфонией стали и крови, свидетельством кодекса воина, который мы так бережно хранили. Сами $germanic_war_god_name$, $germanic_good_god_thor$ и $germanic_high_god_alternate$ свидетельствуют нашей победе, их благосклонный взгляд сияет на нас.\nПусть эхо нашего мужественного поединка раздастся по страницам истории, навечно удостаивая [actor.GetFirstName] статуса настоящей легенды $germanic_religion_adherent$.\n\n\n" 
+ nh.0111.desc.opponent_died.recipient_fighting:0 "[actor.GetFirstName] теперь несомненно доблестно достиг чертогов что скрывает $germanic_positive_afterlife$. Его отважный дух и несгибаемая смелость оставили неизгладимый след в наших сердцах.\nНаша битва была симфонией стали и крови, свидетельством кодекса воина, который мы так бережно хранили. Сами $germanic_war_god_name$, $germanic_good_god_thor$ и $germanic_high_god_alternate$ свидетельствуют нашей победе, их благосклонный взгляд сияет на нас.\nПусть эхо нашего мужественного поединка раздастся по страницам истории, навечно удостаивая [actor.GetFirstName] статуса настоящей легенды $germanic_religion_adherent$.\n\n\n"
  nh.0111.desc.outro:0 "$germanic_positive_afterlife$ приняла [actor.GetFirstName] теперь его место среди павших героев!"
  nh.0111.a:0 "Это наши почитаемые традиции..."
 
@@ -51,6 +51,10 @@
  nh.1004.option.pagan.desc:0 "Остаться язычниками"
  nh.1004.option.catholic.desc:0 "Обратиться в Католицизм"
  nh.1004.option.insular.desc:0 "Обратиться в островное христианство"
+ nh.1004.option.pagan_tooltip.desc:0 "Выберите остаться верным Старым Путям и получите возможность сформировать Королевство Исландии, а также другие мощные бонусы."
+ nh.1004.option.catholic_tooltip.desc:0 "Примите католицизм и получите существенный прирост престижа династии, но без разблокировки дополнительного контента Nordic Honor."
+ nh.1004.option.insular_tooltip.desc:0 "Примите инсульское христианство и получите значительный прирост престижа династии, хотя и без разблокировки дополнительного контента Nordic Honor."
+
 
  # Old Saxony [nh.1005]
  nh.1005.t:0 "Воссоздать Древнюю Саксонию"
@@ -124,4 +128,4 @@
 
  nh.9004.opening:0 "Уважаемые присутствующие,"
  nh.9004.desc:0 "Правитель решил сосредоточиться на дипломатии и приключениях во время этого собрания Тинг. Принимаются меры для заключения союзов, поиска новых возможностей и смелых предприятий. Пусть наши дипломатические усилия и смелые экспедиции приносят честь и славу нашему королевству."
- nh.9004.a:0 "Отправляйтесь в великие путешествия" 
+ nh.9004.a:0 "Отправляйтесь в великие путешествия"
