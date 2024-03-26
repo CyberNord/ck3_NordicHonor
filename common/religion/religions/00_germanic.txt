@@ -35,6 +35,9 @@
 	#Allow pilgrimages
 	doctrine = doctrine_pilgrimage_encouraged
 
+	#Funeral tradition
+	doctrine = doctrine_funeral_cremation
+
 	traits = {
 		virtues = { brave wrathful vengeful poet one_eyed einherjar}
 		sins = { craven deceitful forgiving weak }
@@ -43,19 +46,19 @@
 	# yes Íí Áá ð Úú Þ
 	# no o
 	reserved_male_names = {
-		Ásgeirr Arni Arnarr Anund AsbjO_rn Aslak Audun Ásmundr Bagge Balder Brage Birgir Brandr 
-		Eyvindr Einar Einriði Egil Eiríkr Eilífr Emund Eysteinn Eydal Fjolnir Frej Fróði 
+		Ásgeirr Arni Arnarr Anund AsbjO_rn Aslak Audun Ásmundr Bagge Balder Brage Birgir Brandr
+		Eyvindr Einar Einriði Egil Eiríkr Eilífr Emund Eysteinn Eydal Fjolnir Frej Fróði
 		Gunnarr Gnupa Gorm Gudmund GudrO_d Geirr Guðmundr Gísl Grímr Geirmundr Gauti Geirfinnr Gestr
 		Haraldr Hardeknud Helge Hjálmarr Hákon Háki Hálfdanr Hrólfr Horðr Hogni Hrafnar Hjortur Huginn Hjalti
-		Ívarr Ingvarr Ingi Knútr Kolbeinn Kári Ketill Leifr Magni Njorðr 
+		Ívarr Ingvarr Ingi Knútr Kolbeinn Kári Ketill Leifr Magni Njorðr
 		Odd Orm Orvar Ottar Óláfr Ormr Oddr Óskar Ógmundr Þorsteinn Þorkell Þorvarðr Þorbjorn Rikulfr Rurik Rognvaldr Reginn Ragnar
 		Sigurðr SigbjO_rn StyrbjO_rn Starkad Styrkar Stígandr SA_mund SO_lve SO_rkver Sveinn Steinn Sigmundr Skúli Sindri Skapti
 		Tryggvi Thorolf Tjudmund Toke Tolir TorbjO_rn Torbrand Torfinn Torgeir Toste Tyke Úlfr Ubbe Víðarr Viðurr Váli Valdamarr Vífill
 	}
 	reserved_female_names = {
-		Aslaug Áslaug Ástríðr Ásdís Álfhildr Bothild BjO_rg Brynhildr Dagrún Drífðr Eiríka Eydís 
+		Aslaug Áslaug Ástríðr Ásdís Álfhildr Bothild BjO_rg Brynhildr Dagrún Drífðr Eiríka Eydís
 		Freja Fríða Gulla Grima Gísla Gytha Gudrún Guðný Guðríðr Gunnhildr Gullrond Geirhildr Gæiða Geirríðr Gyða Geirlaug Gróa Gyða Gísladís
-		Hallgerðr Hildr Hildigunnr Hallveig Helga Herbjorg Honn Hervor Hold Herbjorg Ingridr Ingibjorg Ísgerðr Inga JO_runn Jorð KrA_ka Katla Lína Malmfrid 
+		Hallgerðr Hildr Hildigunnr Hallveig Helga Herbjorg Honn Hervor Hold Herbjorg Ingridr Ingibjorg Ísgerðr Inga JO_runn Jorð KrA_ka Katla Lína Malmfrid
 		Ólof Ósk Þóra Þórdís Þuríðr Þorbjorg Þórveig Þorgerðr Þórgunnr Þórhildr Ragnfrid Ragnfríðr Ragnhild Ragnhildr Rannveig Rognhildr Rán Rúna Rósa
 		Svanhild Sigridr Sigríðr Sigurðr Solveig Sólveig Steinvor Thora Thordis Thyra Tófa Thorgunna Ulvhilde Unnr Vilhjálmr Yrsa Ylfa
 	}
@@ -97,7 +100,7 @@
 		HealthGodSheHe = CHARACTER_SHEHE_SHE
 		HealthGodHerHis = CHARACTER_HERHIS_HER
 		HealthGodHerHim = CHARACTER_HERHIM_HER
-		
+
 		#FertilityGod
 		FertilityGodName = germanic_fertility_god_name
 		FertilityGodNamePossessive = germanic_fertility_god_name_possessive
@@ -272,11 +275,11 @@
 
 			holy_site = uppsala
 			holy_site = paderborn
-			holy_site = heiligenberg 
+			holy_site = heiligenberg
 			holy_site = gniezno
 			holy_site = hallstatt
 			holy_site = joromaborg
-		
+
 			doctrine = unreformed_faith_doctrine
 
 			doctrine = tenet_sanctity_of_nature
@@ -303,28 +306,28 @@
 				HighGodHerHis = CHARACTER_HERHIS_HIS
 				HighGodNameAlternate = forn_sidr_high_god_alternate
 				HighGodNameAlternatePossessive = forn_sidr_high_god_alternate_possessive
-				
+
 				#FertilityGod
 				FertilityGodName = forn_sidr_fertility_god_name
 				FertilityGodNamePossessive = forn_sidr_fertility_god_name_possessive
 				FertilityGodSheHe = CHARACTER_SHEHE_SHE
 				FertilityGodHerHis = CHARACTER_HERHIS_HER
 				FertilityGodHerHim = CHARACTER_HERHIM_HER
-		
+
 				#KnowledgeGod
 				KnowledgeGodName = forn_sidr_knowledge_god_name
 				KnowledgeGodNamePossessive = forn_sidr_knowledge_god_name_possessive
 				KnowledgeGodSheHe = CHARACTER_SHEHE_HE
 				KnowledgeGodHerHis = CHARACTER_HERHIS_HIS
 				KnowledgeGodHerHim = CHARACTER_HERHIM_HIM
-		
+
 				#WarGod
 				WarGodName = forn_sidr_war_god_name
 				WarGodNamePossessive = forn_sidr_war_god_name_possessive
 				WarGodSheHe = CHARACTER_SHEHE_HE
 				WarGodHerHis = CHARACTER_HERHIS_HIS
 				WarGodHerHim = CHARACTER_HERHIM_HIM
-		
+
 				PantheonTerm = religion_the_gods
 				PantheonTermHasHave = pantheon_term_have
 				GoodGodNames = { forn_sidr_good_god_fairguneis forn_sidr_good_god_ingwaz forn_sidr_good_god_terwing }
@@ -334,7 +337,7 @@
 				PriestFemalePlural = forn_sidr_priest_female_plural
 				PriestNeuter = forn_sidr_priest_neuter
 				PriestNeuterPlural = forn_sidr_priest_neuter_plural
-			}	
+			}
 		}
 
 		# Giñnregla (Icelandic)
@@ -348,7 +351,7 @@
 			holy_site = zeeland
 			holy_site = jorvik
 			holy_site = ranaheim
-		
+
 			doctrine = unreformed_faith_doctrine
 
 			doctrine = tenet_astrology
@@ -363,20 +366,20 @@
 			# germanic faith group
 			doctrine = special_faith_has_germanic_heritage
 
-			# other tenets  
+			# other tenets
 			doctrine = doctrine_clerical_function_alms_and_pacification
 			doctrine = doctrine_pluralism_righteous
 			doctrine = doctrine_pilgrimage_forbidden
 
 			localization = {
-				
+
 				PriestMale = ginnregla_priest_male
 				PriestMalePlural = ginnregla_priest_male_plural
 				PriestFemale = ginnregla_priest_female
 				PriestFemalePlural = ginnregla_priest_female_plural
 				PriestNeuter = ginnregla_priest_neuter
 				PriestNeuterPlural = ginnregla_priest_neuter_plural
-			}	
+			}
 		}
 
 		# Náttúruguðtrúarmenn (Skando-Finnic)
@@ -385,13 +388,13 @@
 			icon = natturugudtruar
 			reformed_icon = natturugudtruar_reformed
 
-			holy_site = trelleborg    
+			holy_site = trelleborg
 			holy_site = akkel
 			holy_site = gniezno
 			holy_site = perm         # kaksalami
 			holy_site = konugardr
-			
-		
+
+
 			doctrine = unreformed_faith_doctrine
 
 			doctrine = tenet_ancestor_worship
@@ -409,7 +412,7 @@
 			# other tenets
 			doctrine = doctrine_clerical_function_alms_and_pacification
 			doctrine = doctrine_witchcraft_accepted
-			doctrine = doctrine_pilgrimage_forbidden 	
+			doctrine = doctrine_pilgrimage_forbidden
 		}
 
 		# Óðinnstrú (Odinism)
@@ -420,12 +423,12 @@
 
 			holy_site = uppsala
 			holy_site = lejre
-			holy_site = ranaheim 
+			holy_site = ranaheim
 			holy_site = zeeland
 			holy_site = jorvik
 			holy_site = joromaborg
 			holy_site = miklagard
-		
+
 			doctrine = unreformed_faith_doctrine
 
 			doctrine = tenet_warmonger
@@ -435,7 +438,7 @@
 				doctrine = tenet_gruesome_festivals
 				fallback_doctrine = tenet_human_sacrifice
 			}
-			doctrine = tenet_unrelenting_faith	
+			doctrine = tenet_unrelenting_faith
 
 			# germanic faith group
 			doctrine = special_faith_stadfast_heritage
@@ -462,12 +465,12 @@
 
 			holy_site = konugardr
 			holy_site = gniezno
-			holy_site = breclav 
+			holy_site = breclav
 			holy_site = heiligenberg
 			holy_site = paderborn
 			holy_site = miklagard
-			
-		
+
+
 			doctrine = unreformed_faith_doctrine
 
 			doctrine = tenet_sanctity_of_nature
@@ -487,7 +490,7 @@
 				HighGodName = heidinn_high_god_name
 				HighGodName2 = heidinn_high_god_name
 				HighGodNamePossessive = heidinn_high_god_name_possessive
-				
+
 				#FertilityGod
 				FertilityGodName = heidinn_fertility_god_name
 				FertilityGodNamePossessive = heidinn_fertility_god_name_possessive
