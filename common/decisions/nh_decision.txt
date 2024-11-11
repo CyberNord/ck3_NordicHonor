@@ -1,7 +1,10 @@
 ﻿
 # v1.0
 last_duel_decision = {
-	picture = "gfx/interface/illustrations/decisions/nh_decision_duel.dds"
+	picture = {
+    	reference =
+		"gfx/interface/illustrations/decisions/nh_decision_duel.dds"
+	}
 
 	sort_order = 1
 	selection_tooltip = last_duel_decision_tooltip
@@ -100,7 +103,10 @@ last_duel_decision = {
 }
 
 nh_rome_hs_decision = {
-	picture = "gfx/interface/illustrations/decisions/nh_decision_rome_hs.dds"
+	picture = {
+    	reference =
+			"gfx/interface/illustrations/decisions/nh_decision_rome_hs.dds"
+	}
 
 	desc = nh_rome_hs_decision_desc
 	selection_tooltip = nh_rome_hs_decision_tooltip
@@ -210,7 +216,10 @@ nh_rome_hs_decision = {
 }
 
 nh_constantinople_hs_decision = {
-	picture = "gfx/interface/illustrations/decisions/nh_decision_constantinople_hs.dds"
+	picture = {
+    	reference =
+		"gfx/interface/illustrations/decisions/nh_decision_constantinople_hs.dds"
+	}
 
 	desc = nh_constantinople_hs_decision_desc
 	selection_tooltip = nh_constantinople_hs_decision_tooltip
@@ -320,7 +329,10 @@ nh_constantinople_hs_decision = {
 }
 
 nh_peace_christianity_decision = {
-	picture = "gfx/interface/illustrations/decisions/nh_peace_christianity_decision.dds"
+	picture = {
+    	reference =
+		picture = "gfx/interface/illustrations/decisions/nh_peace_christianity_decision.dds"
+	}
 
 	desc = nh_peace_christianity_decision_desc
 	selection_tooltip = nh_peace_christianity_decision_tooltip
@@ -415,7 +427,10 @@ nh_peace_christianity_decision = {
 }
 
 nh_convert_whole_realm_to_feudalism_decision = {
-	picture = "gfx/interface/illustrations/decisions/nh_pagan_feudalize.dds"
+	picture = {
+    	reference =
+		picture = "gfx/interface/illustrations/decisions/nh_pagan_feudalize.dds"
+	}
 	major = yes
 	desc = nh_convert_whole_realm_to_feudalism_decision_desc
 
@@ -523,7 +538,10 @@ nh_convert_whole_realm_to_feudalism_decision = {
 }
 
 nh_convert_to_christianity_iceland_decision = {
-	picture = "gfx/interface/illustrations/decisions/decision_personal_religious.dds"
+	picture = {
+    	reference =
+		"gfx/interface/illustrations/decisions/decision_personal_religious.dds"
+	}
 
 	desc = nh_convert_to_christianity_iceland_decision_desc
 	selection_tooltip = nh_convert_to_christianity_iceland_decision_tooltip
@@ -630,7 +648,10 @@ nh_convert_to_christianity_iceland_decision = {
 }
 
 nh_form_old_saxia_kingdom_decision = {
-	picture = "gfx/interface/illustrations/decisions/nh_form_old_saxia_kingdom_decision.dds"
+	picture = {
+    	reference =
+		"gfx/interface/illustrations/decisions/nh_form_old_saxia_kingdom_decision.dds"
+	}
 	desc = nh_form_old_saxia_kingdom_decision_desc
 	selection_tooltip = nh_form_old_saxia_kingdom_decision_tooltip
 	major = yes
@@ -766,7 +787,10 @@ nh_form_old_saxia_kingdom_decision = {
 
 # v1.1
 nh_rollos_adventure_decision = {
-	picture = "gfx/interface/illustrations/decisions/nh_rollos_adventure_decision.dds"
+	picture = {
+    	reference =
+		"gfx/interface/illustrations/decisions/nh_rollos_adventure_decision.dds"
+	}
 
 	desc = nh_rollos_adventure_decision_desc
 	selection_tooltip = nh_rollos_adventure_decision_tooltip
@@ -849,7 +873,10 @@ nh_rollos_adventure_decision = {
 }
 
 nh_gotland_policy_decision = {
-	picture = "gfx/interface/illustrations/decisions/nh_gotland_policy_decision.dds"
+	picture = {
+    	reference =
+		"gfx/interface/illustrations/decisions/nh_gotland_policy_decision.dds"
+	}
 
 	sort_order = 2
 	selection_tooltip = nh_gotland_policy_decision_tooltip
@@ -912,7 +939,10 @@ nh_gotland_policy_decision = {
 }
 
 nh_iceland_first_great_ting = {
-	picture = "gfx/interface/illustrations/decisions/nh_iceland_great_ting.dds"
+	picture = {
+    	reference =
+		"gfx/interface/illustrations/decisions/nh_iceland_great_ting.dds"
+	}
 
 	desc = nh_iceland_first_great_ting_desc
 	selection_tooltip = nh_iceland_first_great_ting_tooltip
@@ -1030,7 +1060,10 @@ nh_iceland_first_great_ting = {
 }
 
 nh_iceland_yearly_ting = {
-	picture = "gfx/interface/illustrations/decisions/nh_iceland_great_ting.dds"
+	picture = {
+    	reference =
+		"gfx/interface/illustrations/decisions/nh_iceland_great_ting.dds"
+	}
 
 	desc = nh_iceland_yearly_ting_desc
 	selection_tooltip = nh_iceland_yearly_ting_tooltip
