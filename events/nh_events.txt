@@ -384,14 +384,16 @@ nh.0111 = {
 		if = {
 			limit = { has_trait = craven }
 			remove_trait = craven
+			add_trait = brave
 		}
-		add_trait = brave
+
 
 		if = {
 			limit = { has_trait = cynical }
 			remove_trait = cynical
+			add_trait = zealous
 		}
-		add_trait = zealous
+		
 
 		dynasty = {
 			add_dynasty_prestige = 50
