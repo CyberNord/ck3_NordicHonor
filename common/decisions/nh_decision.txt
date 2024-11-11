@@ -43,6 +43,12 @@ last_duel_decision = {
 				has_trait = cancer
 				triggered_desc = { desc = last_duel_decision_desc_cancer}
 			}
+			AND = {
+				age >= 30
+				religion = religion:germanic_religion
+				has_trait = infirm
+				triggered_desc = { desc = last_duel_decision_desc_cancer}
+			}
 		}
 	}
 

@@ -325,6 +325,9 @@ nh.0041 = {
 				modifier = nh_odins_blessing_modifier
 				years = 1
 			}
+			scope:actor = {
+				remove_trait = kinslayer_3
+			}
 		}
 
 		# No stress for single-option events.
@@ -372,7 +375,9 @@ nh.0111 = {
 		name = nh.0111.a
 		if = {
 			limit = { scope:champion = scope:player_heir_option }
-			scope:champion = { add_trait = einherjar }
+			scope:champion = {
+				remove_trait = kinslayer_3
+				add_trait = einherjar }
 		}
 
 		# further bonuses
