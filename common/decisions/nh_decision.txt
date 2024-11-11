@@ -63,7 +63,7 @@ last_duel_decision = {
 
 	ai_potential = {
 		highest_held_title_tier > tier_barony
-		is_landed = yes
+		is_playable_character  = yes
 		faith = faith:norse_pagan
 	}
 
@@ -118,7 +118,7 @@ nh_rome_hs_decision = {
 
 	# only shown if faith is unreformed
 	is_shown = {
-		is_landed = yes
+		is_playable_character = yes
 		OR = {
 			faith = faith:norse_pagan
 			faith = faith:forn_sidr_pagan
@@ -231,7 +231,7 @@ nh_constantinople_hs_decision = {
 
 	# only shown if faith is unreformed
 	is_shown = {
-		is_landed = yes
+		is_playable_character = yes
 		OR = {
 			faith = faith:norse_pagan
 			faith = faith:heidinn_pagan
@@ -344,7 +344,7 @@ nh_peace_christianity_decision = {
 
 	# only shown if faith is unreformed
 	is_shown = {
-		is_landed = yes
+		is_playable_character = yes
 		faith = faith:natturugudtruar_pagan
 
 		#Not repeatable.
@@ -658,7 +658,7 @@ nh_form_old_saxia_kingdom_decision = {
 	ai_check_interval = 36
 
 	is_shown = {
-		is_landed = yes
+		is_playable_character = yes
 		NOT = { exists = title:k_old_saxia.holder }
 		NOT = {  #Can only do it once.
 			is_target_in_global_variable_list = {
