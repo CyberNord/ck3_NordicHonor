@@ -4,6 +4,7 @@
 Adds new faiths, decisions, events, holy sites, and light historical flavor to make unreformed pagan play more engaging.
  
 > No Paradox assets are included. All game assets belong to Paradox Interactive.
+> Community impact: 2.6k+ subscribers, 566 favorites, 171 ratings, 22k+ unique visitors (Stand 4. Okt 2025).
 
 ## Highlights
 
