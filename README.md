@@ -1,155 +1,51 @@
-# ck3_NordicHonor
+# Nordic Honor — CK3 Mod
 
-## Overview
+**Crusader Kings III** gameplay overhaul focused on *Germanic/Norse paganism*.  
+Adds new faiths, decisions, events, holy sites, and light historical flavor to make unreformed pagan play more engaging.
+ 
+> No Paradox assets are included. All game assets belong to Paradox Interactive.
 
-Released on Steam Workshop
-https://steamcommunity.com/sharedfiles/filedetails/?id=2992171720 \
-Nordic Honor (CK3) — ~2.6k subscribers, 566 favorites, 171 ratings, 22k+ unique visitors
+## Highlights
 
-## Faiths
+- **New Germanic/Norse faiths** with distinct flavor and mechanics  
+  *Forn Siðr (Wotan), Gíñnregla (Icelandic), Heiðinn (Slavic-Germanic blend), Náttúruguðtrúar (Sámi-Norse), Óðinstru (warlike focus)*
 
-### Germanic Religion Group
+- **Decisions & flavor**
+  - *Last Duel* (old ruler seeks a worthy final duel; unique trait outcome)
+  - *Form Old Saxia* (recreate the Kingdom of Saxony)
+  - *Religious future of Iceland* (Christianization vs. old ways)
+  - *Religious coexistence* (peace with Christian faith)  
+  - …plus new trait, more names, more holy sites, and custom GFX for decisions/events
 
-- **more religion specific names**
-- **special doctrine for germanic faiths**
-- **unique way to go feudal without reforming the faith**
+- **Adjusted game starts** (e.g., Dyre the Stranger with unique trait/army tweaks; regional faith mix in Sámi/Sweden border; Icelandic rulers’ choice, etc.)
 
-#### Ásatrú (Vanilla)
+## Compatibility
 
-(no Changes)
+- **Achievement compatible**  
+- Overwrites only `00_germanic.txt`  
+- **Not save-game compatible** (start a new run)  
+- Known conflicts: **Rurik: Chronica Slavorum**, **Old Gods Expanded**  
 
-#### Forn Siðr
+> Last verified CK3 version noted on Workshop: **1.11.\*** (see Dev/Discussions).
 
-It represents the ancient Germanic pantheon of gods, with the supreme deity being Odin. This religion has become extinct at the beginning of the game.\
+## Screenshots
 
-**Tenets**
-- Sanctity of Nature
-- Blót
-- Esotericis
+<img width="400" height="650" alt="decisions_last_duel" src="https://github.com/user-attachments/assets/36a8d645-f511-4c7d-ba0c-cdf642eba16d" />
+<img width="400" height="650" alt="decisions_religious_coexistance" src="https://github.com/user-attachments/assets/ae29cb25-f8a2-4dab-b182-e9801ed234f0" />
+<img width="400" height="650" alt="trait_einherjar" src="https://github.com/user-attachments/assets/9887ca1a-5266-48ac-8ed2-163cca86072a" />
+<img width="400" height="650" alt="faiths_overview" src="https://github.com/user-attachments/assets/132d91b0-afa5-471b-85eb-7848e866ba82" />
 
-#### Giñnregla
+## Credits & License
 
-It represents the Iclandic pantheon of gods, it endured until the 11th century. This religion will be the dominant religion in Iceland.\
+- Design/Implementation: **CyberNord (Rudolf Garstenauer)**
+- Thanks: Community contributors for French/Russian localizations and feedback.
+- **License (this repo):** MIT for showcased code snippets.  
+  *Note:* Paradox IP and game assets are **not** included in this repository.
 
-**Tenets**
-- Astrology
-- Personal Deities
-- Ancestor Worship
+## Links
 
-#### Heiðinn
-
-It represents the slavic-germanic pantheon of gods, when the scandinavians settled the Rus it intermixed. This religion will be the dominant religion in Kiev.\
-
-**Tenets**
-- Sanctity of Natur
-- Warmonger
-- Blót
-
-#### Náttúruguðtrúar
-
-It represents the sami-norse pantheon which is focused on nature. Its completely fictional. Some counties in Sami will follow this religion.\
-
-**Tenets**
-- Ancestor Worship
-- Blðt
-- Sanctity of Nature
-
-#### Óðinstru
-
-It represents a very fundamental pantheon which accepts no peace with the abrahamic religions. Its completely fictional. Ivar the Boneless is considered as brutal pagan and therefor follows this faith.\
-
-**Tenets**
-- Warmonger
-- Blót
-- Unrelenting Faith
-
-#### Vanatrú
-
-(not implemented)
-
-## Holy Sites
-
-New holy sites were added to fit the theme of the new added iteration of germanic faith.
-
-- **Joromaborg**\
-(Rome) obtainable for some germanic faiths in a special event.
-- **Mikladard**\
-(Constantinople) obtainable for some germanic faiths in a special event.
-- **Trelleborg**\
-(Skane, Sweden)  These fortresses likely had religious importance, serving as regional centers for religious activities.
-- **Thingvellir**\
-(Island) Thingvellir, held great importance in Norse culture. It was the site of the Alþingi, the national assembly of Iceland. It was also a gathering place for religious and cultural events.
-- **Heiligenberg**\
-(Grünningen, Bayern) Heiligenberg, was an ancient hilltop settlement with evidence of Germanic occupation. It was considered a sacred site and likely had religious and ceremonial significance.
-- **Gniezno**\
-(Poland) Gniezno, was an important religious center during the early medieval period. It is associated with both Slavic and Germanic influences.
-- **Břeclav**\
-(Znojmo,Czech) Břeclav, is believed to have been a significant early medieval center associated with both Germanic and Slavic influences.
-- **Hallstatt**\
-(Hallstadt, Austria) Hallstatt, is an ancient village which thrived in the region during the early Iron Age. While the Hallstatt culture predates the Germanic and Norse periods, it is considered an important site for understanding the prehistoric cultures of Central Europe.
-
-## Decisions
-
-### Last Duel
-
-When the Character is old or sick of cancer he might to choose a worthy opponent to make a last duel.
-If the heir (expected) give him the honor and succeed, he will get a unique Trait.
-
-### Divine Conquest
-
-Add Rome as Holysite\
-Avaliable for: Forn Siðr, Asatru, Óðinstru
-
-### Constantinople's New Order
-
-Add Rome as Holysite\
-Avaliable for: Forn Siðr, Asatru, Heiðinn
-
-### Religious Coexistence
-
-Make peace with christian faith\
-Avaliable for: Náttúruguðtrúar
-
-### Deciding the religious future
-
-Decide whether Iceland become Christian or stays true to the old ways.\
-Avaliable for: Giñnregla\
-878 start "Chieftes Auðr af Vestland" and "Chieftain Garðar af Austrland"
-
-### Form Old Saxia Kingdom
-
-Recreate Old Saxia and convert to the old pagan ways.\
-Avaliable for: North,central,west germans except Karolinger-Dynasty
-
-### Rollos Adventure
-
-Invade the dutchy of Normandy and start the legacy of the norman conquests.
-Avaliable for: Hrolfr (Rollo) now landed count in Rogaland in 867. After successfully conquering Normandy (as Rollo) a unique event happens.
+- **Steam Workshop:** [Nordic Honor](https://steamcommunity.com/sharedfiles/filedetails/?id=2992171720)
+- **Author (Steam):** [N*rd](https://steamcommunity.com/profiles/76561197991167172/ ( mein Steam Profil))
+- **Related tooling:** [CK3 LocalizationChanger](https://github.com/CyberNord/CK3_LocalizationChanger)
 
 
-### Gotland 
-Gotland in the early middleages was a center for trade and piracy. 
-Rulers that control Gotland (dutchy) have a unique repeatable decision to decide whether to focus on trade or piracy. 
-Avaliable for: North and central germans with germanic faith. 
-
-### Alþingi
-In Iceland rulers can call all icelandic-faith brothers to an Thing to discuss the matters. 
-This simple decision will allow the ruler of Iceland to set the focus of the following years.
-Avaliable for: Northern germans with Giñnregla faith. 
-
-
-### Great Alþingi
-A Great unique decision to create the Kingdom of Iceland.
-Avaliable for: Northern germans with Giñnregla faith. 
-
-
-## Map
-
-### Changes
-
-- Leon: Ásatrú spreaded
-- Jorvik: Ásatrú & Norse culture spreaded
-- Sudreyar: Óðinnstrú & Norse culture spreaded
-- Iceland: Giñnregla
-- Aarjetje: Náttúruguðtrúar spreaded
-- Kiev: Heiðinn spreaded
