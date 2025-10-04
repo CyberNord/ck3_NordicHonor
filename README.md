@@ -3,6 +3,8 @@
 ## Overview
 
 Released on Steam Workshop
+https://steamcommunity.com/sharedfiles/filedetails/?id=2992171720
+Nordic Honor (CK3) — ~2.6k subscribers, 566 favorites, 171 ratings, 22k+ unique visitors
 
 ## Faiths
 
