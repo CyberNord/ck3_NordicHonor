@@ -3,7 +3,6 @@
 ## Overview
 
 Released on Steam Workshop
-https://steamcommunity.com/sharedfiles/filedetails/?id=2992171720&searchtext=nordic
 
 ## Faiths
 
