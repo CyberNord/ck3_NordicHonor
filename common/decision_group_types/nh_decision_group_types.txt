@@ -1,0 +1,9 @@
+############################################
+# Nordic Honor Decision Groups
+############################################
+
+nordic_honor = {
+	sort_order = 150
+	gui_tags = { big_button }
+	important_decision_group = yes
+}

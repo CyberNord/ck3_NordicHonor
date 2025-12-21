@@ -55,3 +55,6 @@
  nh_iceland_yearly_ting_desc:0 "At the annual ting, the people of Iceland gather to discuss and resolve matters of importance."
  nh_iceland_yearly_ting_confirm:0 "Gather the goðar!"
  nh_iceland_yearly_ting_tooltip:0 "A Ting - meeting is initiated, where all sort of stuff is discussed"
+
+ # Decision Group Types
+ decision_group_type_nordic_honor:0 "Nordic Honor"
