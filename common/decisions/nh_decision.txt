@@ -13,41 +13,29 @@ last_duel_decision = {
 	desc = {
 		first_valid = {
 
-			triggered_desc = {
-				trigger = { has_trait = cancer}
-				desc = last_duel_decision_desc_cancer
-			}
+			{ trigger = { has_trait = cancer } desc = last_duel_decision_desc_cancer }
 
-			triggered_desc = {
-				trigger = { age >= 60 }
-				desc = last_duel_decision_desc_old
-			}
+			{ trigger = { age >= 60 } desc = last_duel_decision_desc_old }
 
-			triggered_desc = {
-				trigger = { religion = religion:germanic_religion }
-				desc = last_duel_decision_desc
-			}
+			{ trigger = { religion = religion:germanic_religion } desc = last_duel_decision_desc }
 		}
 	}
 
 	is_shown = {
-		OR= {
+		OR = {
 			AND = {
 				age >= 60
 				religion = religion:germanic_religion
-				triggered_desc = { desc = last_duel_decision_desc_old}
 			}
 			AND = {
 				age >= 18
 				religion = religion:germanic_religion
 				has_trait = cancer
-				triggered_desc = { desc = last_duel_decision_desc_cancer}
 			}
 			AND = {
 				age >= 30
 				religion = religion:germanic_religion
 				has_trait = infirm
-				triggered_desc = { desc = last_duel_decision_desc_cancer}
 			}
 		}
 	}
@@ -336,8 +324,7 @@ nh_constantinople_hs_decision = {
 
 nh_peace_christianity_decision = {
 	picture = {
-    	reference =
-		picture = "gfx/interface/illustrations/decisions/nh_peace_christianity_decision.dds"
+    	reference = "gfx/interface/illustrations/decisions/nh_peace_christianity_decision.dds"
 	}
 
 	desc = nh_peace_christianity_decision_desc
@@ -434,8 +421,7 @@ nh_peace_christianity_decision = {
 
 nh_convert_whole_realm_to_feudalism_decision = {
 	picture = {
-    	reference =
-		picture = "gfx/interface/illustrations/decisions/nh_pagan_feudalize.dds"
+    	reference = "gfx/interface/illustrations/decisions/nh_pagan_feudalize.dds"
 	}
 	major = yes
 	desc = nh_convert_whole_realm_to_feudalism_decision_desc
