@@ -18,6 +18,11 @@ last_duel_decision = {
 			}
 
 			triggered_desc = {
+				trigger = { has_trait = infirm }
+				desc = last_duel_decision_desc_cancer
+			}
+
+			triggered_desc = {
 				trigger = { age >= 60 }
 				desc = last_duel_decision_desc_old
 			}
@@ -34,19 +39,16 @@ last_duel_decision = {
 			AND = {
 				age >= 60
 				religion = religion:germanic_religion
-				triggered_desc = { desc = last_duel_decision_desc_old}
 			}
 			AND = {
 				age >= 18
 				religion = religion:germanic_religion
 				has_trait = cancer
-				triggered_desc = { desc = last_duel_decision_desc_cancer}
 			}
 			AND = {
 				age >= 30
 				religion = religion:germanic_religion
 				has_trait = infirm
-				triggered_desc = { desc = last_duel_decision_desc_cancer}
 			}
 		}
 	}
@@ -975,20 +977,20 @@ nh_iceland_first_great_ting = {
 		has_title = title:d_iceland
 		highest_held_title_tier <= tier_duchy
 		# completely_controls_region = custom_iceland
-		if = {
-			limit = { is_ai = yes }
-			any_held_title = {
-				tier = tier_county
-				title_province = { geographical_region = custom_iceland}
+		OR = {
+			AND = {
+				is_ai = yes
+				any_held_title = {
+					tier = tier_county
+					title_province = { geographical_region = custom_iceland}
+				}
 			}
-		}
-
-		# easy for AI
-		if = {
-			limit = { is_ai = no }
-			any_held_title = {
-				tier = tier_county
-				title_province = { geographical_region = custom_ai_iceland}
+			AND = {
+				is_ai = no
+				any_held_title = {
+					tier = tier_county
+					title_province = { geographical_region = custom_ai_iceland}
+				}
 			}
 		}
 
