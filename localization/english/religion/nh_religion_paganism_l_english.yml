@@ -25,7 +25,7 @@
  
  special_faith_stadfast_heritage_name:0 "Staðfast"
  special_faith_stadfast_heritage_desc:0 "In our unwavering conviction, we proudly assert our path as the sole truth, looking down to those who deviate from our way"
- doctrine_parameter_fervor_per_holy_site:0 "Holy sites increase fervor." 
+ # doctrine_parameter_fervor_per_holy_site:0 "Holy sites increase fervor." 
  doctrine_parameter_hostility_override_special_faith_stadfast_heritage: "Considers, and is considered by, other [faiths|E] with the #V $special_faith_stadfast_heritage_name$#! [doctrine|E] as [GetHostilityLevelName( TOKEN_PARAMETER.GetIntValue )|V]"
  
  special_faith_no_special_heritage_name:0 "None"

@@ -1,17 +1,16 @@
 ﻿# Rollo
 nh_rollo_special_ai_modifier = {
 	icon = martial_positive
+	hidden = yes
 	martial = 10
 	advantage = 30
 	health = 1.0
-	hidden_effect = {
-		min_combat_roll = 10
-		max_combat_roll = 10
-		knight_effectiveness_mult = 1.0
-		supply_duration = 1
-		hostile_county_attrition = -1
-		no_water_crossing_penalty = yes
-	}
+	min_combat_roll = 10
+	max_combat_roll = 10
+	knight_effectiveness_mult = 1.0
+	supply_duration = 1
+	hostile_county_attrition = -1
+	no_water_crossing_penalty = yes
 }
 
 # Thingvellir
@@ -47,7 +46,8 @@ nh_njords_blessing_modifier = {
 
 nh_lokis_curse_modifier = {
 	icon = asatru_raven_negative
-	personal_scheme_power_mult = 0.5
+	hostile_scheme_power_mult = 0.5
+	owned_hostile_scheme_success_chance_add = 50
 	diplomacy = major_skill_penalty
 	monthly_prestige = -0.5
 }
