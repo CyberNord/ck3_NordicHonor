@@ -2,8 +2,7 @@
 # v1.0
 last_duel_decision = {
 	picture = {
-    	reference =
-		"gfx/interface/illustrations/decisions/nh_decision_duel.dds"
+    	reference ="gfx/interface/illustrations/decisions/nh_decision_duel.dds"
 	}
 
 	sort_order = 1
@@ -13,11 +12,20 @@ last_duel_decision = {
 	desc = {
 		first_valid = {
 
-			{ trigger = { has_trait = cancer } desc = last_duel_decision_desc_cancer }
+			triggered_desc = {
+				trigger = { has_trait = cancer}
+				desc = last_duel_decision_desc_cancer
+			}
 
-			{ trigger = { age >= 60 } desc = last_duel_decision_desc_old }
+			triggered_desc = {
+				trigger = { age >= 60 }
+				desc = last_duel_decision_desc_old
+			}
 
-			{ trigger = { religion = religion:germanic_religion } desc = last_duel_decision_desc }
+			triggered_desc = {
+				trigger = { religion = religion:germanic_religion }
+				desc = last_duel_decision_desc
+			}
 		}
 	}
 
@@ -26,16 +34,19 @@ last_duel_decision = {
 			AND = {
 				age >= 60
 				religion = religion:germanic_religion
+				triggered_desc = { desc = last_duel_decision_desc_old}
 			}
 			AND = {
 				age >= 18
 				religion = religion:germanic_religion
 				has_trait = cancer
+				triggered_desc = { desc = last_duel_decision_desc_cancer}
 			}
 			AND = {
 				age >= 30
 				religion = religion:germanic_religion
 				has_trait = infirm
+				triggered_desc = { desc = last_duel_decision_desc_cancer}
 			}
 		}
 	}
@@ -98,8 +109,7 @@ last_duel_decision = {
 
 nh_rome_hs_decision = {
 	picture = {
-    	reference =
-			"gfx/interface/illustrations/decisions/nh_decision_rome_hs.dds"
+    	reference ="gfx/interface/illustrations/decisions/nh_decision_rome_hs.dds"
 	}
 
 	desc = nh_rome_hs_decision_desc
@@ -211,8 +221,7 @@ nh_rome_hs_decision = {
 
 nh_constantinople_hs_decision = {
 	picture = {
-    	reference =
-		"gfx/interface/illustrations/decisions/nh_decision_constantinople_hs.dds"
+    	reference ="gfx/interface/illustrations/decisions/nh_decision_constantinople_hs.dds"
 	}
 
 	desc = nh_constantinople_hs_decision_desc
@@ -326,10 +335,9 @@ nh_peace_christianity_decision = {
 	picture = {
     	reference = "gfx/interface/illustrations/decisions/nh_peace_christianity_decision.dds"
 	}
-
+	decision_group_type = major
 	desc = nh_peace_christianity_decision_desc
 	selection_tooltip = nh_peace_christianity_decision_tooltip
-	major = yes
 
 	sort_order = 0
 
@@ -531,8 +539,7 @@ nh_convert_whole_realm_to_feudalism_decision = {
 
 nh_convert_to_christianity_iceland_decision = {
 	picture = {
-    	reference =
-		"gfx/interface/illustrations/decisions/decision_personal_religious.dds"
+    	reference ="gfx/interface/illustrations/decisions/decision_personal_religious.dds"
 	}
 
 	desc = nh_convert_to_christianity_iceland_decision_desc
@@ -641,8 +648,7 @@ nh_convert_to_christianity_iceland_decision = {
 
 nh_form_old_saxia_kingdom_decision = {
 	picture = {
-    	reference =
-		"gfx/interface/illustrations/decisions/nh_form_old_saxia_kingdom_decision.dds"
+    	reference ="gfx/interface/illustrations/decisions/nh_form_old_saxia_kingdom_decision.dds"
 	}
 	desc = nh_form_old_saxia_kingdom_decision_desc
 	selection_tooltip = nh_form_old_saxia_kingdom_decision_tooltip
@@ -780,8 +786,7 @@ nh_form_old_saxia_kingdom_decision = {
 # v1.1
 nh_rollos_adventure_decision = {
 	picture = {
-    	reference =
-		"gfx/interface/illustrations/decisions/nh_rollos_adventure_decision.dds"
+    	reference ="gfx/interface/illustrations/decisions/nh_rollos_adventure_decision.dds"
 	}
 
 	desc = nh_rollos_adventure_decision_desc
@@ -866,8 +871,7 @@ nh_rollos_adventure_decision = {
 
 nh_gotland_policy_decision = {
 	picture = {
-    	reference =
-		"gfx/interface/illustrations/decisions/nh_gotland_policy_decision.dds"
+    	reference ="gfx/interface/illustrations/decisions/nh_gotland_policy_decision.dds"
 	}
 
 	sort_order = 2
@@ -932,8 +936,7 @@ nh_gotland_policy_decision = {
 
 nh_iceland_first_great_ting = {
 	picture = {
-    	reference =
-		"gfx/interface/illustrations/decisions/nh_iceland_great_ting.dds"
+    	reference ="gfx/interface/illustrations/decisions/nh_iceland_great_ting.dds"
 	}
 
 	desc = nh_iceland_first_great_ting_desc
@@ -1053,8 +1056,7 @@ nh_iceland_first_great_ting = {
 
 nh_iceland_yearly_ting = {
 	picture = {
-    	reference =
-		"gfx/interface/illustrations/decisions/nh_iceland_great_ting.dds"
+    	reference ="gfx/interface/illustrations/decisions/nh_iceland_great_ting.dds"
 	}
 
 	desc = nh_iceland_yearly_ting_desc
