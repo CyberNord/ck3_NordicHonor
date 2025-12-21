@@ -36,11 +36,11 @@ nh_marry_norman_historical_effect = {
 		dynasty = inherit
 		father = scope:spouse_father
 		mother = scope:spouse_mother
-		location = actor.capital_province
+		location = root.capital_province
 		save_scope_as = norman_spouse
 	}
 
-	scope:actor = {marry = scope:norman_spouse}
+	root = {marry = scope:norman_spouse}
 }
 
 nh_marry_norman_alternate_effect = {
@@ -48,11 +48,11 @@ nh_marry_norman_alternate_effect = {
 		template = nh_norman_character
 		dynasty = inherit
 		father = scope:francish_king
-		location = actor.capital_province
+		location = root.capital_province
 		save_scope_as = norman_spouse
 	}
 
-	scope:actor = {marry = scope:norman_spouse}
+	root = {marry = scope:norman_spouse}
 }
 
 nh_swear_fealty_effect = {

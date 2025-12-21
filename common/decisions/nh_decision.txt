@@ -2,8 +2,7 @@
 # v1.0
 last_duel_decision = {
 	picture = {
-    	reference =
-		"gfx/interface/illustrations/decisions/nh_decision_duel.dds"
+    	reference ="gfx/interface/illustrations/decisions/nh_decision_duel.dds"
 	}
 
 	sort_order = 1
@@ -15,6 +14,11 @@ last_duel_decision = {
 
 			triggered_desc = {
 				trigger = { has_trait = cancer}
+				desc = last_duel_decision_desc_cancer
+			}
+
+			triggered_desc = {
+				trigger = { has_trait = infirm }
 				desc = last_duel_decision_desc_cancer
 			}
 
@@ -31,23 +35,20 @@ last_duel_decision = {
 	}
 
 	is_shown = {
-		OR= {
+		OR = {
 			AND = {
 				age >= 60
 				religion = religion:germanic_religion
-				triggered_desc = { desc = last_duel_decision_desc_old}
 			}
 			AND = {
 				age >= 18
 				religion = religion:germanic_religion
 				has_trait = cancer
-				triggered_desc = { desc = last_duel_decision_desc_cancer}
 			}
 			AND = {
 				age >= 30
 				religion = religion:germanic_religion
 				has_trait = infirm
-				triggered_desc = { desc = last_duel_decision_desc_cancer}
 			}
 		}
 	}
@@ -110,13 +111,12 @@ last_duel_decision = {
 
 nh_rome_hs_decision = {
 	picture = {
-    	reference =
-			"gfx/interface/illustrations/decisions/nh_decision_rome_hs.dds"
+    	reference ="gfx/interface/illustrations/decisions/nh_decision_rome_hs.dds"
 	}
 
+	decision_group_type = nordic_honor
 	desc = nh_rome_hs_decision_desc
 	selection_tooltip = nh_rome_hs_decision_tooltip
-	major = yes
 
 	sort_order = 0
 
@@ -223,13 +223,12 @@ nh_rome_hs_decision = {
 
 nh_constantinople_hs_decision = {
 	picture = {
-    	reference =
-		"gfx/interface/illustrations/decisions/nh_decision_constantinople_hs.dds"
+    	reference ="gfx/interface/illustrations/decisions/nh_decision_constantinople_hs.dds"
 	}
 
+	decision_group_type = nordic_honor
 	desc = nh_constantinople_hs_decision_desc
 	selection_tooltip = nh_constantinople_hs_decision_tooltip
-	major = yes
 
 	sort_order = 0
 
@@ -336,13 +335,11 @@ nh_constantinople_hs_decision = {
 
 nh_peace_christianity_decision = {
 	picture = {
-    	reference =
-		picture = "gfx/interface/illustrations/decisions/nh_peace_christianity_decision.dds"
+    	reference = "gfx/interface/illustrations/decisions/nh_peace_christianity_decision.dds"
 	}
-
+	decision_group_type = nordic_honor
 	desc = nh_peace_christianity_decision_desc
 	selection_tooltip = nh_peace_christianity_decision_tooltip
-	major = yes
 
 	sort_order = 0
 
@@ -434,10 +431,9 @@ nh_peace_christianity_decision = {
 
 nh_convert_whole_realm_to_feudalism_decision = {
 	picture = {
-    	reference =
-		picture = "gfx/interface/illustrations/decisions/nh_pagan_feudalize.dds"
+    	reference = "gfx/interface/illustrations/decisions/nh_pagan_feudalize.dds"
 	}
-	major = yes
+	decision_group_type = nordic_honor
 	desc = nh_convert_whole_realm_to_feudalism_decision_desc
 
 	ai_check_interval = 36
@@ -545,13 +541,12 @@ nh_convert_whole_realm_to_feudalism_decision = {
 
 nh_convert_to_christianity_iceland_decision = {
 	picture = {
-    	reference =
-		"gfx/interface/illustrations/decisions/decision_personal_religious.dds"
+    	reference ="gfx/interface/illustrations/decisions/decision_personal_religious.dds"
 	}
 
+	decision_group_type = nordic_honor
 	desc = nh_convert_to_christianity_iceland_decision_desc
 	selection_tooltip = nh_convert_to_christianity_iceland_decision_tooltip
-	major = yes
 	ai_goal = yes
 
 	ai_check_interval = 3
@@ -655,12 +650,11 @@ nh_convert_to_christianity_iceland_decision = {
 
 nh_form_old_saxia_kingdom_decision = {
 	picture = {
-    	reference =
-		"gfx/interface/illustrations/decisions/nh_form_old_saxia_kingdom_decision.dds"
+    	reference ="gfx/interface/illustrations/decisions/nh_form_old_saxia_kingdom_decision.dds"
 	}
+	decision_group_type = nordic_honor
 	desc = nh_form_old_saxia_kingdom_decision_desc
 	selection_tooltip = nh_form_old_saxia_kingdom_decision_tooltip
-	major = yes
 	ai_check_interval = 36
 
 	is_shown = {
@@ -794,13 +788,12 @@ nh_form_old_saxia_kingdom_decision = {
 # v1.1
 nh_rollos_adventure_decision = {
 	picture = {
-    	reference =
-		"gfx/interface/illustrations/decisions/nh_rollos_adventure_decision.dds"
+    	reference ="gfx/interface/illustrations/decisions/nh_rollos_adventure_decision.dds"
 	}
 
+	decision_group_type = nordic_honor
 	desc = nh_rollos_adventure_decision_desc
 	selection_tooltip = nh_rollos_adventure_decision_tooltip
-	major = yes
 	ai_goal = yes
 
 	ai_check_interval = 6
@@ -880,8 +873,7 @@ nh_rollos_adventure_decision = {
 
 nh_gotland_policy_decision = {
 	picture = {
-    	reference =
-		"gfx/interface/illustrations/decisions/nh_gotland_policy_decision.dds"
+    	reference ="gfx/interface/illustrations/decisions/nh_gotland_policy_decision.dds"
 	}
 
 	sort_order = 2
@@ -946,13 +938,12 @@ nh_gotland_policy_decision = {
 
 nh_iceland_first_great_ting = {
 	picture = {
-    	reference =
-		"gfx/interface/illustrations/decisions/nh_iceland_great_ting.dds"
+    	reference ="gfx/interface/illustrations/decisions/nh_iceland_great_ting.dds"
 	}
 
+	decision_group_type = nordic_honor
 	desc = nh_iceland_first_great_ting_desc
 	selection_tooltip = nh_iceland_first_great_ting_tooltip
-	major = yes
 	ai_goal = yes
 
 	ai_check_interval = 36
@@ -986,20 +977,20 @@ nh_iceland_first_great_ting = {
 		has_title = title:d_iceland
 		highest_held_title_tier <= tier_duchy
 		# completely_controls_region = custom_iceland
-		if = {
-			limit = { is_ai = yes }
-			any_held_title = {
-				tier = tier_county
-				title_province = { geographical_region = custom_iceland}
+		OR = {
+			AND = {
+				is_ai = yes
+				any_held_title = {
+					tier = tier_county
+					title_province = { geographical_region = custom_iceland}
+				}
 			}
-		}
-
-		# easy for AI
-		if = {
-			limit = { is_ai = no }
-			any_held_title = {
-				tier = tier_county
-				title_province = { geographical_region = custom_ai_iceland}
+			AND = {
+				is_ai = no
+				any_held_title = {
+					tier = tier_county
+					title_province = { geographical_region = custom_ai_iceland}
+				}
 			}
 		}
 
@@ -1067,8 +1058,7 @@ nh_iceland_first_great_ting = {
 
 nh_iceland_yearly_ting = {
 	picture = {
-    	reference =
-		"gfx/interface/illustrations/decisions/nh_iceland_great_ting.dds"
+    	reference ="gfx/interface/illustrations/decisions/nh_iceland_great_ting.dds"
 	}
 
 	desc = nh_iceland_yearly_ting_desc

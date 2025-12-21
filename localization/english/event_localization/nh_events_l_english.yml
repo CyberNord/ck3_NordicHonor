@@ -12,7 +12,7 @@
 
  # TbC has invalidated [nh.0021]
  nh.0021.trigger_failure.actor:0 "$nh.0001.trigger_failure.actor$"
- nh.trigger_failure.recipient:0 "$nh.0001.trigger_failure.recipient$"
+ nh.0021.trigger_failure.recipient:0 "$nh.0001.trigger_failure.recipient$"
  nh.0001.trigger_failure.actor:0 "My [trial_by_combat_trial|E] against [recipient.GetFirstNameNoTooltip] has invalidated. It's an omen..."
  nh.0001.trigger_failure.recipient:0 "My [trial_by_combat_trial|E] against [actor.GetFirstNameNoTooltip] has invalidated. It's an omen..."
 

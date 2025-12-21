@@ -25,9 +25,17 @@
  
  special_faith_stadfast_heritage_name:0 "Staðfast"
  special_faith_stadfast_heritage_desc:0 "In our unwavering conviction, we proudly assert our path as the sole truth, looking down to those who deviate from our way"
- doctrine_parameter_fervor_per_holy_site:0 "Holy sites increase fervor." 
+ # doctrine_parameter_fervor_per_holy_site:0 "Holy sites increase fervor." 
  doctrine_parameter_hostility_override_special_faith_stadfast_heritage: "Considers, and is considered by, other [faiths|E] with the #V $special_faith_stadfast_heritage_name$#! [doctrine|E] as [GetHostilityLevelName( TOKEN_PARAMETER.GetIntValue )|V]"
  
+
+# Required custom localization for death deity pronouns
+ norse_pagan_DeathDeityHerHim:0 "him"
+ forn_sidr_pagan_DeathDeityHerHim:0 "him"
+ ginnregla_pagan_DeathDeityHerHim:0 "him"
+ natturugudtruar_pagan_DeathDeityHerHim:0 "him"
+ odinstru_pagan_DeathDeityHerHim:0 "him"
+ heidinn_pagan_DeathDeityHerHim:0 "him"
  special_faith_no_special_heritage_name:0 "None"
  special_faith_no_special_heritage_desc:0 "End the bond to other believers of the Allfather."
  doctrine_parameter_no_effect_removed_upon_creation:0 "The nordic similarity will be removed upon creation."

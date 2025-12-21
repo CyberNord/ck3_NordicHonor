@@ -1,0 +1,696 @@
+﻿error(missing-item): trait poet not defined in common/traits/
+  --> [MOD] common\religion\religions\00_germanic.txt
+42 |         virtues = { brave wrathful vengeful poet one_eyed einherjar}
+   |                                             ^^^^ 
+
+error(missing-item): government flag government_is_feudal not defined in common/governments/
+ --> [MOD] common\script_values\nh_script_values.txt
+9 |                 government_has_flag = government_is_feudal
+  |                                       ^^^^^^^^^^^^^^^^^^^^ 
+
+error(missing-item): government flag government_is_clan not defined in common/governments/
+  --> [MOD] common\script_values\nh_script_values.txt
+10 |                 government_has_flag = government_is_clan
+   |                                       ^^^^^^^^^^^^^^^^^^ 
+
+error(missing-item): government flag government_is_tribal not defined in common/governments/
+   --> [CK3] common\scripted_effects\00_single_combat_effects.txt
+382 |             $ATTACKER$ = { government_has_flag = government_is_tribal }
+    |                                                  ^^^^^^^^^^^^^^^^^^^^ 
+   --> [MOD] events\nh_events.txt
+135 |         single_combat_apply_default_shirtlessness_effect = {
+    |         ^ <-- from here
+
+error(missing-item): government flag government_is_tribal not defined in common/governments/
+   --> [CK3] common\scripted_effects\00_single_combat_effects.txt
+382 |             $ATTACKER$ = { government_has_flag = government_is_tribal }
+    |                                                  ^^^^^^^^^^^^^^^^^^^^ 
+   --> [MOD] events\nh_events.txt
+167 |         single_combat_apply_default_shirtlessness_effect = {
+    |         ^ <-- from here
+
+error(missing-item): government flag government_is_tribal not defined in common/governments/
+   --> [CK3] common\scripted_effects\00_single_combat_effects.txt
+382 |             $ATTACKER$ = { government_has_flag = government_is_tribal }
+    |                                                  ^^^^^^^^^^^^^^^^^^^^ 
+   --> [MOD] events\nh_events.txt
+200 |         single_combat_apply_default_shirtlessness_effect = {
+    |         ^ <-- from here
+
+error(missing-item): government flag government_is_tribal not defined in common/governments/
+   --> [CK3] common\scripted_effects\00_single_combat_effects.txt
+383 |             $DEFENDER$ = { government_has_flag = government_is_tribal }
+    |                                                  ^^^^^^^^^^^^^^^^^^^^ 
+   --> [MOD] events\nh_events.txt
+135 |         single_combat_apply_default_shirtlessness_effect = {
+    |         ^ <-- from here
+
+error(missing-item): government flag government_is_tribal not defined in common/governments/
+   --> [CK3] common\scripted_effects\00_single_combat_effects.txt
+383 |             $DEFENDER$ = { government_has_flag = government_is_tribal }
+    |                                                  ^^^^^^^^^^^^^^^^^^^^ 
+   --> [MOD] events\nh_events.txt
+167 |         single_combat_apply_default_shirtlessness_effect = {
+    |         ^ <-- from here
+
+error(missing-item): government flag government_is_tribal not defined in common/governments/
+   --> [CK3] common\scripted_effects\00_single_combat_effects.txt
+383 |             $DEFENDER$ = { government_has_flag = government_is_tribal }
+    |                                                  ^^^^^^^^^^^^^^^^^^^^ 
+   --> [MOD] events\nh_events.txt
+200 |         single_combat_apply_default_shirtlessness_effect = {
+    |         ^ <-- from here
+
+error(missing-item): government flag government_is_feudal not defined in common/governments/
+  --> [MOD] common\scripted_effects\nh_scripted_effects.txt
+88 |                 government_has_flag = government_is_feudal
+   |                                       ^^^^^^^^^^^^^^^^^^^^ 
+
+error(missing-item): government flag government_is_feudal not defined in common/governments/
+   --> [MOD] common\scripted_effects\nh_scripted_effects.txt
+104 |                 government_has_flag = government_is_feudal
+    |                                       ^^^^^^^^^^^^^^^^^^^^ 
+
+error(unknown-field): unknown token `triggered_desc`
+  --> [MOD] common\decisions\nh_decision.txt
+38 |                 triggered_desc = { desc = last_duel_decision_desc_old}
+   |                 ^^^^^^^^^^^^^^ 
+
+error(unknown-field): unknown token `triggered_desc`
+  --> [MOD] common\decisions\nh_decision.txt
+44 |                 triggered_desc = { desc = last_duel_decision_desc_cancer}
+   |                 ^^^^^^^^^^^^^^ 
+
+error(unknown-field): unknown token `triggered_desc`
+  --> [MOD] common\decisions\nh_decision.txt
+50 |                 triggered_desc = { desc = last_duel_decision_desc_cancer}
+   |                 ^^^^^^^^^^^^^^ 
+
+error(parse-error): unexpected comparator `=`
+   --> [MOD] common\decisions\nh_decision.txt
+340 |         picture = "gfx/interface/illustrations/decisions/nh_peace_christianity_decision.dds"
+    |                 ^ 
+
+error(structure): found loose value gfx/interface/illustrations/decisions/nh_peace_christianity_decision.dds, expected only `key =`
+   --> [MOD] common\decisions\nh_decision.txt
+340 |         picture = "gfx/interface/illustrations/decisions/nh_peace_christianity_decision.dds"
+    |                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ 
+
+error(structure): expected definition, found assignment
+   --> [MOD] common\decisions\nh_decision.txt
+343 |     desc = nh_peace_christianity_decision_desc
+    |     ^ 
+
+error(structure): expected definition, found assignment
+   --> [MOD] common\decisions\nh_decision.txt
+344 |     selection_tooltip = nh_peace_christianity_decision_tooltip
+    |     ^ 
+
+error(structure): expected definition, found assignment
+   --> [MOD] common\decisions\nh_decision.txt
+345 |     major = yes
+    |     ^ 
+
+error(structure): expected definition, found assignment
+   --> [MOD] common\decisions\nh_decision.txt
+347 |     sort_order = 0
+    |     ^ 
+
+error(structure): expected definition, found assignment
+   --> [MOD] common\decisions\nh_decision.txt
+349 |     ai_check_interval = 10
+    |     ^ 
+
+error(parse-error): unexpected `}`
+   --> [MOD] common\decisions\nh_decision.txt
+433 | }
+    | ^ 
+
+error(parse-error): unexpected comparator `=`
+   --> [MOD] common\decisions\nh_decision.txt
+438 |         picture = "gfx/interface/illustrations/decisions/nh_pagan_feudalize.dds"
+    |                 ^ 
+
+error(structure): found loose value gfx/interface/illustrations/decisions/nh_pagan_feudalize.dds, expected only `key =`
+   --> [MOD] common\decisions\nh_decision.txt
+438 |         picture = "gfx/interface/illustrations/decisions/nh_pagan_feudalize.dds"
+    |                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ 
+
+error(structure): expected definition, found assignment
+   --> [MOD] common\decisions\nh_decision.txt
+440 |     major = yes
+    |     ^ 
+
+error(structure): expected definition, found assignment
+   --> [MOD] common\decisions\nh_decision.txt
+441 |     desc = nh_convert_whole_realm_to_feudalism_decision_desc
+    |     ^ 
+
+error(structure): expected definition, found assignment
+   --> [MOD] common\decisions\nh_decision.txt
+443 |     ai_check_interval = 36
+    |     ^ 
+
+error(parse-error): unexpected `}`
+   --> [MOD] common\decisions\nh_decision.txt
+544 | }
+    | ^ 
+
+error(unknown-field): unknown token `if`
+   --> [MOD] common\decisions\nh_decision.txt
+989 |         if = {
+    |         ^^ 
+
+error(unknown-field): unknown token `if`
+   --> [MOD] common\decisions\nh_decision.txt
+998 |         if = {
+    |         ^^ 
+
+error(unknown-field): unknown modifier `hidden_effect`
+ --> [MOD] common\modifiers\nh_character_modifiers.txt
+7 |     hidden_effect = {
+  |     ^^^^^^^^^^^^^ 
+
+error(removed): personal_scheme_power_mult has been removed
+  --> [MOD] common\modifiers\nh_character_modifiers.txt
+50 |     personal_scheme_power_mult = 0.5
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^ 
+   = Info: removed in 1.13
+
+error(removed): monthly_county_control_change_add has been removed
+  --> [MOD] common\modifiers\nh_modifiers.txt
+10 |     monthly_county_control_change_add = 0.5
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ 
+   = Info: replaced with monthly_county_control_decline_add and monthly_county_control_growth_add
+
+error(unknown-field): unknown token `actor`
+  --> [MOD] common\scripted_effects\nh_scripted_effects.txt
+39 |         location = actor.capital_province
+   |                    ^^^^^ 
+
+error(unknown-field): unknown token `actor`
+  --> [MOD] common\scripted_effects\nh_scripted_effects.txt
+51 |         location = actor.capital_province
+   |                    ^^^^^ 
+
+error(unknown-field): unknown field `AND`
+   --> [MOD] common\decisions\nh_decision.txt
+446 |         AND ={
+    |         ^^^ 
+
+error(unknown-field): unknown field `OR`
+   --> [MOD] common\decisions\nh_decision.txt
+450 |         OR = {
+    |         ^^ 
+
+error(unknown-field): unknown field `OR`
+   --> [MOD] common\decisions\nh_decision.txt
+455 |         OR = {
+    |         ^^ 
+
+error(unknown-field): unknown field `has_realm_law`
+   --> [MOD] common\decisions\nh_decision.txt
+470 |         has_realm_law = tribal_authority_3
+    |         ^^^^^^^^^^^^^ 
+
+error(unknown-field): unknown field `custom_description`
+   --> [MOD] common\decisions\nh_decision.txt
+471 |         custom_description = {
+    |         ^^^^^^^^^^^^^^^^^^ 
+
+error(unknown-field): unknown field `prestige_level`
+   --> [MOD] common\decisions\nh_decision.txt
+476 |         prestige_level >= 5
+    |         ^^^^^^^^^^^^^^ 
+
+error(unknown-field): unknown field `capital_province.county`
+   --> [MOD] common\decisions\nh_decision.txt
+477 |         capital_province.county = {
+    |         ^^^^^^^^^^^^^^^^^^^^^^^ 
+
+error(unknown-field): unknown field `custom_description`
+   --> [MOD] common\decisions\nh_decision.txt
+481 |         custom_description = { #You need to have 85% of all (non-regional/unique) tribal innovations!
+    |         ^^^^^^^^^^^^^^^^^^ 
+
+error(unknown-field): unknown field `is_capable_adult`
+   --> [MOD] common\decisions\nh_decision.txt
+507 |         is_capable_adult = yes
+    |         ^^^^^^^^^^^^^^^^ 
+
+error(unknown-field): unknown field `is_imprisoned`
+   --> [MOD] common\decisions\nh_decision.txt
+508 |         is_imprisoned = no
+    |         ^^^^^^^^^^^^^ 
+
+error(unknown-field): unknown field `is_at_war`
+   --> [MOD] common\decisions\nh_decision.txt
+509 |         is_at_war = no
+    |         ^^^^^^^^^ 
+
+error(unknown-field): unknown field `not`
+   --> [MOD] common\decisions\nh_decision.txt
+510 |         not = { exists = involved_activity }
+    |         ^^^ 
+
+error(unknown-field): unknown field `prestige`
+   --> [MOD] common\decisions\nh_decision.txt
+514 |         prestige = {
+    |         ^^^^^^^^ 
+
+error(unknown-field): unknown field `trigger_event`
+   --> [MOD] common\decisions\nh_decision.txt
+524 |         trigger_event = major_decisions.0001
+    |         ^^^^^^^^^^^^^ 
+
+error(unknown-field): unknown field `save_scope_as`
+   --> [MOD] common\decisions\nh_decision.txt
+525 |         save_scope_as = actor
+    |         ^^^^^^^^^^^^^ 
+
+error(unknown-field): unknown field `convert_whole_realm_to_feudalism_effect`
+   --> [MOD] common\decisions\nh_decision.txt
+526 |         convert_whole_realm_to_feudalism_effect = yes
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ 
+
+error(unknown-field): unknown field `hidden_effect`
+   --> [MOD] common\decisions\nh_decision.txt
+527 |         hidden_effect = {
+    |         ^^^^^^^^^^^^^ 
+
+error(unknown-field): unknown field `NOT`
+   --> [MOD] common\decisions\nh_decision.txt
+538 |         NOT = { has_title = title:e_mongol_empire } #Stop the Mongols from slowing their conquest.
+    |         ^^^ 
+
+error(unknown-field): unknown field `base`
+   --> [MOD] common\decisions\nh_decision.txt
+542 |         base = 100
+    |         ^^^^ 
+
+warning(missing-item): trigger localization nh_faith_is_unreformed not defined in common/trigger_localization/
+   --> [MOD] common\decisions\nh_decision.txt
+598 |             text = nh_faith_is_unreformed
+    |                    ^^^^^^^^^^^^^^^^^^^^^^ 
+
+warning(missing-item): trigger localization nh_faith_is_unreformed not defined in common/trigger_localization/
+   --> [MOD] common\decisions\nh_decision.txt
+830 |             text = nh_faith_is_unreformed
+    |                    ^^^^^^^^^^^^^^^^^^^^^^ 
+
+warning(missing-item): trigger localization nh_faith_is_unreformed not defined in common/trigger_localization/
+   --> [MOD] common\decisions\nh_decision.txt
+906 |             text = nh_faith_is_unreformed
+    |                    ^^^^^^^^^^^^^^^^^^^^^^ 
+
+warning(missing-item): trigger localization nh_within_viking_age not defined in common/trigger_localization/
+   --> [MOD] common\decisions\nh_decision.txt
+912 |             text = nh_within_viking_age
+    |                    ^^^^^^^^^^^^^^^^^^^^ 
+
+warning(missing-item): trigger localization nh_faith_is_unreformed not defined in common/trigger_localization/
+   --> [MOD] common\decisions\nh_decision.txt
+980 |             text = nh_faith_is_unreformed
+    |                    ^^^^^^^^^^^^^^^^^^^^^^ 
+
+warning(missing-item): trigger localization nh_faith_is_unreformed not defined in common/trigger_localization/
+    --> [MOD] common\decisions\nh_decision.txt
+1095 |             text = nh_faith_is_unreformed
+     |                    ^^^^^^^^^^^^^^^^^^^^^^ 
+
+warning(missing-item): modifier format personal_scheme_power_mult not defined in common/modifier_definition_formats/
+  --> [MOD] common\modifiers\nh_character_modifiers.txt
+50 |     personal_scheme_power_mult = 0.5
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^ 
+
+warning(missing-item): modifier format monthly_county_control_change_add not defined in common/modifier_definition_formats/
+  --> [MOD] common\modifiers\nh_modifiers.txt
+10 |     monthly_county_control_change_add = 0.5
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ 
+
+warning(missing-item): portrait animation diplomacy not defined in gfx/portraits/portrait_animations/
+   --> [MOD] events\nh_events.txt
+908 |          animation = diplomacy
+    |                      ^^^^^^^^^ 
+
+warning(missing-item): portrait animation diplomacy not defined in gfx/portraits/portrait_animations/
+   --> [MOD] events\nh_events.txt
+913 |          animation = diplomacy
+    |                      ^^^^^^^^^ 
+
+warning(missing-file): file picture does not exist
+   --> [MOD] common\decisions\nh_decision.txt
+340 |         picture = "gfx/interface/illustrations/decisions/nh_peace_christianity_decision.dds"
+    |         ^^^^^^^ 
+
+warning(duplicate-item): decision is redefined by another decision
+   --> [MOD] common\decisions\nh_decision.txt
+352 |     is_shown = {
+    |     ^^^^^^^^ 
+445 |     is_shown = {
+    |     ^^^^^^^^ <-- the other decision is here
+
+warning(duplicate-item): decision is redefined by another decision
+   --> [MOD] common\decisions\nh_decision.txt
+368 |     is_valid ={
+    |     ^^^^^^^^ 
+469 |     is_valid = {
+    |     ^^^^^^^^ <-- the other decision is here
+
+warning(duplicate-item): decision is redefined by another decision
+   --> [MOD] common\decisions\nh_decision.txt
+388 |     is_valid_showing_failures_only = {
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ 
+506 |     is_valid_showing_failures_only = {
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ <-- the other decision is here
+
+warning(duplicate-item): decision is redefined by another decision
+   --> [MOD] common\decisions\nh_decision.txt
+396 |     cost = { # easy for AI
+    |     ^^^^ 
+513 |     cost = {
+    |     ^^^^ <-- the other decision is here
+
+warning(duplicate-item): decision is redefined by another decision
+   --> [MOD] common\decisions\nh_decision.txt
+413 |     effect = {
+    |     ^^^^^^ 
+523 |     effect = {
+    |     ^^^^^^ <-- the other decision is here
+
+warning(duplicate-item): decision is redefined by another decision
+   --> [MOD] common\decisions\nh_decision.txt
+430 |     ai_potential = {always = yes}
+    |     ^^^^^^^^^^^^ 
+537 |     ai_potential = {
+    |     ^^^^^^^^^^^^ <-- the other decision is here
+
+warning(exact-duplicate-item): decision is redefined by an identical decision
+   --> [MOD] common\decisions\nh_decision.txt
+432 |     ai_will_do = {base = 100}
+    |     ^^^^^^^^^^ 
+541 |     ai_will_do = {
+    |     ^^^^^^^^^^ <-- the other decision is here
+
+warning(missing-file): file picture does not exist
+   --> [MOD] common\decisions\nh_decision.txt
+438 |         picture = "gfx/interface/illustrations/decisions/nh_pagan_feudalize.dds"
+    |         ^^^^^^^ 
+
+warning(missing-localization): missing english localization key is_shown
+   --> [MOD] common\decisions\nh_decision.txt
+445 |     is_shown = {
+    |     ^^^^^^^^ 
+
+warning(missing-localization): missing english localization key is_shown_confirm
+   --> [MOD] common\decisions\nh_decision.txt
+445 |     is_shown = {
+    |     ^^^^^^^^ 
+
+warning(missing-localization): missing english localization key is_shown_desc
+   --> [MOD] common\decisions\nh_decision.txt
+445 |     is_shown = {
+    |     ^^^^^^^^ 
+
+warning(missing-localization): missing english localization key is_shown_tooltip
+   --> [MOD] common\decisions\nh_decision.txt
+445 |     is_shown = {
+    |     ^^^^^^^^ 
+
+warning(field-missing): required field `picture` missing
+   --> [MOD] common\decisions\nh_decision.txt
+445 |     is_shown = {
+    |                ^ 
+
+warning(missing-localization): missing english localization key is_valid
+   --> [MOD] common\decisions\nh_decision.txt
+469 |     is_valid = {
+    |     ^^^^^^^^ 
+
+warning(missing-localization): missing english localization key is_valid_confirm
+   --> [MOD] common\decisions\nh_decision.txt
+469 |     is_valid = {
+    |     ^^^^^^^^ 
+
+warning(missing-localization): missing english localization key is_valid_desc
+   --> [MOD] common\decisions\nh_decision.txt
+469 |     is_valid = {
+    |     ^^^^^^^^ 
+
+warning(missing-localization): missing english localization key is_valid_tooltip
+   --> [MOD] common\decisions\nh_decision.txt
+469 |     is_valid = {
+    |     ^^^^^^^^ 
+
+warning(field-missing): required field `picture` missing
+   --> [MOD] common\decisions\nh_decision.txt
+469 |     is_valid = {
+    |                ^ 
+
+warning(missing-localization): missing english localization key is_valid_showing_failures_only
+   --> [MOD] common\decisions\nh_decision.txt
+506 |     is_valid_showing_failures_only = {
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ 
+
+warning(missing-localization): missing english localization key is_valid_showing_failures_only_confirm
+   --> [MOD] common\decisions\nh_decision.txt
+506 |     is_valid_showing_failures_only = {
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ 
+
+warning(missing-localization): missing english localization key is_valid_showing_failures_only_desc
+   --> [MOD] common\decisions\nh_decision.txt
+506 |     is_valid_showing_failures_only = {
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ 
+
+warning(missing-localization): missing english localization key is_valid_showing_failures_only_tooltip
+   --> [MOD] common\decisions\nh_decision.txt
+506 |     is_valid_showing_failures_only = {
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ 
+
+warning(field-missing): required field `picture` missing
+   --> [MOD] common\decisions\nh_decision.txt
+506 |     is_valid_showing_failures_only = {
+    |                                      ^ 
+
+warning(missing-localization): missing english localization key cost
+   --> [MOD] common\decisions\nh_decision.txt
+513 |     cost = {
+    |     ^^^^ 
+
+warning(missing-localization): missing english localization key cost_confirm
+   --> [MOD] common\decisions\nh_decision.txt
+513 |     cost = {
+    |     ^^^^ 
+
+warning(missing-localization): missing english localization key cost_desc
+   --> [MOD] common\decisions\nh_decision.txt
+513 |     cost = {
+    |     ^^^^ 
+
+warning(missing-localization): missing english localization key cost_tooltip
+   --> [MOD] common\decisions\nh_decision.txt
+513 |     cost = {
+    |     ^^^^ 
+
+warning(field-missing): required field `picture` missing
+   --> [MOD] common\decisions\nh_decision.txt
+513 |     cost = {
+    |            ^ 
+
+warning(missing-localization): missing english localization key effect
+   --> [MOD] common\decisions\nh_decision.txt
+523 |     effect = {
+    |     ^^^^^^ 
+
+warning(missing-localization): missing english localization key effect_confirm
+   --> [MOD] common\decisions\nh_decision.txt
+523 |     effect = {
+    |     ^^^^^^ 
+
+warning(missing-localization): missing english localization key effect_desc
+   --> [MOD] common\decisions\nh_decision.txt
+523 |     effect = {
+    |     ^^^^^^ 
+
+warning(missing-localization): missing english localization key effect_tooltip
+   --> [MOD] common\decisions\nh_decision.txt
+523 |     effect = {
+    |     ^^^^^^ 
+
+warning(field-missing): required field `picture` missing
+   --> [MOD] common\decisions\nh_decision.txt
+523 |     effect = {
+    |              ^ 
+
+warning(missing-localization): missing english localization key ai_potential
+   --> [MOD] common\decisions\nh_decision.txt
+537 |     ai_potential = {
+    |     ^^^^^^^^^^^^ 
+
+warning(missing-localization): missing english localization key ai_potential_confirm
+   --> [MOD] common\decisions\nh_decision.txt
+537 |     ai_potential = {
+    |     ^^^^^^^^^^^^ 
+
+warning(missing-localization): missing english localization key ai_potential_desc
+   --> [MOD] common\decisions\nh_decision.txt
+537 |     ai_potential = {
+    |     ^^^^^^^^^^^^ 
+
+warning(missing-localization): missing english localization key ai_potential_tooltip
+   --> [MOD] common\decisions\nh_decision.txt
+537 |     ai_potential = {
+    |     ^^^^^^^^^^^^ 
+
+warning(field-missing): required field `picture` missing
+   --> [MOD] common\decisions\nh_decision.txt
+537 |     ai_potential = {
+    |                    ^ 
+
+warning(missing-localization): missing english localization key ai_will_do
+   --> [MOD] common\decisions\nh_decision.txt
+541 |     ai_will_do = {
+    |     ^^^^^^^^^^ 
+
+warning(missing-localization): missing english localization key ai_will_do_confirm
+   --> [MOD] common\decisions\nh_decision.txt
+541 |     ai_will_do = {
+    |     ^^^^^^^^^^ 
+
+warning(missing-localization): missing english localization key ai_will_do_desc
+   --> [MOD] common\decisions\nh_decision.txt
+541 |     ai_will_do = {
+    |     ^^^^^^^^^^ 
+
+warning(missing-localization): missing english localization key ai_will_do_tooltip
+   --> [MOD] common\decisions\nh_decision.txt
+541 |     ai_will_do = {
+    |     ^^^^^^^^^^ 
+
+warning(field-missing): required field `picture` missing
+   --> [MOD] common\decisions\nh_decision.txt
+541 |     ai_will_do = {
+    |                  ^ 
+
+warning(tooltip): OR is a too complex trigger to be tooltipped in a trigger that shows failures only.
+   --> [MOD] common\decisions\nh_decision.txt
+609 |         OR = {
+    |              ^ 
+    = Info: Try adding a custom_description or custom_tooltip, or simplifying the trigger
+
+warning(missing-localization): faith or religion missing localization for DeathDeityHerHim
+   --> [MOD] common\religion\religions\00_germanic.txt
+237 |         norse_pagan = {
+    |         ^^^^^^^^^^^ 
+
+warning(missing-localization): missing english localization key norse_pagan_desc
+   --> [MOD] common\religion\religions\00_germanic.txt
+237 |         norse_pagan = {
+    |         ^^^^^^^^^^^ 
+
+warning(missing-localization): faith or religion missing localization for DeathDeityHerHim
+   --> [MOD] common\religion\religions\00_germanic.txt
+271 |         forn_sidr_pagan = {
+    |         ^^^^^^^^^^^^^^^ 
+
+warning(missing-localization): faith or religion missing localization for DeathDeityHerHim
+   --> [MOD] common\religion\religions\00_germanic.txt
+344 |         ginnregla_pagan = {
+    |         ^^^^^^^^^^^^^^^ 
+
+warning(missing-localization): faith or religion missing localization for DeathDeityHerHim
+   --> [MOD] common\religion\religions\00_germanic.txt
+386 |         natturugudtruar_pagan = {
+    |         ^^^^^^^^^^^^^^^^^^^^^ 
+
+warning(missing-localization): faith or religion missing localization for DeathDeityHerHim
+   --> [MOD] common\religion\religions\00_germanic.txt
+419 |         odinstru_pagan = {
+    |         ^^^^^^^^^^^^^^ 
+
+warning(missing-localization): faith or religion missing localization for DeathDeityHerHim
+   --> [MOD] common\religion\religions\00_germanic.txt
+461 |         heidinn_pagan = {
+    |         ^^^^^^^^^^^^^ 
+
+warning(missing-localization): missing english localization key Poppa
+  --> [MOD] common\scripted_character_templates\nh_character_templates.txt
+39 |     name = "Poppa"
+   |             ^^^^^ 
+
+warning(missing-localization): missing english localization key nh.0021.trigger_failure.recipient
+   --> [MOD] events\nh_events.txt
+279 |                 title = nh.0021.trigger_failure.recipient
+    |                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ 
+
+warning(datafunctions): GetTitle cannot follow a Character promote
+  --> [MOD] localization\english\event_localization\nh_events_l_english.yml
+45 |  nh.1003.desc:0 "In a bold move towards religious harmony, [actor.GetFirstName], the [actor.GetTitle] of [actor.GetRealm], has decided to forge a historic pact of coexistence with the Christian faith. Through diplomatic negotiations and mutual respect, a declaration of peace and tolerance has been proclaimed. This momentous occasion marks a turning point in the religious landscape, as the realm embraces a newfound era of harmony between Norse traditions and the Christian beliefs. The future holds the promise of shared prosperity and understanding, as the realm sets forth on a path of unity and cooperation."
+   |                                                                                             ^^^^^^^^ 
+
+warning(datafunctions): unknown datafunction GetRealm
+  --> [MOD] localization\english\event_localization\nh_events_l_english.yml
+45 |  nh.1003.desc:0 "In a bold move towards religious harmony, [actor.GetFirstName], the [actor.GetTitle] of [actor.GetRealm], has decided to forge a historic pact of coexistence with the Christian faith. Through diplomatic negotiations and mutual respect, a declaration of peace and tolerance has been proclaimed. This momentous occasion marks a turning point in the religious landscape, as the realm embraces a newfound era of harmony between Norse traditions and the Christian beliefs. The future holds the promise of shared prosperity and understanding, as the realm sets forth on a path of unity and cooperation."
+   |                                                                                                                 ^^^^^^^^ 
+
+warning(datafunctions): GetTitle cannot follow a Character promote
+  --> [MOD] localization\english\nh_decisions_l_english.yml
+20 |  nh_peace_christianity_decision_desc:0 "With careful consideration and wisdom, [ROOT.Char.GetFirstName], the [ROOT.Char.GetTitle] of [ROOT.Char.GetRealm], has made the momentous decision to enact a Religious Coexistence Edict. This groundbreaking decree establishes a framework for peaceful coexistence between the Norse traditions and the Christian faith. It guarantees the freedom of religious practice and protects the rights of both believers, fostering an environment of mutual respect and understanding. By embracing this edict, the realm takes a significant step towards religious harmony, setting an example for future generations and ensuring a prosperous and tolerant future for all."
+   |                                                                                                                         ^^^^^^^^ 
+
+warning(datafunctions): unknown datafunction GetRealm
+  --> [MOD] localization\english\nh_decisions_l_english.yml
+20 |  nh_peace_christianity_decision_desc:0 "With careful consideration and wisdom, [ROOT.Char.GetFirstName], the [ROOT.Char.GetTitle] of [ROOT.Char.GetRealm], has made the momentous decision to enact a Religious Coexistence Edict. This groundbreaking decree establishes a framework for peaceful coexistence between the Norse traditions and the Christian faith. It guarantees the freedom of religious practice and protects the rights of both believers, fostering an environment of mutual respect and understanding. By embracing this edict, the realm takes a significant step towards religious harmony, setting an example for future generations and ensuring a prosperous and tolerant future for all."
+   |                                                                                                                                                 ^^^^^^^^ 
+
+warning(localization): Unexpected character `0`, expected `"`
+  --> [MOD] localization\english\religion\nh_religion_paganism_l_english.yml
+46 |  forn_sidr_pagan_desc: 0 "The ancient Germanic pantheon of Forn Si├░r was characterized by a close connection to nature and a deep reverence for the natural elements. They worshipped Wotan, the Allfather, as the supreme deity and believed in the existence of a multitude of divine beings who influenced the world around them. The heathens practiced rituals and ceremonies to establish a spiritual connection with their gods, offering sacrifices and seeking support and blessings in all aspects of life. Their beliefs also encompassed a belief in fate and a strong bond with their ancestors. Overall, the pagan faith of the Saxons in northern Germany embodied a profound connection to nature, a strong sense of community, and a belief in the power and wisdom of their gods."
+   |                        ^ 
+
+untidy(unneeded): Replaced with decision_group_type
+   --> [MOD] common\decisions\nh_decision.txt
+119 |     major = yes
+    |     ^^^^^ 
+
+untidy(unneeded): Replaced with decision_group_type
+   --> [MOD] common\decisions\nh_decision.txt
+232 |     major = yes
+    |     ^^^^^ 
+
+untidy(unneeded): Replaced with decision_group_type
+   --> [MOD] common\decisions\nh_decision.txt
+554 |     major = yes
+    |     ^^^^^ 
+
+untidy(unneeded): not needed if ai_goal = yes
+   --> [MOD] common\decisions\nh_decision.txt
+557 |     ai_check_interval = 3
+    |     ^^^^^^^^^^^^^^^^^ 
+
+untidy(unneeded): Replaced with decision_group_type
+   --> [MOD] common\decisions\nh_decision.txt
+663 |     major = yes
+    |     ^^^^^ 
+
+untidy(unneeded): Replaced with decision_group_type
+   --> [MOD] common\decisions\nh_decision.txt
+803 |     major = yes
+    |     ^^^^^ 
+
+untidy(unneeded): not needed if ai_goal = yes
+   --> [MOD] common\decisions\nh_decision.txt
+806 |     ai_check_interval = 6
+    |     ^^^^^^^^^^^^^^^^^ 
+
+untidy(unneeded): Replaced with decision_group_type
+   --> [MOD] common\decisions\nh_decision.txt
+955 |     major = yes
+    |     ^^^^^ 
+
+untidy(unneeded): not needed if ai_goal = yes
+   --> [MOD] common\decisions\nh_decision.txt
+958 |     ai_check_interval = 36
+    |     ^^^^^^^^^^^^^^^^^ 
+
+fatal: 0, error: 54, warning: 69, untidy: 9, tips: 0
