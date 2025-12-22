@@ -1,0 +1,154 @@
+﻿l_spanish:
+# Holysites
+ holy_site_joromaborg_name:0 "Jórómaborg"
+ holy_site_joromaborg_effect_name:0 "From [holy_site|E] #weak ($holy_site_joromaborg_name$)#!"
+ holy_site_miklagard_name:0 "Mikligarðr"
+ holy_site_miklagard_effect_name:0 "From [holy_site|E] #weak ($holy_site_miklagard_name$)#!"
+ holy_site_trelleborg_name:0 "Trelleborg"
+ holy_site_trelleborg_effect_name:0 "From [holy_site|E] #weak ($holy_site_trelleborg_name$)#!"
+ holy_site_thingvellir_name:0 "Thingvellir"
+ holy_site_thingvellir_effect_name:0 "From [holy_site|E] #weak ($holy_site_thingvellir_name$)#!"
+ holy_site_heiligenberg_name:0 "Heiligenberg"
+ holy_site_heiligenberg_effect_name:0 "From [holy_site|E] #weak ($holy_site_heiligenberg_name$)#!"
+ holy_site_gniezno_name:0 "Gniezno"
+ holy_site_gniezno_effect_name:0 "From [holy_site|E] #weak ($holy_site_gniezno_name$)#!"
+ holy_site_breclav_name:0 "Břeclav"
+ holy_site_breclav_effect_name:0 "From [holy_site|E] #weak ($holy_site_breclav_name$)#!"
+ holy_site_hallstatt_name:0 "Hallstatt"
+ holy_site_hallstatt_effect_name:0 "From [holy_site|E] #weak ($holy_site_hallstatt_name$)#!"
+
+# Heritages
+ has_special_heritage_name:0 "Nordic Similarity"
+ special_faith_has_germanic_heritage_name:0 "Nordic Faith"
+ special_faith_has_germanic_heritage_desc:0 "We praise the same gods with different names, so we shall not spill the blood of our brothers in faith."
+ doctrine_parameter_hostility_override_special_faith_has_germanic_heritage: "Considers, and is considered by, other [faiths|E] with the #V $special_faith_has_germanic_heritage_name$#! [doctrine|E] as [GetHostilityLevelName( TOKEN_PARAMETER.GetIntValue )|V]"
+ 
+ special_faith_stadfast_heritage_name:0 "Staðfast"
+ special_faith_stadfast_heritage_desc:0 "In our unwavering conviction, we proudly assert our path as the sole truth, looking down to those who deviate from our way"
+ doctrine_parameter_fervor_per_holy_site:0 "Holy sites increase fervor." 
+ doctrine_parameter_hostility_override_special_faith_stadfast_heritage: "Considers, and is considered by, other [faiths|E] with the #V $special_faith_stadfast_heritage_name$#! [doctrine|E] as [GetHostilityLevelName( TOKEN_PARAMETER.GetIntValue )|V]"
+ 
+ # Required custom localization for death deity pronouns
+ norse_pagan_DeathDeityHerHim:0 "him"
+ forn_sidr_pagan_DeathDeityHerHim:0 "him"
+ ginnregla_pagan_DeathDeityHerHim:0 "him"
+ natturugudtruar_pagan_DeathDeityHerHim:0 "him"
+ odinstru_pagan_DeathDeityHerHim:0 "him"
+ heidinn_pagan_DeathDeityHerHim:0 "him"
+
+ special_faith_no_special_heritage_name:0 "None"
+ special_faith_no_special_heritage_desc:0 "End the bond to other believers of the Allfather."
+ doctrine_parameter_no_effect_removed_upon_creation:0 "The nordic similarity will be removed upon creation."
+
+ special_faith_christian_heritage_name:0 "Christian Acceptance"
+ special_faith_christian_heritage_desc:0 "We have to accept that Jesus Christ is indeed a powerful beeing."
+
+ special_faith_traitor_heritage_name:0 "Siðbrytari"
+ special_faith_traitor_heritage_desc:0 "The world is changing and so do we, the christians could be powerful Allies if we accept some of their traditions"
+
+# Forn Siðr (North German)
+ forn_sidr_pagan:0 "Forn Siðr"
+ forn_sidr_pagan_adj:0 "Forn Siðr"
+ forn_sidr_pagan_adherent:0 "Forn Siðrist"
+ forn_sidr_pagan_adherent_plural:0 "Forn Siðrists"
+ forn_sidr_pagan_desc: 0 "The ancient Germanic pantheon of Forn Siðr was characterized by a close connection to nature and a deep reverence for the natural elements. They worshipped Wotan, the Allfather, as the supreme deity and believed in the existence of a multitude of divine beings who influenced the world around them. The heathens practiced rituals and ceremonies to establish a spiritual connection with their gods, offering sacrifices and seeking support and blessings in all aspects of life. Their beliefs also encompassed a belief in fate and a strong bond with their ancestors. Overall, the pagan faith of the Saxons in northern Germany embodied a profound connection to nature, a strong sense of community, and a belief in the power and wisdom of their gods."
+ 
+ forn_sidr_pagan_old:0 "Old Forn Siðr"
+ forn_sidr_pagan_old_adj:0 "Old Forn Siðr"
+ forn_sidr_pagan_old_adherent:0 "Old Forn Siðrar"
+ forn_sidr_pagan_old_adherent_plural:0 "Old Forn Siðrar"
+
+ forn_sidr_high_god_name:0 "Wótan"
+ forn_sidr_high_god_name_possessive:0 "Wótan's"
+ forn_sidr_high_god_alternate:0 "Wótan"
+ forn_sidr_high_god_alternate_possessive:0 "Wótan's"
+ forn_sidr_good_god_fairguneis:0 "Frey"
+ forn_sidr_good_god_ingwaz:0 "$forn_sidr_fertility_god_name$"
+ forn_sidr_good_god_terwing:0 "$forn_sidr_war_god_name$"
+ forn_sidr_priest_male:0 "Gothi"			
+ forn_sidr_priest_male_plural:0 "Gothar"
+ forn_sidr_priest_female:0 "Gythia"
+ forn_sidr_priest_female_plural:0 "Gythjur"
+ forn_sidr_priest_neuter:0 "Gothi"
+ forn_sidr_priest_neuter_plural:0 "Gothar"
+
+ forn_sidr_fertility_god_name:0 "Freyja"
+ forn_sidr_fertility_god_name_possessive:0 "Freyja's"
+ forn_sidr_knowledge_god_name:0 "$forn_sidr_high_god_name$"
+ forn_sidr_knowledge_god_name_possessive:0 "$forn_sidr_high_god_name_possessive$"
+ forn_sidr_war_god_name:0 "Tiwaz"					# German Tyr
+ forn_sidr_war_god_name_possessive:0 "Tiwaz's"		# German Tyr
+ forn_sidr_desc:0 "The old Germanic pagan faith was rooted in a strong belief in a pantheon of gods and goddesses. Central to their belief system was the worship of Wótan, the chief deity associated with war, wisdom, and magic. Followers of this faith believed in the interconnectedness of nature and the divine. They saw the natural world as sacred and held a deep reverence for the elements, forests, and rivers. Rituals and ceremonies were conducted to honor the gods, often held in sacred groves or at natural landmarks."
+ 
+ # Giñnregla (Icelandic)
+ ginnregla_pagan:0 "Giñnregla"
+ ginnregla_pagan_adj:0 "Giñnregla"
+ ginnregla_pagan_adherent:0 "Giñnreglur"
+ ginnregla_pagan_adherent_plural:0 "Giñnreglur"
+ ginnregla_pagan_desc:0 "The heathens in Iceland, here called as Giñnregla, who followed the faith in Odin and the Old Norse pantheon, had a deep spiritual connection with nature and the gods. Their beliefs were closely tied to the Allthing, the assembly of all free men, and the community. They sought truth and guidance in the stars and practiced a form of astrological observation to interpret the signs of the gods. Despite their warlike past, they placed great value on peaceful communities and sought to foster harmonious coexistence. Their religious practice included offerings, rituals, and festivals to honor the gods and seek their blessings. Overall, the heathens in Iceland embodied a profound spirituality shaped by their belief in Odin, the significance of the Allthing, the pursuit of truth in the stars, and their commitment to peaceful community."
+ 
+ ginnregla_pagan_old:0 "Old Giñnregla"
+ ginnregla_pagan_old_adj:0 "Old Giñnregla"
+ ginnregla_pagan_old_adherent:0 "Old Giñnreglur"
+ ginnregla_pagan_old_adherent_plural:0 "Old Giñnreglur"
+
+ ginnregla_priest_male:0 "Goði"			
+ ginnregla_priest_male_plural:0 "Goðar"
+ ginnregla_priest_female:0 "Gythja"
+ ginnregla_priest_female_plural:0 "Gythjur"
+ ginnregla_priest_neuter:0 "Goði"
+ ginnregla_priest_neuter_plural:0 "Goðar"
+
+ # Náttúruguðtrúarmenn (Scando-Finnic)
+ natturugudtruar_pagan:0 "Náttúruguðtrúar"
+ natturugudtruar_pagan_adj:0 "Náttúruguðtrúar"
+ natturugudtruar_pagan_adherent:0 "Náttúruguðtrúarmaður"
+ natturugudtruar_pagan_adherent_plural:0 "Náttúruguðtrúarmenn"
+ natturugudtruar_pagan_desc:0 "The nature-oriented expression known as Náttúruguðtrúarmenn, which has blended with some elements of Finno-Ugric customs, embodies a deeply rooted connection to the natural world and witchcraft. This belief system honors the Norse gods and combines them with the traditional practices of the Finno-Ugric peoples. Through the application of witchcraft and shamanistic practices, the followers of this belief seek spiritual insight and harmony with the natural forces. They find inspiration in the spirits of forests, rivers, and mountains and celebrate rituals to strengthen their connection to nature. With deep respect for the diversity of nature and the interplay of elements, they strive for a balanced and harmonious existence in alignment with the Divine and nature spirits."
+ 
+ natturugudtruar_pagan_old:0 "Old Náttúruguðtrúar"
+ natturugudtruar_pagan_old_adj:0 "Old Náttúruguðtrúar"
+ natturugudtruar_pagan_old_adherent:0 "Old Náttúruguðtrúarmaður"
+ natturugudtruar_pagan_old_adherent_plural:0 "Old Náttúruguðtrúarmenn"
+
+ # Óðinnstrú (Odinism)
+ odinstru_pagan:0 "Óðinnstrú"
+ odinstru_pagan_adj:0 "Óðinnstrú"
+ odinstru_pagan_adherent:0 "Óðinnstrú"
+ odinstru_pagan_adherent_plural:0 "Óðinnstrúar"
+ odinstru_pagan_desc:0 "The fanatically fundamentalist expression of the Norse pantheon, known as Óðinnstrú worships the gods with unwavering faith, placing particular emphasis on Odin and Tyr. This path of belief is characterized by an extreme warrior mentality. The followers see themselves as chosen warriors and view battle as a sacred duty. They firmly believe that it is their task to defend the honor of the gods on the bloody battlefield and to overcome their enemies. Their rituals are marked by martial elements, in which they offer sacrifices and seek divine favor for upcoming battles. The fanatically fundamentalist version of the Norse pantheon considers war as the ultimate path to attain glory and honor, both in the earthly realm and in Valhalla."
+ 
+ odinstru_pagan_old:0 "Old Óðinnstrú"
+ odinstru_pagan_old_adj:0 "Old Óðinnstrú"
+ odinstru_pagan_old_adherent:0 "Old Óðinnstrú"
+ odinstru_pagan_old_adherent_plural:0 "Old Óðinnstrúar"
+
+ # Heiðinn (Scando-Baltic)
+ heidinn_pagan:0 "Heiðinn"
+ heidinn_pagan_adj:0 "heiðinn"
+ heidinn_pagan_adherent:0 "Heiðinn"
+ heidinn_pagan_adherent_plural:0 "Heiðnir"
+ heidinn_pagan_desc:0 "The Skando-Slavic pantheon of Heiðinn has, in a way, adapted to the rugged customs of the Slavic peoples. It venerates the Norse gods with a blend of Norse and Slavic traditions. Followers of this belief value their connection to nature and practice rituals that encompass both the wild elements of Norse mythology and the natural cycles of Slavic traditions. They see the Norse gods as powerful protectors and seek their favor in matters of fertility, harvest, and survival in the harsh Slavic regions. The Kiever version of Asatru thus retains its Norse essence but integrates elements of Slavic culture and customs to form a unique community of faith."
+ 
+ heidinn_pagan_old:0 "Old Heiðinn"
+ heidinn_pagan_old_adj:0 "Old heiðinn"
+ heidinn_pagan_old_adherent:0 "Old Heiðnir"
+ heidinn_pagan_old_adherent_plural:0 "Old Heiðnir"
+
+ heidinn_high_god_name:0 "Ods"
+ heidinn_high_god_name_possessive:0 "Ods's"
+ heidinn_high_god_alternate:0 "Odsn"
+ heidinn_high_god_alternate_possessive:0 "Ods's"
+ heidinn_good_god_thor:0 "Perkūnas"
+ heidinn_good_god_fairguneis:0 "Laima"
+ heidinn_good_god_ingwaz:0 "$heidinn_fertility_god_name$"
+ heidinn_good_god_terwing:0 "$heidinn_war_god_name$"
+
+ heidinn_fertility_god_name:0 "Lauma"
+ heidinn_fertility_god_name_possessive:0 "Lauma's"
+ heidinn_knowledge_god_name:0 "$heidinn_high_god_name$"
+ heidinn_knowledge_god_name_possessive:0 "$heidinn_high_god_name_possessive$"
+ heidinn_war_god_name:0 "Tīvs"					
+ heidinn_war_god_name_possessive:0 "Tīvs's"
+ heidinn_good_god_freyja:0 "$heidinn_fertility_god_name$"
+ heidinn_good_god_tyr:0 "$heidinn_war_god_name$"

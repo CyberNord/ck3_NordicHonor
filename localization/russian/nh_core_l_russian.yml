@@ -1,0 +1,4 @@
+﻿l_russian:
+ event_troop_rollo_name:2 "[ROOT.Char.GetTitledFirstNamePossessiveNoTooltip] Норманны"
+ event_troop_gotland_name:2 "[ROOT.Char.GetTitledFirstNamePossessiveNoTooltip] Готландские варяги"
+ event_troop_ginregla:2 "[ROOT.Char.GetTitledFirstNamePossessiveNoTooltip] Воины Исланда"
