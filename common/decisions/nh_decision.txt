@@ -189,7 +189,11 @@ nh_rome_hs_decision = {
 			add_dynasty_prestige = 1000
 		}
 
-		root.faith = { activate_holy_site = joromaborg }
+			# Guard activation with has_holy_site per standards
+			if = {
+				limit = { root.faith = { has_holy_site = joromaborg } }
+				root.faith = { activate_holy_site = joromaborg }
+			}
 
 		#Can only happen once per faith
 		if = {
@@ -301,7 +305,11 @@ nh_constantinople_hs_decision = {
 			add_dynasty_prestige = 1000
 		}
 
-		root.faith = { activate_holy_site = miklagard }
+			# Guard activation with has_holy_site per standards
+			if = {
+				limit = { root.faith = { has_holy_site = miklagard } }
+				root.faith = { activate_holy_site = miklagard }
+			}
 
 		#Can only happen once per faith
 		if = {
