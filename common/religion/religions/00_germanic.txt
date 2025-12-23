@@ -7,6 +7,7 @@
 	doctrine = pagan_hostility_doctrine
 
 	#Main Group
+	doctrine = doctrine_polytheist
 	doctrine = doctrine_no_head
 	doctrine = doctrine_gender_male_dominated
 	doctrine = doctrine_pluralism_pluralistic
@@ -38,6 +39,9 @@
 	#Funeral tradition
 	doctrine = doctrine_funeral_cremation
 
+	#Coronation tradition
+	doctrine = doctrine_no_anointment
+
 	traits = {
 		virtues = { brave wrathful vengeful poet one_eyed einherjar}
 		sins = { craven deceitful forgiving weak }
@@ -54,6 +58,7 @@
 		Odd Orm Orvar Ottar Óláfr Ormr Oddr Óskar Ógmundr Þorsteinn Þorkell Þorvarðr Þorbjorn Rikulfr Rurik Rognvaldr Reginn Ragnar
 		Sigurðr SigbjO_rn StyrbjO_rn Starkad Styrkar Stígandr SA_mund SO_lve SO_rkver Sveinn Steinn Sigmundr Skúli Sindri Skapti
 		Tryggvi Thorolf Tjudmund Toke Tolir TorbjO_rn Torbrand Torfinn Torgeir Toste Tyke Úlfr Ubbe Víðarr Viðurr Váli Valdamarr Vífill
+		BjO_rn Sigtryggr Ingólfr Halldór Hrollaugr Hvítserkr Þórir Þorgrímr
 	}
 	reserved_female_names = {
 		Aslaug Áslaug Ástríðr Ásdís Álfhildr Bothild BjO_rg Brynhildr Dagrún Drífðr Eiríka Eydís
@@ -61,6 +66,7 @@
 		Hallgerðr Hildr Hildigunnr Hallveig Helga Herbjorg Honn Hervor Hold Herbjorg Ingridr Ingibjorg Ísgerðr Inga JO_runn Jorð KrA_ka Katla Lína Malmfrid
 		Ólof Ósk Þóra Þórdís Þuríðr Þorbjorg Þórveig Þorgerðr Þórgunnr Þórhildr Ragnfrid Ragnfríðr Ragnhild Ragnhildr Rannveig Rognhildr Rán Rúna Rósa
 		Svanhild Sigridr Sigríðr Sigurðr Solveig Sólveig Steinvor Thora Thordis Thyra Tófa Thorgunna Ulvhilde Unnr Vilhjálmr Yrsa Ylfa
+		Oddný Ingunn Árný Svanhvít Brynja Ragnheiðr Signý Sigrún
 	}
 
 	custom_faith_icons = {
@@ -72,9 +78,17 @@
 		{ name = "holy_order_faithful_of_tyr" }
 		{ name = "holy_order_odins_valkyries" }
 		{ name = "holy_order_chosen_of_freyja" }
+		{ name = "holy_order_varangian_guard" }
+		{ name = "holy_order_ravens_of_odin" }
+		{ name = "holy_order_hird_of_odin" }
+		{ name = "holy_order_tyrs_oathkeepers" }
+		{ name = "holy_order_ulfhednar" }
+		{ name = "holy_order_sons_of_ivarr" }
+		{ name = "holy_order_runespears" }
+		{ name = "holy_order_fenrir_pack" }
 	}
 
-	holy_order_maa = { jomsviking_pirates }
+	holy_order_maa = { jomsviking_pirates vigmen varangian_veterans }
 
 	localization = {
 		#HighGodName
@@ -231,6 +245,10 @@
 
 		GHWName = ghw_great_holy_war
 		GHWNamePlural = ghw_great_holy_wars
+		
+		# Random faith generation (for reformed/custom faiths)
+		RandomReligiousName = germanic_random_faith_name
+		RandomReligiousNamePossessive = germanic_random_faith_name_possessive
 	}
 
 	faiths = {
