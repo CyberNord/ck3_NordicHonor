@@ -66,3 +66,12 @@
  nh_odinstru_raise_elite_warriors_confirm:0 "The zealous gather..."
  nh_elite_warriors_holy_sites_requirement:0 "Your Faith is in danger of beeing forgotten"
  nh_elite_warriors_cooldown_requirement:0 "You have not recently raised Elite Warriors"
+
+# Forced Conversion Decision
+ nh_odinstru_force_conversion:0 "Force Religious Conversion"
+ nh_odinstru_force_conversion_desc:0 "Through fire and blood, we can purge the false faiths from our conquered lands. The sword shall be our argument, and terror our teacher. Those who refuse the old gods will learn obedience through suffering.\n\nThis path is brutal and will bring harsh consequences - reduced prosperity, rebellious subjects, and the scorn of our neighbors. But for true believers of Óðinnstrú, no price is too high to spread the faith of our ancestors."
+ nh_odinstru_force_conversion_tooltip:0 "Convert a conquered county through brutal purges"
+ nh_odinstru_force_conversion_confirm:0 "The gods demand it"
+ nh_force_conversion_cooldown_requirement:0 "You have not recently forced conversions"
+ nh_force_conversion_capital_requirement:0 "Your capital follows your faith"
+ nh_force_conversion_target_requirement:0 "You control counties of different faiths"

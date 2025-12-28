@@ -39,3 +39,14 @@
  nh_thing_build_modifier_desc:0 "With a focus on building and development, the ruler aims to strengthen infrastructure, expand fortifications, and enhance the prosperity and stability of their realm."
  nh_thing_diplomacy_modifier:0 "Sendiherra"
  nh_thing_diplomacy_modifier_desc:0 "By prioritizing diplomacy and forging new alliances, the ruler seeks to establish strong diplomatic ties, secure valuable alliances, and ensure the safety and security of their realm."
+
+# v1.2 - Forced Conversion
+ nh_forced_conversion:0 "Forced Conversion"
+ nh_forced_conversion_desc:0 "This county suffers under brutal religious persecution. The population resists the imposed faith, development stagnates, and local levies refuse to muster properly."
+ nh_religious_oppressor:0 "Religious Oppressor"
+ nh_religious_oppressor_desc:0 "This ruler has forcibly converted conquered populations, earning a reputation for religious brutality and tyranny."
+ nh_champion_of_faith:0 "Champion of the Faith"
+ nh_champion_of_faith_desc:0 "This zealous defender of Óðinnstrú has proven their devotion through decisive action, earning the respect of the faithful."
+ approved_conversion_opinion:0 "Approves Forced Conversion"
+ forced_conversion_opinion:0 "Forced Religious Conversion"
+ fervor_loss_forced_conversion:0 "Forced Conversion"

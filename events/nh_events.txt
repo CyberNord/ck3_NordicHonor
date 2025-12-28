@@ -1401,9 +1401,11 @@ nh.9004 = {
 		name = nh.9004.a
 	}
 }
+############################################ v1.2 ##################################################
+
 ###############################################
-# v1.2 - Odinstru Elite Warriors Events
-# nh.2001-2009
+# Odinstru Elite Warriors Events
+# nh.2001
 ###############################################
 
 # Elite Warriors Gathering - Flavor event
@@ -1432,5 +1434,493 @@ nh.2001 = {
 		name = nh.2001.b
 		custom_tooltip = nh.2001.b.tt
 		add_dynasty_prestige = 25
+	}
+}
+
+###############################################
+# Odinstru - Forced Conversion Event Chain
+# nh.2010-2019
+###############################################
+
+# nh.2010 - Decision to Convert (Initial)
+nh.2010 = {
+	type = character_event
+	title = nh.2010.t
+	desc = nh.2010.desc
+	theme = faith
+
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}
+
+	immediate = {
+		save_scope_as = converter
+	}
+
+	# Trigger county selection
+	option = {
+		name = nh.2010.a
+		custom_tooltip = nh.2010.a.tt
+		trigger_event = nh.2011
+	}
+
+	#cancel - pay the price of cowardice
+	option = {
+		name = nh.2010.b
+		custom_tooltip = nh.2010.b.tt
+		add_piety = -300
+		add_prestige = -200
+	}
+}
+
+# nh.2011 - County Selection
+nh.2011 = {
+	type = character_event
+	title = nh.2011.t
+	desc = nh.2011.desc
+	theme = faith
+
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+
+	# Pre-select up to 5 convertible counties
+	immediate = {
+		every_held_title = {
+			limit = {
+				tier = tier_county
+				NOT = { title_province.faith = root.faith }
+			}
+			add_to_list = convertible_counties
+		}
+		
+		# Save up to 5 specific counties as scopes
+		random_in_list = {
+			list = convertible_counties
+			position = 0
+			limit = { always = yes }
+			save_scope_as = county_option_1
+		}
+		
+		random_in_list = {
+			list = convertible_counties
+			position = 1
+			limit = { always = yes }
+			save_scope_as = county_option_2
+		}
+		
+		random_in_list = {
+			list = convertible_counties
+			position = 2
+			limit = { always = yes }
+			save_scope_as = county_option_3
+		}
+		
+		random_in_list = {
+			list = convertible_counties
+			position = 3
+			limit = { always = yes }
+			save_scope_as = county_option_4
+		}
+		
+		random_in_list = {
+			list = convertible_counties
+			position = 4
+			limit = { always = yes }
+			save_scope_as = county_option_5
+		}
+	}
+
+	# Option 1 - First county
+	option = {
+		name = nh.2011.a1
+		trigger = { exists = scope:county_option_1 }
+		
+		custom_tooltip = nh.2011.convert.tt
+		
+		scope:county_option_1 = {
+			save_scope_as = target_county
+			nh_convert_county_forced_effect = yes
+		}
+		
+		faith = {
+			change_fervor = {
+				value = -5
+				desc = fervor_loss_forced_conversion
+			}
+		}
+		
+		add_character_flag = {
+			flag = nh_force_conversion_cooldown
+			years = 1
+		}
+		
+		trigger_event = {
+			id = nh.2012
+			days = 7
+		}
+	}
+
+	# Option 2 - Second county
+	option = {
+		name = nh.2011.a2
+		trigger = { exists = scope:county_option_2 }
+		
+		custom_tooltip = nh.2011.convert.tt
+		
+		scope:county_option_2 = {
+			save_scope_as = target_county
+			nh_convert_county_forced_effect = yes
+		}
+		
+		faith = {
+			change_fervor = {
+				value = -5
+				desc = fervor_loss_forced_conversion
+			}
+		}
+		
+		add_character_flag = {
+			flag = nh_force_conversion_cooldown
+			years = 1
+		}
+		
+		trigger_event = {
+			id = nh.2012
+			days = 7
+		}
+	}
+
+	# Option 3 - Third county
+	option = {
+		name = nh.2011.a3
+		trigger = { exists = scope:county_option_3 }
+		
+		custom_tooltip = nh.2011.convert.tt
+		
+		scope:county_option_3 = {
+			save_scope_as = target_county
+			nh_convert_county_forced_effect = yes
+		}
+		
+		faith = {
+			change_fervor = {
+				value = -5
+				desc = fervor_loss_forced_conversion
+			}
+		}
+		
+		add_character_flag = {
+			flag = nh_force_conversion_cooldown
+			years = 1
+		}
+		
+		trigger_event = {
+			id = nh.2012
+			days = 7
+		}
+	}
+
+	# Option 4 - Fourth county
+	option = {
+		name = nh.2011.a4
+		trigger = { exists = scope:county_option_4 }
+		
+		custom_tooltip = nh.2011.convert.tt
+		
+		scope:county_option_4 = {
+			save_scope_as = target_county
+			nh_convert_county_forced_effect = yes
+		}
+		
+		faith = {
+			change_fervor = {
+				value = -5
+				desc = fervor_loss_forced_conversion
+			}
+		}
+		
+		add_character_flag = {
+			flag = nh_force_conversion_cooldown
+			years = 1
+		}
+		
+		trigger_event = {
+			id = nh.2012
+			days = 7
+		}
+	}
+
+	# Option 5 - Fifth county
+	option = {
+		name = nh.2011.a5
+		trigger = { exists = scope:county_option_5 }
+		
+		custom_tooltip = nh.2011.convert.tt
+		
+		scope:county_option_5 = {
+			save_scope_as = target_county
+			nh_convert_county_forced_effect = yes
+		}
+		
+		faith = {
+			change_fervor = {
+				value = -5
+				desc = fervor_loss_forced_conversion
+			}
+		}
+		
+		add_character_flag = {
+			flag = nh_force_conversion_cooldown
+			years = 1
+		}
+		
+		trigger_event = {
+			id = nh.2012
+			days = 7
+		}
+	}
+
+	# Option 6 - Convert ALL counties at once (extreme brutality)
+	option = {
+		name = nh.2011.c
+		trigger = { 
+			exists = scope:county_option_5
+		}
+		
+		custom_tooltip = nh.2011.convert_all.tt
+		
+		# Player pays full cost, AI doesn't
+		if = {
+			limit = { is_ai = no }
+			add_prestige = -5000
+			add_tyranny = 100
+		}
+		
+		add_dread = 100
+		
+		# Convert all 5 counties
+		scope:county_option_1 = {
+			nh_convert_county_forced_effect = yes
+			set_county_development = 0
+		}
+		scope:county_option_2 = {
+			nh_convert_county_forced_effect = yes
+			set_county_development = 0
+		}
+		scope:county_option_3 = {
+			nh_convert_county_forced_effect = yes
+			set_county_development = 0
+		}
+		scope:county_option_4 = {
+			nh_convert_county_forced_effect = yes
+			set_county_development = 0
+		}
+		scope:county_option_5 = {
+			nh_convert_county_forced_effect = yes
+			set_county_development = 0
+		}
+		
+		faith = {
+			change_fervor = {
+				value = -20
+				desc = fervor_loss_forced_conversion
+			}
+		}
+		
+		add_character_flag = {
+			flag = nh_force_conversion_cooldown
+			years = 10
+		}
+		
+		# Save last county for follow-up event
+		scope:county_option_5 = {
+			save_scope_as = target_county
+		}
+		
+		trigger_event = {
+			id = nh.2014
+			days = 66
+		}
+		
+		ai_chance = {
+			base = 5
+			
+			# Extremely aggressive traits
+			modifier = {
+				add = 150
+				has_trait = zealous
+			}
+			modifier = {
+				add = 150
+				has_trait = lunatic
+			}
+			modifier = {
+				add = 150
+				has_trait = sadistic
+			}
+			modifier = {
+				add = 150
+				has_trait = wrathful
+			}
+			
+			# Never choose for compassionate traits
+			modifier = {
+				factor = 0
+				has_trait = compassionate
+			}
+			modifier = {
+				factor = 0
+				has_trait = cynical
+			}
+			modifier = {
+				factor = 0
+				has_trait = forgiving
+			}
+			modifier = {
+				factor = 0
+				has_trait = craven
+			}
+			modifier = {
+				factor = 0
+				has_trait = content
+			}
+		}
+	}
+
+	# Cancel option - heavy cost for backing down now
+	option = {
+		name = nh.2011.b
+		custom_tooltip = nh.2011.b.tt
+		add_piety = -500
+		add_legitimacy = -500
+		add_prestige = -300
+	}
+}
+
+# nh.2012 - Conversion Outcome
+nh.2012 = {
+	type = character_event
+	title = nh.2012.t
+	desc = nh.2012.desc
+	theme = faith
+
+	left_portrait = {
+		character = root
+		animation = personality_vengeful
+	}
+
+	immediate = {
+		# 20% chance of resistance event
+		random = {
+			chance = 20
+			save_scope_value_as = {
+				name = has_resistance
+				value = yes
+			}
+		}
+	}
+
+	option = {
+		name = nh.2012.a
+		
+		if = {
+			limit = { scope:has_resistance = yes }
+			custom_tooltip = nh.2012.a.resistance
+			trigger_event = {
+				id = nh.2013
+				days = 14
+			}
+		}
+		else = {
+			custom_tooltip = nh.2012.a.peaceful
+		}
+	}
+}
+
+# nh.2013 - Resistance Event
+nh.2013 = {
+	type = character_event
+	title = nh.2013.t
+	desc = nh.2013.desc
+	theme = war
+
+	left_portrait = {
+		character = root
+		animation = worry
+	}
+
+	option = {
+		name = nh.2013.a
+		trigger = {
+			OR = {
+				has_trait = wrathful
+				has_trait = zealous
+				dread >= 50
+			}
+		}
+		
+		add_dread = 10
+		scope:target_county = {
+			change_development_level = -1
+		}
+	}
+
+	option = {
+		name = nh.2013.b
+		
+		add_piety = -250
+		scope:target_county = {
+			remove_county_modifier = nh_forced_conversion
+			add_county_modifier = {
+				modifier = nh_forced_conversion
+				years = 5
+			}
+		}
+	}
+
+	option = {
+		name = nh.2013.c
+		add_prestige = -1000
+		scope:target_county = {
+			remove_county_modifier = nh_forced_conversion
+		}
+	}
+}
+# nh.2014 - Mass Conversion Outcome
+nh.2014 = {
+	type = character_event
+	title = nh.2014.t
+	desc = nh.2014.desc
+	theme = death
+
+	left_portrait = {
+		character = root
+		animation = shock
+	}
+
+	override_background = { reference = burning_building }
+	option = {
+		name = nh.2014.a
+
+		if = {
+			limit = { 
+				NOR = {
+					has_trait = sadistic
+					has_trait = lunatic
+				}
+			}
+			add_stress = 150
+		}
+
+		if = {
+			limit = { 
+				has_trait = zealous
+				NOT = { has_trait = sadistic }
+			}
+			add_stress = 75
+		}
 	}
 }

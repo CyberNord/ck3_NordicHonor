@@ -1126,7 +1126,8 @@ nh_iceland_yearly_ting = {
 	}
 }
 
-# v1.2 - Odinstru Elite Warriors
+# v1.2
+# Odinstru Elite Warriors
 nh_odinstru_raise_elite_warriors = {
 	picture = {
 		reference = "gfx/interface/illustrations/decisions/nh_decision_call_to_arms.dds"
@@ -1167,7 +1168,6 @@ nh_odinstru_raise_elite_warriors = {
 			}
 		}
 
-		# Zealous requirement
 		OR = {
 			has_trait = zealous
 			has_trait = holy_warrior
@@ -1190,27 +1190,22 @@ nh_odinstru_raise_elite_warriors = {
 	effect = {
 		save_scope_as = actor
 
-		# Apply scripted effect based on realm size
 		nh_spawn_elite_warriors_effect = yes
 
-		# Add blessed modifier
 		add_character_modifier = {
 			modifier = nh_blessed_by_odin
 			years = 3
 		}
 
-		# Dynasty prestige
 		dynasty = {
 			add_dynasty_prestige = 50
 		}
 
-		# Cooldown flag
 		add_character_flag = {
 			flag = nh_elite_warriors_cooldown
 			years = 15
 		}
 
-		# Trigger flavor event
 		trigger_event = {
 			id = nh.2001
 			days = 3
@@ -1242,6 +1237,113 @@ nh_odinstru_raise_elite_warriors = {
 		modifier = {
 			add = -100
 			gold < 500
+		}
+	}
+}
+
+# Forced Conversion Decision
+nh_odinstru_force_conversion = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/nh_decision_forced_conversion.dds"
+	}
+
+	decision_group_type = nordic_honor
+	desc = nh_odinstru_force_conversion_desc
+	selection_tooltip = nh_odinstru_force_conversion_tooltip
+
+	sort_order = 2
+
+	ai_check_interval = 120
+
+	is_shown = {
+		is_lowborn = no
+		OR = {
+			faith = faith:odinstru_pagan
+			faith = faith:norse_pagan
+		}
+		
+		any_held_title = {
+			tier = tier_county
+			NOT = { title_province.faith = root.faith }
+		}
+	}
+
+	is_valid = {
+		is_at_war = no
+		piety_level >= 2
+
+		# Not on cooldown
+		custom_description = {
+			text = nh_force_conversion_cooldown_requirement
+			NOT = { has_character_flag = nh_force_conversion_cooldown }
+		}
+		
+		custom_description = {
+			text = nh_force_conversion_capital_requirement
+			capital_province.faith = root.faith
+		}
+		
+		custom_description = {
+			text = nh_force_conversion_target_requirement
+			any_held_title = {
+				tier = tier_county
+				NOT = { title_province.faith = root.faith }
+			}
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		is_capable_adult = yes
+		is_imprisoned = no
+	}
+
+	cost = {
+		prestige = 250
+		piety = 750
+	}
+
+	effect = {
+		save_scope_as = actor
+		
+		trigger_event = {
+			id = nh.2010
+		}
+	}
+
+	ai_potential = {
+		realm_size >= 3
+		OR = {
+			has_trait = zealous
+			faith = faith:odinstru_pagan
+		}
+	}
+
+	ai_will_do = {
+		base = 30
+
+		modifier = {
+			add = 60
+			has_trait = zealous
+		}
+
+		modifier = {
+			add = 20
+			has_trait = wrathful
+		}
+
+		modifier = {
+			add = -50
+			has_trait = compassionate
+		}
+
+		modifier = {
+			add = -50
+			has_trait = forgiving
+		}
+
+		modifier = {
+			add = 20
+			faith = faith:odinstru_pagan
 		}
 	}
 }

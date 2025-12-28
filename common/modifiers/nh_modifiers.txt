@@ -24,3 +24,12 @@ nh_tinvellir_county_modifier = {
 	county_opinion_add = 30
 	travel_danger = -5
 }
+
+# v1.2 - Forced Conversion
+nh_forced_conversion = {
+	icon = county_modifier_opinion_negative
+	county_opinion_add = -15
+	development_growth_factor = -0.75
+	levy_size = -0.50
+	tax_mult = -0.90
+}

@@ -224,3 +224,88 @@ nh_spawn_elite_warriors_effect = {
 		}
 	}
 }
+
+# v1.2 - Forced Conversion Effect
+nh_convert_county_forced_effect = {
+
+	prev.faith = {
+		save_scope_as = old_faith
+	}
+	
+	# Convert county and all holdings
+	set_county_faith = prev.faith
+	every_county_province = {
+		set_province_faith = prev.faith
+	}
+	
+	if = {
+		limit = { prev.faith = faith:odinstru_pagan }
+		change_development_level = {
+			subtract = { value = development_level multiply = 0.15 }
+		}
+	}
+	else = {
+		change_development_level = {
+			subtract = { value = development_level multiply = 0.20 }
+		}
+	}
+	
+	add_county_modifier = {
+		modifier = nh_forced_conversion
+		years = 10
+	}
+	
+	prev = {
+		add_character_modifier = {
+			modifier = nh_religious_oppressor
+			years = 10
+		}
+	}
+	
+	# Imprison heretics
+	every_county_province = {
+		every_province_character = {
+			limit = {
+				NOT = { faith = prev.prev.faith }
+				is_imprisoned = no
+				is_ruler = no
+			}
+			prev.prev = {
+				imprison = {
+					target = prev
+					type = house_arrest
+				}
+			}
+		}
+	}
+	
+	# Odinstru bonus
+	if = {
+		limit = { prev.faith = faith:odinstru_pagan }
+		prev = {
+			add_character_modifier = {
+				modifier = nh_champion_of_faith
+				years = 2
+			}
+			every_vassal = {
+				limit = { faith = prev.faith }
+				add_opinion = {
+					target = prev
+					modifier = approved_conversion_opinion
+					opinion = 5
+				}
+			}
+		}
+	}
+	
+	prev = {
+		every_neighboring_and_across_water_realm_same_rank_owner = {
+			limit = { faith = scope:old_faith }
+			add_opinion = {
+				target = prev
+				modifier = forced_conversion_opinion
+				opinion = -20
+			}
+		}
+	}
+}
