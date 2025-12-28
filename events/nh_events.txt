@@ -558,7 +558,7 @@ nh.1004 = {
 		if = {
 			limit = { is_ai = yes }
 			spawn_army = {
-				name = event_troop_ginregla
+				name = event_troop_ginregla_name
 				levies = 1000
 				men_at_arms = {
 					type = varangian_veterans
@@ -1344,24 +1344,6 @@ nh.1015 = {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ############################################ letters ##################################################
 # rollo
 nh.9000 = {
@@ -1417,5 +1399,38 @@ nh.9004 = {
 
 	option = {
 		name = nh.9004.a
+	}
+}
+###############################################
+# v1.2 - Odinstru Elite Warriors Events
+# nh.2001-2009
+###############################################
+
+# Elite Warriors Gathering - Flavor event
+nh.2001 = {
+	type = character_event
+	title = nh.2001.t
+	desc = nh.2001.desc
+	theme = war
+
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+
+	immediate = {
+		play_music_cue = mx_cue_combat
+	}
+
+	option = {
+		name = nh.2001.a
+		custom_tooltip = nh.2001.a.tt
+		add_military_experience = 500
+	}
+
+	option = {
+		name = nh.2001.b
+		custom_tooltip = nh.2001.b.tt
+		add_dynasty_prestige = 25
 	}
 }

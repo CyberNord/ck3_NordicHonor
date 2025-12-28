@@ -27,6 +27,8 @@
  nh_tyr_blessing_modifier_desc:0 "Благосклонность Тира сияет на этом персонаже, вселяя в него храбрость, справедливость и чувство чести."
  nh_njords_blessing_modifier:0 "Благословен Ньордом"
  nh_njords_blessing_modifier_desc:0 "Благословение Ньерда приносит этому персонажу процветание, богатство и успех, особенно в вопросах торговли и морской деятельности."
+ nh_blessed_by_odin:0 "Blessed by Odin"
+ nh_blessed_by_odin_desc:0 "The Allfather has granted his favor, enhancing our martial prowess and prestige among the faithful."
  nh_lokis_curse_modifier:0 "Проклятие Локи"
  nh_lokis_curse_modifier_desc:0 "Этот персонаж несет на себе бремя проклятия Локи, которое приносит в его жизнь неожиданные испытания, обман и хитрость."
  nh_hels_curse_modifier:0 "Проклятие Хель"

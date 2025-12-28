@@ -13,21 +13,12 @@ on_game_start = {
 nh_on_game_start_hs = {
 	effect = {
 		faith:norse_pagan = {
-			if = {
-				limit = { has_holy_site = joromaborg }
-				deactivate_holy_site = joromaborg
-			}
-			if = {
-				limit = { has_holy_site = miklagard }
-				deactivate_holy_site = miklagard
-			}
+			deactivate_holy_site = joromaborg
+			deactivate_holy_site = miklagard
 		}
 
 		faith:forn_sidr_pagan = {
-			if = {
-				limit = { has_holy_site = joromaborg }
-				deactivate_holy_site = joromaborg
-			}
+			deactivate_holy_site = joromaborg
 		}
 
 		faith:ginnregla_pagan = { }
@@ -35,14 +26,8 @@ nh_on_game_start_hs = {
 		faith:natturugudtruar_pagan = { }
 
 		faith:odinstru_pagan = {
-			if = {
-				limit = { has_holy_site = joromaborg }
-				deactivate_holy_site = joromaborg
-			}
-			if = {
-				limit = { has_holy_site = miklagard }
-				deactivate_holy_site = miklagard
-			}
+			deactivate_holy_site = miklagard
+			deactivate_holy_site = joromaborg
 		}
 		
 		faith:heidinn_pagan = { }

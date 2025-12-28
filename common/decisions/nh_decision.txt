@@ -189,12 +189,6 @@ nh_rome_hs_decision = {
 			add_dynasty_prestige = 1000
 		}
 
-			# Guard activation with has_holy_site per standards
-			if = {
-				limit = { root.faith = { has_holy_site = joromaborg } }
-				root.faith = { activate_holy_site = joromaborg }
-			}
-
 		#Can only happen once per faith
 		if = {
 			limit = { faith = faith:norse_pagan }
@@ -304,12 +298,6 @@ nh_constantinople_hs_decision = {
 		dynasty = {
 			add_dynasty_prestige = 1000
 		}
-
-			# Guard activation with has_holy_site per standards
-			if = {
-				limit = { root.faith = { has_holy_site = miklagard } }
-				root.faith = { activate_holy_site = miklagard }
-			}
 
 		#Can only happen once per faith
 		if = {
@@ -1135,5 +1123,125 @@ nh_iceland_yearly_ting = {
 
 	ai_will_do = {
 		base = 100
+	}
+}
+
+# v1.2 - Odinstru Elite Warriors
+nh_odinstru_raise_elite_warriors = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/nh_decision_call_to_arms.dds"
+	}
+
+	decision_group_type = nordic_honor
+	desc = nh_odinstru_raise_elite_warriors_desc
+	selection_tooltip = nh_odinstru_raise_elite_warriors_tooltip
+
+	sort_order = 1
+
+	ai_check_interval = 60
+
+	is_shown = {
+		is_lowborn = no
+		faith = faith:odinstru_pagan
+		any_held_title = {
+			tier = tier_county
+		}
+	}
+
+	is_valid = {
+		
+		is_at_war = no
+		piety_level >= 3
+		highest_held_title_tier >= tier_duchy
+
+		custom_description = {
+			text = nh_elite_warriors_holy_sites_requirement
+			faith = { holy_sites_controlled <= 3 }
+		}
+
+		# Not repeatable within cooldown
+		custom_description = {
+			text = nh_elite_warriors_cooldown_requirement
+			NOT = {
+				has_character_flag = nh_elite_warriors_cooldown
+			}
+		}
+
+		# Zealous requirement
+		OR = {
+			has_trait = zealous
+			has_trait = holy_warrior
+			has_trait = faith_warrior
+			piety_level >= 3
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		is_capable_adult = yes
+		is_imprisoned = no
+	}
+
+	cost = {
+		gold = 100
+		prestige = 1000
+		piety = 500
+	}
+
+	effect = {
+		save_scope_as = actor
+
+		# Apply scripted effect based on realm size
+		nh_spawn_elite_warriors_effect = yes
+
+		# Add blessed modifier
+		add_character_modifier = {
+			modifier = nh_blessed_by_odin
+			years = 3
+		}
+
+		# Dynasty prestige
+		dynasty = {
+			add_dynasty_prestige = 50
+		}
+
+		# Cooldown flag
+		add_character_flag = {
+			flag = nh_elite_warriors_cooldown
+			years = 15
+		}
+
+		# Trigger flavor event
+		trigger_event = {
+			id = nh.2001
+			days = 3
+		}
+	}
+
+	ai_potential = {
+		realm_size >= 5
+		is_at_war = no
+		gold >= 500
+	}
+
+	ai_will_do = {
+		base = 50
+
+		modifier = {
+			add = 50
+			OR = {
+				has_trait = holy_warrior
+				has_trait = faith_warrior
+			}
+		}
+
+		modifier = {
+			add = 30
+			piety_level >= 4
+		}
+
+		modifier = {
+			add = -100
+			gold < 500
+		}
 	}
 }

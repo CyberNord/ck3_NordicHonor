@@ -27,6 +27,8 @@
  nh_tyr_blessing_modifier_desc:0 "Tyr's favor shines upon this character, instilling them with bravery, justice, and a sense of honor."
  nh_njords_blessing_modifier:0 "Blessed by Njord"
  nh_njords_blessing_modifier_desc:0 "Njord's blessing brings prosperity, wealth, and success to this character, especially in matters of trade and maritime activities."
+ nh_blessed_by_odin:0 "Blessed by Odin"
+ nh_blessed_by_odin_desc:0 "The Allfather has granted his favor, enhancing our martial prowess and prestige among the faithful."
  nh_lokis_curse_modifier:0 "Cursed by Loki"
  nh_lokis_curse_modifier_desc:0 "This character bears the burden of Loki's curse, which brings unexpected challenges, deception, and trickery to their life."
  nh_hels_curse_modifier:0 "Haunted by Hel"

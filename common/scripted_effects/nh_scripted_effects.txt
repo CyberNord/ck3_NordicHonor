@@ -140,3 +140,87 @@ form_nh_iceland_scripted_effect = {
 	resolve_title_and_vassal_change = scope:change
 	hidden_effect = { set_primary_title_to = title:k_iceland }
 }
+
+
+# v1.2 - Spawn elite warriors based on realm size
+nh_spawn_elite_warriors_effect = {
+	# Small realm (< 5 counties)
+	if = {
+		limit = { realm_size < 5 }
+		spawn_army = {
+			men_at_arms = {
+				type = vigmen
+				stacks = 1
+			}
+			men_at_arms = {
+				type = varangian_veterans
+				stacks = 1
+			}
+			men_at_arms = {
+				type = bondi
+				stacks = 23
+			}
+			location = root.capital_province
+			origin = root.capital_province
+			inheritable = yes
+			uses_supply = yes
+			name = event_troop_elite_warriors_name
+		}
+	}
+	# Medium realm (5-10 counties)
+	else_if = {
+		limit = {
+			realm_size >= 5
+			realm_size <= 10
+		}
+		spawn_army = {
+			men_at_arms = {
+				type = vigmen
+				stacks = 2
+			}
+			men_at_arms = {
+				type = varangian_veterans
+				stacks = 2
+			}
+			men_at_arms = {
+				type = huscarl
+				stacks = 1
+			}
+			men_at_arms = {
+				type = bondi
+				stacks = 20
+			}
+			location = root.capital_province
+			origin = root.capital_province
+			inheritable = yes
+			uses_supply = yes
+			name = event_troop_elite_warriors_name
+		}
+	}
+	# Large realm (> 10 counties)
+	else = {
+		spawn_army = {
+			men_at_arms = {
+				type = vigmen
+				stacks = 5
+			}
+			men_at_arms = {
+				type = varangian_veterans
+				stacks = 3
+			}
+			men_at_arms = {
+				type = huscarl
+				stacks = 2
+			}
+			men_at_arms = {
+				type = bondi
+				stacks = 15
+			}
+			location = root.capital_province
+			origin = root.capital_province
+			inheritable = yes
+			uses_supply = yes
+			name = event_troop_elite_warriors_name
+		}
+	}
+}

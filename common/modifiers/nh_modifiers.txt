@@ -7,7 +7,7 @@ nh_county_trade_modifier = {
 
 nh_county_raid_modifier = {
 	icon = martial_positive
-	monthly_county_control_change_factor = 0.5
+	monthly_county_control_growth_add = 0.5
 	development_growth_factor = -0.1
 }
 

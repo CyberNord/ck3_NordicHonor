@@ -56,5 +56,13 @@
  nh_iceland_yearly_ting_confirm:0 "Gather the goðar!"
  nh_iceland_yearly_ting_tooltip:0 "A Ting - meeting is initiated, where all sort of stuff is discussed"
 
- # Decision Group Types
+# decision group
  decision_group_type_nordic_honor:0 "Nordic Honor"
+
+# Odinstru Elite Warriors Decision
+ nh_odinstru_raise_elite_warriors:0 "Summon Odin's Chosen Warriors"
+ nh_odinstru_raise_elite_warriors_desc:0 "As a devoted follower of Óðinnstrú, I can invoke the Allfather's blessing to rally the most zealous warriors from across my realm. These elite fighters, blessed by Odin himself, will form an army of unmatched skill and ferocity.\n\nSuch divine favor comes at a price - both in resources and in the fervor of our faith. But in times of great need, the gods provide for those who truly believe."
+ nh_odinstru_raise_elite_warriors_tooltip:0 "Elite warriors will gather at your capital based on realm size"
+ nh_odinstru_raise_elite_warriors_confirm:0 "The zealous gather..."
+ nh_elite_warriors_holy_sites_requirement:0 "Your Faith is in danger of beeing forgotten"
+ nh_elite_warriors_cooldown_requirement:0 "You have not recently raised Elite Warriors"

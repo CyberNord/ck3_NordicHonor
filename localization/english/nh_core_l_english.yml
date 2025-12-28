@@ -1,4 +1,5 @@
 ﻿l_english:
  event_troop_rollo_name:2 "[ROOT.Char.GetTitledFirstNamePossessiveNoTooltip] Normans"
  event_troop_gotland_name:2 "[ROOT.Char.GetTitledFirstNamePossessiveNoTooltip] Gotland Varangians"
- event_troop_ginregla:2 "[ROOT.Char.GetTitledFirstNamePossessiveNoTooltip] Iceland Warriors"
+ event_troop_ginregla_name:2 "[ROOT.Char.GetTitledFirstNamePossessiveNoTooltip] Iceland Warriors"
+ event_troop_elite_warriors_name:2 "[ROOT.Char.GetTitledFirstNamePossessiveNoTooltip] Fanatic Berserkers"

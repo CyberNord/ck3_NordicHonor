@@ -27,6 +27,8 @@
  nh_tyr_blessing_modifier_desc:0 "La faveur de Tyr brille sur ce personnage, lui insufflant bravoure, justice et sens de l'honneur."
  nh_njords_blessing_modifier:0 "Béni par Njord"
  nh_njords_blessing_modifier_desc:0 "La bénédiction de Njord apporte prospérité, richesse et succès à ce personnage, notamment en matière de commerce et d'activités maritimes.."
+ nh_blessed_by_odin:0 "Blessed by Odin"
+ nh_blessed_by_odin_desc:0 "The Allfather has granted his favor, enhancing our martial prowess and prestige among the faithful."
  nh_lokis_curse_modifier:0 "Maudits par Loki"
  nh_lokis_curse_modifier_desc:0 "Ce personnage porte le fardeau de la malédiction de Loki, ce qui entraîne des défis inattendus, des tromperies et des ruses dans sa vie."
  nh_hels_curse_modifier:0 "Hanté par Hel"
