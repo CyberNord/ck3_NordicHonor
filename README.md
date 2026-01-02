@@ -6,6 +6,8 @@ Adds new faiths, decisions, events, holy sites, and light historical flavor to m
 > No Paradox assets are included. All game assets belong to Paradox Interactive. \
 > Community impact:  2.6k+ subscribers, 566 favorites, 171 ratings 5/5 stars, 22k+ unique visitors (Stand 4. Okt 2025).
 
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/E1E81QTC2X)
+
 ## Highlights
 
 - **New Germanic/Norse faiths** with distinct flavor and mechanics  
