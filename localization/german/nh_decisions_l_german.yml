@@ -17,8 +17,8 @@
  nh_constantinople_hs_decision_confirm:0 "Joromaborg shall be [ROOT.Char.GetFaith.HighGodName]'s seat."
 
  nh_peace_christianity_decision:0 "Religious Coexistence"
- nh_peace_christianity_decision_desc:0 "With careful consideration and wisdom, [ROOT.Char.GetFirstName], the [ROOT.Char.GetTitle] of [ROOT.Char.GetRealm], has made the momentous decision to enact a Religious Coexistence Edict. This groundbreaking decree establishes a framework for peaceful coexistence between the Norse traditions and the Christian faith. It guarantees the freedom of religious practice and protects the rights of both believers, fostering an environment of mutual respect and understanding. By embracing this edict, the realm takes a significant step towards religious harmony, setting an example for future generations and ensuring a prosperous and tolerant future for all."
- nh_peace_christianity_decision_tooltip:0 "You will make peace with the Christians and enable interfaith marriages. Other nordic pagans might not like it"
+ nh_peace_christianity_decision_desc:0 "Christliche Familien sollen unsere Verwandten werden können, ohne dass wir die Götter unserer Ahnen aufgeben. Ich werde Ehen über diese Glaubensgrenze hinweg zulassen, auch wenn manche Gläubige darin einen Verrat an unseren Überlieferungen sehen."
+ nh_peace_christianity_decision_tooltip:0 "Ermöglicht Ehen mit Christen und erhält die bisherigen Glaubensgrundsätze. Religiöse Feindseligkeit bleibt bestehen."
  nh_peace_christianity_decision_confirm:0 "Call the priests!"
 
  nh_convert_whole_realm_to_feudalism_decision:0 "Another way to adopt [ROOT.Char.Custom('GetTribalReformGovernment')|U]ism."
@@ -66,3 +66,11 @@
  nh_odinstru_raise_elite_warriors_confirm:0 "The zealous gather..."
  nh_elite_warriors_holy_sites_requirement:0 "Your Faith is in danger of beeing forgotten"
  nh_elite_warriors_cooldown_requirement:0 "You have not recently raised Elite Warriors"
+ nh_odinstru_force_conversion:0 "Den Glauben mit Gewalt durchsetzen"
+ nh_odinstru_force_conversion_desc:0 "Wo unsere Gebete kein Gehör finden, sollen Schwert und Furcht den Glauben unserer Ahnen durchsetzen. Doch unterworfene Menschen vergessen das erlittene Leid nicht: Die Ländereien verarmen, Widerstand regt sich und benachbarte Herrscher werden uns dieses Vorgehen verübeln."
+ nh_odinstru_force_conversion_tooltip:0 "Eine andersgläubige Grafschaft Eurer Domäne gewaltsam bekehren"
+ nh_odinstru_force_conversion_confirm:0 "Die Götter verlangen es"
+ nh_force_conversion_cooldown_requirement:0 "Ihr habt in letzter Zeit keine gewaltsame Bekehrung durchgeführt"
+ nh_force_conversion_capital_requirement:0 "Eure Hauptstadt folgt Eurem Glauben"
+ nh_force_conversion_target_requirement:0 "Ihr besitzt andersgläubige Grafschaften in Eurer Domäne"
+ nh_holy_site_capacity_requirement:0 "Euer Glaube hat noch Platz für eine weitere heilige Stätte"

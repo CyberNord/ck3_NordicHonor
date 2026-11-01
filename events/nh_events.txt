@@ -489,19 +489,7 @@ nh.1003 ={
 			save_scope_as = actor		#loc
 		}
 
-		faith = {
-
-			remove_doctrine = special_faith_stadfast_heritage
-			add_doctrine = special_faith_traitor_heritage
-
-			if = {
-				limit = {has_doctrine = tenet_bhakti}
-				remove_doctrine = tenet_bhakti
-			} else = {
-				remove_doctrine = tenet_astrology
-			}
-			add_doctrine = tenet_christian_syncretism
-		}
+		nh_adopt_sidbrytari_effect = yes
 	}
 
 	option = {
@@ -524,7 +512,7 @@ nh.1004 = {
 	}
 
 	right_portrait = {
-		character = faith:catholic.religious_head
+		character = title:k_papal_state.holder
 		animation = personality_zealous
 	}
 
@@ -611,8 +599,7 @@ nh.1004 = {
 		name = nh.1004.option.catholic.desc
 		custom_tooltip = nh.1004.option.catholic_tooltip.desc
 		give_nickname = nick_nh_catholic_special
-		root = {set_character_faith = faith:catholic}
-		trigger_event = { on_action = on_faith_conversion }
+		root = { nh_story_convert_to_rite_effect = { RITE = rite:roman_rite } }
 
 		if = {
 			limit = { has_trait = vengeful }
@@ -675,8 +662,7 @@ nh.1004 = {
 		name = nh.1004.option.insular.desc
 		custom_tooltip = nh.1004.option.insular_tooltip.desc
 		give_nickname = nick_nh_insular_special
-		root = {set_character_faith = faith:insular_celtic}
-		trigger_event = { on_action = on_faith_conversion }
+		root = { nh_story_convert_to_rite_effect = { RITE = rite:insular_celtic } }
 
 		if = {
 			limit = { has_trait = gluttonous }
@@ -744,7 +730,7 @@ nh.1005 = {
 	}
 
 	right_portrait = {
-		character = faith:catholic.religious_head
+		character = title:k_papal_state.holder
 		animation = shock
 	}
 
@@ -767,8 +753,7 @@ nh.1005 = {
 		}
 		add_trait = zealous
 
-		root = {set_character_faith = faith:forn_sidr_pagan}
-		trigger_event = { on_action = on_faith_conversion }
+		root = { nh_story_convert_to_rite_effect = { RITE = rite:forn_sidr_pagan } }
 
 		ai_chance = {base = 100}
 	}
@@ -970,8 +955,7 @@ nh.1012 = {
 			divorce = primary_spouse
 		}
 
-		root = {set_character_faith = faith:catholic}
-		trigger_event = { on_action = on_faith_conversion }
+		root = { nh_story_convert_to_rite_effect = { RITE = rite:roman_rite } }
 
 		hidden_effect = { nh_marry_norman_historical_effect = yes }
 		nh_swear_fealty_effect = yes
@@ -1023,8 +1007,7 @@ nh.1012 = {
 			divorce = primary_spouse
 		}
 
-		root = {set_character_faith = faith:catholic}
-		trigger_event = { on_action = on_faith_conversion }
+		root = { nh_story_convert_to_rite_effect = { RITE = rite:roman_rite } }
 
 		hidden_effect = { nh_marry_norman_alternate_effect = yes }
 		nh_swear_fealty_effect = yes
@@ -1170,8 +1153,9 @@ nh.1015 = {
 		custom_tooltip = nh.0015.option.blot_tooltip.desc
 
 		hidden_effect = {
-			faith:ginnregla_pagan = {
+			faith:norse_pagan = {
 				every_faith_ruler = {
+					limit = { rite = rite:ginnregla_pagan }
 					random_list = {
 						15 = {
 							add_character_modifier = {
@@ -1249,8 +1233,9 @@ nh.1015 = {
 		custom_tooltip = nh.0015.option.trade_tooltip.desc
 
 		hidden_effect = {
-			faith:ginnregla_pagan = {
+			faith:norse_pagan = {
 				every_faith_ruler = {
+					limit = { rite = rite:ginnregla_pagan }
 					add_character_modifier = {
 						modifier = nh_thing_trade_modifier
 						years = 3
@@ -1282,8 +1267,9 @@ nh.1015 = {
 		custom_tooltip = nh.0015.option.build_tooltip.desc
 
 		hidden_effect = {
-			faith:ginnregla_pagan = {
+			faith:norse_pagan = {
 				every_faith_ruler = {
+					limit = { rite = rite:ginnregla_pagan }
 					add_character_modifier = {
 						modifier = nh_thing_build_modifier
 						years = 3
@@ -1315,8 +1301,9 @@ nh.1015 = {
 		custom_tooltip = nh.0015.option.diplomacy_tooltip.desc
 
 		hidden_effect = {
-			faith:ginnregla_pagan = {
+			faith:norse_pagan = {
 				every_faith_ruler = {
+					limit = { rite = rite:ginnregla_pagan }
 					add_character_modifier = {
 						modifier = nh_thing_diplomacy_modifier
 						years = 3
@@ -1427,13 +1414,14 @@ nh.2001 = {
 	option = {
 		name = nh.2001.a
 		custom_tooltip = nh.2001.a.tt
-		add_military_experience = 500
+		# CK3 has martial lifestyle XP; the old military-experience effect does not exist.
+		add_martial_lifestyle_xp = 500
 	}
 
 	option = {
 		name = nh.2001.b
 		custom_tooltip = nh.2001.b.tt
-		add_dynasty_prestige = 25
+		dynasty = { add_dynasty_prestige = 25 }
 	}
 }
 
@@ -1486,50 +1474,50 @@ nh.2011 = {
 		animation = personality_bold
 	}
 
-	# Pre-select up to 5 convertible counties
+	# Draw without replacement: random_in_list has no position parameter.
 	immediate = {
+		save_scope_as = converter
+		clear_saved_scope = county_option_1
+		clear_saved_scope = county_option_2
+		clear_saved_scope = county_option_3
+		clear_saved_scope = county_option_4
+		clear_saved_scope = county_option_5
 		every_held_title = {
 			limit = {
 				tier = tier_county
-				NOT = { title_province.faith = root.faith }
+				NOT = { title_province.faith = scope:converter.faith }
 			}
-			add_to_list = convertible_counties
+			add_to_list = nh_convertible_counties
 		}
-		
-		# Save up to 5 specific counties as scopes
+
 		random_in_list = {
-			list = convertible_counties
-			position = 0
-			limit = { always = yes }
+			list = nh_convertible_counties
 			save_scope_as = county_option_1
+			remove_from_list = nh_convertible_counties
 		}
-		
+
 		random_in_list = {
-			list = convertible_counties
-			position = 1
-			limit = { always = yes }
+			list = nh_convertible_counties
 			save_scope_as = county_option_2
+			remove_from_list = nh_convertible_counties
 		}
-		
+
 		random_in_list = {
-			list = convertible_counties
-			position = 2
-			limit = { always = yes }
+			list = nh_convertible_counties
 			save_scope_as = county_option_3
+			remove_from_list = nh_convertible_counties
 		}
-		
+
 		random_in_list = {
-			list = convertible_counties
-			position = 3
-			limit = { always = yes }
+			list = nh_convertible_counties
 			save_scope_as = county_option_4
+			remove_from_list = nh_convertible_counties
 		}
-		
+
 		random_in_list = {
-			list = convertible_counties
-			position = 4
-			limit = { always = yes }
+			list = nh_convertible_counties
 			save_scope_as = county_option_5
+			remove_from_list = nh_convertible_counties
 		}
 	}
 
@@ -1704,23 +1692,28 @@ nh.2011 = {
 		# Convert all 5 counties
 		scope:county_option_1 = {
 			nh_convert_county_forced_effect = yes
-			set_county_development = 0
+			# Subtract the current level: CK3 has no set_county_development effect.
+			change_development_level = { subtract = development_level }
 		}
 		scope:county_option_2 = {
 			nh_convert_county_forced_effect = yes
-			set_county_development = 0
+			# Subtract the current level: CK3 has no set_county_development effect.
+			change_development_level = { subtract = development_level }
 		}
 		scope:county_option_3 = {
 			nh_convert_county_forced_effect = yes
-			set_county_development = 0
+			# Subtract the current level: CK3 has no set_county_development effect.
+			change_development_level = { subtract = development_level }
 		}
 		scope:county_option_4 = {
 			nh_convert_county_forced_effect = yes
-			set_county_development = 0
+			# Subtract the current level: CK3 has no set_county_development effect.
+			change_development_level = { subtract = development_level }
 		}
 		scope:county_option_5 = {
 			nh_convert_county_forced_effect = yes
-			set_county_development = 0
+			# Subtract the current level: CK3 has no set_county_development effect.
+			change_development_level = { subtract = development_level }
 		}
 		
 		faith = {
@@ -1813,6 +1806,8 @@ nh.2012 = {
 	}
 
 	immediate = {
+		# Always initialise the outcome, including the peaceful 80% branch.
+		save_scope_value_as = { name = has_resistance value = no }
 		# 20% chance of resistance event
 		random = {
 			chance = 20
@@ -1827,7 +1822,7 @@ nh.2012 = {
 		name = nh.2012.a
 		
 		if = {
-			limit = { scope:has_resistance = yes }
+			limit = { exists = scope:has_resistance scope:has_resistance = yes }
 			custom_tooltip = nh.2012.a.resistance
 			trigger_event = {
 				id = nh.2013

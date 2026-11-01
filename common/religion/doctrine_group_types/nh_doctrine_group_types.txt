@@ -1,0 +1,6 @@
+﻿# Rite-specific heritage choices, retained within the Germanic religion.
+has_special_heritage = {
+	category = special
+	doctrine_lock = religion
+	is_available_on_create = { religion = religion:germanic_religion }
+}

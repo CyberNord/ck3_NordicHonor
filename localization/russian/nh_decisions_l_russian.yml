@@ -17,8 +17,8 @@
  nh_constantinople_hs_decision_confirm:0 "Константинополь станет местом, где обитает [ROOT.Char.GetFaith.HighGodName]."
 
  nh_peace_christianity_decision:0 "Религиозный эдикт о сосуществовании"
- nh_peace_christianity_decision_desc:0 "[ROOT.Char.GetFirstName] принял решение о принятии Религиозного Эдикта Сосуществования. Это революционное постановление устанавливает рамки мирного сосуществования между северными традициями и христианской верой. Оно гарантирует свободу исповедания религии и защищает права верующих, способствуя созданию атмосферы взаимного уважения и понимания. Приняв это постановление, королевство сделало значительный шаг в направлении религиозного согласия, служа примером для будущих поколений и обеспечивая процветание и религиозно терпимое будущее для всех."
- nh_peace_christianity_decision_tooltip:0 "Вы заключите мир с христианами и разрешите межрелигиозные браки. Другие северные язычники могут этого не одобрить."
+ nh_peace_christianity_decision_desc:0 "Christian families may become our kin without taking away the gods of our ancestors. I shall permit marriages across this religious divide and accept the distrust of those who see such ties as a betrayal of our traditions."
+ nh_peace_christianity_decision_tooltip:0 "Разрешает браки с христианами, сохраняя нынешние догматы. Религиозная враждебность остаётся прежней."
  nh_peace_christianity_decision_confirm:0 "Позовите жрецов!"
 
  nh_convert_whole_realm_to_feudalism_decision:0 "Другой способ принять [ROOT.Char.Custom('GetTribalReformGovernment')|U]"
@@ -66,3 +66,11 @@
  nh_odinstru_raise_elite_warriors_confirm:0 "The zealous gather..."
  nh_elite_warriors_holy_sites_requirement:0 "Your Faith is in danger of beeing forgotten"
  nh_elite_warriors_cooldown_requirement:0 "You have not recently raised Elite Warriors"
+ nh_odinstru_force_conversion:0 "Force Religious Conversion"
+ nh_odinstru_force_conversion_desc:0 "Through fire and blood, we can purge the false faiths from our conquered lands. The sword shall be our argument, and terror our teacher. Those who refuse the old gods will learn obedience through suffering.\n\nThis path is brutal and will bring harsh consequences - reduced prosperity, rebellious subjects, and the scorn of our neighbors. But for true believers of Óðinnstrú, no price is too high to spread the faith of our ancestors."
+ nh_odinstru_force_conversion_tooltip:0 "Convert a conquered county through brutal purges"
+ nh_odinstru_force_conversion_confirm:0 "The gods demand it"
+ nh_force_conversion_cooldown_requirement:0 "You have not recently forced conversions"
+ nh_force_conversion_capital_requirement:0 "Your capital follows your faith"
+ nh_force_conversion_target_requirement:0 "You control counties of different faiths"
+ nh_holy_site_capacity_requirement:0 "Your faith has room for another holy site"

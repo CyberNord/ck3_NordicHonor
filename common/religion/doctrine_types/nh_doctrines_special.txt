@@ -1,0 +1,75 @@
+﻿# Retain and redesign all five original heritage doctrine keys.
+# Heritage grants only the features below; no custom opinions, traits or pair updates.
+# Three visible choices and two hidden event choices, with zero additional divergence.
+
+# Nordic Similarity
+# Shared gods connect the regional rites through access to friendship.
+# Befriend access is granted through the shared vanilla access trigger.
+special_faith_has_germanic_heritage = {
+	doctrine_group_type = has_special_heritage
+	icon = special_faith_has_germanic_heritage
+	index = 0
+	visible = yes
+	is_shown = { religion = religion:germanic_religion }
+	piety_cost = { value = 2000 }
+	parameters = { nh_nordic_befriend_access }
+}
+
+# Staðfast
+# Conviction is expressed through fervor, without scripted opinion penalties.
+# Fervor is a faith resource; a branch rite does not gain a separate fervor pool.
+special_faith_stadfast_heritage = {
+	doctrine_group_type = has_special_heritage
+	icon = special_faith_stadfast_heritage
+	index = 1
+	visible = yes
+	is_shown = { religion = religion:germanic_religion }
+	piety_cost = { value = 2000 }	special_parameters = { fervor_per_holy_site = 1 }
+}
+
+# None: no special heritage bonus.
+special_faith_no_special_heritage = {
+	doctrine_group_type = has_special_heritage
+	icon = special_faith_no_special_heritage
+	index = 2
+	visible = yes
+	is_shown = { religion = religion:germanic_religion }
+	piety_cost = { value = 1000 }
+}
+
+# RESERVED / CURRENTLY UNUSED: Christian Acceptance.
+# Keep hidden and unselectable. No starting rite, decision or event grants this.
+# The unused adoption effect is preparation for a possible future light version
+# of Christian Syncretism; its final design is not decided yet.
+# The prepared parameter only waives Christian marriage penalties, without
+# syncretic opinion, hostility or artifact effects. Do not activate it implicitly.
+special_faith_christian_heritage = {
+	doctrine_group_type = has_special_heritage
+	icon = special_faith_christian_heritage
+	index = 3
+	visible = no
+	is_shown = { always = no }
+	can_pick = { always = no }
+	piety_cost = { value = 200000 }
+	# Marriage acceptance without adopting the Christian Syncretism tenet.
+	parameters = { nh_christian_marriage_acceptance }
+}
+
+# Hidden heritage: Siðbrytari, the active Christian coexistence pact (nh.1003).
+# Replaces the rite's previous heritage and preserves its existing three tenets.
+# Unlike Christian Acceptance, this is actually granted by a current decision.
+special_faith_traitor_heritage = {
+	doctrine_group_type = has_special_heritage
+	icon = special_faith_traitor_heritage
+	index = 4
+	visible = no
+	is_shown = { always = no }
+	can_pick = { always = no }
+	piety_cost = { value = 200000 }
+	parameters = {		# Bilateral marriage exception only; other marriage requirements still apply.
+		nh_christian_marriage_acceptance
+		# Reuse vanilla's conversion-rate bonus and county conversion resistance.
+		mendicant_preachers_conversion_active
+		tenet_adaptive_conversion_resistance
+	}
+}

@@ -42,7 +42,7 @@
 
  # Peace with Christianity [nh.1003]
  nh.1003.t:0 "Религиозный эдикт о сосуществовании"
- nh.1003.desc:0 "[ROOT.Char.GetFirstName] смело вступает на путь религиозного согласия и заключает исторический договор о сосуществовании с христианской верой. Посредством дипломатических переговоров и взаимного уважения была объявлена декларация о мире и терпимости. Это важное событие стало поворотным моментом в религиозном ландшафте, поскольку круги власти вступили в новую эру гармонии между скандинавскими традициями и христианскими убеждениями. Будущее обещает процветание и взаимное понимание, так как круги власти идут по пути единства и сотрудничества."
+ nh.1003.desc:0 "[actor.GetTitledFirstName] has opened the way for marriages between our people and Christian families. Our rites and sacred teachings endure, yet some of the faithful call this accommodation a betrayal. Kinship may bridge the divide, though old grievances will not fade in a day."
  nh.1003.option.accept.desc:0 "Ragnarök нам больше не грозит."
 
  # Iceland pagan/christianity [nh.1004 to .1006]

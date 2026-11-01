@@ -17,8 +17,8 @@
  nh_constantinople_hs_decision_confirm:0 "Joromaborg shall be [ROOT.Char.GetFaith.HighGodName]'s seat."
 
  nh_peace_christianity_decision:0 "Religious Coexistence"
- nh_peace_christianity_decision_desc:0 "With careful consideration and wisdom, [ROOT.Char.GetFirstName], the [ROOT.Char.GetTitle] of [ROOT.Char.GetRealm], has made the momentous decision to enact a Religious Coexistence Edict. This groundbreaking decree establishes a framework for peaceful coexistence between the Norse traditions and the Christian faith. It guarantees the freedom of religious practice and protects the rights of both believers, fostering an environment of mutual respect and understanding. By embracing this edict, the realm takes a significant step towards religious harmony, setting an example for future generations and ensuring a prosperous and tolerant future for all."
- nh_peace_christianity_decision_tooltip:0 "You will make peace with the Christians and enable interfaith marriages. Other nordic pagans might not like it"
+ nh_peace_christianity_decision_desc:0 "Christian families may become our kin without taking away the gods of our ancestors. I shall permit marriages across this religious divide and accept the distrust of those who see such ties as a betrayal of our traditions."
+ nh_peace_christianity_decision_tooltip:0 "기존 신조를 유지하면서 기독교인과의 혼인을 허용합니다. 종교적 적대감은 변하지 않습니다."
  nh_peace_christianity_decision_confirm:0 "Call the priests!"
 
  nh_convert_whole_realm_to_feudalism_decision:0 "Another way to adopt [ROOT.Char.Custom('GetTribalReformGovernment')|U]ism."
@@ -66,3 +66,11 @@
  nh_odinstru_raise_elite_warriors_confirm:0 "The zealous gather..."
  nh_elite_warriors_holy_sites_requirement:0 "Your Faith is in danger of beeing forgotten"
  nh_elite_warriors_cooldown_requirement:0 "You have not recently raised Elite Warriors"
+ nh_odinstru_force_conversion:0 "Force Religious Conversion"
+ nh_odinstru_force_conversion_desc:0 "Through fire and blood, we can purge the false faiths from our conquered lands. The sword shall be our argument, and terror our teacher. Those who refuse the old gods will learn obedience through suffering.\n\nThis path is brutal and will bring harsh consequences - reduced prosperity, rebellious subjects, and the scorn of our neighbors. But for true believers of Óðinnstrú, no price is too high to spread the faith of our ancestors."
+ nh_odinstru_force_conversion_tooltip:0 "Convert a conquered county through brutal purges"
+ nh_odinstru_force_conversion_confirm:0 "The gods demand it"
+ nh_force_conversion_cooldown_requirement:0 "You have not recently forced conversions"
+ nh_force_conversion_capital_requirement:0 "Your capital follows your faith"
+ nh_force_conversion_target_requirement:0 "You control counties of different faiths"
+ nh_holy_site_capacity_requirement:0 "Your faith has room for another holy site"

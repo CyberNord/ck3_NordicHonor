@@ -42,7 +42,7 @@
   # Peace with Christianity [nh.1003] 
 
  nh.1003.t: "Un pacte de coexistence" #
- nh.1003.desc: "Dans une démarche audacieuse vers l'harmonie religieuse, [actor.GetFirstName], le [actor.GetTitle] du [actor.GetRealm], a décidé de nouer un pacte historique de coexistence avec la foi chrétienne. Grâce à des négociations diplomatiques et au respect mutuel, une déclaration de paix et de tolérance a été proclamée. Cette occasion capitale marque un tournant dans le paysage religieux, alors que le royaume embrasse une nouvelle ère d'harmonie entre les traditions nordiques et les croyances chrétiennes. L'avenir est porteur de la promesse d'une prospérité et d'une compréhension partagées, alors que le royaume s'engage sur la voie de l'unité et de la coopération." #
+ nh.1003.desc:0 "[actor.GetTitledFirstName] has opened the way for marriages between our people and Christian families. Our rites and sacred teachings endure, yet some of the faithful call this accommodation a betrayal. Kinship may bridge the divide, though old grievances will not fade in a day."
  nh.1003.option.accept.desc: "Plus de Ragnarök." #
 
    # Iceland pagan/christianity [nh.1004 to .1006] 

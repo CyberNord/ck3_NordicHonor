@@ -1,0 +1,203 @@
+﻿# Nordic conquest sites use their original names; vanilla Rome/Constantinople are untouched.
+# Existing NordicHonor modifier values are preserved as eminent-site faith bonuses.
+# Local base bonuses also apply to Eminent sites. scale=1 makes the county bonus
+# independent of relic rarity; the holder bonus belongs to the county holder, not a liege.
+
+# Original historical context notes; "Retired" refers to their former vanilla status.
+# These notes do not assign sites: current membership is defined in faith_types.
+#####################
+# Eurasian Pagan	#
+#####################
+
+# Norse
+## Uppsala
+	# Site of Scandinavia's pre-eminent temple, both pre & post Christianisation.
+## Lejre
+	# (Retired) Hrólfr's Hall, a legendary king.
+## Paderborn
+	# Site of Saxon Irminsul.
+## Zeeland
+	# (Retired) Focal point for an old major Germanic cult. Probably.
+## Ranaheim
+	# Important religious site in assorted sagas.
+## York
+	# Focal point for Norse activities in the British Isles, place of Ragnar's "martyrdom" (and subsequently suddenly genealogically important for half of Scandinavia's nobility).
+## Kiev
+	# Focal point for Norse activities in Russia & symbolic of their influence in the east.
+
+# Legacy Finnic reference notes: raivola, hiiumaa, akkel.
+# Only actually defined and assigned sites are used by the current faiths.
+
+# Trelleborg - These fortresses likely had religious importance, serving as regional centers for religious activities.
+trelleborg = {
+	county = c_skane
+	barony = b_trelleborg
+	faith_character_modifier = {
+
+		build_speed = -0.15
+		diplomacy_per_prestige_level = 2
+	}
+}
+
+# Thingvellir, held great importance in Norse culture. It was the site of the Alþingi, the national assembly of Iceland. It was also a gathering place for religious and cultural events.
+thingvellir = {
+	county = c_sudurland
+	# Assembly and law: a diplomatic holder and a more content local population.
+	county_holder_character_modifier = {
+		diplomacy = 2
+	}
+	county_modifier_scaled = {
+		scale = 1
+		county_opinion_add = 10
+	}
+	faith_character_modifier = {
+
+		development_growth_factor = 0.2
+		defender_advantage = 10
+		monthly_piety_gain_mult = 0.2
+		stewardship_per_piety_level = 2
+	}
+}
+
+# Heiligenberg, was an ancient hilltop settlement with evidence of Germanic occupation. It was considered a sacred site and likely had religious and ceremonial significance.
+heiligenberg = {
+	county = c_grunningen
+	barony = b_heiligenberg
+	# Sacred hillfort: local leadership and defensive strength.
+	county_holder_character_modifier = {
+		martial = 1
+	}
+	county_modifier_scaled = {
+		scale = 1
+		defender_holding_advantage = 5
+	}
+	faith_character_modifier = {
+
+		martial = 3
+		knight_effectiveness_mult = 0.05
+	}
+}
+
+# Gniezno, was an important religious center during the early medieval period. It is associated with both Slavic and Germanic influences.
+gniezno ={
+	county = c_gnieznienska
+	# Regional religious center: administration and steady local development.
+	county_holder_character_modifier = {
+		stewardship = 1
+	}
+	county_modifier_scaled = {
+		scale = 1
+		development_growth_factor = 0.1
+	}
+	faith_character_modifier = {
+
+		stewardship = 2
+		monthly_prestige_gain_mult = 0.05
+	}
+}
+
+# Břeclav, is believed to have been a significant early medieval center associated with both Germanic and Slavic influences.
+breclav = {
+	county = c_znojmo
+	barony = b_breclav
+	faith_character_modifier = {
+
+		different_culture_opinion = 15
+		different_faith_opinion = 15
+	}
+}
+
+# Hallstatt, is an ancient village which thrived in the region during the early Iron Age. While the Hallstatt culture predates the Germanic and Norse periods, it is considered an important site for understanding the prehistoric cultures of Central Europe.
+hallstatt = {
+	county = c_hallstatt
+	faith_character_modifier = {
+
+		mountains_development_growth_factor = 0.2
+		mountains_advantage = 10
+	}
+}
+
+# Retired vanilla keys still used by NordicHonor. Locations follow existing landed titles.
+# The old mod supplied no bonuses here; approved local base effects now give them value.
+lejre = {
+	county = c_sjaelland
+	barony = b_roskilde
+	# Legendary royal center: prestige for its holder and a stronger local levy.
+	county_holder_character_modifier = {
+		monthly_prestige_gain_mult = 0.1
+	}
+	county_modifier_scaled = {
+		scale = 1
+		levy_size = 0.25
+	}
+}
+
+zeeland = {
+	county = c_zeeland
+	barony = b_middelburg
+	# Cult and trade: devotion for its holder and local prosperity.
+	county_holder_character_modifier = {
+		monthly_piety_gain_mult = 0.1
+	}
+	county_modifier_scaled = {
+		scale = 1
+		tax_mult = 0.2
+	}
+}
+
+# rome-germanic (no real holy site, but sure a trophy for some pagans)
+# Conquest-trophy context retained; the current type is a normal scripted holy site.
+# Same location and modifiers as the installed 1.20.1.2 vanilla type.
+joromaborg = {
+	county = c_roma
+	barony = b_vaticano
+
+	county_holder_character_modifier = {
+		stewardship = 1
+	}
+
+	county_modifier_scaled = {
+		scale = holy_site_total_artifact_rarity
+		development_growth_factor = 0.01
+		county_opinion_add = 1
+	}
+
+	faith_character_modifier = {
+		stewardship = 1
+		church_holding_build_gold_cost = -0.1
+	}
+
+	faith_character_modifier_scaled = {
+		scale = holy_site_total_artifact_rarity
+		development_growth_factor = 0.01
+		character_travel_speed_mult = 0.01
+	}
+}
+
+# constantinople-germanic (no real holy site, but sure a trophy for some pagans)
+# Conquest-trophy context retained; the current type is a normal scripted holy site.
+# Same location and modifiers as the installed 1.20.1.2 vanilla type.
+miklagard = {
+	county = c_byzantion
+
+	county_holder_character_modifier = {
+		learning = 1
+		courtier_and_guest_opinion = 5
+	}
+
+	county_modifier_scaled = {
+		scale = holy_site_total_artifact_rarity
+		tax_mult = 0.01
+		county_opinion_add = 1
+	}
+
+	faith_character_modifier = {
+		cultural_head_fascination_mult = 0.05
+		learning = 1
+	}
+
+	faith_character_modifier_scaled = {
+		scale = holy_site_total_artifact_rarity
+		cultural_head_fascination_mult = 0.01
+	}
+}

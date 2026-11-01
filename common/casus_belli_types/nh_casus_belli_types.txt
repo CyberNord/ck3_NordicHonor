@@ -1,0 +1,451 @@
+﻿# Nordic Honor - Religious Conquest Casus Belli
+# Exclusive to Óðinnstrú faith
+
+nh_holy_conquest_cb = {
+	icon = county_conquest_cb
+	group = conquest
+
+	combine_into_one = yes
+	should_show_war_goal_subview = yes
+	mutually_exclusive_titles = { always = yes }
+
+	attacker_score_from_occupation_scale = 150
+	attacker_score_from_battles_scale = 150
+	defender_score_from_battles_scale = 150
+
+	allowed_for_character = {
+		# Must be Óðinnstrú
+		rite = rite:odinstru_pagan
+		
+		# Basic conquest CB requirements
+		can_use_conquest_cbs_trigger = yes
+		
+		# Must have minimum piety level
+		piety_level >= 2
+		
+		NOT = {
+			government_has_flag = government_is_landless_adventurer
+		}
+	}
+
+	allowed_for_character_display_regardless = {
+		# Struggle constraint
+		custom_tooltip = {
+			text = struggle_involvement_cb_check_failure
+			struggle_blocks_invasion_conquest_cb_trigger = yes
+		}
+	}
+
+	allowed_against_character = {
+		scope:attacker = {
+			ALL_FALSE = {
+				top_liege = scope:defender.top_liege
+				liege = scope:defender
+			}
+		}
+		
+		# Must be different faith
+		scope:defender.faith != scope:attacker.faith
+	}
+
+	target_titles = all
+	target_title_tier = duchy
+	target_de_jure_regions_above = yes
+	ignore_effect = change_title_holder
+
+	ai_can_target_all_titles = {
+		can_use_viking_invasion_cbs_trigger = yes
+	}
+
+	ai_score_mult = {
+		value = viking_conquest_ai_score_value
+
+		# Feudal gov constraints
+		add = {
+			every_in_list = {
+				list = target_titles
+				if = {
+					limit = { feudal_clan_tribal_conquest_constraints = yes }
+					add = -1000
+				}
+			}
+		}
+
+		# House relations
+		add = house_relation_ai_score_value
+		
+		# Struggle constraints
+		multiply = struggle_wars_prioritise_struggle_targets_value
+		
+		# Boost for zealous characters
+		if = {
+			limit = { scope:attacker = { has_trait = zealous } }
+			multiply = 1.5
+		}
+	}
+
+	valid_to_start = {
+		scope:target = {
+			is_landless_type_title = no
+			tier = tier_duchy
+			
+			# Must border attacker's realm or use viking rules
+			OR = {
+				any_in_de_jure_hierarchy = {
+					tier = tier_county
+					any_county_province = {
+						any_neighboring_province = {
+							county = {
+								holder = {
+									OR = {
+										this = scope:attacker
+										is_liege_or_above = scope:attacker
+									}
+								}
+							}
+						}
+					}
+				}
+				# Viking conquest rules
+				AND = {
+					can_use_viking_invasion_cbs_trigger = { FACTION_PARAMETER = no }
+					any_in_de_jure_hierarchy = {
+						tier = tier_county
+						holder.top_liege = scope:defender
+						title_province = {
+							OR = {
+								geographical_region = world_europe_west_britannia
+								geographical_region = world_europe_west
+								geographical_region = world_europe_north
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	should_invalidate = {
+		NOT = {
+			any_in_list = {
+				list = target_titles
+				any_in_de_jure_hierarchy = {
+					tier = tier_county
+					holder = {
+						OR = {
+							this = scope:defender
+							target_is_liege_or_above = scope:defender
+						}
+					}
+				}
+			}
+		}
+	}
+
+	on_invalidated_desc = msg_county_conquest_war_invalidated_message
+	on_invalidated = {}
+
+	cost = {
+		piety = {
+			value = 150
+			desc = CB_HOLY_WAR_COST
+			
+			# Reduced cost for Óðinnstrú (religious war)
+			multiply = 0.75
+			
+			# Realm size scaling
+			add = {
+				value = 5
+				multiply = scope:attacker.realm_size
+				desc = CB_REALM_SIZE_COST
+				max = 100
+			}
+			
+			multiply = common_cb_piety_cost_multiplier
+		}
+		
+		prestige = {
+			value = 100
+			desc = CB_CONQUEST_COST
+			
+			add = {
+				value = 5
+				multiply = scope:attacker.realm_size
+				desc = CB_REALM_SIZE_COST
+				max = 150
+			}
+			
+			multiply = common_cb_prestige_cost_multiplier
+		}
+	}
+
+	on_declaration = {
+		on_declared_war = yes
+		
+		# Initial fervor impact
+		scope:attacker.faith = {
+			change_fervor = {
+				value = 2
+				desc = fervor_holy_conquest_declared
+			}
+		}
+	}
+
+	on_victory_desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = { scope:attacker = { is_local_player = yes } }
+				desc = nh_holy_conquest_cb_victory_desc_attacker
+			}
+			desc = nh_holy_conquest_cb_victory_desc
+		}
+	}
+
+	on_victory = {
+		scope:attacker = { 
+			show_pow_release_message_effect = yes 
+			accolade_attacker_war_end_glory_gain_med_effect = yes
+		}
+		
+		# Legitimacy gain
+		add_legitimacy_attacker_victory_effect = yes
+
+		create_title_and_vassal_change = {
+			type = conquest
+			save_scope_as = change
+			add_claim_on_loss = yes
+		}
+
+		# Transfer all targeted titles and their de jure vassals
+		every_in_list = {
+			list = target_titles
+			change_title_holder_include_vassals = {
+				holder = scope:attacker
+				change = scope:change
+			}
+		}
+
+		resolve_title_and_vassal_change = scope:change
+
+		# Imprison up to 7 enemy characters (from design)
+		scope:defender = {
+			save_temporary_scope_as = defender_for_imprisonment
+			every_courtier = {
+				limit = {
+					is_ruler = no
+					is_imprisoned = no
+					faith != scope:attacker.faith
+					NOT = { this = scope:defender }
+				}
+				random = {
+					chance = 50
+					if = {
+						limit = {
+							scope:attacker = {
+								any_prisoner = {
+									count < 7
+								}
+							}
+						}
+						scope:attacker = {
+							imprison = {
+								target = prev
+								type = house_arrest
+							}
+						}
+					}
+				}
+			}
+		}
+
+		# Prestige for attacker
+		scope:attacker = {
+			add_prestige_experience = medium_prestige_value
+		}
+
+		# Allies prestige
+		modify_allies_of_participants_fame_values = {
+			WINNER = scope:attacker
+			FAME_BASE = medium_prestige_value
+			IS_RELIGIOUS_WAR = yes
+			WINNER_ALLY_FAME_SCALE = 1
+			LOSER_ALLY_FAME_SCALE = 1
+		}
+
+		# Truce
+		add_truce_attacker_victory_effect = yes
+
+		# FP1: stele memory
+		scope:attacker = { fp1_remember_recent_conquest_victory_effect = yes }
+		
+		# Feature 4 effects will be triggered via on_action
+		
+		# Fervor for victory
+		scope:attacker.faith = {
+			change_fervor = {
+				value = 15
+				desc = fervor_holy_conquest_victory
+			}
+		}
+		
+		scope:defender.faith = {
+			change_fervor = {
+				value = -15
+				desc = fervor_holy_conquest_defeat
+			}
+		}
+	}
+
+	on_white_peace_desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = { scope:defender = { is_local_player = yes } }
+				desc = nh_holy_conquest_cb_white_peace_desc_defender
+			}
+			desc = nh_holy_conquest_cb_white_peace_desc
+		}
+	}
+
+	on_white_peace = {
+		scope:attacker = { show_pow_release_message_effect = yes }
+		
+		# Minor prestige loss for attacker
+		scope:attacker = {
+			add_prestige = {
+				value = medium_prestige_value
+				multiply = -0.5
+			}
+			stress_impact = {
+				ambitious = medium_stress_impact_gain
+				zealous = medium_stress_impact_gain
+			}
+		}
+
+		# Allies prestige
+		modify_allies_of_participants_fame_values = {
+			WINNER = scope:attacker
+			FAME_BASE = minor_prestige_value
+			IS_RELIGIOUS_WAR = yes
+			WINNER_ALLY_FAME_SCALE = 1
+			LOSER_ALLY_FAME_SCALE = 1
+		}
+
+		scope:defender = {
+			stress_impact = {
+				arrogant = medium_stress_impact_gain
+			}
+		}
+
+		add_truce_white_peace_effect = yes
+		
+		# Partial fervor impact (treated as victory)
+		scope:attacker.faith = {
+			change_fervor = {
+				value = 5
+				desc = fervor_holy_conquest_white_peace
+			}
+		}
+	}
+
+	on_defeat_desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = { scope:defender = { is_local_player = yes } }
+				desc = nh_holy_conquest_cb_defeat_desc_defender
+			}
+			triggered_desc = {
+				trigger = {
+					scope:attacker = {
+						is_local_player = yes
+						has_targeting_faction = yes
+					}
+				}
+				desc = nh_holy_conquest_cb_defeat_desc_attacker
+			}
+			desc = nh_holy_conquest_cb_defeat_desc
+		}
+	}
+
+	on_defeat = {
+		scope:attacker = { show_pow_release_message_effect = yes }
+
+		# Legitimacy loss
+		add_legitimacy_attacker_defeat_effect = yes
+
+		# Influence loss
+		add_influence_attacker_defeat_effect = yes
+
+		scope:defender = {
+			accolade_defender_war_end_glory_gain_low_effect = yes
+			add_prestige_war_defender_effect = {
+				PRESTIGE_VALUE = major_prestige_value
+			}
+		}
+
+		# Heavy penalties for attacker
+		scope:attacker = {
+			pay_short_term_gold_reparations_effect = {
+				GOLD_VALUE = 3
+			}
+			add_prestige = major_prestige_loss
+			add_piety = {
+				value = minor_piety_value
+				multiply = -1
+			}
+		}
+
+		# Allies prestige
+		modify_allies_of_participants_fame_values = {
+			WINNER = scope:defender
+			FAME_BASE = medium_prestige_value
+			IS_RELIGIOUS_WAR = yes
+			WINNER_ALLY_FAME_SCALE = 1
+			LOSER_ALLY_FAME_SCALE = 1
+		}
+
+		add_truce_attacker_defeat_effect = yes
+
+		scope:attacker = {
+			save_temporary_scope_as = loser
+		}
+		on_lost_aggression_war_discontent_loss = yes
+		
+		# Feature 4 effects will be triggered via on_action
+		
+		# Fervor for defeat
+		scope:attacker.faith = {
+			change_fervor = {
+				value = -10
+				desc = fervor_holy_conquest_defeat
+			}
+		}
+		
+		scope:defender.faith = {
+			change_fervor = {
+				value = 10
+				desc = fervor_holy_conquest_defense_victory
+			}
+		}
+	}
+
+	transfer_behavior = transfer
+
+	on_primary_attacker_death = inherit
+	on_primary_defender_death = inherit
+
+	attacker_allies_inherit = yes
+	defender_allies_inherit = yes
+
+	war_name = "NH_HOLY_CONQUEST_WAR_NAME"
+	war_name_base = "NH_HOLY_CONQUEST_WAR_NAME_BASE"
+	cb_name = "NH_HOLY_CONQUEST_CB_NAME"
+
+	interface_priority = 90
+
+	use_de_jure_wargoal_only = yes
+
+	attacker_wargoal_percentage = 0.8
+
+	max_defender_score_from_occupation = 150
+	max_attacker_score_from_occupation = 150
+}

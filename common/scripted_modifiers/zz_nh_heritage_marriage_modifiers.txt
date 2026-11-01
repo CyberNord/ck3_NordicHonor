@@ -1,0 +1,133 @@
+﻿# CK3 1.20.1.2 targeted object override; divergence and all vanilla exceptions retained.
+marriage_ai_accept_faith_hostility_modifier = {
+	#########
+	# FAITH #
+	#########
+	modifier = { # A recipient will be reluctant (to differing degrees) to agree to marriages sent from an puppet_or_actor of a different faith
+		#Same faith is always fully accepted, so we can skip the hostility level check below
+		scope:recipient.faith != scope:puppet_or_actor.faith
+		NOT = { nh_christian_heritage_marriage_pair_trigger = { CHARACTER_1 = scope:puppet_or_actor CHARACTER_2 = scope:recipient } } # Event heritage waives only this religious penalty.
+		# Nomads care little of Faith within the Steppe, and Tributaries are willing to marry them, too.
+		trigger_if = {
+			limit = {
+				scope:puppet_or_actor = {
+					government_has_flag = government_is_in_steppe
+				}
+			}
+			scope:recipient = {
+				NOR = {
+					government_has_flag = government_is_in_steppe
+					is_tributary_of = scope:puppet_or_actor
+				}
+			}
+		}
+		trigger_if = {
+			limit = {
+				scope:recipient = {
+					government_has_flag = government_is_in_steppe
+				}
+			}
+			scope:puppet_or_actor = {
+				NOR = {
+					government_has_flag = government_is_in_steppe
+					is_tributary_of = scope:recipient
+				}
+			}
+		}
+
+		scope:recipient.rite = {
+			rite_hostility_level = {
+				target = scope:puppet_or_actor.rite
+				value > faith_fully_accepted_level
+			}
+		}
+		add = {
+			value = -10
+			if = {
+				limit = {
+					NOR = {
+						# Exempt certain struggle phases.
+						is_struggle_parameter_active_interfaith_marriages_available_between_involved_characters_trigger = yes
+						# Exempt Conciliation struggle resolution
+						AND = {
+							has_global_variable = fp2_struggle_conciliation_ending
+							fp2_struggle_conciliation_special_cultural_rules_trigger = { C1 = scope:recipient C2 = scope:puppet_or_actor }
+						}
+					}
+				}
+				if = {
+					limit = {
+						scope:recipient.rite = {
+							rite_hostility_level = {
+								target = scope:puppet_or_actor.rite
+								value > faith_astray_level
+							}
+						}
+					}
+					subtract = 15
+				}
+				if = {
+					limit = {
+						scope:recipient.rite = {
+							rite_hostility_level = {
+								target = scope:puppet_or_actor.rite
+								value >= faith_hostility_prevents_marriage_level
+							}
+						}
+					}
+					subtract = 975
+				}
+			}
+		}
+
+		desc = MARRY_DIFFERENT_FAITH_REASON
+	}
+	#Divergence
+	first_valid = {
+		modifier = {
+			add = -50
+			scope:recipient.faith = scope:puppet_or_actor.faith
+			scope:puppet_or_actor.rite != scope:recipient.rite
+			scope:recipient.rite = {
+				"divergence(scope:puppet_or_actor.rite)" >= monumental_rite_divergence_value
+			}
+			desc = marriage_monumental_divergence_reason
+		}
+		modifier = {
+			add = -30
+			scope:recipient.faith = scope:puppet_or_actor.faith
+			scope:puppet_or_actor.rite != scope:recipient.rite
+			scope:recipient.rite = {
+				"divergence(scope:puppet_or_actor.rite)" >= massive_rite_divergence_value
+			}
+			desc = marriage_massive_divergence_reason
+		}
+		modifier = {
+			add = -20
+			scope:recipient.faith = scope:puppet_or_actor.faith
+			scope:puppet_or_actor.rite != scope:recipient.rite
+			scope:recipient.rite = {
+				"divergence(scope:puppet_or_actor.rite)" >= major_rite_divergence_value
+			}
+			desc = marriage_major_divergence_reason
+		}
+		modifier = {
+			add = -10
+			scope:recipient.faith = scope:puppet_or_actor.faith
+			scope:puppet_or_actor.rite != scope:recipient.rite
+			scope:recipient.rite = {
+				"divergence(scope:puppet_or_actor.rite)" >= medium_rite_divergence_value
+			}
+			desc = marriage_medium_divergence_reason
+		}
+		modifier = {
+			add = -5
+			scope:recipient.faith = scope:puppet_or_actor.faith
+			scope:puppet_or_actor.rite != scope:recipient.rite
+			scope:recipient.rite = {
+				"divergence(scope:puppet_or_actor.rite)" >= minor_rite_divergence_value
+			}
+			desc = marriage_minor_divergence_reason
+		}
+	}
+}

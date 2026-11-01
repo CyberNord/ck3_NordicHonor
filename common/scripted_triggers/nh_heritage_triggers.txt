@@ -1,0 +1,25 @@
+﻿# Character scope: adds Befriend access without bypassing normal scheme requirements.
+nh_nordic_befriend_access_trigger = {
+	rite = { rite_has_parameter = nh_nordic_befriend_access }
+}
+
+# Bilateral exception: Germanic rite with an event doctrine and Christianity.
+# Supply marriage negotiators, matching vanilla's hostility checks.
+nh_christian_heritage_marriage_pair_trigger = {
+	OR = {
+		AND = {
+			$CHARACTER_1$ = {
+				faith.religion = religion:germanic_religion
+				rite = { rite_has_parameter = nh_christian_marriage_acceptance }
+			}
+			$CHARACTER_2$ = { faith.religion = religion:christianity_religion }
+		}
+		AND = {
+			$CHARACTER_2$ = {
+				faith.religion = religion:germanic_religion
+				rite = { rite_has_parameter = nh_christian_marriage_acceptance }
+			}
+			$CHARACTER_1$ = { faith.religion = religion:christianity_religion }
+		}
+	}
+}

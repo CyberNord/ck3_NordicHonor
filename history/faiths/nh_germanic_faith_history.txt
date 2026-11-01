@@ -1,0 +1,13 @@
+﻿# Vanilla _faith_history.info: main-rite core tenets are automatically permitted.
+# Permit the established branch traditions as well, rather than treating them as unknown.
+# DLC-locked entries are ignored automatically when that DLC is not active.
+norse_pagan = {
+	1.1.1 = {
+		permitted = {
+			tenet_unrelenting_faith
+			tenet_astrology
+			tenet_communal_identity
+		}
+	}
+}
+

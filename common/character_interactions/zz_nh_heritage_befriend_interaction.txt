@@ -1,0 +1,452 @@
+﻿# CK3 1.20.1.2 targeted object override; include doctrine holders in AI availability.
+befriend_interaction = {
+	icon = icon_scheme_befriend
+	category = interaction_category_friendly
+
+	interface_priority = 90
+	scheme = befriend
+
+	send_name = START_SCHEME
+	ignores_pending_interaction_block = yes
+
+	ai_targets = {
+		ai_recipients = liege
+		ai_recipients = neighboring_rulers
+	}
+	ai_targets = {
+		ai_recipients = vassals
+		ai_recipients = peer_vassals
+		chance = 0.25
+	}
+
+	ai_frequency_by_tier = {
+		barony = 0
+		county = 72
+		duchy = 24
+		kingdom = 12
+		empire = 12
+		hegemony = 12
+	}
+
+	is_available = {
+		trigger_if = {
+			limit = { is_ai = yes }
+			OR = {
+				nh_nordic_befriend_access_trigger = yes
+				has_perk = befriend_perk # Unlocked by the Befriend Perk
+				culture ?= { has_cultural_parameter = automatic_befriend_access }
+				any_character_struggle = {
+					involvement = involved
+					has_struggle_phase_parameter = struggle_unlocks_befriend_schemes_for_everyone
+				}
+				house ?= { has_house_aspiration_parameter = aspect_of_serenity }
+				dynasty ?= {
+					has_dynasty_perk = fp1_adventure_legacy_5
+				}
+			}
+			NOR = {
+				has_trait = shy
+				has_trait = callous
+				AND = { # No one cares about City barons
+					is_lowborn = yes
+					primary_title.tier <= tier_barony
+				}
+				any_scheme = {
+					OR = {
+						scheme_type = befriend
+						#scheme_type = sway # We allow the AI to override Sway with Befriend
+						scheme_type = seduce
+						scheme_type = courting
+						scheme_type = elope
+						scheme_type = learn_language
+						scheme_type = teach_governor
+					}
+				}
+			}
+		}
+	}
+
+	is_shown = {
+		scope:puppet_or_actor ?= {
+			can_use_befriend_scheme_trigger = { TARGET = scope:recipient }
+		}
+		scope:puppet_or_actor != scope:recipient
+	}
+
+	is_valid_showing_failures_only = {
+		scope:puppet_or_actor = {
+			can_start_scheme = {
+				type = befriend
+				target_character = scope:recipient
+			}
+		}
+		#limit range for landless adventurers
+		trigger_if = {
+			limit = {
+				scope:puppet_or_actor = {
+					has_government = landless_adventurer_government
+				}
+			}
+			#Has to be used instead of diplo range checks in laamp to landed interactions
+			ep3_laamp_diplo_range_trigger = {
+				TARGET = scope:recipient
+				LAAMP = scope:puppet_or_actor
+			}
+		}
+		trigger_if = {
+			limit = { scope:is_puppet_action ?= yes }
+			scope:puppet_or_actor = {
+				prestige >= befriend_interaction_cost_value
+			}
+		}
+	}
+
+	cost = {
+		prestige = {
+			value = befriend_interaction_cost_value
+			if = {
+				limit = { scope:is_puppet_action ?= yes }
+				multiply = 0
+			}
+		}
+	}
+
+	desc = {
+		triggered_desc = {
+			trigger = {
+				scope:puppet_or_actor = {
+					NOT = { is_at_war_with = scope:recipient }
+					can_start_scheme = {
+						type = befriend
+						target_character = scope:recipient
+					}
+				}
+			}
+			desc = scheme_interaction_tt_befriend_approved
+		}
+	}
+
+	on_accept = {
+		if = {
+			limit = { scope:is_puppet_action ?= yes }
+			scope:puppet_or_actor = {
+				if = {
+					limit = { befriend_interaction_cost_value > 0 }
+					add_prestige = {
+						value = {
+							add = befriend_interaction_cost_value
+							max = prestige
+							multiply = -1
+						}
+					}
+				}
+			}
+		}
+		scope:puppet_or_actor = {
+			send_interface_toast = {
+				type = event_toast_effect_neutral
+				title = befriend_interaction_notification
+
+				left_icon = scope:puppet_or_actor
+				right_icon = scope:recipient
+
+				begin_scheme_basic_effect = {
+					SCHEME_TYPE = befriend
+					TARGET_TYPE = target_character
+					TARGET_SCOPE = scope:recipient
+				}
+			}
+		}
+		if = {
+			limit = {
+				scope:is_puppet_action ?= yes
+				scope:actor != scope:recipient
+			}
+			scope:actor = {
+				send_interface_toast = {
+					type = event_toast_effect_neutral
+					title = befriend_interaction_notification_puppeteer
+					left_icon = scope:puppet_or_actor
+					right_icon = scope:recipient
+				}
+			}
+		}
+		if = { #Stubborness effect
+			limit = {
+				scope:recipient = {
+					has_trait = stubborn
+				}
+			}
+			scope:puppet_or_actor = {
+				random_scheme = {
+					type = befriend
+					limit = {
+						scheme_target_character = scope:recipient
+					}
+					scheme_target_character = {
+						random_list = {
+							20 = {
+								set_variable = {
+									name = recipient_stubborness_scheme
+									value = -5
+								}
+							}
+							20 = {
+								set_variable = {
+									name = recipient_stubborness_scheme
+									value = -10
+								}
+							}
+							20 = {
+								set_variable = {
+									name = recipient_stubborness_scheme
+									value = -15
+								}
+							}
+							20 = {
+								set_variable = {
+									name = recipient_stubborness_scheme
+									value = -20
+								}
+							}
+							20 = {
+								set_variable = {
+									name = recipient_stubborness_scheme
+									value = -25
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	auto_accept = yes
+
+	ai_will_do = {
+		base = 50
+
+		modifier = { # Try to befriend those who you might want to vassalize
+			add = 30
+			scope:puppet_or_actor = {
+				top_liege = this
+				primary_title.tier >= tier_county
+				NOT = {
+					any_targeting_faction = {
+						OR = {
+							faction_is_type = liberty_faction
+							faction_is_type = claimant_faction
+							faction_is_type = independence_faction
+						}
+					}
+				}
+			}
+			scope:recipient = {
+				top_liege = this
+				is_playable_character = yes
+				primary_title.tier < scope:puppet_or_actor.primary_title.tier
+				OR = {
+					faith.religion = scope:puppet_or_actor.faith.religion
+					AND = {
+						rite = {
+							rite_has_doctrine = doctrine_pluralism_pluralistic
+						}
+						scope:puppet_or_actor.rite = {
+							rite_has_doctrine = doctrine_pluralism_pluralistic
+						}
+					}
+				}
+			}
+		}
+
+		modifier = {
+			factor = 0.1
+			scope:puppet_or_actor = {
+				opinion = {
+					target = scope:recipient
+					value < -50
+				}
+			}
+		}
+
+		modifier = {
+			factor = 0.1
+			scope:recipient = {
+				opinion = {
+					target = scope:puppet_or_actor
+					value > 50
+				}
+			}
+		}
+
+		modifier = {
+			factor = 0.5
+			scope:recipient = {
+				number_of_personality_traits_in_common = {
+					target = scope:puppet_or_actor
+					value < 2
+				}
+			}
+		}
+
+		modifier = {
+			factor = 0.1
+			scope:recipient = {
+				number_of_personality_traits_in_common = {
+					target = scope:puppet_or_actor
+					value < 1
+				}
+			}
+		}
+
+		# Struggle
+		modifier = {
+			scope:puppet_or_actor = {
+				any_character_struggle = {
+					involvement = involved
+					is_struggle_type = iberian_struggle
+					phase_has_catalyst = catalyst_became_friend_lover_with_character
+				}
+			}
+			scope:recipient = {
+				any_character_struggle = {
+					involvement = involved
+					is_struggle_type = iberian_struggle
+					phase_has_catalyst = catalyst_became_friend_lover_with_character
+				}
+			}
+			add = {
+				value = 0
+				if = {
+					limit = {
+						scope:puppet_or_actor = {
+							has_character_flag = agenda_towards_deescalation
+							trait_compatibility = {
+								target = scope:recipient
+								value >= low_positive_trait_compatibility
+							}
+						}
+						scope:recipient = {
+							has_character_flag = agenda_towards_deescalation
+						}
+					}
+					add = 200
+				}
+				else_if = {
+					limit = {
+						scope:puppet_or_actor = {
+							has_character_flag = agenda_towards_deescalation
+							trait_compatibility = {
+								target = scope:recipient
+								value >= low_positive_trait_compatibility
+							}
+						}
+					}
+					add = 50
+				}
+				else_if = {
+					limit = {
+						scope:puppet_or_actor = {
+							has_character_flag = agenda_towards_escalation
+						}
+					}
+					add = -200
+				}
+				else = {
+					add = 10
+				}
+			}
+		}
+
+		modifier = {
+			factor = 25
+			OR = {
+				has_focus = diplomacy_family_focus
+				house ?= { has_house_aspiration_parameter = aspect_of_serenity }
+			}
+		}
+
+		modifier = {
+			factor = 2
+			scope:recipient.liege = scope:puppet_or_actor
+		}
+
+		modifier = {
+			factor = 0.5
+			scope:recipient.faith != scope:puppet_or_actor.faith
+		}
+
+		modifier = {
+			factor = 0.25
+			scope:puppet_or_actor = {
+				is_ruler = yes
+				tier_difference = {
+					target = scope:recipient
+					value > 2
+				}
+			}
+		}
+		modifier = {
+			factor = 0.35
+			scope:puppet_or_actor = {
+				has_personality_malicious_trigger = yes
+			}
+		}
+		modifier = {
+			factor = 2
+			scope:puppet_or_actor = {
+				OR = {
+					has_trait = gregarious
+					has_trait = diplomat
+					has_trait = family_first
+					has_trait = august
+				}
+			}
+		}
+		modifier = {
+			factor = 1.5
+			scope:puppet_or_actor = {
+				num_of_relation_friend < 3
+			}
+		}
+		modifier = { #Better to Court rather than befriend.
+			factor = 0.25
+			scope:puppet_or_actor = {
+				is_spouse_of = scope:recipient
+			}
+		}
+		modifier = {
+			factor = 0.75
+			scope:recipient = {
+				is_child_of = scope:puppet_or_actor
+			}
+		}
+		modifier = {
+			factor = 2
+			scope:puppet_or_actor = {
+				is_child_of = scope:recipient
+			}
+		}
+		modifier = {
+			factor = 2
+			scope:puppet_or_actor = { #Friends of friends
+				any_relation = {
+					type = friend
+					any_relation = {
+						type = friend
+						this = scope:recipient
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.25
+			scope:recipient = {
+				any_claim = {
+					this = scope:puppet_or_actor.primary_title
+				}
+			}
+		}
+	}
+}

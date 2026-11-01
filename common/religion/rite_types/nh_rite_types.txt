@@ -1,0 +1,149 @@
+﻿# Six additive rites; the seventh, norse_pagan, is provided by vanilla.
+# Each legacy identity keeps its key, icon, tenets and applicable doctrines.
+
+# Forn Siðr (North German)
+forn_sidr_pagan = {
+	faith = forn_sidr_pagan
+	color = { 0.94 0.87 0.80 }
+	icon = forn_sidr
+
+	tenets = { tenet_sanctity_of_nature tenet_esotericism }
+	# germanic faith group: Nordic Similarity is inherited from the religion.
+	doctrines = {
+		unreformed_faith_doctrine
+		#Main Group
+		doctrine_pluralism_righteous
+	}
+
+	tenet_selection_pair = {
+		# Gruesome Festivals, else Human Sacrifice.
+		requires_dlc_flag = the_northern_lords
+		tenet = tenet_gruesome_festivals
+		fallback_tenet = tenet_human_sacrifice
+	}
+}
+
+# Initial Wōden Siðr
+woden_sidr_pagan = {
+	faith = forn_sidr_pagan
+	color = { 0.6 0.4 0.2 }
+	icon = forn_sidr
+
+	tenets = { tenet_sanctity_of_nature tenet_ritual_celebrations tenet_ancestor_worship}
+	doctrines = {
+		unreformed_faith_doctrine
+		doctrine_pluralism_righteous
+	}
+}
+
+# Giñnregla (Icelandic)
+# Its holy sites are shared with the other Ásatrú rites at faith level.
+ginnregla_pagan = {
+	faith = norse_pagan
+	color = { 0.45 0.63 0.76 }
+	icon = ginnregla
+
+	tenets = { tenet_astrology tenet_communal_identity }
+	# germanic faith group: Nordic Similarity is inherited from the religion.
+	# Other rite doctrines (the legacy section called these "other tenets").
+	doctrines = {
+		unreformed_faith_doctrine
+		doctrine_clerical_function_alms_and_pacification
+		doctrine_pluralism_righteous
+		#Allow pilgrimages
+		doctrine_pilgrimage_forbidden
+	}
+
+	tenet_selection_pair = {
+		# Bhakti, else Ancestor Worship.
+		requires_dlc_flag = the_northern_lords
+		tenet = tenet_bhakti
+		fallback_tenet = tenet_ancestor_worship
+	}
+
+	localization = {
+
+		PriestMale = ginnregla_priest_male
+		PriestMalePlural = ginnregla_priest_male_plural
+		PriestFemale = ginnregla_priest_female
+		PriestFemalePlural = ginnregla_priest_female_plural
+		PriestNeuter = ginnregla_priest_neuter
+		PriestNeuterPlural = ginnregla_priest_neuter_plural
+	}
+}
+
+# Náttúruguðtrúarmenn (Skando-Finnic)
+natturugudtruar_pagan = {
+	faith = natturugudtruar_pagan
+	color = { 0.25 0.64 0.21 }
+	icon = natturugudtruar
+
+	tenets = { tenet_ancestor_worship tenet_sanctity_of_nature }
+	doctrines = {
+		# germanic faith group: Staðfast replaces the inherited Nordic Similarity.
+		special_faith_stadfast_heritage
+		unreformed_faith_doctrine
+		# Other rite doctrines (the legacy section called these "other tenets").
+		doctrine_clerical_function_alms_and_pacification
+		doctrine_witchcraft_accepted
+		doctrine_pilgrimage_forbidden
+	}
+
+	tenet_selection_pair = {
+		# Bhakti, else Astrology (this rite's original fallback).
+		requires_dlc_flag = the_northern_lords
+		tenet = tenet_bhakti
+		fallback_tenet = tenet_astrology
+	}
+}
+
+# Óðinnstrú (Odinism)
+# Keep this identity on its own rite; do not grant its features to all Ásatrú.
+odinstru_pagan = {
+	faith = norse_pagan
+	color = { 0 0.1 0.1 }
+	icon = odinstru
+
+	tenets = { tenet_warmonger tenet_unrelenting_faith }
+	doctrines = {
+		# germanic faith group
+		special_faith_stadfast_heritage
+		unreformed_faith_doctrine
+		#Main Group
+		doctrine_pluralism_fundamentalist
+		#Marriage
+		doctrine_concubines
+		doctrine_bastardry_all
+		#Clerical Functions
+		doctrine_clerical_marriage_disallowed
+		#Allow pilgrimages
+		doctrine_pilgrimage_mandatory
+	}
+
+	tenet_selection_pair = {
+		# Gruesome Festivals, else Human Sacrifice.
+		requires_dlc_flag = the_northern_lords
+		tenet = tenet_gruesome_festivals
+		fallback_tenet = tenet_human_sacrifice
+	}
+}
+
+# Heiðinn (Baltisch)
+heidinn_pagan = {
+	faith = heidinn_pagan
+	color = { 0.4 0.6 0 }
+	icon = heidinn
+
+	tenets = { tenet_sanctity_of_nature tenet_warmonger }
+	# germanic faith group: Nordic Similarity is inherited from the religion.
+	doctrines = {
+		unreformed_faith_doctrine
+	}
+
+	tenet_selection_pair = {
+		# Gruesome Festivals, else Human Sacrifice.
+		requires_dlc_flag = the_northern_lords
+		tenet = tenet_gruesome_festivals
+		fallback_tenet = tenet_human_sacrifice
+	}
+}

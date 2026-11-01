@@ -4,33 +4,8 @@ on_game_start = {
 	events = {
 	}
 	on_actions = {
-		nh_on_game_start_hs
 		nh_on_game_start_conversion
 		nh_on_game_start_rollo
-	}
-}
-
-nh_on_game_start_hs = {
-	effect = {
-		faith:norse_pagan = {
-			deactivate_holy_site = joromaborg
-			deactivate_holy_site = miklagard
-		}
-
-		faith:forn_sidr_pagan = {
-			deactivate_holy_site = joromaborg
-		}
-
-		faith:ginnregla_pagan = { }
-
-		faith:natturugudtruar_pagan = { }
-
-		faith:odinstru_pagan = {
-			deactivate_holy_site = miklagard
-			deactivate_holy_site = joromaborg
-		}
-		
-		faith:heidinn_pagan = { }
 	}
 }
 
@@ -42,28 +17,28 @@ nh_on_game_start_conversion = {
 			}
 
 			# Náttúruguðtrúar
-			title:c_sjeltie = { set_county_faith = faith:natturugudtruar_pagan }
-			title:c_ubmejeiednuo = { set_county_faith = faith:natturugudtruar_pagan }
-			title:c_pite = { set_county_faith = faith:natturugudtruar_pagan }
-			title:c_jahkamakke = { set_county_faith = faith:natturugudtruar_pagan }
-			title:c_biton = { set_county_faith = faith:natturugudtruar_pagan }
-			title:c_angermanland = { set_county_faith = faith:natturugudtruar_pagan }
+			title:c_sjeltie = { set_county_rite = rite:natturugudtruar_pagan }
+			title:c_ubmejeiednuo = { set_county_rite = rite:natturugudtruar_pagan }
+			title:c_pite = { set_county_rite = rite:natturugudtruar_pagan }
+			title:c_jahkamakke = { set_county_rite = rite:natturugudtruar_pagan }
+			title:c_biton = { set_county_rite = rite:natturugudtruar_pagan }
+			title:c_angermanland = { set_county_rite = rite:natturugudtruar_pagan }
 
-			character:167722 = {set_character_faith = faith:natturugudtruar_pagan}
-			character:167723 = {set_character_faith = faith:natturugudtruar_pagan}
-			character:167725 = {set_character_faith = faith:natturugudtruar_pagan}
-			character:167726 = {set_character_faith = faith:natturugudtruar_pagan}
-			character:167728 = {set_character_faith = faith:natturugudtruar_pagan}
-			character:167729 = {set_character_faith = faith:natturugudtruar_pagan}
+			character:167722 = {set_character_rite = rite:natturugudtruar_pagan}
+			character:167723 = {set_character_rite = rite:natturugudtruar_pagan}
+			character:167725 = {set_character_rite = rite:natturugudtruar_pagan}
+			character:167726 = {set_character_rite = rite:natturugudtruar_pagan}
+			character:167728 = {set_character_rite = rite:natturugudtruar_pagan}
+			character:167729 = {set_character_rite = rite:natturugudtruar_pagan}
 
 			# Giñnregla
-			title:c_sudurland = { set_county_faith = faith:ginnregla_pagan }
-			title:c_vestisland = { set_county_faith = faith:ginnregla_pagan }
-			title:c_austisland = { set_county_faith = faith:ginnregla_pagan }
-			title:c_nordrland = { set_county_faith = faith:ginnregla_pagan }
+			title:c_sudurland = { set_county_rite = rite:ginnregla_pagan }
+			title:c_vestisland = { set_county_rite = rite:ginnregla_pagan }
+			title:c_austisland = { set_county_rite = rite:ginnregla_pagan }
+			title:c_nordrland = { set_county_rite = rite:ginnregla_pagan }
 
 			character:180257 = {
-				set_character_faith = faith:ginnregla_pagan
+				set_character_rite = rite:ginnregla_pagan
 				spawn_army = {
 					name = event_troop_default_name
 					men_at_arms = {
@@ -75,27 +50,27 @@ nh_on_game_start_conversion = {
 					inheritable = no
 				}
 			}	
-			character:180258 = {set_character_faith = faith:ginnregla_pagan}
+			character:180258 = {set_character_rite = rite:ginnregla_pagan}
 			character:168609 = {
-				set_character_faith = faith:ginnregla_pagan
+				set_character_rite = rite:ginnregla_pagan
 				remove_nickname = yes
 				give_nickname = nick_nh_wise
 				}									# needs christ decision
-			character:168331 = {set_character_faith = faith:ginnregla_pagan}
-			character:168332 = {set_character_faith = faith:ginnregla_pagan}
-			character:168333 = {set_character_faith = faith:ginnregla_pagan}
+			character:168331 = {set_character_rite = rite:ginnregla_pagan}
+			character:168332 = {set_character_rite = rite:ginnregla_pagan}
+			character:168333 = {set_character_rite = rite:ginnregla_pagan}
 
 			# Heiðinn
-			title:c_korsun = { set_county_faith = faith:heidinn_pagan }
-			title:c_kiev = { set_county_faith = faith:heidinn_pagan }
-			title:c_chornobyl = { set_county_faith = faith:heidinn_pagan }
-			title:c_zvyahel = { set_county_faith = faith:heidinn_pagan }
-			title:c_zhytomyr = { set_county_faith = faith:heidinn_pagan }
+			title:c_korsun = { set_county_rite = rite:heidinn_pagan }
+			title:c_kiev = { set_county_rite = rite:heidinn_pagan }
+			title:c_chornobyl = { set_county_rite = rite:heidinn_pagan }
+			title:c_zvyahel = { set_county_rite = rite:heidinn_pagan }
+			title:c_zhytomyr = { set_county_rite = rite:heidinn_pagan }
 
-			character:6871 = {set_character_faith = faith:heidinn_pagan}
-			character:6872 = {set_character_faith = faith:heidinn_pagan}
+			character:6871 = {set_character_rite = rite:heidinn_pagan}
+			character:6872 = {set_character_rite = rite:heidinn_pagan}
 			character:6811 = {
-				set_character_faith = faith:heidinn_pagan
+				set_character_rite = rite:heidinn_pagan
 				add_trait = einherjar
 				spawn_army = {
 					name = event_troop_default_name
@@ -110,39 +85,39 @@ nh_on_game_start_conversion = {
 			}
 
 			# Óðinnstrú
-			character:163111 = {set_character_faith = faith:odinstru_pagan}	# Ivar
-			character:306011 = {set_character_faith = faith:odinstru_pagan} # Feydis
-			character:168500 = {set_character_faith = faith:odinstru_pagan} 
-			character:6864 = {set_character_faith = faith:odinstru_pagan}
-			character:40608 = {set_character_faith = faith:odinstru_pagan}
-			character:40609 = {set_character_faith = faith:odinstru_pagan}
-			character:6814 = {set_character_faith = faith:odinstru_pagan}
+			character:163111 = {set_character_rite = rite:odinstru_pagan}	# Ivar
+			character:306011 = {set_character_rite = rite:odinstru_pagan} # Feydis
+			character:168500 = {set_character_rite = rite:odinstru_pagan}
+			character:6864 = {set_character_rite = rite:odinstru_pagan}
+			character:40608 = {set_character_rite = rite:odinstru_pagan}
+			character:40609 = {set_character_rite = rite:odinstru_pagan}
+			character:6814 = {set_character_rite = rite:odinstru_pagan}
 
 			title:c_inner_hebrides = { 
-				set_county_faith = faith:odinstru_pagan
+				set_county_rite = rite:odinstru_pagan
 				set_county_culture = culture:norse
 				}	
 			title:c_argyll = { 
-				set_county_faith = faith:odinstru_pagan
+				set_county_rite = rite:odinstru_pagan
 				# set_county_culture = culture:norse 
 				}
 
 			# Aengland - Asatrú
 			title:c_east_riding = { 
-				set_county_faith = faith:norse_pagan
+				set_county_rite = rite:norse_pagan
 				set_county_culture = culture:norse
 				}
 			title:c_north_riding = { 
-				set_county_faith = faith:norse_pagan
+				set_county_rite = rite:norse_pagan
 				set_county_culture = culture:norse
 				}
 			title:c_west_riding = { 
-				set_county_faith = faith:norse_pagan
+				set_county_rite = rite:norse_pagan
 				}	
 
 			# Brittany
 			title:c_french_leon = { 
-				set_county_faith = faith:norse_pagan
+				set_county_rite = rite:norse_pagan
 				# set_county_culture = culture:norse 
 				}
 		}

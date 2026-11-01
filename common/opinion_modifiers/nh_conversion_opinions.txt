@@ -1,0 +1,4 @@
+﻿# Forced conversion: values belong to opinion definitions, not add_opinion effects.
+# Explicit duration preserves the old intended temporary reward/backlash.
+approved_conversion_opinion = { opinion = 5 years = 10 stacking = no }
+forced_conversion_opinion = { opinion = -20 years = 10 stacking = no }

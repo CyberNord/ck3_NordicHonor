@@ -1,0 +1,131 @@
+﻿# One targeted norse_pagan object override plus three additive NordicHonor faiths.
+# Core tenets and rite-specific doctrines belong to the explicit main rites.
+# Rome and Constantinople are intentionally absent until their conquest decisions.
+
+# Ásatrú: the shared faith of the main Norse, Óðinnstrú and Icelandic rites.
+norse_pagan = {
+	main_rite = norse_pagan
+	faith_details = {
+		religion = germanic_religion
+		color = { 0.4 0.4 0.4 }
+		icon = germanic
+		reformed_icon = germanic_reformed
+	}
+
+	eminent_holy_sites = { uppsala ranaheim jorvik }
+	holy_sites = { thingvellir lejre zeeland konugardr }
+}
+
+# Forn Siðr (North German), also the parent faith of Wōden Siðr.
+forn_sidr_pagan = {
+	main_rite = forn_sidr_pagan
+	# Existing tradition, even without start followers; not an uncreated future faith.
+	# Vanilla historical=yes keeps it available as a dead faith, including its rites.
+	historical = yes
+	faith_details = {
+		religion = germanic_religion
+		color = { 0.94 0.87 0.80 }
+		icon = forn_sidr
+		reformed_icon = forn_sidr_reformed
+	}
+
+	eminent_holy_sites = { paderborn heiligenberg hallstatt }
+	holy_sites = { uppsala gniezno }
+
+	localization = {
+		#HighGodName
+		HighGodName = forn_sidr_high_god_name
+		HighGodNamePossessive = forn_sidr_high_god_name_possessive
+		HighGodNameSheHe = CHARACTER_SHEHE_HE
+		HighGodHerselfHimself = CHARACTER_HIMSELF
+		HighGodHerHis = CHARACTER_HERHIS_HIS
+		HighGodNameAlternate = forn_sidr_high_god_alternate
+		HighGodNameAlternatePossessive = forn_sidr_high_god_alternate_possessive
+
+		#FertilityGod
+		FertilityGodName = forn_sidr_fertility_god_name
+		FertilityGodNamePossessive = forn_sidr_fertility_god_name_possessive
+		FertilityGodSheHe = CHARACTER_SHEHE_SHE
+		FertilityGodHerHis = CHARACTER_HERHIS_HER
+		FertilityGodHerHim = CHARACTER_HERHIM_HER
+
+		#KnowledgeGod
+		KnowledgeGodName = forn_sidr_knowledge_god_name
+		KnowledgeGodNamePossessive = forn_sidr_knowledge_god_name_possessive
+		KnowledgeGodSheHe = CHARACTER_SHEHE_HE
+		KnowledgeGodHerHis = CHARACTER_HERHIS_HIS
+		KnowledgeGodHerHim = CHARACTER_HERHIM_HIM
+
+		#WarGod
+		WarGodName = forn_sidr_war_god_name
+		WarGodNamePossessive = forn_sidr_war_god_name_possessive
+		WarGodSheHe = CHARACTER_SHEHE_HE
+		WarGodHerHis = CHARACTER_HERHIS_HIS
+		WarGodHerHim = CHARACTER_HERHIM_HIM
+
+		PantheonTerm = religion_the_gods
+		PantheonTermHasHave = pantheon_term_have
+		GoodGodNames = { forn_sidr_good_god_fairguneis forn_sidr_good_god_ingwaz forn_sidr_good_god_terwing }
+		PriestMale = forn_sidr_priest_male
+		PriestMalePlural = forn_sidr_priest_male_plural
+		PriestFemale = forn_sidr_priest_female
+		PriestFemalePlural = forn_sidr_priest_female_plural
+		PriestNeuter = forn_sidr_priest_neuter
+		PriestNeuterPlural = forn_sidr_priest_neuter_plural
+	}
+}
+
+# Náttúruguðtrúarmenn (Skando-Finnic)
+natturugudtruar_pagan = {
+	main_rite = natturugudtruar_pagan
+	# Remain a historical faith when the early-start assignment does not run (1066).
+	historical = yes
+	faith_details = {
+		religion = germanic_religion
+		color = { 0.25 0.64 0.21 }
+		icon = natturugudtruar
+		reformed_icon = natturugudtruar_reformed
+	}
+
+	# perm: kaksalami (original regional annotation).
+	eminent_holy_sites = { akkel trelleborg perm }
+	holy_sites = { gniezno konugardr }
+}
+
+# Heiðinn (Baltisch)
+heidinn_pagan = {
+	main_rite = heidinn_pagan
+	# Remain a historical faith when the early-start assignment does not run (1066).
+	historical = yes
+	faith_details = {
+		religion = germanic_religion
+		color = { 0.4 0.6 0 }
+		icon = heidinn
+		reformed_icon = heidinn_reformed
+	}
+
+	eminent_holy_sites = { konugardr gniezno breclav }
+	holy_sites = { heiligenberg paderborn }
+
+	localization = {
+		#HighGodName
+		HighGodName = heidinn_high_god_name
+		HighGodName2 = heidinn_high_god_name
+		HighGodNamePossessive = heidinn_high_god_name_possessive
+
+		#FertilityGod
+		FertilityGodName = heidinn_fertility_god_name
+		FertilityGodNamePossessive = heidinn_fertility_god_name_possessive
+
+		#KnowledgeGod
+		KnowledgeGodName = heidinn_knowledge_god_name
+		KnowledgeGodNamePossessive = heidinn_knowledge_god_name_possessive
+
+		#WarGod
+		WarGodName = heidinn_war_god_name
+		WarGodNamePossessive = heidinn_war_god_name_possessive
+
+		GoodGodNames = { heidinn_good_god_thor germanic_good_god_baldr heidinn_good_god_freyja heidinn_good_god_tyr germanic_good_god_sif}
+	}
+}
+

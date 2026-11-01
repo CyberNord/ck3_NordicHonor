@@ -17,8 +17,8 @@
  nh_constantinople_hs_decision_confirm:0 "Joromaborg shall be [ROOT.Char.GetFaith.HighGodName]'s seat."
 
  nh_peace_christianity_decision:0 "Religious Coexistence"
- nh_peace_christianity_decision_desc:0 "With careful consideration and wisdom, [ROOT.Char.GetFirstName], [ROOT.Char.GetPrimaryTitle.GetTierAsNameNoTooltip] of [ROOT.Char.GetPrimaryTitle.GetNameNoTier], has made the momentous decision to enact a Religious Coexistence Edict. This groundbreaking decree establishes a framework for peaceful coexistence between the Norse traditions and the Christian faith. It guarantees the freedom of religious practice and protects the rights of both believers, fostering an environment of mutual respect and understanding. By embracing this edict, the realm takes a significant step towards religious harmony, setting an example for future generations and ensuring a prosperous and tolerant future for all."
- nh_peace_christianity_decision_tooltip:0 "You will make peace with the Christians and enable interfaith marriages. Other nordic pagans might not like it"
+ nh_peace_christianity_decision_desc:0 "Christian families may become our kin without taking away the gods of our ancestors. I shall permit marriages across this religious divide and accept the distrust of those who see such ties as a betrayal of our traditions."
+ nh_peace_christianity_decision_tooltip:0 "Allows marriages with Christians while preserving the current tenets. Religious hostility remains unchanged."
  nh_peace_christianity_decision_confirm:0 "Call the priests!"
 
  nh_convert_whole_realm_to_feudalism_decision:0 "Another way to adopt [ROOT.Char.Custom('GetTribalReformGovernment')|U]ism."
@@ -75,3 +75,4 @@
  nh_force_conversion_cooldown_requirement:0 "You have not recently forced conversions"
  nh_force_conversion_capital_requirement:0 "Your capital follows your faith"
  nh_force_conversion_target_requirement:0 "You control counties of different faiths"
+ nh_holy_site_capacity_requirement:0 "Your faith has room for another holy site"

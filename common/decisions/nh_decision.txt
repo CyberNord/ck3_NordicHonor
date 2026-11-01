@@ -71,7 +71,7 @@ last_duel_decision = {
 	ai_potential = {
 		highest_held_title_tier > tier_barony
 		is_playable_character  = yes
-		faith = faith:norse_pagan
+		rite = rite:norse_pagan
 	}
 
 	ai_will_do = {
@@ -126,10 +126,15 @@ nh_rome_hs_decision = {
 	is_shown = {
 		is_playable_character = yes
 		OR = {
-			faith = faith:norse_pagan
+			rite = rite:norse_pagan
+			rite = rite:odinstru_pagan
 			faith = faith:forn_sidr_pagan
-			faith = faith:odinstru_pagan
 		}
+		faith = { NOR = {
+			is_faith_holy_site = holy_site:joromaborg
+			is_faith_holy_site = holy_site:rome
+		} }
+		# Unlocks are shared by every rite of the same faith, even if the site is later abandoned.
 		NOR = {
 			AND = {
 				faith = faith:norse_pagan
@@ -145,13 +150,6 @@ nh_rome_hs_decision = {
 					target = flag:nh_rome_hs_forn_sidr_decision
 				}
 			}
-			AND = {
-				faith = faith:odinstru_pagan
-				is_target_in_global_variable_list = {
-					name = unavailable_unique_decisions
-					target = flag:nh_rome_hs_odinstru_decision
-				}
-			}
 		}
 	}
 
@@ -163,6 +161,10 @@ nh_rome_hs_decision = {
 			has_trait = theologian
 			has_trait = holy_warrior
 			piety_level >= 5
+		}
+		custom_description = {
+			text = nh_holy_site_capacity_requirement
+			faith = { list_size:holy_site < religion.holy_sites_max }
 		}
 	}
 
@@ -181,6 +183,9 @@ nh_rome_hs_decision = {
 	}
 
 	effect = {
+		# Add the Nordic-named site as a regular site, never an eminent one.
+		faith = { add_holy_site = { target = holy_site:joromaborg actor = root } }
+
 		trigger_event = {
 			id = nh.1001
 		}
@@ -204,13 +209,7 @@ nh_rome_hs_decision = {
 				target = flag:nh_rome_hs_forn_sidr_decision
 			}
 		}
-		else_if = {
-			limit = { faith = faith:odinstru_pagan }
-			add_to_global_variable_list = {
-				name = unavailable_unique_decisions
-				target = flag:nh_rome_hs_odinstru_decision
-			}
-		}
+
 
 	}
 
@@ -236,10 +235,15 @@ nh_constantinople_hs_decision = {
 	is_shown = {
 		is_playable_character = yes
 		OR = {
-			faith = faith:norse_pagan
+			rite = rite:norse_pagan
+			rite = rite:odinstru_pagan
 			faith = faith:heidinn_pagan
-			faith = faith:odinstru_pagan
 		}
+		faith = { NOR = {
+			is_faith_holy_site = holy_site:miklagard
+			is_faith_holy_site = holy_site:constantinople
+		} }
+		# Unlocks are shared by every rite of the same faith, even if the site is later abandoned.
 		NOR = {
 			AND = {
 				faith = faith:norse_pagan
@@ -255,13 +259,6 @@ nh_constantinople_hs_decision = {
 					target = flag:nh_constantinople_hs_heidinn_decision
 				}
 			}
-			AND = {
-				faith = faith:odinstru_pagan
-				is_target_in_global_variable_list = {
-					name = unavailable_unique_decisions
-					target = flag:nh_constantinople_hs_odinstru_decision
-				}
-			}
 		}
 	}
 
@@ -273,6 +270,10 @@ nh_constantinople_hs_decision = {
 			has_trait = theologian
 			has_trait = holy_warrior
 			piety_level >= 5
+		}
+		custom_description = {
+			text = nh_holy_site_capacity_requirement
+			faith = { list_size:holy_site < religion.holy_sites_max }
 		}
 	}
 
@@ -291,6 +292,9 @@ nh_constantinople_hs_decision = {
 	}
 
 	effect = {
+		# Add the Nordic-named site as a regular site, never an eminent one.
+		faith = { add_holy_site = { target = holy_site:miklagard actor = root } }
+
 		trigger_event = {
 			id = nh.1002
 		}
@@ -314,13 +318,7 @@ nh_constantinople_hs_decision = {
 				target = flag:nh_constantinople_hs_heidinn_decision
 			}
 		}
-		else_if = {
-			limit = { faith = faith:odinstru_pagan }
-			add_to_global_variable_list = {
-				name = unavailable_unique_decisions
-				target = flag:nh_constantinople_hs_odinstru_decision
-			}
-		}
+
 
 	}
 
@@ -551,8 +549,8 @@ nh_convert_to_christianity_iceland_decision = {
 	is_shown = {
 		is_lowborn = no
 		OR = {
-     		faith = faith:ginnregla_pagan
-     		faith = faith:norse_pagan
+			rite = rite:ginnregla_pagan
+			rite = rite:norse_pagan
 		}
 
 		OR = {
@@ -946,7 +944,7 @@ nh_iceland_first_great_ting = {
 
 	is_shown = {
 		is_lowborn = no
-		faith = faith:ginnregla_pagan
+		rite = rite:ginnregla_pagan
 		any_held_title = {
 			tier = tier_county
 			title_province = { geographical_region = custom_iceland}
@@ -1073,7 +1071,7 @@ nh_iceland_yearly_ting = {
 
 	is_valid = {
 		#restricted to norse icelandic folk
-		faith = faith:ginnregla_pagan
+		rite = rite:ginnregla_pagan
 		culture = { has_cultural_pillar = heritage_north_germanic }
 
 		# unreformed
@@ -1143,7 +1141,7 @@ nh_odinstru_raise_elite_warriors = {
 
 	is_shown = {
 		is_lowborn = no
-		faith = faith:odinstru_pagan
+		rite = rite:odinstru_pagan
 		any_held_title = {
 			tier = tier_county
 		}
@@ -1258,8 +1256,8 @@ nh_odinstru_force_conversion = {
 	is_shown = {
 		is_lowborn = no
 		OR = {
-			faith = faith:odinstru_pagan
-			faith = faith:norse_pagan
+			rite = rite:odinstru_pagan
+			rite = rite:norse_pagan
 		}
 		
 		any_held_title = {
@@ -1314,7 +1312,7 @@ nh_odinstru_force_conversion = {
 		realm_size >= 3
 		OR = {
 			has_trait = zealous
-			faith = faith:odinstru_pagan
+			rite = rite:odinstru_pagan
 		}
 	}
 
@@ -1343,7 +1341,7 @@ nh_odinstru_force_conversion = {
 
 		modifier = {
 			add = 20
-			faith = faith:odinstru_pagan
+			rite = rite:odinstru_pagan
 		}
 	}
 }
