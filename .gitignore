@@ -1,4 +1,25 @@
+
+# Existing exclusions
 /Roadmap.txt
 /README.md.backup
 /.vscode
 /error_ck3-tiger.txt
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.log
+
+# Python development
+__pycache__/
+*.pyc
+.venv/
+
+# Operating system
+Thumbs.db
+.DS_Store
+desktop.ini
+
+# Local editor files
+*.code-workspace
