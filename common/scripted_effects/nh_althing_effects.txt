@@ -1,0 +1,20 @@
+﻿# Apply the reward inside the native message so its effect text cannot diverge.
+nh_althing_personal_reward_effect = {
+	send_interface_message = {
+		type = nh_althing_reward_message
+		title = nh_althing_reward_title
+		desc = $DESCRIPTION$
+		left_icon = scope:iceland_liege
+		add_character_modifier = { modifier = $MODIFIER$ years = $YEARS$ }
+		# The county effect is applied once by nh.1015, outside the ruler loop.
+		# List it for the host without applying it a second time.
+		if = {
+			limit = { this = scope:iceland_liege }
+			show_as_tooltip = {
+				title:c_sudurland = {
+					add_county_modifier = { modifier = nh_tinvellir_county_modifier years = 3 }
+				}
+			}
+		}
+	}
+}

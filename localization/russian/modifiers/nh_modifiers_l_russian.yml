@@ -53,3 +53,7 @@
  approved_conversion_opinion:0 "Approves Forced Conversion"
  forced_conversion_opinion:0 "Forced Religious Conversion"
  fervor_loss_forced_conversion:0 "Forced Conversion"
+
+ # Etappe 2: assembly results and Saxon founding rewards
+ nh_old_saxony_conversion_modifier:0 "Восстановитель древней веры"
+ nh_old_saxony_conversion_modifier_desc:0 "Обращение веры в графстве идёт на 300% быстрее (в четыре раза быстрее применимого темпа). Личный модификатор действует не более 100 лет и не передаётся наследникам."

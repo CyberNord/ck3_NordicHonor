@@ -114,3 +114,9 @@ nh_thing_diplomacy_modifier = {
 	monthly_diplomacy_lifestyle_xp_gain_mult = 0.5
 	monthly_intrigue_lifestyle_xp_gain_mult = -0.9
 }
+
+# Personal founder marker; the council-task factor is implemented in script_values.
+# Character modifiers do not pass to successors and expire after 100 years.
+nh_old_saxony_conversion_modifier = {
+	icon = piety_positive
+}

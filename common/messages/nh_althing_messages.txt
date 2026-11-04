@@ -1,0 +1,9 @@
+﻿# Show the actual awarded effect and duration, even for the assembly's host.
+nh_althing_reward_message = {
+	icon = "generic_neutral_effect"
+	title = nh_althing_reward_title
+	desc = event_message_text_and_effect
+	style = neutral
+	display = popup
+	message_filter_type = event_outcome
+}

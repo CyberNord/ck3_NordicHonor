@@ -1,0 +1,75 @@
+﻿# The title and story conversion must have succeeded before rewarding the founder.
+nh_old_saxony_founder_rewards_effect = {
+	if = {
+		limit = {
+			is_alive = yes
+			has_title = title:k_old_saxia
+			rite = rite:forn_sidr_pagan
+			NOT = { has_character_flag = nh_old_saxony_rewards_received }
+		}
+		custom_tooltip = nh_old_saxony_rewards_tt
+		add_character_flag = nh_old_saxony_rewards_received
+		add_character_modifier = { modifier = nh_old_saxony_conversion_modifier years = 100 }
+		spawn_army = {
+			name = nh_old_saxony_huscarls_name
+			men_at_arms = { type = huscarl men = 1000 }
+			location = capital_province
+			origin = capital_province
+			inheritable = no
+		}
+		nh_create_irmunsul_relic_effect = yes
+	}
+}
+
+# Use the native highest rarity and branch visuals with standard relic modifiers.
+nh_create_irmunsul_relic_effect = {
+	if = {
+		limit = { NOT = { has_global_variable = nh_irmunsul_created } }
+		clear_saved_scope = nh_irmunsul
+		set_artifact_rarity_illustrious = yes
+		save_scope_as = owner
+		create_artifact = {
+			name = nh_irmunsul_name
+			description = nh_irmunsul_desc
+			type = pedestal
+			template = nh_irmunsul_template
+			visuals = pedestal_branch_relic_germanic
+			wealth = scope:wealth
+			quality = scope:quality
+			modifier = artifact_placeholder_modifier
+			history = { type = created location = title:c_paderborn.title_province }
+			save_scope_as = nh_irmunsul
+		}
+		if = {
+			limit = { exists = scope:nh_irmunsul }
+			set_global_variable = { name = nh_irmunsul_created value = yes }
+			scope:nh_irmunsul = {
+				set_variable = { name = historical_unique_artifact value = yes }
+				set_variable = { name = relic_religion value = religion:germanic_religion }
+				add_sanctified_for_faith = faith:forn_sidr_pagan
+				add_scaled_artifact_modifier_piety_effect = yes
+				add_scaled_artifact_modifier_grandeur_small_effect = yes
+				add_2_scaled_artifact_modifier_devotion_effect = yes
+				add_artifact_modifier = artifact_monthly_prestige_penalty_modifier
+			}
+			if = {
+				limit = { holy_site:paderborn = { holy_site_artifact_count < 3 } }
+				scope:nh_irmunsul = {
+					set_holy_site_owner = { target = holy_site:paderborn }
+					equip_artifact_to_owner = yes
+				}
+				custom_tooltip = nh_irmunsul_enshrined_tt
+			}
+			else = {
+				# Never destroy or displace an existing relic when all three slots are full.
+				# Keep the new relic with the founder for later manual enshrinement.
+				send_interface_message = {
+					type = event_generic_neutral_text
+					title = nh_irmunsul_full_title
+					desc = nh_irmunsul_full_desc
+					right_icon = scope:nh_irmunsul
+				}
+			}
+		}
+	}
+}

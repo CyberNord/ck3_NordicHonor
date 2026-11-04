@@ -53,3 +53,7 @@
  approved_conversion_opinion:0 "Approves Forced Conversion"
  forced_conversion_opinion:0 "Forced Religious Conversion"
  fervor_loss_forced_conversion:0 "Forced Conversion"
+
+ # Etappe 2: assembly results and Saxon founding rewards
+ nh_old_saxony_conversion_modifier:0 "古老信仰的复兴者"
+ nh_old_saxony_conversion_modifier_desc:0 "伯爵领传教进度提高300%（适用进度的四倍）。此个人修正最长持续100年，不会由继承人继承。"

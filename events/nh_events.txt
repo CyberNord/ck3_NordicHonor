@@ -519,45 +519,11 @@ nh.1004 = {
 			}
 		}
 
-		ai_chance = {
-			base = 0
-			modifier = {
-				add = -40
-				has_trait = chaste
-			}
-			modifier = {
-				add = -40
-				has_trait = compassionate
-			}
-			modifier = {
-				add = -40
-				has_trait = forgiving
-			}
-			modifier = {
-				add = 100
-				has_trait = brave
-			}
-			modifier = {
-				add = 100
-				has_trait = vengeful
-			}
-			modifier = {
-				add = 100
-				has_trait = wrathful
-			}
-			modifier = {
-				add = 200
-				has_trait = zealous
-			}
-			modifier = {
-				add = -50
-				has_trait = cynical
-			}
-		}
+		ai_chance = { base = 100 }
 	}
 
 	option = {
-		trigger = { exists = scope:nh_iceland_roman_rite }
+		trigger = { is_ai = no exists = scope:nh_iceland_roman_rite }
 		name = nh.1004.option.catholic.desc
 		custom_tooltip = nh.1004.option.catholic_tooltip.desc
 		root = {
@@ -584,49 +550,12 @@ nh.1004 = {
 			}
 		}
 
-		ai_chance = {
-			base = 0
-			modifier = {
-				add = 60
-				has_trait = craven
-			}
-			modifier = {
-				add = 30
-				has_trait = chaste
-			}
-			modifier = {
-				add = 30
-				has_trait = compassionate
-			}
-			modifier = {
-				add = 30
-				has_trait = forgiving
-			}
-			modifier = {
-				add = -40
-				has_trait = brave
-			}
-			modifier = {
-				add = -40
-				has_trait = vengeful
-			}
-			modifier = {
-				add = -40
-				has_trait = wrathful
-			}
-			modifier = {
-				add = -90
-				has_trait = zealous
-			}
-			modifier = {
-				add = -10
-				has_trait = cynical
-			}
-		}
+		ai_chance = { base = 0 }
 
 	}
 
 	option = {
+		trigger = { is_ai = no }
 		name = nh.1004.option.insular.desc
 		custom_tooltip = nh.1004.option.insular_tooltip.desc
 		root = { nh_story_convert_to_rite_effect = { RITE = rite:insular_celtic } }
@@ -650,41 +579,7 @@ nh.1004 = {
 			}
 		}
 
-		ai_chance = {
-			base = 0
-			modifier = {
-				add = 30
-				has_trait = calm
-			}
-			modifier = {
-				add = 30
-				has_trait = humble
-			}
-			modifier = {
-				add = 30
-				has_trait = temperate
-			}
-			modifier = {
-				add = -40
-				has_trait = brave
-			}
-			modifier = {
-				add = -40
-				has_trait = vengeful
-			}
-			modifier = {
-				add = -40
-				has_trait = wrathful
-			}
-			modifier = {
-				add = -90
-				has_trait = zealous
-			}
-			modifier = {
-				add = -10
-				has_trait = cynical
-			}
-		}
+		ai_chance = { base = 0 }
 	}
 }
 
@@ -725,6 +620,12 @@ nh.1005 = {
 		add_trait = zealous
 
 		root = { nh_story_convert_to_rite_effect = { RITE = rite:forn_sidr_pagan } }
+
+		# Only a successful founder receives the new one-time rewards.
+		if = {
+			limit = { scope:nh_story_conversion_succeeded = yes }
+			nh_old_saxony_founder_rewards_effect = yes
+		}
 
 		ai_chance = {base = 100}
 	}
@@ -1150,6 +1051,7 @@ nh.1015 = {
 	option = {
 		name = nh.0015.option.blot.desc
 		custom_tooltip = nh.0015.option.blot_tooltip.desc
+		custom_tooltip = nh_althing_religion_preview
 
 		hidden_effect = {
 			faith:norse_pagan = {
@@ -1157,52 +1059,28 @@ nh.1015 = {
 					limit = { rite = rite:ginnregla_pagan }
 					random_list = {
 						15 = {
-							add_character_modifier = {
-								modifier = nh_odins_blessing_modifier
-								years = 2
-							}
+							nh_althing_personal_reward_effect = { MODIFIER = nh_odins_blessing_modifier YEARS = 2 DESCRIPTION = nh_althing_result_nh_odins_blessing_modifier }
 						}
 						20 = {
-							add_character_modifier = {
-								modifier = nh_thors_blessing_modifier
-								years = 3
-							}
+							nh_althing_personal_reward_effect = { MODIFIER = nh_thors_blessing_modifier YEARS = 3 DESCRIPTION = nh_althing_result_nh_thors_blessing_modifier }
 						}
 						20 = {
-							add_character_modifier = {
-								modifier = nh_freyas_blessing_modifier
-								years = 3
-							}
+							nh_althing_personal_reward_effect = { MODIFIER = nh_freyas_blessing_modifier YEARS = 3 DESCRIPTION = nh_althing_result_nh_freyas_blessing_modifier }
 						}
 						15 = {
-							add_character_modifier = {
-								modifier = nh_tyr_blessing_modifier
-								years = 2
-							}
+							nh_althing_personal_reward_effect = { MODIFIER = nh_tyr_blessing_modifier YEARS = 2 DESCRIPTION = nh_althing_result_nh_tyr_blessing_modifier }
 						}
 						15 = {
-							add_character_modifier = {
-								modifier = nh_njords_blessing_modifier
-								years = 2
-							}
+							nh_althing_personal_reward_effect = { MODIFIER = nh_njords_blessing_modifier YEARS = 2 DESCRIPTION = nh_althing_result_nh_njords_blessing_modifier }
 						}
 						5 = {
-							add_character_modifier = {
-								modifier = nh_lokis_curse_modifier
-								years = 5
-							}
+							nh_althing_personal_reward_effect = { MODIFIER = nh_lokis_curse_modifier YEARS = 5 DESCRIPTION = nh_althing_result_nh_lokis_curse_modifier }
 						}
 						5 = {
-							add_character_modifier = {
-								modifier = nh_hels_curse_modifier
-								years = 5
-							}
+							nh_althing_personal_reward_effect = { MODIFIER = nh_hels_curse_modifier YEARS = 5 DESCRIPTION = nh_althing_result_nh_hels_curse_modifier }
 						}
 						5 = {
-							add_character_modifier = {
-								modifier = nh_suturs_curse_modifier
-								years = 5
-							}
+							nh_althing_personal_reward_effect = { MODIFIER = nh_suturs_curse_modifier YEARS = 5 DESCRIPTION = nh_althing_result_nh_suturs_curse_modifier }
 						}
 					}
 					trigger_event = nh.9001
@@ -1230,15 +1108,13 @@ nh.1015 = {
 	option = {
 		name = nh.0015.option.trade.desc
 		custom_tooltip = nh.0015.option.trade_tooltip.desc
+		custom_tooltip = nh_althing_result_nh_thing_trade_modifier
 
 		hidden_effect = {
 			faith:norse_pagan = {
 				every_faith_ruler = {
 					limit = { rite = rite:ginnregla_pagan }
-					add_character_modifier = {
-						modifier = nh_thing_trade_modifier
-						years = 3
-						}
+					nh_althing_personal_reward_effect = { MODIFIER = nh_thing_trade_modifier YEARS = 3 DESCRIPTION = nh_althing_result_nh_thing_trade_modifier }
 					trigger_event = nh.9002
 				}
 			}
@@ -1264,15 +1140,13 @@ nh.1015 = {
 	option = {
 		name = nh.0015.option.build.desc
 		custom_tooltip = nh.0015.option.build_tooltip.desc
+		custom_tooltip = nh_althing_result_nh_thing_build_modifier
 
 		hidden_effect = {
 			faith:norse_pagan = {
 				every_faith_ruler = {
 					limit = { rite = rite:ginnregla_pagan }
-					add_character_modifier = {
-						modifier = nh_thing_build_modifier
-						years = 3
-						}
+					nh_althing_personal_reward_effect = { MODIFIER = nh_thing_build_modifier YEARS = 3 DESCRIPTION = nh_althing_result_nh_thing_build_modifier }
 					trigger_event = nh.9003
 				}
 			}
@@ -1298,15 +1172,13 @@ nh.1015 = {
 	option = {
 		name = nh.0015.option.diplomacy.desc
 		custom_tooltip = nh.0015.option.diplomacy_tooltip.desc
+		custom_tooltip = nh_althing_result_nh_thing_diplomacy_modifier
 
 		hidden_effect = {
 			faith:norse_pagan = {
 				every_faith_ruler = {
 					limit = { rite = rite:ginnregla_pagan }
-					add_character_modifier = {
-						modifier = nh_thing_diplomacy_modifier
-						years = 3
-						}
+					nh_althing_personal_reward_effect = { MODIFIER = nh_thing_diplomacy_modifier YEARS = 3 DESCRIPTION = nh_althing_result_nh_thing_diplomacy_modifier }
 					trigger_event = nh.9004
 				}
 			}
