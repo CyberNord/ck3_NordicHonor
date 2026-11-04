@@ -1,0 +1,46 @@
+﻿# Recheck the saved choice immediately before entering the native combat engine.
+nh_start_last_duel_effect = {
+	if = {
+		limit = {
+			exists = scope:actor
+			scope:actor = { nh_last_duel_initiator_valid_trigger = yes }
+			exists = $OPPONENT$
+			$OPPONENT$ = { nh_last_duel_opponent_valid_trigger = yes }
+			OR = {
+				always = $NON_HEIR$
+				AND = {
+					scope:actor.player_heir = $OPPONENT$
+					$OPPONENT$ = { age >= 18 }
+				}
+			}
+		}
+		$OPPONENT$ = { save_scope_as = champion }
+		single_combat_apply_default_shirtlessness_effect = {
+			ATTACKER = scope:actor
+			DEFENDER = scope:champion
+		}
+		configure_start_single_combat_effect = {
+			SC_INITIATOR = scope:actor
+			SC_ATTACKER = scope:actor
+			SC_DEFENDER = scope:champion
+			FATALITY = always
+			FIXED = no
+			LOCALE = terrain_scope
+			OUTPUT_EVENT = nh.0011
+			INVALIDATION_EVENT = nh.0021
+		}
+	}
+}
+
+# Native single combat clears its busy variables before invoking the callback.
+# NH owns only the appearance flags here. Either participant may have vanished.
+nh_last_duel_clean_appearance_effect = {
+	scope:actor ?= {
+		remove_character_flag = single_combat_stripped_to_waist
+		remove_character_flag = single_combat_duel_armor
+	}
+	scope:champion ?= {
+		remove_character_flag = single_combat_stripped_to_waist
+		remove_character_flag = single_combat_duel_armor
+	}
+}

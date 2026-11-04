@@ -1,0 +1,36 @@
+﻿# The initiator may deliberately be old, infirm or suffering from cancer.
+# Age-related ailments and low prowess do not bar this final fight.
+# Check each illness separately: cancer does not excuse a second disease.
+nh_last_duel_initiator_valid_trigger = {
+	is_alive = yes
+	is_imprisoned = no
+	is_at_war = no
+	is_travelling = no
+	NOT = { exists = involved_activity }
+	can_start_single_combat_banned_checks_trigger = no
+	NOR = {
+		has_trait = incapable
+		has_trait = compassionate
+		has_trait = craven
+		has_trait = cynical
+		has_trait = blind
+		has_trait = pregnant
+	}
+	NOT = {
+		any_character_trait = {
+			has_trait_flag = illness
+			NOT = { this = trait:cancer }
+		}
+	}
+}
+
+# Physical eligibility is required of the opponent, not the dying challenger.
+nh_last_duel_opponent_valid_trigger = {
+	is_alive = yes
+	is_adult = yes
+	is_imprisoned = no
+	is_travelling = no
+	NOT = { exists = involved_activity }
+	NOT = { this = scope:actor }
+	can_start_single_combat_trigger = yes
+}

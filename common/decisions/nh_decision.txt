@@ -56,9 +56,7 @@ last_duel_decision = {
 	cooldown = { days = 300 }
 
 	is_valid_showing_failures_only = {
-		is_imprisoned = no
-		is_at_war = no
-		not = { exists = involved_activity }
+		nh_last_duel_initiator_valid_trigger = yes
 	}
 
 	effect = {
@@ -813,6 +811,12 @@ nh_rollos_adventure_decision = {
 	}
 
 	is_valid = {
+		# Do not spend the existing one-shot cost if all targets are already invalid.
+		OR = {
+			nh_rollo_adventure_target_valid_trigger = { COUNTY = title:c_rouen TITLE = title:d_normandy }
+			nh_rollo_adventure_target_valid_trigger = { COUNTY = title:c_cagliari TITLE = title:d_sardinia }
+			nh_rollo_adventure_target_valid_trigger = { COUNTY = title:c_middlesex TITLE = title:d_bedford }
+		}
 		custom_description = {
 			text = nh_faith_is_unreformed
 			subject = root
@@ -960,6 +964,8 @@ nh_iceland_first_great_ting = {
 	}
 
 	is_valid = {
+		# Formation is not a scripted usurpation of an existing kingdom.
+		NOT = { exists = title:k_iceland.holder }
 		# unreformed
 		custom_description = {
 			text = nh_faith_is_unreformed

@@ -1,4 +1,4 @@
-version="1.11.2"
+version="1.2.0"
 tags={
 	"Religion"
 	"Decisions"
@@ -7,5 +7,5 @@ tags={
 	"Alternative History"
 }
 name="Nordic Honor"
-supported_version="1.18.*"
+supported_version="1.20.*"
 remote_file_id="2992171720"

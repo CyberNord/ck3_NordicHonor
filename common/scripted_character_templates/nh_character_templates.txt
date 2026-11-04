@@ -10,7 +10,9 @@
 	intrigue = 9
 	learning = 5
 
-	faith = faith:catholic
+	# Roman rite belongs to christian_faith before the historical 1054 split.
+	faith = rite:roman_rite.faith
+	rite = rite:roman_rite
 	culture = culture:french
 
 	random_traits_list = {
@@ -47,7 +49,9 @@ nh_norman_character = {
 	intrigue = 5
 	learning = 8
 
-	faith = faith:catholic
+	# Keep the bride Roman even when Rollo follows another Frankish rite.
+	faith = rite:roman_rite.faith
+	rite = rite:roman_rite
 	culture = culture:french
 
 	random_traits_list = {

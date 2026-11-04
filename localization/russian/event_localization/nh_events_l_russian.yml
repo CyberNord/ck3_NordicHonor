@@ -13,8 +13,8 @@
  # TbC has invalidated [nh.0021]
  nh.0021.trigger_failure.actor:0 "$nh.0001.trigger_failure.actor$"
  nh.0021.trigger_failure.recipient:0 "$nh.0001.trigger_failure.recipient$"
- nh.0001.trigger_failure.actor:0 "Мой [trial_by_combat_trial|E] против [recipient.GetFirstNameNoTooltip] признан несостоявшимся. Это предзнаменование..."
- nh.0001.trigger_failure.recipient:0 "Мой [trial_by_combat_trial|E] против [actor.GetFirstNameNoTooltip] признан несостоявшимся. Это предзнаменование..."
+ nh.0001.trigger_failure.actor:0 "Последний поединок больше не может состояться. Это предзнаменование..."
+ nh.0001.trigger_failure.recipient:0 "Последний поединок больше не может состояться. Это предзнаменование..."
 
  # Duel Won [nh.0041]
  nh.0041.t:0 "Победа"

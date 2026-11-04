@@ -13,8 +13,8 @@
   # TbC has invalidated [nh.0021] 
  nh.0021.trigger_failure.actor: "$nh.0001.trigger_failure.actor$" #
  nh.0021.trigger_failure.recipient: "$nh.0001.trigger_failure.recipient$" #
- nh.0001.trigger_failure.actor: "Mon [trial_by_combat_trial|E] contre [recipient.GetFirstNameNoTooltip] a invalidé. C'est un présage..." #
- nh.0001.trigger_failure.recipient: "Mon [trial_by_combat_trial|E] contre [actor.GetFirstNameNoTooltip] a invalidé. C'est un présage..." #
+ nh.0001.trigger_failure.actor: "Le dernier duel ne peut plus avoir lieu. C'est un présage..." #
+ nh.0001.trigger_failure.recipient: "Le dernier duel ne peut plus avoir lieu. C'est un présage..." #
 
   # Duel Won [nh.0041] 
  nh.0041.t: "La victoire" #

@@ -13,8 +13,8 @@
  # TbC has invalidated [nh.0021]
  nh.0021.trigger_failure.actor:0 "$nh.0001.trigger_failure.actor$"
  nh.0021.trigger_failure.recipient:0 "$nh.0001.trigger_failure.recipient$"
- nh.0001.trigger_failure.actor:0 "My [trial_by_combat_trial|E] against [recipient.GetFirstNameNoTooltip] has invalidated. It's an omen..."
- nh.0001.trigger_failure.recipient:0 "My [trial_by_combat_trial|E] against [actor.GetFirstNameNoTooltip] has invalidated. It's an omen..."
+ nh.0001.trigger_failure.actor:0 "Das letzte Duell kann nicht mehr stattfinden. Es ist ein Omen..."
+ nh.0001.trigger_failure.recipient:0 "Das letzte Duell kann nicht mehr stattfinden. Es ist ein Omen..."
 
  # Duel Won [nh.0041]
  nh.0041.t:0 "Victory"

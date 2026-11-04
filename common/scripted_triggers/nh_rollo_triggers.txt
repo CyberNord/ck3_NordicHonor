@@ -1,0 +1,59 @@
+﻿# Rollo's scripted event war
+nh_rollo_adventure_target_valid_trigger = {
+	is_alive = yes
+	this = character:242
+	is_landed = yes
+	is_at_war = no
+	top_liege = this
+	highest_held_title_tier <= tier_duchy
+	NOT = { government_has_flag = government_is_landless_adventurer }
+	exists = $COUNTY$.holder
+	exists = $COUNTY$.holder.top_liege
+	$COUNTY$.holder.top_liege = {
+		is_alive = yes
+		is_landed = yes
+		NOT = { this = character:242 }
+	}
+	$TITLE$ = {
+		any_in_de_jure_hierarchy = {
+			tier = tier_county
+			exists = holder
+			holder.top_liege = $COUNTY$.holder.top_liege
+		}
+	}
+}
+
+nh_rollo_normandy_offer_valid_trigger = {
+	is_alive = yes
+	this = character:242
+	is_landed = yes
+	is_at_war = no
+	has_title = title:d_normandy
+	is_confederation_member = no
+	is_tributary = no
+	exists = title:k_france.holder
+	exists = title:k_france.holder.top_liege
+	title:k_france.holder.top_liege = {
+		is_alive = yes
+		is_landed = yes
+		NOT = { government_has_flag = cannot_be_vassal_or_liege }
+		NOT = { government_has_flag = government_is_herder }
+	}
+	highest_held_title_tier < title:k_france.holder.top_liege.highest_held_title_tier
+	NOT = { government_has_flag = cannot_be_vassal_or_liege }
+	NOT = { government_has_flag = government_is_landless_adventurer }
+	NOT = { government_has_flag = government_is_herder }
+	OR = {
+		top_liege = this
+		is_vassal_of = title:k_france.holder.top_liege
+	}
+}
+
+nh_rollo_normandy_acceptance_valid_trigger = {
+	nh_rollo_normandy_offer_valid_trigger = yes
+	exists = scope:francish_king
+	scope:francish_king = { is_alive = yes }
+	title:k_france.holder.top_liege = scope:francish_king
+	exists = capital_province
+	can_marry_common_trigger = yes
+}

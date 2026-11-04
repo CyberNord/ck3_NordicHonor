@@ -1,33 +1,39 @@
 ﻿form_nh_old_saxony_scripted_effect ={
-	save_scope_as = scoped_ruler
-	title:k_old_saxia = { save_scope_as = old_saxia }
+	# Recheck before moving de-jure titles; never take an existing kingdom.
+	if = {
+		limit = { is_alive = yes highest_held_title_tier <= tier_duchy NOT = { exists = title:k_old_saxia.holder } completely_controls_region = custom_old_saxia }
+		save_scope_as = scoped_ruler
+		title:k_old_saxia = { save_scope_as = old_saxia }
 
-	#De jure shifts.
-	title:d_holstein = { set_de_jure_liege_title = title:k_old_saxia }
-	title:d_ostfalen = { set_de_jure_liege_title = title:k_old_saxia }
-	title:d_angria = { set_de_jure_liege_title = title:k_old_saxia }
-	title:d_westfalen = { set_de_jure_liege_title = title:k_old_saxia }
-	title:d_anhalt = { set_de_jure_liege_title = title:k_old_saxia }
+		#De jure shifts.
+		title:d_holstein = { set_de_jure_liege_title = title:k_old_saxia }
+		title:d_ostfalen = { set_de_jure_liege_title = title:k_old_saxia }
+		title:d_angria = { set_de_jure_liege_title = title:k_old_saxia }
+		title:d_westfalen = { set_de_jure_liege_title = title:k_old_saxia }
+		title:d_anhalt = { set_de_jure_liege_title = title:k_old_saxia }
 
 
-	title:k_old_saxia = { set_de_jure_liege_title = title:e_germany}
-	create_title_and_vassal_change = {
-		type = created
-		save_scope_as = change
-		add_claim_on_loss = no
-	}
-	title:k_old_saxia = {
-		change_title_holder = {
-			holder = root
-			change = scope:change
+		title:k_old_saxia = { set_de_jure_liege_title = title:e_germany}
+		create_title_and_vassal_change = {
+			type = created
+			save_scope_as = change
+			add_claim_on_loss = no
 		}
+		title:k_old_saxia = {
+			change_title_holder = {
+				holder = root
+				change = scope:change
+			}
+		}
+		resolve_title_and_vassal_change = scope:change
+		hidden_effect = { set_primary_title_to = title:k_old_saxia }
+
 	}
-	resolve_title_and_vassal_change = scope:change
-	hidden_effect = { set_primary_title_to = title:k_old_saxia }
 }
 
 ## Rollo Norman conquest events
 nh_marry_norman_historical_effect = {
+	clear_saved_scope = norman_spouse
 	character:90104 = { save_scope_as = spouse_father }		#(King Charles the Bald)
 	character:167830 = { save_scope_as = spouse_mother }	#(Irminitrude of Orléans)
 
@@ -40,10 +46,10 @@ nh_marry_norman_historical_effect = {
 		save_scope_as = norman_spouse
 	}
 
-	root = {marry = scope:norman_spouse}
 }
 
 nh_marry_norman_alternate_effect = {
+	clear_saved_scope = norman_spouse
 	create_character = {
 		template = nh_norman_character
 		dynasty = inherit
@@ -52,32 +58,101 @@ nh_marry_norman_alternate_effect = {
 		save_scope_as = norman_spouse
 	}
 
-	root = {marry = scope:norman_spouse}
+}
+
+# Shared safety envelope for the four existing acceptance options. 
+nh_rollo_accept_normandy_effect = {
+	save_scope_value_as = { name = nh_story_conversion_succeeded value = no }
+	if = {
+		limit = {
+			nh_rollo_normandy_acceptance_valid_trigger = yes
+			OR = {
+				AND = {
+					always = $HISTORICAL$
+					scope:francish_king = character:90104
+					exists = character:167830
+				}
+				AND = {
+					always = $ALTERNATE$
+					NOT = { scope:francish_king = character:90104 }
+				}
+			}
+		}
+		save_scope_as = actor
+		$BRIDE_EFFECT$ = yes
+		if = {
+			limit = {
+				exists = scope:norman_spouse
+				scope:norman_spouse = { is_alive = yes }
+				could_marry_character_trigger = { CHARACTER = scope:norman_spouse }
+			}
+			if = {
+				limit = { always = $CONVERT$ }
+				nh_story_convert_to_frankish_rite_effect = yes
+			}
+			if = {
+				limit = {
+					OR = {
+						always = $KEEP_FAITH$
+						scope:nh_story_conversion_succeeded = yes
+					}
+				}
+				if = {
+					limit = { exists = primary_spouse }
+					divorce = primary_spouse
+				}
+				marry = scope:norman_spouse
+				if = {
+					limit = { is_spouse_of = scope:norman_spouse }
+					nh_swear_fealty_effect = yes
+					if = {
+						limit = { is_vassal_of = scope:francish_king }
+						$CONTRACT_EFFECT$ = yes
+						dynasty = { add_dynasty_prestige = 500 }
+						if = {
+							limit = { always = $CONVERT$ }
+							scope:francish_king = { trigger_event = nh.9000 }
+						}
+					}
+				}
+			}
+		}
+	}
 }
 
 nh_swear_fealty_effect = {
-	create_title_and_vassal_change = {
-		type = swear_fealty
-		save_scope_as = change
-	}
-
-	scope:actor = {
-		change_liege = {
-			liege = scope:francish_king
-			change = scope:change
+	# Already a direct vassal: keep the existing relationship and contract.
+	if = {
+		limit = {
+			nh_rollo_normandy_acceptance_valid_trigger = yes
+			NOT = { is_vassal_of = scope:francish_king }
 		}
-		add_opinion = {
-			modifier = became_vassal
-			target = scope:francish_king
-			opinion = 10
+		create_title_and_vassal_change = {
+			type = swear_fealty
+			save_scope_as = change
 		}
-	}
-	resolve_title_and_vassal_change = scope:change
 
-	# remove silly imprisonment reason
-	consume_all_criminal_reasons_effect = {
-		LIEGE = scope:francish_king
-		CRIMINAL = scope:actor
+		scope:actor = {
+			change_liege = {
+				liege = scope:francish_king
+				change = scope:change
+			}
+		}
+		resolve_title_and_vassal_change = scope:change
+
+		if = {
+			limit = { is_vassal_of = scope:francish_king }
+			add_opinion = {
+				modifier = became_vassal
+				target = scope:francish_king
+				opinion = 10
+			}
+			# Remove the old imprisonment reason only after actual submission.
+			consume_all_criminal_reasons_effect = {
+				LIEGE = scope:francish_king
+				CRIMINAL = scope:actor
+			}
+		}
 	}
 }
 
@@ -87,6 +162,7 @@ nh_vassal_contract_march_effect = {
 			limit = {
 				government_has_flag = government_is_feudal
 				is_vassal_of = scope:francish_king
+				vassal_contract_has_modifiable_obligations = yes
 			}
 			vassal_contract_set_obligation_level = {
 				type = special_contract
@@ -103,6 +179,7 @@ nh_vassal_contract_religious_effect = {
 			limit = {
 				government_has_flag = government_is_feudal
 				is_vassal_of = scope:francish_king
+				vassal_contract_has_modifiable_obligations = yes
 			}
 			vassal_contract_set_obligation_level = {
 				type = religious_rights
@@ -115,30 +192,35 @@ nh_vassal_contract_religious_effect = {
 
 ## form Iceland
 form_nh_iceland_scripted_effect = {
-	save_scope_as = scoped_ruler
-	title:k_iceland = { save_scope_as = iceland }
+	# Recheck before moving de-jure titles; never take an existing kingdom.
+	if = {
+		limit = { is_alive = yes highest_held_title_tier <= tier_duchy NOT = { exists = title:k_iceland.holder } rite = rite:ginnregla_pagan has_title = title:d_iceland }
+		save_scope_as = scoped_ruler
+		title:k_iceland = { save_scope_as = iceland }
 
-	#De jure shifts.
-	title:d_iceland = { set_de_jure_liege_title = title:k_iceland }
-	title:d_northern_isles = { set_de_jure_liege_title = title:k_iceland }
+		#De jure shifts.
+		title:d_iceland = { set_de_jure_liege_title = title:k_iceland }
+		title:d_northern_isles = { set_de_jure_liege_title = title:k_iceland }
 
-	hidden_effect = {
-		title:k_iceland = { set_de_jure_liege_title = title:e_scandinavia }
-	}
-
-	create_title_and_vassal_change = {
-		type = created
-		save_scope_as = change
-		add_claim_on_loss = no
-	}
-	title:k_iceland = {
-		change_title_holder = {
-			holder = root
-			change = scope:change
+		hidden_effect = {
+			title:k_iceland = { set_de_jure_liege_title = title:e_scandinavia }
 		}
+
+		create_title_and_vassal_change = {
+			type = created
+			save_scope_as = change
+			add_claim_on_loss = no
+		}
+		title:k_iceland = {
+			change_title_holder = {
+				holder = root
+				change = scope:change
+			}
+		}
+		resolve_title_and_vassal_change = scope:change
+		hidden_effect = { set_primary_title_to = title:k_iceland }
+
 	}
-	resolve_title_and_vassal_change = scope:change
-	hidden_effect = { set_primary_title_to = title:k_iceland }
 }
 
 
@@ -223,20 +305,104 @@ nh_spawn_elite_warriors_effect = {
 			name = event_troop_elite_warriors_name
 		}
 	}
+
 }
 
-# Scripted story choices may cross faith boundaries, unlike the rite-view conversion.
-# Convert to the target faith first (including willing vassals/capital), then select
-# the promised rite explicitly. Do not use a history effect: conversion hooks matter.
 nh_story_convert_to_rite_effect = {
+	save_scope_value_as = { name = nh_story_conversion_succeeded value = no }
 	if = {
-		limit = { NOT = { faith = $RITE$.faith } }
-		set_character_faith_with_conversion = $RITE$.faith
+		limit = {
+			is_alive = yes
+			exists = faith
+			exists = $RITE$
+			$RITE$ = { is_rite_enabled = yes can_convert_to_rite = yes }
+		}
+		$RITE$ = { save_scope_as = nh_story_target_rite }
+		if = {
+			limit = {
+				NOT = { faith = scope:nh_story_target_rite.faith }
+				is_adult = yes
+				NOT = { faith.religious_head = this }
+				pam_is_antipope_trigger = no
+				is_in_ongoing_great_holy_war = no
+				NOR = { has_title = title:k_papal_state has_title = title:k_orthodox }
+				scope:nh_story_target_rite.faith = {
+					NOT = { has_variable = block_conversion_till_decision_taken }
+					NOT = { has_variable = block_conversion_till_nebulous_circumstances }
+					main_rite = { is_rite_enabled = yes can_convert_to_rite = yes }
+				}
+			}
+			add_known_rite = scope:nh_story_target_rite.faith.main_rite
+			add_known_rite = scope:nh_story_target_rite
+			remove_character_flag = faith_conversion_recently_converted
+			set_character_faith_with_conversion = scope:nh_story_target_rite.faith
+		}
+		if = {
+			limit = { faith = scope:nh_story_target_rite.faith }
+			if = {
+				limit = { NOT = { rite = scope:nh_story_target_rite } }
+				set_character_rite = scope:nh_story_target_rite
+			}
+			if = {
+				limit = { faith = scope:nh_story_target_rite.faith rite = scope:nh_story_target_rite }
+				if = {
+					limit = { exists = capital_county capital_county.faith = faith }
+					capital_county = {
+						if = {
+							limit = { NOT = { rite = scope:nh_story_target_rite } }
+							set_county_rite = scope:nh_story_target_rite
+						}
+					}
+				}
+				save_scope_value_as = { name = nh_story_conversion_succeeded value = yes }
+			}
+		}
 	}
-	set_character_rite = $RITE$
+}
+
+# Aud the Deep-minded 
+nh_resolve_iceland_christian_reference_effect = {
+	clear_saved_scope = nh_iceland_roman_rite
 	if = {
-		limit = { exists = capital_county capital_county.faith = faith }
-		capital_county = { set_county_rite = $RITE$ }
+		limit = {
+			exists = character:168609
+			character:168609 = { is_alive = yes }
+			exists = rite:roman_rite
+			rite:roman_rite = {
+				faith.religion = religion:christianity_religion
+				is_rite_enabled = yes can_convert_to_rite = yes
+			}
+		}
+		rite:roman_rite = { save_scope_as = nh_iceland_roman_rite }
+	}
+	else_if = {
+		limit = {
+			exists = title:k_papal_state.holder
+			title:k_papal_state.holder = {
+				is_alive = yes
+				faith.religion = religion:christianity_religion
+				exists = rite
+				NOT = { rite = rite:insular_celtic }
+				rite = { is_rite_enabled = yes can_convert_to_rite = yes }
+			}
+		}
+		title:k_papal_state.holder.rite = { save_scope_as = nh_iceland_roman_rite }
+	}
+}
+
+# Rollo offer
+nh_story_convert_to_frankish_rite_effect = {
+	save_scope_value_as = { name = nh_story_conversion_succeeded value = no }
+	if = {
+		limit = {
+			exists = scope:francish_king
+			scope:francish_king = {
+				is_alive = yes
+				faith.religion = religion:christianity_religion
+				exists = rite
+			}
+		}
+		nh_story_convert_to_rite_effect = { RITE = scope:francish_king.rite }
 	}
 }
 

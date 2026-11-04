@@ -9,6 +9,7 @@ namespace = nh
 
 #Ruler picking his opponent for last duel
 nh.0001 = {
+	trigger = { nh_last_duel_initiator_valid_trigger = yes }
 	type = character_event
 	title = {
 		desc = nh.0001.t
@@ -27,18 +28,24 @@ nh.0001 = {
 	lower_left_portrait = scope:player_vassal_option
 
 	immediate = {
+		clear_saved_scope = player_heir_option
+		clear_saved_scope = player_rival_option
+		clear_saved_scope = player_vassal_option
+		clear_saved_scope = champion
 
 		root = {
 			save_scope_as = actor
 		}
 
-		root.player_heir = {
-			save_scope_as = player_heir_option
+		if = {
+			limit = { exists = player_heir player_heir = { age >= 18 nh_last_duel_opponent_valid_trigger = yes } }
+			player_heir = { save_scope_as = player_heir_option }
 		}
 
 		# player_vassal_option (either Vassal or a honorable knight)
 		random_vassal = {
 			limit = {
+					nh_last_duel_opponent_valid_trigger = yes
 					OR = {
 						prowess > 20
 						has_trait = brave
@@ -69,6 +76,7 @@ nh.0001 = {
 			limit = { not = { exists = scope:player_vassal_option } }
 			random_knight = {
 				limit = {
+					nh_last_duel_opponent_valid_trigger = yes
 					OR = {
 						prowess > 20
 						has_trait = brave
@@ -99,6 +107,7 @@ nh.0001 = {
 		random_relation = {
 				type = rival
 				limit = {
+					nh_last_duel_opponent_valid_trigger = yes
 					NOR = {
 						has_trait = craven
 					}
@@ -117,9 +126,10 @@ nh.0001 = {
 	# duel heir
 	option = {
 		trigger = {
-			root.player_heir = {
-				age >= 18
-			}
+			exists = scope:player_heir_option
+			scope:actor = { nh_last_duel_initiator_valid_trigger = yes }
+			scope:player_heir_option = { nh_last_duel_opponent_valid_trigger = yes age >= 18 }
+			scope:actor.player_heir = scope:player_heir_option
 		}
 
 		name = nh.0001.option.duel_player_heir.desc
@@ -128,31 +138,15 @@ nh.0001 = {
 		ai_chance = {base = 75}
 
 
-		hidden_effect = {
-			scope:player_heir_option = { save_scope_as = champion }
-		}
-
-		single_combat_apply_default_shirtlessness_effect = {
-			ATTACKER = scope:actor
-			DEFENDER = scope:champion
-		}
-
-		configure_start_single_combat_effect = {
-				SC_INITIATOR = scope:actor
-				SC_ATTACKER = scope:actor
-				SC_DEFENDER = scope:champion
-				FATALITY = always
-				FIXED = no
-				LOCALE = terrain_scope
-				OUTPUT_EVENT = nh.0011
-				INVALIDATION_EVENT = nh.0021
-		}
+		nh_start_last_duel_effect = { OPPONENT = scope:player_heir_option NON_HEIR = no }
 	}
 
 	# duel rival
 	option = {
 		trigger = {
 			exists = scope:player_rival_option
+			scope:actor = { nh_last_duel_initiator_valid_trigger = yes }
+			scope:player_rival_option = { nh_last_duel_opponent_valid_trigger = yes  }
 		}
 		name = nh.0001.option.duel_player_rival.desc
 		custom_tooltip = nh.0001.option.duel_player_rival_tooltip.desc
@@ -160,32 +154,15 @@ nh.0001 = {
 
 		ai_chance = {base = 15}
 
-		hidden_effect = {
-			scope:player_rival_option = { save_scope_as = champion }
-		}
-
-		single_combat_apply_default_shirtlessness_effect = {
-			ATTACKER = scope:actor
-			DEFENDER = scope:champion
-		}
-
-		configure_start_single_combat_effect = {
-				SC_INITIATOR = scope:actor
-				SC_ATTACKER = scope:actor
-				SC_DEFENDER = scope:champion
-				FATALITY = always
-				FIXED = no
-				LOCALE = terrain_scope
-				OUTPUT_EVENT = nh.0011
-				INVALIDATION_EVENT = nh.0021
-		}
-
+		nh_start_last_duel_effect = { OPPONENT = scope:player_rival_option NON_HEIR = yes }
 	}
 
 	# duel vassal/knight
 	option = {
 		trigger = {
 			exists = scope:player_vassal_option
+			scope:actor = { nh_last_duel_initiator_valid_trigger = yes }
+			scope:player_vassal_option = { nh_last_duel_opponent_valid_trigger = yes  }
 		}
 
 		ai_chance = {base = 5}
@@ -193,25 +170,7 @@ nh.0001 = {
 		name = nh.0001.option.player_vassal_option.desc
 		custom_tooltip = nh.0001.option.player_vassal_option_tooltip.desc
 
-		hidden_effect = {
-			scope:player_vassal_option = { save_scope_as = champion }
-		}
-
-		single_combat_apply_default_shirtlessness_effect = {
-			ATTACKER = scope:actor
-			DEFENDER = scope:champion
-		}
-
-		configure_start_single_combat_effect = {
-				SC_INITIATOR = scope:actor
-				SC_ATTACKER = scope:actor
-				SC_DEFENDER = scope:champion
-				FATALITY = always
-				FIXED = no
-				LOCALE = terrain_scope
-				OUTPUT_EVENT = nh.0011
-				INVALIDATION_EVENT = nh.0021
-		}
+		nh_start_last_duel_effect = { OPPONENT = scope:player_vassal_option NON_HEIR = yes }
 	}
 
 }
@@ -221,10 +180,7 @@ nh.0011 = {
 	hidden = yes
 	immediate = {
 		# If any clothes were stripped, put 'em back on.
-		single_combat_clean_shirtlessness_effect = {
-			ATTACKER = scope:actor
-			DEFENDER = scope:champion
-		}
+		nh_last_duel_clean_appearance_effect = yes
 
 		# Did scope:actor win?
 		if = {
@@ -262,22 +218,17 @@ nh.0011 = {
 nh.0021 = {
 	hidden = yes
 	immediate = {
-		# Put your shirts back on.
-		single_combat_clean_shirtlessness_effect = {
-			ATTACKER = scope:actor
-			DEFENDER = scope:champion
-		}
-		# Inform both parties that the duel has invalidated.
-		scope:actor = {
-			send_interface_toast = {
-				title = nh.0021.trigger_failure.actor
-				left_icon = scope:champion
+		nh_last_duel_clean_appearance_effect = yes
+		scope:actor ?= {
+			if = {
+				limit = { is_alive = yes }
+				send_interface_toast = { title = nh.0021.trigger_failure.actor left_icon = this }
 			}
 		}
-		scope:champion = {
-			send_interface_toast = {
-				title = nh.0021.trigger_failure.recipient
-				left_icon = scope:actor
+		scope:champion ?= {
+			if = {
+				limit = { is_alive = yes }
+				send_interface_toast = { title = nh.0021.trigger_failure.recipient left_icon = this }
 			}
 		}
 	}
@@ -520,11 +471,21 @@ nh.1004 = {
 		root.faith = {
 			save_scope_as = old_faith
 		}
+		nh_resolve_iceland_christian_reference_effect = yes
 	}
 
 	option = {
 		name = nh.1004.option.pagan.desc
 		custom_tooltip = nh.1004.option.pagan_tooltip.desc
+		# The first great Althing requires Ginnregla, including for an Asatru entrant.
+		# Change only this character's rite; no faith-conversion or county/family pass.
+		if = {
+			limit = {
+				faith = faith:norse_pagan
+				NOT = { rite = rite:ginnregla_pagan }
+			}
+			set_character_rite = rite:ginnregla_pagan
+		}
 		give_nickname = nick_nh_pagan_special
 
 		if = {
@@ -596,23 +557,30 @@ nh.1004 = {
 	}
 
 	option = {
+		trigger = { exists = scope:nh_iceland_roman_rite }
 		name = nh.1004.option.catholic.desc
 		custom_tooltip = nh.1004.option.catholic_tooltip.desc
-		give_nickname = nick_nh_catholic_special
-		root = { nh_story_convert_to_rite_effect = { RITE = rite:roman_rite } }
-
+		root = {
+			nh_resolve_iceland_christian_reference_effect = yes
+			nh_story_convert_to_rite_effect = { RITE = scope:nh_iceland_roman_rite }
+		}
 		if = {
-			limit = { has_trait = vengeful }
-			remove_trait = vengeful
-		}
-		add_trait = forgiving
-		dynasty = {
-			add_dynasty_prestige = 1000
-		}
-		hidden_effect = {
-			add_character_modifier = {
-				modifier = nh_odins_curse_modifier
-				years = 100
+			limit = { scope:nh_story_conversion_succeeded = yes }
+			give_nickname = nick_nh_catholic_special
+
+			if = {
+				limit = { has_trait = vengeful }
+				remove_trait = vengeful
+			}
+			add_trait = forgiving
+			dynasty = {
+				add_dynasty_prestige = 1000
+			}
+			hidden_effect = {
+				add_character_modifier = {
+					modifier = nh_odins_curse_modifier
+					years = 100
+				}
 			}
 		}
 
@@ -661,21 +629,24 @@ nh.1004 = {
 	option = {
 		name = nh.1004.option.insular.desc
 		custom_tooltip = nh.1004.option.insular_tooltip.desc
-		give_nickname = nick_nh_insular_special
 		root = { nh_story_convert_to_rite_effect = { RITE = rite:insular_celtic } }
-
 		if = {
-			limit = { has_trait = gluttonous }
-			remove_trait = gluttonous
-		}
-		add_trait = temperate
-		dynasty = {
-			add_dynasty_prestige = 1000
-		}
-		hidden_effect = {
-			add_character_modifier = {
-				modifier = nh_odins_curse_modifier
-				years = 100
+			limit = { scope:nh_story_conversion_succeeded = yes }
+			give_nickname = nick_nh_insular_special
+
+			if = {
+				limit = { has_trait = gluttonous }
+				remove_trait = gluttonous
+			}
+			add_trait = temperate
+			dynasty = {
+				add_dynasty_prestige = 1000
+			}
+			hidden_effect = {
+				add_character_modifier = {
+					modifier = nh_odins_curse_modifier
+					years = 100
+				}
 			}
 		}
 
@@ -764,6 +735,7 @@ nh.1005 = {
 # Rollo's Adventure
 nh.1011 = {
 	type = character_event
+	trigger = { this = character:242 is_alive = yes is_landed = yes }
 	title = nh.1011.t
 	desc = nh.1011.desc
 	theme = war
@@ -783,17 +755,20 @@ nh.1011 = {
 		}
 
 		# normandy
-		title:c_rouen.holder.top_liege = {
+		clear_saved_scope = opponent_normandy_option
+		title:c_rouen.holder.top_liege ?= {
 			save_scope_as = opponent_normandy_option
 		}
 
 		# sardinia
-		title:c_cagliari.holder.top_liege = {
+		clear_saved_scope = opponent_sardinia_option
+		title:c_cagliari.holder.top_liege ?= {
 			save_scope_as = opponent_sardinia_option
 		}
 
 		# essex
-		title:c_middlesex.holder.top_liege = {
+		clear_saved_scope = opponent_essex_option
+		title:c_middlesex.holder.top_liege ?= {
 			save_scope_as = opponent_essex_option
 		}
 
@@ -843,13 +818,18 @@ nh.1011 = {
 		name = nh.1011.option.opponent_normandy_option.desc
 		custom_tooltip = nh.1011.option.opponent_normandy_option_tooltip.desc
 
-		trigger = {exists = scope:opponent_normandy_option}
+		trigger = {
+			nh_rollo_adventure_target_valid_trigger = { COUNTY = title:c_rouen TITLE = title:d_normandy }
+		}
 
-		# if this cause problems for non DLC owners use fix in issue#5
-		start_war = {
-			cb = fp1_varangian_adventurer_conquest
-			target = scope:opponent_normandy_option
-			target_title = title:d_normandy
+		# Resolve ownership again at the click; never attack the stale portrait.
+		if = {
+			limit = { nh_rollo_adventure_target_valid_trigger = { COUNTY = title:c_rouen TITLE = title:d_normandy } }
+			start_war = {
+				cb = fp1_varangian_adventurer_conquest
+				target = title:c_rouen.holder.top_liege
+				target_title = title:d_normandy
+			}
 		}
 
 		ai_chance = {base = 100}
@@ -859,11 +839,16 @@ nh.1011 = {
 		name = nh.1011.option.opponent_sardinia_option.desc
 		custom_tooltip = nh.1011.option.opponent_sardinia_option_tooltip.desc
 
-		trigger = {exists = scope:opponent_sardinia_option}
-		start_war = {
-			cb = fp1_varangian_adventurer_conquest
-			target = scope:opponent_sardinia_option
-			target_title = title:d_sardinia
+		trigger = {
+			nh_rollo_adventure_target_valid_trigger = { COUNTY = title:c_cagliari TITLE = title:d_sardinia }
+		}
+		if = {
+			limit = { nh_rollo_adventure_target_valid_trigger = { COUNTY = title:c_cagliari TITLE = title:d_sardinia } }
+			start_war = {
+				cb = fp1_varangian_adventurer_conquest
+				target = title:c_cagliari.holder.top_liege
+				target_title = title:d_sardinia
+			}
 		}
 		ai_chance = {base = 0}
 	}
@@ -872,13 +857,31 @@ nh.1011 = {
 		name = nh.1011.option.opponent_essex_option.desc
 		custom_tooltip = nh.1011.option.opponent_essex_option_tooltip.desc
 
-		trigger = {exists = scope:opponent_essex_option}
-		start_war = {
-			cb = fp1_varangian_adventurer_conquest
-			target = scope:opponent_essex_option
-			target_title = title:d_bedford
+		trigger = {
+			nh_rollo_adventure_target_valid_trigger = { COUNTY = title:c_middlesex TITLE = title:d_bedford }
+		}
+		if = {
+			limit = { nh_rollo_adventure_target_valid_trigger = { COUNTY = title:c_middlesex TITLE = title:d_bedford } }
+			start_war = {
+				cb = fp1_varangian_adventurer_conquest
+				target = title:c_middlesex.holder.top_liege
+				target_title = title:d_bedford
+			}
 		}
 		ai_chance = {base = 0}
+	}
+
+	# Technical exit if the world changed after the decision was taken.
+	option = {
+		name = CANCEL
+		trigger = {
+			NOR = {
+				nh_rollo_adventure_target_valid_trigger = { COUNTY = title:c_rouen TITLE = title:d_normandy }
+				nh_rollo_adventure_target_valid_trigger = { COUNTY = title:c_cagliari TITLE = title:d_sardinia }
+				nh_rollo_adventure_target_valid_trigger = { COUNTY = title:c_middlesex TITLE = title:d_bedford }
+			}
+		}
+		ai_chance = { base = 100 }
 	}
 }
 
@@ -900,10 +903,11 @@ nh.1012 = {
 
 	trigger = {
 		current_date > 860.1.1
-		title:d_normandy.holder ?= character:242
+		nh_rollo_normandy_offer_valid_trigger = yes
 	}
 
 	immediate = {
+		clear_saved_scope = francish_king
 		title:k_france.holder.top_liege = {
 			save_scope_as = francish_king
 		}
@@ -917,6 +921,8 @@ nh.1012 = {
 	# historical (no conversion)
 	option = {
 		trigger = {
+			nh_rollo_normandy_acceptance_valid_trigger = yes
+			exists = character:167830
 			exists = character:90104
 			title:k_france.holder.top_liege = character:90104
 		}
@@ -924,17 +930,15 @@ nh.1012 = {
 		name = nh.1012.option.alternate_historical_agree.desc
 		custom_tooltip = nh.1012.option.alternate_historical_agree_tooltip.desc
 
-		if = {
-			limit = {exists = primary_spouse}
-			divorce = primary_spouse
-		}
-
-		hidden_effect = { nh_marry_norman_historical_effect = yes }
-		nh_swear_fealty_effect = yes
-		hidden_effect = { nh_vassal_contract_religious_effect = yes }
-
-		dynasty = {
-			add_dynasty_prestige = 500
+		hidden_effect = {
+			nh_rollo_accept_normandy_effect = {
+				HISTORICAL = yes
+				ALTERNATE = no
+				CONVERT = no
+				KEEP_FAITH = yes
+				BRIDE_EFFECT = nh_marry_norman_historical_effect
+				CONTRACT_EFFECT = nh_vassal_contract_religious_effect
+			}
 		}
 
 		ai_chance = {base = 0 }
@@ -943,29 +947,27 @@ nh.1012 = {
 	# historical with conversion
 	option = {
 		trigger = {
+			nh_rollo_normandy_acceptance_valid_trigger = yes
+			exists = character:167830
 			exists = character:90104
 			title:k_france.holder.top_liege = character:90104
+			exists = scope:francish_king
+			scope:francish_king = { is_alive = yes faith.religion = religion:christianity_religion exists = rite }
 		}
 
 		name = nh.1012.option.historical_agree.desc
 		custom_tooltip = nh.1012.option.historical_agree_tooltip.desc
 
-		if = {
-			limit = {exists = primary_spouse}
-			divorce = primary_spouse
+		hidden_effect = {
+			nh_rollo_accept_normandy_effect = {
+				HISTORICAL = yes
+				ALTERNATE = no
+				CONVERT = yes
+				KEEP_FAITH = no
+				BRIDE_EFFECT = nh_marry_norman_historical_effect
+				CONTRACT_EFFECT = nh_vassal_contract_march_effect
+			}
 		}
-
-		root = { nh_story_convert_to_rite_effect = { RITE = rite:roman_rite } }
-
-		hidden_effect = { nh_marry_norman_historical_effect = yes }
-		nh_swear_fealty_effect = yes
-		hidden_effect = { nh_vassal_contract_march_effect = yes }
-
-		dynasty = {
-			add_dynasty_prestige = 500
-		}
-
-		scope:francish_king = { trigger_event = nh.9000}
 
 		ai_chance = {base = 100}
 	}
@@ -973,22 +975,21 @@ nh.1012 = {
 	# alternate historical (no conversion)
 	option = {
 		trigger = {
+			nh_rollo_normandy_acceptance_valid_trigger = yes
 			NOT ={ title:k_france.holder.top_liege = character:90104 }
 		}
 		name = nh.1012.option.agree_alternative.desc
 		custom_tooltip = nh.1012.option.agree_alternative_tooltip.desc
 
-		if = {
-			limit = {exists = primary_spouse}
-			divorce = primary_spouse
-		}
-
-		hidden_effect = { nh_marry_norman_alternate_effect = yes }
-		nh_swear_fealty_effect = yes
-		hidden_effect = { nh_vassal_contract_religious_effect = yes }
-
-		dynasty = {
-			add_dynasty_prestige = 500
+		hidden_effect = {
+			nh_rollo_accept_normandy_effect = {
+				HISTORICAL = no
+				ALTERNATE = yes
+				CONVERT = no
+				KEEP_FAITH = yes
+				BRIDE_EFFECT = nh_marry_norman_alternate_effect
+				CONTRACT_EFFECT = nh_vassal_contract_religious_effect
+			}
 		}
 
 		ai_chance = {base = 0}
@@ -997,26 +998,24 @@ nh.1012 = {
 	# alternate historical with conversion
 	option = {
 		trigger = {
+			nh_rollo_normandy_acceptance_valid_trigger = yes
 			NOT ={ title:k_france.holder.top_liege = character:90104 }
+			exists = scope:francish_king
+			scope:francish_king = { is_alive = yes faith.religion = religion:christianity_religion exists = rite }
 		}
 		name = nh.1012.option.agree_alternative_convert.desc
 		custom_tooltip = nh.1012.option.agree_alternative_convert_tooltip.desc
 
-		if = {
-			limit = {exists = primary_spouse}
-			divorce = primary_spouse
+		hidden_effect = {
+			nh_rollo_accept_normandy_effect = {
+				HISTORICAL = no
+				ALTERNATE = yes
+				CONVERT = yes
+				KEEP_FAITH = no
+				BRIDE_EFFECT = nh_marry_norman_alternate_effect
+				CONTRACT_EFFECT = nh_vassal_contract_religious_effect
+			}
 		}
-
-		root = { nh_story_convert_to_rite_effect = { RITE = rite:roman_rite } }
-
-		hidden_effect = { nh_marry_norman_alternate_effect = yes }
-		nh_swear_fealty_effect = yes
-		hidden_effect = { nh_vassal_contract_religious_effect = yes }
-
-		dynasty = {
-			add_dynasty_prestige = 500
-		}
-		scope:francish_king = { trigger_event = nh.9000}
 
 		ai_chance = {base = 100}
 	}
@@ -1335,6 +1334,11 @@ nh.1015 = {
 # rollo
 nh.9000 = {
 	type = letter_event
+	trigger = {
+		is_alive = yes
+		exists = scope:actor
+		scope:actor = { is_alive = yes }
+	}
 	opening = nh.9000.opening
 	desc = nh.9000.desc
 	sender = scope:actor
@@ -1346,6 +1350,7 @@ nh.9000 = {
 
 # repeatable thing
 nh.9001 = {
+	trigger = { is_alive = yes exists = scope:iceland_liege scope:iceland_liege = { is_alive = yes } }
 	type = letter_event
 	opening = nh.9001.opening
 	desc = nh.9001.desc
@@ -1357,6 +1362,7 @@ nh.9001 = {
 }
 
 nh.9002 = {
+	trigger = { is_alive = yes exists = scope:iceland_liege scope:iceland_liege = { is_alive = yes } }
 	type = letter_event
 	opening = nh.9002.opening
 	desc = nh.9002.desc
@@ -1368,6 +1374,7 @@ nh.9002 = {
 }
 
 nh.9003 = {
+	trigger = { is_alive = yes exists = scope:iceland_liege scope:iceland_liege = { is_alive = yes } }
 	type = letter_event
 	opening = nh.9003.opening
 	desc = nh.9003.desc
@@ -1379,6 +1386,7 @@ nh.9003 = {
 }
 
 nh.9004 = {
+	trigger = { is_alive = yes exists = scope:iceland_liege scope:iceland_liege = { is_alive = yes } }
 	type = letter_event
 	opening = nh.9004.opening
 	desc = nh.9004.desc
