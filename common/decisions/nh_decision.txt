@@ -541,7 +541,6 @@ nh_convert_to_christianity_iceland_decision = {
 	selection_tooltip = nh_convert_to_christianity_iceland_decision_tooltip
 	ai_goal = yes
 
-	ai_check_interval = 3
 
 
 	is_shown = {
@@ -788,7 +787,6 @@ nh_rollos_adventure_decision = {
 	selection_tooltip = nh_rollos_adventure_decision_tooltip
 	ai_goal = yes
 
-	ai_check_interval = 6
 
 
 	is_shown = {
@@ -944,7 +942,6 @@ nh_iceland_first_great_ting = {
 	selection_tooltip = nh_iceland_first_great_ting_tooltip
 	ai_goal = yes
 
-	ai_check_interval = 36
 
 	is_shown = {
 		is_lowborn = no
