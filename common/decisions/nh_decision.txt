@@ -1073,7 +1073,7 @@ nh_iceland_yearly_ting = {
 	}
 
 	is_valid = {
-		#restricted to norse icelandic folk
+		# Gíñnregla rite and North Germanic cultural heritage.
 		rite = rite:ginnregla_pagan
 		culture = { has_cultural_pillar = heritage_north_germanic }
 
@@ -1083,7 +1083,7 @@ nh_iceland_yearly_ting = {
 			subject = root
 			faith = { has_doctrine_parameter = unreformed }
 		}
-		# Thingvellirhold relevant Titles
+		# Personally hold South Iceland and the Duchy of Iceland.
 		has_title = title:c_sudurland
 		has_title = title:d_iceland
 	}
@@ -1195,8 +1195,6 @@ nh_odinstru_raise_elite_warriors = {
 
 		nh_spawn_elite_warriors_effect = yes
 		# One fixed five-point cost for every army package, for players and AI.
-		# Keep this outside the realm-size branches; the native effect is visible.
-		faith = {
 			change_fervor = {
 				value = -5
 				desc = nh_odinstru_raise_elite_warriors

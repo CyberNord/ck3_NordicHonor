@@ -2,7 +2,7 @@
 # Core tenets and rite-specific doctrines belong to the explicit main rites.
 # Rome and Constantinople are intentionally absent until their conquest decisions.
 
-# Ásatrú: the shared faith of the main Norse, Óðinnstrú and Icelandic rites.
+# Æsirtrú: the shared faith of Ásatrú, Óðinnstrú and Gíñnregla.
 norse_pagan = {
 	main_rite = norse_pagan
 	faith_details = {
@@ -16,10 +16,10 @@ norse_pagan = {
 	holy_sites = { thingvellir lejre zeeland konugardr }
 }
 
-# Forn Siðr (North German), also the parent faith of Wōden Siðr.
+# Irminsul: parent faith of Forn Siðr and Wōden Siðr.
 forn_sidr_pagan = {
 	main_rite = forn_sidr_pagan
-	# Existing tradition, even without start followers; not an uncreated future faith.
+	# Historical tradition remains available without starting followers.
 	# Vanilla historical=yes keeps it available as a dead faith, including its rites.
 	historical = yes
 	faith_details = {
@@ -75,7 +75,7 @@ forn_sidr_pagan = {
 	}
 }
 
-# Náttúruguðtrúarmenn (Skando-Finnic)
+# Landvættir: parent faith of Náttúruguðtrúar.
 natturugudtruar_pagan = {
 	main_rite = natturugudtruar_pagan
 	# Remain a historical faith when the early-start assignment does not run (1066).
@@ -87,12 +87,12 @@ natturugudtruar_pagan = {
 		reformed_icon = natturugudtruar_reformed
 	}
 
-	# perm: kaksalami (original regional annotation).
+	# Perm / Kaksalami.
 	eminent_holy_sites = { akkel trelleborg perm }
 	holy_sites = { gniezno konugardr }
 }
 
-# Heiðinn (Baltisch)
+# Erþtrú: parent faith of Heiðinn and Gotisch.
 heidinn_pagan = {
 	main_rite = heidinn_pagan
 	# Remain a historical faith when the early-start assignment does not run (1066).

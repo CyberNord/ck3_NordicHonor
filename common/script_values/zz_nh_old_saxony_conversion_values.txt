@@ -1,4 +1,4 @@
-﻿# CK3 1.20.1.2 single-object override. Keep the vanilla factors unchanged.
+﻿# County conversion factors with a personal bonus for the founder of Old Saxony.
 # The founder-only multiplier expires with the personal modifier (100 years/death).
 court_chaplain_conversion_factors = {
 	value = 1

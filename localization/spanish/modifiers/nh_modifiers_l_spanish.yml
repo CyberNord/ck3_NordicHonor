@@ -54,6 +54,6 @@
  forced_conversion_opinion:0 "Forced Religious Conversion"
  fervor_loss_forced_conversion:0 "Forced Conversion"
 
- # Etappe 2: assembly results and Saxon founding rewards
+ # Assembly results and Saxon founding rewards
  nh_old_saxony_conversion_modifier:0 "Restaurador de la antigua fe"
  nh_old_saxony_conversion_modifier_desc:0 "La conversión religiosa del condado avanza un 300% más rápido (cuatro veces el ritmo aplicable). Este modificador personal caduca como máximo a los 100 años y no se hereda."

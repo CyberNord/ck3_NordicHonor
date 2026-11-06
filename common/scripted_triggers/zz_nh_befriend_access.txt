@@ -1,4 +1,4 @@
-﻿# CK3 1.20.1.2 targeted object override; all vanilla access paths retained.
+﻿# Befriend access through native requirements or Nordic heritage.
 can_use_befriend_scheme_trigger = {
 	OR = {
 		nh_nordic_befriend_access_trigger = yes

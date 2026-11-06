@@ -1,5 +1,5 @@
-﻿# CK3 1.20.1.2 religion type; this small vanilla file contains only germanic_religion.
-# Preserve NordicHonor's common names, virtues/sins and holy-order pool.
+﻿# Germanic religion: shared doctrines, deity names and holy orders.
+
 germanic_religion = {
 	religion_details = {
 		family = rf_pagan
@@ -58,7 +58,7 @@ germanic_religion = {
 		sins = { craven deceitful forgiving weak }
 	}
 
-	# Original author spelling notes for the reserved name lists:
+	# Name-list spelling notes:
 	# yes Íí Áá ð Úú Þ
 	# no o
 	reserved_male_names = {

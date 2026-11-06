@@ -51,6 +51,6 @@
  forced_conversion_opinion:0 "Forced Religious Conversion"
  fervor_loss_forced_conversion:0 "Forced Conversion"
 
- # Etappe 2: assembly results and Saxon founding rewards
+ # Assembly results and Saxon founding rewards
  nh_old_saxony_conversion_modifier:0 "Restorer of the Old Faith"
  nh_old_saxony_conversion_modifier_desc:0 "The founder leads the religious restoration. Convert Faith in County progresses 300% faster (four times the otherwise applicable rate) while this personal modifier lasts. It expires after 100 years at the latest and is not inherited."

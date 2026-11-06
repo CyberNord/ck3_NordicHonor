@@ -1,4 +1,4 @@
-﻿# A unique Forn-Sidr relic, not a new holy-site type or faith-wide doctrine.
+﻿# Unique Forn-Siðr holy-site relic.
 nh_irmunsul_template = {
 	can_equip = { always = yes }
 	can_benefit = { faith = faith:forn_sidr_pagan }

@@ -1,4 +1,4 @@
-﻿# CK3 1.20.1.2 targeted object override; divergence and all vanilla exceptions retained.
+﻿# Marriage acceptance: event heritage waives Christian religious penalties.
 marriage_ai_accept_faith_hostility_modifier = {
 	#########
 	# FAITH #

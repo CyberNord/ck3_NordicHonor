@@ -5,5 +5,5 @@
  event_troop_ginregla_name:0 "[ROOT.Char.GetTitledFirstNamePossessiveNoTooltip] Iceland Warriors"
  event_troop_elite_warriors_name:0 "[ROOT.Char.GetTitledFirstNamePossessiveNoTooltip] Fanatic Berserkers"
 
- # Etappe 2: assembly results and Saxon founding rewards
+ # Assembly results and Saxon founding rewards
  nh_old_saxony_huscarls_name:0 "古萨克森侍卫"

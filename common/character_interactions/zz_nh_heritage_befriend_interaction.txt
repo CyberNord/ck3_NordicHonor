@@ -1,4 +1,4 @@
-﻿# CK3 1.20.1.2 targeted object override; include doctrine holders in AI availability.
+﻿# Befriend interaction: doctrine holders are included in AI availability.
 befriend_interaction = {
 	icon = icon_scheme_befriend
 	category = interaction_category_friendly

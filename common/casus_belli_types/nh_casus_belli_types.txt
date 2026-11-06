@@ -1,5 +1,5 @@
 ﻿# Nordic Honor - Religious Conquest Casus Belli
-# Exclusive to Óðinnstrú faith
+# Restricted to the Óðinnstrú rite.
 
 nh_holy_conquest_cb = {
 	icon = county_conquest_cb
@@ -227,7 +227,7 @@ nh_holy_conquest_cb = {
 
 		resolve_title_and_vassal_change = scope:change
 
-		# Imprison up to 7 enemy characters (from design)
+		# Imprison up to 7 enemy characters
 		scope:defender = {
 			save_temporary_scope_as = defender_for_imprisonment
 			every_courtier = {
@@ -278,7 +278,7 @@ nh_holy_conquest_cb = {
 		# FP1: stele memory
 		scope:attacker = { fp1_remember_recent_conquest_victory_effect = yes }
 		
-		# Feature 4 effects will be triggered via on_action
+		
 		
 		# Fervor for victory
 		scope:attacker.faith = {
@@ -410,7 +410,7 @@ nh_holy_conquest_cb = {
 		}
 		on_lost_aggression_war_discontent_loss = yes
 		
-		# Feature 4 effects will be triggered via on_action
+		
 		
 		# Fervor for defeat
 		scope:attacker.faith = {

@@ -1,14 +1,11 @@
 ﻿# RESERVED / UNUSED: no event, decision, on_action or startup assignment calls this.
-# Prepared for possible future light Christian Syncretism; keep dormant.
 # Merely defining this helper grants nothing and charges no doctrine piety cost.
-# Its final future design is undecided; enabling it requires a separate design change.
 nh_adopt_christian_acceptance_effect = {
 	rite = {
 		change_rite_doctrine = special_faith_christian_heritage	}
 }
 
 # Active coexistence pact (nh.1003): change only this rite, retaining all three tenets.
-# Heritage opinions are retired; this change requires no character/follower updates.
 nh_adopt_sidbrytari_effect = {
 	rite = {
 		change_rite_doctrine = special_faith_traitor_heritage	}

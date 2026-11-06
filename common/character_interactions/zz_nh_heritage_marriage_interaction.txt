@@ -1,4 +1,4 @@
-﻿# CK3 1.20.1.2 targeted object override. Only the evil-faith AI gate gains an event-doctrine exception.
+﻿# Marriage interaction: event heritage grants an exception to the evil-faith AI gate.
 arrange_marriage_interaction = {
 	icon = icon_marriage
 	category = interaction_category_diplomacy
@@ -392,7 +392,7 @@ arrange_marriage_interaction = {
 		scope:puppet_or_actor ?= {
 			OR = {
 				is_ruler = yes #Can arrange marriages for others
-				#You're just a courtier? Only use the interaction on characters you can marry
+				# Courtiers may use the interaction only for characters they can marry.
 				can_marry_character_trigger = { CHARACTER = scope:recipient }
 			}
 		}
@@ -478,7 +478,7 @@ arrange_marriage_interaction = {
 	is_valid_showing_failures_only = {
 		pam_ai_marriage_respects_clerical_restraint_trigger = yes
 		#If we're opening this interaction through the interaction menu (i.e. not all scopes exist yet)
-		#This was giving double-warnings about a marry-able character existing so it's commented out for now
+		# Duplicate marriage-availability warning disabled.
 		#custom_description = {
 		#	text = character_to_marry_exists
 		#	object = scope:recipient
@@ -599,7 +599,7 @@ arrange_marriage_interaction = {
 				bp2_valid_for_standard_interactions_trigger = yes
 			}
 		}
-		# Account for regents being bolshy.
+		# Apply regent acceptance conditions.
 		marriage_interaction_non_loyal_diarchs_refuse_secondary_marriage_trigger = { TARGET = secondary_actor }
 		marriage_interaction_non_loyal_diarchs_refuse_secondary_marriage_trigger = { TARGET = secondary_recipient }
 		marriage_interaction_non_loyal_diarchs_refuse_secondary_marriage_trigger = { TARGET = puppet_or_actor }

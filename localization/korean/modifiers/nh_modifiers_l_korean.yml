@@ -54,6 +54,6 @@
  forced_conversion_opinion:0 "Forced Religious Conversion"
  fervor_loss_forced_conversion:0 "Forced Conversion"
 
- # Etappe 2: assembly results and Saxon founding rewards
+ # Assembly results and Saxon founding rewards
  nh_old_saxony_conversion_modifier:0 "옛 신앙의 복원자"
  nh_old_saxony_conversion_modifier_desc:0 "영지 개종 진행 속도가 300% 증가합니다(적용되는 기존 속도의 4배). 이 개인 변화 요소는 최대 100년 동안 지속되며 후계자에게 상속되지 않습니다."

@@ -1,6 +1,6 @@
 ﻿#Events for Nordic Honor
 
-# nh.0xxx  .... Last Duel (messy)
+# nh.0xxx  .... Last Duel
 # nh.100x  .... v1.0 Events
 # nh.101x  .... v1.1 Events
 # nh.9xxx  .... v1.1 Notification Events
@@ -179,14 +179,14 @@ nh.0001 = {
 nh.0011 = {
 	hidden = yes
 	immediate = {
-		# If any clothes were stripped, put 'em back on.
+		# Remove temporary duel clothing overrides.
 		nh_last_duel_clean_appearance_effect = yes
 
-		# Did scope:actor win?
+		# Challenger victory.
 		if = {
 			limit = { scope:sc_victor = scope:actor }
 
-			# And send out the ending events.
+			# Schedule the outcome event.
 			scope:actor = {
 				trigger_event = {
 					id = nh.0041
@@ -196,7 +196,7 @@ nh.0011 = {
 			# other died --> no event for other
 		}
 
-		# Or was it the other
+		# Opponent victory.
 		else_if = {
 			limit = { scope:sc_victor = scope:champion }
 
@@ -263,7 +263,7 @@ nh.0041 = {
 	override_background = { reference = throne_room }
 
 	trigger = {
-		# Juuuust need to double-check that they're actually alive.
+		# Deliver the delayed outcome only to a living recipient.
 		is_alive = yes
 	}
 
@@ -295,7 +295,7 @@ nh.0111 = {
 	title = nh.0111.t
 	desc = {
 		desc = nh.0111.desc.intro
-		# Scope:actor died in the fighting; we don't account for
+		# Description when the challenger died in the duel.
 		triggered_desc = {
 			trigger = {
 				scope:actor = { is_alive = no }
@@ -317,7 +317,7 @@ nh.0111 = {
 	override_background = { reference = throne_room }
 
 	trigger = {
-		# Juuuust need to double-check that they're actually alive.
+		# Deliver the delayed outcome only to a living recipient.
 		is_alive = yes
 	}
 
@@ -621,7 +621,7 @@ nh.1005 = {
 
 		root = { nh_story_convert_to_rite_effect = { RITE = rite:forn_sidr_pagan } }
 
-		# Only a successful founder receives the new one-time rewards.
+		# Only a successful founder receives the one-time rewards.
 		if = {
 			limit = { scope:nh_story_conversion_succeeded = yes }
 			nh_old_saxony_founder_rewards_effect = yes
@@ -1294,7 +1294,7 @@ nh.2001 = {
 	option = {
 		name = nh.2001.a
 		custom_tooltip = nh.2001.a.tt
-		# CK3 has martial lifestyle XP; the old military-experience effect does not exist.
+		# Martial lifestyle experience.
 		add_martial_lifestyle_xp = 500
 	}
 
@@ -1354,7 +1354,7 @@ nh.2011 = {
 		animation = personality_bold
 	}
 
-	# Draw without replacement: random_in_list has no position parameter.
+	# Select distinct counties without replacement.
 	immediate = {
 		save_scope_as = converter
 		clear_saved_scope = county_option_1
