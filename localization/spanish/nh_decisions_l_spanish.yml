@@ -61,7 +61,7 @@
 
 # Odinstru Elite Warriors Decision
  nh_odinstru_raise_elite_warriors:0 "Summon Odin's Chosen Warriors"
- nh_odinstru_raise_elite_warriors_desc:0 "As a devoted follower of Óðinnstrú, I can invoke the Allfather's blessing to rally the most zealous warriors from across my realm. These elite fighters, blessed by Odin himself, will form an army of unmatched skill and ferocity.\n\nSuch divine favor comes at a price - both in resources and in the fervor of our faith. But in times of great need, the gods provide for those who truly believe."
+ nh_odinstru_raise_elite_warriors_desc:0 "Como fiel seguidor de Óðinnstrú, puedo invocar la bendición del Padre de Todos y convocar a sus guerreros elegidos. Acuden de todo mi reino para luchar por los antiguos dioses.\n\nAdemás de oro, prestigio y piedad, esta convocatoria cuesta exactamente 5 puntos porcentuales de [fervor|E]. Todos los ritos de nuestra fe compartida sufren esta pérdida de fervor."
  nh_odinstru_raise_elite_warriors_tooltip:0 "Elite warriors will gather at your capital based on realm size"
  nh_odinstru_raise_elite_warriors_confirm:0 "The zealous gather..."
  nh_elite_warriors_holy_sites_requirement:0 "Your Faith is in danger of beeing forgotten"

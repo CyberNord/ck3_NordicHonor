@@ -1155,6 +1155,8 @@ nh_odinstru_raise_elite_warriors = {
 		is_at_war = no
 		piety_level >= 3
 		highest_held_title_tier >= tier_duchy
+		# Fervor belongs to the shared faith, including its other rites.
+		faith = { fervor >= 5 }
 
 		custom_description = {
 			text = nh_elite_warriors_holy_sites_requirement
@@ -1192,6 +1194,14 @@ nh_odinstru_raise_elite_warriors = {
 		save_scope_as = actor
 
 		nh_spawn_elite_warriors_effect = yes
+		# One fixed five-point cost for every army package, for players and AI.
+		# Keep this outside the realm-size branches; the native effect is visible.
+		faith = {
+			change_fervor = {
+				value = -5
+				desc = nh_odinstru_raise_elite_warriors
+			}
+		}
 
 		add_character_modifier = {
 			modifier = nh_blessed_by_odin

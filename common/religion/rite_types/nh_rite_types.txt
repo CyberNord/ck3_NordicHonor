@@ -1,8 +1,7 @@
-﻿# Six additive rites; the seventh, norse_pagan, is provided by vanilla.
-# Each legacy identity keeps its key, icon, tenets and applicable doctrines.
-
-# Forn Siðr (North German)
+﻿# Forn Siðr (North German)
 forn_sidr_pagan = {
+	name = nh_rite_forn_sidr_pagan
+	desc = nh_rite_forn_sidr_pagan_desc
 	faith = forn_sidr_pagan
 	color = { 0.94 0.87 0.80 }
 	icon = forn_sidr
@@ -23,7 +22,7 @@ forn_sidr_pagan = {
 	}
 }
 
-# Initial Wōden Siðr
+# Wōden Siðr (British Isles)
 woden_sidr_pagan = {
 	faith = forn_sidr_pagan
 	color = { 0.6 0.4 0.2 }
@@ -74,6 +73,8 @@ ginnregla_pagan = {
 
 # Náttúruguðtrúarmenn (Skando-Finnic)
 natturugudtruar_pagan = {
+	name = nh_rite_natturugudtruar_pagan
+	desc = nh_rite_natturugudtruar_pagan_desc
 	faith = natturugudtruar_pagan
 	color = { 0.25 0.64 0.21 }
 	icon = natturugudtruar
@@ -130,6 +131,8 @@ odinstru_pagan = {
 
 # Heiðinn (Baltisch)
 heidinn_pagan = {
+	name = nh_rite_heidinn_pagan
+	desc = nh_rite_heidinn_pagan_desc
 	faith = heidinn_pagan
 	color = { 0.4 0.6 0 }
 	icon = heidinn
@@ -146,4 +149,54 @@ heidinn_pagan = {
 		tenet = tenet_gruesome_festivals
 		fallback_tenet = tenet_human_sacrifice
 	}
+}
+
+# Keep vanilla gameplay exactly; Faith Æsirtrú and main rite Ásatrú need distinct names.
+norse_pagan = {
+	name = nh_rite_norse_pagan
+	desc = nh_rite_norse_pagan_desc
+	faith = norse_pagan
+
+	color = { 0.4 0.4 0.4 }
+
+	tenets = {
+		tenet_warmonger
+	}
+
+	doctrines = {
+		unreformed_faith_doctrine
+	}
+
+	tenet_selection_pair = {
+		requires_dlc_flag = the_northern_lords
+		tenet = tenet_gruesome_festivals
+		fallback_tenet = tenet_human_sacrifice
+	}
+
+	tenet_selection_pair = {
+		requires_dlc_flag = the_northern_lords
+		tenet = tenet_bhakti
+		fallback_tenet = tenet_ancestor_worship
+	}
+}
+
+# An extinct pre-Christian Gothic tradition, deliberately without 867/1066 followers.
+gothic_pagan = {
+	faith = heidinn_pagan
+	name = gothic_pagan
+	desc = gothic_pagan_desc
+	color = { 0.46 0.32 0.16 }
+	# Temporary reuse of Erþtrú's existing Heiðinn icon; no new artwork.
+	icon = heidinn
+	create = yes
+	convert = yes
+	history = no
+	tenets = { tenet_unrelenting_faith tenet_ancestor_worship }
+	tenet_selection_pair = {
+		requires_dlc_flag = the_northern_lords
+		tenet = tenet_gruesome_festivals
+		fallback_tenet = tenet_human_sacrifice
+	}
+	# Other baseline doctrines are inherited from the unchanged parent religion/faith.
+	doctrines = { unreformed_faith_doctrine }
 }
