@@ -154,7 +154,7 @@ nh.9004.a:0 "Embarquez pour de grands voyages"
  nh.2011.a5:0 "Convert [county_option_5.GetNameNoTier]"
  nh.2011.convert.tt:0 "Ce comté adopte votre rite par la force. Pendant 10 ans, les adeptes de son rite initial perdent 90 points d’opinion envers vous ; les autres rites de la même foi en perdent 40, et les autres fois de la même religion 20. Votre propre rite est prioritaire et ne perd que 10 points. Un seul motif négatif par personnage ; une action ultérieure le remplace."
  nh.2011.c:0 "Unleash total devastation - convert them ALL"
- nh.2011.convert_all.tt:0 "Les cinq comtés adoptent votre rite par la force et leur développement tombe à zéro. La ferveur baisse de 20 points ; les joueurs paient aussi 5 000 points de prestige. Pendant 10 ans, les adeptes des rites ou fois initiaux perdent 100 points d’opinion envers vous ; les autres fois de ces religions en perdent 50. Votre propre rite est prioritaire et ne perd que 10 points. Seule la réaction la plus forte s’applique, une fois par personnage ; une action ultérieure la remplace."
+ nh.2011.convert_all.tt:0 "Les cinq comtés adoptent votre rite par la force et leur développement est divisé par deux et arrondi à l’entier inférieur. La ferveur baisse de 20 points ; les joueurs paient aussi 5 000 points de prestige. Pendant 10 ans, les adeptes des rites ou fois initiaux perdent 100 points d’opinion envers vous ; les autres fois de ces religions en perdent 50. Votre propre rite est prioritaire et ne perd que 10 points. Seule la réaction la plus forte s’applique, une fois par personnage ; une action ultérieure la remplace."
  nh.2011.b:0 "I cannot bear this burden"
  nh.2011.b.tt:0 "Lose Piety, Legitimacy, and  Prestige for backing down after your forces have already mobilized"
 

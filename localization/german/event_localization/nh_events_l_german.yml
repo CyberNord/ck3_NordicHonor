@@ -154,7 +154,7 @@ nh.9004.a:0 "Embark on Great Journeys"
  nh.2011.a5:0 "Convert [county_option_5.GetNameNoTier]"
  nh.2011.convert.tt:0 "Diese Grafschaft übernimmt gewaltsam Euren Ritus. Zehn Jahre lang verlieren Anhänger ihres ursprünglichen Ritus 90 Meinung über Euch; andere Riten derselben Glaubensrichtung verlieren 40, andere Glaubensrichtungen derselben Religion 20. Euer eigener Ritus hat Vorrang und verliert nur 10. Ein negativer Grund je Charakter; eine spätere Aktion ersetzt ihn."
  nh.2011.c:0 "Unleash total devastation - convert them ALL"
- nh.2011.convert_all.tt:0 "Alle fünf Grafschaften übernehmen gewaltsam Euren Ritus, ihre Entwicklung fällt auf null. Eifer sinkt um 20 Punkte; Spieler zahlen zusätzlich 5.000 Prestige. Zehn Jahre lang verlieren Anhänger der ursprünglichen Riten oder Glaubensrichtungen 100 Meinung über Euch; andere Glaubensrichtungen dieser Religionen verlieren 50. Euer eigener Ritus hat Vorrang und verliert nur 10. Nur die stärkste Reaktion gilt einmal je Charakter; eine spätere Aktion ersetzt sie."
+ nh.2011.convert_all.tt:0 "Alle fünf Grafschaften übernehmen gewaltsam Euren Ritus, ihre Entwicklung wird halbiert und abgerundet. Eifer sinkt um 20 Punkte; Spieler zahlen zusätzlich 5.000 Prestige. Zehn Jahre lang verlieren Anhänger der ursprünglichen Riten oder Glaubensrichtungen 100 Meinung über Euch; andere Glaubensrichtungen dieser Religionen verlieren 50. Euer eigener Ritus hat Vorrang und verliert nur 10. Nur die stärkste Reaktion gilt einmal je Charakter; eine spätere Aktion ersetzt sie."
  nh.2011.b:0 "I cannot bear this burden"
  nh.2011.b.tt:0 "Lose Piety, Legitimacy, and  Prestige for backing down after your forces have already mobilized"
 

@@ -421,6 +421,19 @@ nh_convert_county_forced_effect = {
 		set_county_rite = scope:converter.rite
 		
 		if = {
+			limit = {
+				exists = scope:nh_conversion_mass_action
+				scope:nh_conversion_mass_action = yes
+			}
+			# Compute an integer target before changing the county development.
+			change_development_level = {
+				value = development_level
+				multiply = 0.5
+				floor = yes
+				subtract = development_level
+			}
+		}
+		else_if = {
 			limit = { scope:converter.rite = rite:odinstru_pagan }
 			change_development_level = {
 				subtract = { value = development_level multiply = 0.15 }

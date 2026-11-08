@@ -1667,28 +1667,18 @@ nh.2011 = {
 			# Convert all 5 counties
 			scope:county_option_1 = {
 				nh_convert_county_forced_effect = yes
-				# Subtract the current level: CK3 has no set_county_development effect.
-				change_development_level = { subtract = development_level }
 			}
 			scope:county_option_2 = {
 				nh_convert_county_forced_effect = yes
-				# Subtract the current level: CK3 has no set_county_development effect.
-				change_development_level = { subtract = development_level }
 			}
 			scope:county_option_3 = {
 				nh_convert_county_forced_effect = yes
-				# Subtract the current level: CK3 has no set_county_development effect.
-				change_development_level = { subtract = development_level }
 			}
 			scope:county_option_4 = {
 				nh_convert_county_forced_effect = yes
-				# Subtract the current level: CK3 has no set_county_development effect.
-				change_development_level = { subtract = development_level }
 			}
 			scope:county_option_5 = {
 				nh_convert_county_forced_effect = yes
-				# Subtract the current level: CK3 has no set_county_development effect.
-				change_development_level = { subtract = development_level }
 			}
 			hidden_effect = { nh_conversion_reactions_effect = yes }
 			
