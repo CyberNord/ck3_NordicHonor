@@ -1,0 +1,29 @@
+﻿# Character scope: current eligibility for an existing forced-conversion action.
+nh_forced_conversion_actor_valid_trigger = {
+	is_alive = yes
+	is_lowborn = no
+	OR = { rite = rite:odinstru_pagan rite = rite:norse_pagan }
+	is_at_war = no
+	piety_level >= 2
+	is_capable_adult = yes
+	is_imprisoned = no
+	NOT = { has_character_flag = nh_force_conversion_cooldown }
+	capital_province.faith = faith
+}
+
+# County scope: an existing personal holding of the living converter.
+nh_forced_conversion_owned_county_trigger = {
+	tier = tier_county
+	exists = scope:converter
+	scope:converter = { is_alive = yes }
+	exists = holder
+	holder = scope:converter
+	exists = title_province
+}
+
+# County scope: retain the decision's different-faith target rule.
+nh_forced_conversion_county_valid_trigger = {
+	nh_forced_conversion_owned_county_trigger = yes
+	scope:converter = { nh_forced_conversion_actor_valid_trigger = yes }
+	NOT = { title_province.faith = scope:converter.faith }
+}

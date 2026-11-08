@@ -2,3 +2,8 @@
 # Conversion rewards and backlash last ten years.
 approved_conversion_opinion = { opinion = 5 years = 10 stacking = no }
 forced_conversion_opinion = { opinion = -20 years = 10 stacking = no }
+nh_conversion_own_rite_opinion = { opinion = -10 years = 10 stacking = no }
+nh_conversion_target_rite_opinion = { opinion = -90 years = 10 stacking = no }
+nh_conversion_target_faith_opinion = { opinion = -40 years = 10 stacking = no }
+nh_mass_conversion_target_faith_opinion = { opinion = -100 years = 10 stacking = no }
+nh_mass_conversion_target_religion_opinion = { opinion = -50 years = 10 stacking = no }

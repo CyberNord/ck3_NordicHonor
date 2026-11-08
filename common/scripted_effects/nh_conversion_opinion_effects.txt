@@ -1,0 +1,91 @@
+﻿# Action-local victim rites are captured before any county changes religion.
+nh_prepare_conversion_reactions_effect = {
+	every_in_list = {
+		list = nh_conversion_old_rites
+		remove_from_list = nh_conversion_old_rites
+	}
+	save_scope_value_as = { name = nh_conversion_mass_action value = no }
+}
+
+# County scope; preserves the original rite for the whole action.
+nh_capture_conversion_rite_effect = {
+	title_province.rite = { add_to_list = nh_conversion_old_rites }
+}
+
+# Character scope; only the current action's negative reaction remains.
+nh_apply_forced_conversion_opinion_effect = {
+	if = {
+		limit = { has_opinion_modifier = { target = scope:converter modifier = nh_conversion_own_rite_opinion } }
+		remove_opinion = { target = scope:converter modifier = nh_conversion_own_rite_opinion }
+	}
+	if = {
+		limit = { has_opinion_modifier = { target = scope:converter modifier = nh_conversion_target_rite_opinion } }
+		remove_opinion = { target = scope:converter modifier = nh_conversion_target_rite_opinion }
+	}
+	if = {
+		limit = { has_opinion_modifier = { target = scope:converter modifier = nh_conversion_target_faith_opinion } }
+		remove_opinion = { target = scope:converter modifier = nh_conversion_target_faith_opinion }
+	}
+	if = {
+		limit = { has_opinion_modifier = { target = scope:converter modifier = forced_conversion_opinion } }
+		remove_opinion = { target = scope:converter modifier = forced_conversion_opinion }
+	}
+	if = {
+		limit = { has_opinion_modifier = { target = scope:converter modifier = nh_mass_conversion_target_faith_opinion } }
+		remove_opinion = { target = scope:converter modifier = nh_mass_conversion_target_faith_opinion }
+	}
+	if = {
+		limit = { has_opinion_modifier = { target = scope:converter modifier = nh_mass_conversion_target_religion_opinion } }
+		remove_opinion = { target = scope:converter modifier = nh_mass_conversion_target_religion_opinion }
+	}
+	add_opinion = { target = scope:converter modifier = $OPINION$ }
+}
+
+# One world pass per action. Own-rite loyalty takes priority over victim ties.
+nh_conversion_reactions_effect = {
+	every_living_character = {
+		limit = { NOT = { this = scope:converter } }
+		save_scope_as = nh_conversion_observer
+		if = {
+			limit = { rite = scope:converter.rite }
+			nh_apply_forced_conversion_opinion_effect = { OPINION = nh_conversion_own_rite_opinion }
+		}
+		else_if = {
+			limit = {
+				scope:nh_conversion_mass_action = yes
+				any_in_list = { list = nh_conversion_old_rites faith = scope:nh_conversion_observer.faith }
+			}
+			nh_apply_forced_conversion_opinion_effect = { OPINION = nh_mass_conversion_target_faith_opinion }
+		}
+		else_if = {
+			limit = {
+				any_in_list = { list = nh_conversion_old_rites this = scope:nh_conversion_observer.rite }
+			}
+			nh_apply_forced_conversion_opinion_effect = { OPINION = nh_conversion_target_rite_opinion }
+		}
+		else_if = {
+			limit = {
+				any_in_list = { list = nh_conversion_old_rites faith = scope:nh_conversion_observer.faith }
+			}
+			nh_apply_forced_conversion_opinion_effect = { OPINION = nh_conversion_target_faith_opinion }
+		}
+		else_if = {
+			limit = {
+				any_in_list = { list = nh_conversion_old_rites faith.religion = scope:nh_conversion_observer.faith.religion }
+			}
+			if = {
+				limit = { scope:nh_conversion_mass_action = yes }
+				nh_apply_forced_conversion_opinion_effect = { OPINION = nh_mass_conversion_target_religion_opinion }
+			}
+			else = {
+				nh_apply_forced_conversion_opinion_effect = { OPINION = forced_conversion_opinion }
+			}
+		}
+	}
+	every_in_list = {
+		list = nh_conversion_old_rites
+		remove_from_list = nh_conversion_old_rites
+	}
+	clear_saved_scope = nh_conversion_observer
+	clear_saved_scope = nh_conversion_mass_action
+}

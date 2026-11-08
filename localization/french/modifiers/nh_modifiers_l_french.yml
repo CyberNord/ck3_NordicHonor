@@ -51,7 +51,12 @@
  nh_champion_of_faith:0 "Champion of the Faith"
  nh_champion_of_faith_desc:0 "This zealous defender of Óðinnstrú has proven their devotion through decisive action, earning the respect of the faithful."
  approved_conversion_opinion:0 "Approves Forced Conversion"
- forced_conversion_opinion:0 "Forced Religious Conversion"
+ forced_conversion_opinion:0 "Conversion forcée de notre religion"
+ nh_conversion_own_rite_opinion:0 "Violence contre nos coreligionnaires"
+ nh_conversion_target_rite_opinion:0 "Conversion forcée de notre rite"
+ nh_conversion_target_faith_opinion:0 "Conversion forcée de notre foi"
+ nh_mass_conversion_target_faith_opinion:0 "Persécution massive de notre foi"
+ nh_mass_conversion_target_religion_opinion:0 "Persécution massive de notre religion"
  fervor_loss_forced_conversion:0 "Forced Conversion"
 
  # Assembly results and Saxon founding rewards

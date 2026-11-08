@@ -51,7 +51,12 @@
  nh_champion_of_faith:0 "Streiter des Glaubens"
  nh_champion_of_faith_desc:0 "Dieser eifrige Anhänger Óðinnstrús hat seine Hingabe durch entschlossenes Handeln bewiesen und die Anerkennung der Gläubigen gewonnen."
  approved_conversion_opinion:0 "Billigt die gewaltsame Bekehrung"
- forced_conversion_opinion:0 "Gewaltsame Bekehrung unserer Glaubensgenossen"
+ forced_conversion_opinion:0 "Zwangsbekehrung unserer Religion"
+ nh_conversion_own_rite_opinion:0 "Gewalt gegen Glaubensbrüder"
+ nh_conversion_target_rite_opinion:0 "Zwangsbekehrung unseres Ritus"
+ nh_conversion_target_faith_opinion:0 "Zwangsbekehrung unseres Glaubens"
+ nh_mass_conversion_target_faith_opinion:0 "Massenverfolgung unseres Glaubens"
+ nh_mass_conversion_target_religion_opinion:0 "Massenverfolgung unserer Religion"
  fervor_loss_forced_conversion:0 "Gewaltsame Bekehrung"
 
  # Assembly results and Saxon founding rewards

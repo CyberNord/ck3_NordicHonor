@@ -1,0 +1,3 @@
+﻿l_german:
+ # Separate the duration from the linked county modifier in effect previews.
+ IT_RECEIVES_COUNTY_MODIFIER_UNTIL_EFFECT:0 "„[TITLE.GetName|U]“ erhält für $DURATION|V$ $MODIFIER|V$"

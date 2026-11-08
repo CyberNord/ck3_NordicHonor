@@ -410,85 +410,80 @@ nh_story_convert_to_frankish_rite_effect = {
 # County scope; caller supplies scope:converter. Named scopes must survive the
 # province/character iterators and delayed outcome events without relying on PREV.
 nh_convert_county_forced_effect = {
-
-	title_province.faith = {
-		save_scope_as = nh_converted_county_old_faith
-	}
-	
-	# Convert county and all holdings
-	set_county_rite = scope:converter.rite
-	
 	if = {
-		limit = { scope:converter.rite = rite:odinstru_pagan }
-		change_development_level = {
-			subtract = { value = development_level multiply = 0.15 }
+		limit = { nh_forced_conversion_county_valid_trigger = yes }
+
+		title_province.faith = {
+			save_scope_as = nh_converted_county_old_faith
 		}
-	}
-	else = {
-		change_development_level = {
-			subtract = { value = development_level multiply = 0.20 }
+		
+		# Convert county and all holdings
+		set_county_rite = scope:converter.rite
+		
+		if = {
+			limit = { scope:converter.rite = rite:odinstru_pagan }
+			change_development_level = {
+				subtract = { value = development_level multiply = 0.15 }
+			}
 		}
-	}
-	
-	add_county_modifier = {
-		modifier = nh_forced_conversion
-		years = 10
-	}
-	
-	scope:converter = {
-		# Dread is an immediate effect, not a persistent modifier field.
-		add_dread = minor_dread_gain
-		add_character_modifier = {
-			modifier = nh_religious_oppressor
+		else = {
+			change_development_level = {
+				subtract = { value = development_level multiply = 0.20 }
+			}
+		}
+		
+		add_county_modifier = {
+			modifier = nh_forced_conversion
 			years = 10
 		}
-	}
-	
-	# Imprison heretics
-	every_county_province = {
-		every_character_in_location = {
-			limit = {
-				NOT = { faith = scope:converter.faith }
-				NOT = { this = scope:converter }
-				is_imprisoned = no
-				is_ruler = no
-			}
-			save_scope_as = nh_conversion_prisoner
-			scope:converter = {
-				imprison = {
-					target = scope:nh_conversion_prisoner
-					type = house_arrest
-				}
-			}
-		}
-	}
-	
-	# Odinstru bonus
-	if = {
-		limit = { scope:converter.rite = rite:odinstru_pagan }
+		
 		scope:converter = {
+			# Dread is an immediate effect, not a persistent modifier field.
 			add_dread = minor_dread_gain
 			add_character_modifier = {
-				modifier = nh_champion_of_faith
-				years = 2
+				modifier = nh_religious_oppressor
+				years = 10
 			}
-			every_vassal = {
-				limit = { faith = scope:converter.faith }
-				add_opinion = {
-					target = scope:converter
-					modifier = approved_conversion_opinion
+		}
+		
+		# Imprison heretics
+		every_county_province = {
+			every_character_in_location = {
+				limit = {
+					NOT = { faith = scope:converter.faith }
+					NOT = { this = scope:converter }
+					is_alive = yes
+					is_imprisoned = no
+					is_ruler = no
+				}
+				save_scope_as = nh_conversion_prisoner
+				scope:converter = {
+					imprison = {
+						target = scope:nh_conversion_prisoner
+						type = house_arrest
+					}
 				}
 			}
 		}
-	}
-	
-	scope:converter = {
-		every_neighboring_and_across_water_realm_same_rank_owner = {
-			limit = { faith = scope:nh_converted_county_old_faith }
-			add_opinion = {
-				target = scope:converter
-				modifier = forced_conversion_opinion
+		
+		# Odinstru bonus
+		if = {
+			limit = { scope:converter.rite = rite:odinstru_pagan }
+			scope:converter = {
+				add_dread = minor_dread_gain
+				add_character_modifier = {
+					modifier = nh_champion_of_faith
+					years = 2
+				}
+				every_vassal = {
+					limit = { faith = scope:converter.faith }
+					add_opinion = {
+						target = scope:converter
+						modifier = approved_conversion_opinion
+					}
+				}
 			}
 		}
+		
 	}
 }
