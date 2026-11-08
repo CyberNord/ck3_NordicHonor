@@ -1,0 +1,8 @@
+﻿# Character scope: loser. Lower clamp (min), then cash floor and upper clamp (max).
+nh_holy_raid_reparations_value = {
+	value = monthly_character_income
+	min = 0
+	multiply = 24
+	min = { value = gold min = 0 multiply = 0.10 }
+	max = { value = gold min = 0 }
+}

@@ -1,0 +1,15 @@
+﻿# Character scope: an available adult member of the losing ruler's own court.
+nh_holy_raid_real_captive_trigger = {
+	is_alive = yes
+	age >= 18
+	this != scope:nh_holy_raid_loser
+	court_owner = scope:nh_holy_raid_loser
+	is_available_quick = {
+		alive = yes
+		imprisoned = no
+		hostage = no
+		travel = no
+		activity = no
+		in_army = no
+	}
+}

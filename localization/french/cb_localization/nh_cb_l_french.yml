@@ -1,0 +1,36 @@
+﻿l_french:
+ # Casus Belli Names
+ NH_HOLY_CONQUEST_WAR_NAME:0 "Guerre de pillage religieux"
+ NH_HOLY_CONQUEST_WAR_NAME_BASE:0 "Guerre de pillage religieux"
+ NH_HOLY_CONQUEST_CB_NAME:0 "Guerre de pillage religieux"
+
+ # CB Descriptions
+ nh_holy_conquest_cb:0 "Guerre de pillage religieux"
+ nh_holy_conquest_cb_desc:0 "Pour la gloire d'Odin, nous marchons contre les sanctuaires étrangers. Que nos ennemis craignent la puissance du Père de tout."
+
+ # Victory/Defeat Descriptions
+ nh_holy_conquest_cb_victory_desc_attacker:0 "Votre guerre de pillage contre [SCOPE.sC('defender').GetUIName] est victorieuse.\n\n$nh_holy_raid_full_victory_terms_desc$"
+ nh_holy_conquest_cb_victory_desc:0 "[SCOPE.sC('attacker').GetUIName] remporte la guerre de pillage religieux contre [SCOPE.sC('defender').GetUIName].\n\n$nh_holy_raid_full_victory_terms_desc$"
+ nh_holy_conquest_cb_white_peace_desc_defender:0 "Vous mettez fin à la guerre de pillage de [SCOPE.sC('attacker').GetUIName] par une paix blanche.\n\n$nh_holy_raid_white_peace_terms_desc$"
+ nh_holy_conquest_cb_white_peace_desc:0 "La guerre de pillage religieux se termine par un échec religieux de l'attaquant.\n\n$nh_holy_raid_white_peace_terms_desc$"
+ nh_holy_conquest_cb_defeat_desc_defender:0 "Vous triomphez de [SCOPE.sC('attacker').GetUIName] dans la guerre de pillage religieux.\n\n$nh_holy_raid_defense_victory_terms_desc$"
+ nh_holy_conquest_cb_defeat_desc_attacker:0 "Votre guerre de pillage contre [SCOPE.sC('defender').GetUIName] a échoué.\n\n$nh_holy_raid_defense_victory_terms_desc$"
+ nh_holy_conquest_cb_defeat_desc:0 "[SCOPE.sC('defender').GetUIName] triomphe de [SCOPE.sC('attacker').GetUIName] dans la guerre de pillage religieux.\n\n$nh_holy_raid_defense_victory_terms_desc$"
+
+ # CB Cost Reasons
+ CB_HOLY_WAR_COST:0 "Guerre de pillage religieux"
+ CB_CONQUEST_COST:0 "Guerre de pillage religieux"
+
+ # Fervor Reasons
+ fervor_holy_conquest_declared:0 "Guerre de pillage religieux déclarée"
+ fervor_holy_conquest_victory:0 "Victoire dans une guerre de pillage religieux"
+ fervor_holy_conquest_defeat:0 "Défaite dans une guerre de pillage religieux"
+ fervor_holy_conquest_white_peace:0 "Échec religieux par paix blanche"
+ fervor_holy_conquest_defense_victory:0 "Guerre de pillage religieux repoussée"
+
+ # Outcome terms
+ nh_holy_raid_gold_terms_desc:0 "Le vaincu verse au vainqueur le montant le plus élevé entre 24 revenus mensuels non négatifs et 10 % de son or personnel disponible, sans dépasser cet or disponible. Sans or disponible, aucun paiement n'a lieu ; ces réparations ne créent aucune nouvelle dette."
+ nh_holy_raid_full_victory_terms_desc:0 "La foi du vainqueur gagne 15 points de pourcentage de ferveur ; celle du vaincu en perd 5.\n$nh_holy_raid_gold_terms_desc$\nLe vainqueur reçoit jusqu'à trois membres disponibles de la cour du vaincu âgés d'au moins 18 ans, ainsi que cinq nouveaux captifs de 30 à 50 ans inclus partageant la foi, le rite exact et la culture du vaincu. Ils sont emprisonnés au cachot du vainqueur selon les règles ordinaires.\nLe vaincu reçoit $nh_holy_raid_odins_curse_modifier$ pour neuf ans. Aucune terre, aucun titre ni aucun vassal n'est transféré. Les autres conséquences ordinaires de la guerre et la trêve restent applicables.\nAprès toute issue normale de la guerre, le même attaquant ne peut déclarer un nouveau pillage religieux contre ce dirigeant pendant un an."
+ nh_holy_raid_white_peace_terms_desc:0 "La paix blanche est un échec religieux pour l'attaquant : sa foi perd 20 points de pourcentage de ferveur et il reçoit $nh_holy_raid_odins_curse_modifier$ pour trois ans. La ferveur de la foi du défenseur reste inchangée. Aucune réparation supplémentaire, aucun nouveau captif et aucun transfert de terre, de titre ou de vassal. Les autres conséquences ordinaires de la guerre et la trêve restent applicables.\nAprès toute issue normale de la guerre, le même attaquant ne peut déclarer un nouveau pillage religieux contre ce dirigeant pendant un an."
+ nh_holy_raid_defense_victory_terms_desc:0 "La foi du défenseur gagne 15 points de ferveur ; celle de l'attaquant en perd 25.\n$nh_holy_raid_gold_terms_desc$\nL'attaquant vaincu reçoit $nh_holy_raid_odins_curse_modifier$ pendant neuf ans. Le défenseur ne reçoit aucun captif supplémentaire ; les prisonniers de guerre ordinaires restent inchangés. Aucune terre, aucun titre ni vassal n'est transféré. Les autres conséquences normales de la guerre et la trêve restent applicables.\nAprès toute issue normale de la guerre, le même attaquant ne peut déclarer un nouveau pillage religieux contre ce dirigeant pendant un an."
+ nh_holy_raid_cooldown_tt:0 "Un an doit s'être écoulé depuis la fin de votre dernier pillage religieux contre ce dirigeant. Rompre une trêve ne permet pas de contourner cette restriction."

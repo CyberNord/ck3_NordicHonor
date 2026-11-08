@@ -1,0 +1,36 @@
+﻿l_spanish:
+ # Casus Belli Names
+ NH_HOLY_CONQUEST_WAR_NAME:0 "Guerra de saqueo religioso"
+ NH_HOLY_CONQUEST_WAR_NAME_BASE:0 "Guerra de saqueo religioso"
+ NH_HOLY_CONQUEST_CB_NAME:0 "Guerra de saqueo religioso"
+
+ # CB Descriptions
+ nh_holy_conquest_cb:0 "Guerra de saqueo religioso"
+ nh_holy_conquest_cb_desc:0 "Por la gloria de Odín, marchamos contra los santuarios extranjeros. Que nuestros enemigos teman el poder del Padre de Todos."
+
+ # Victory/Defeat Descriptions
+ nh_holy_conquest_cb_victory_desc_attacker:0 "Vuestra guerra de saqueo contra [SCOPE.sC('defender').GetUIName] tiene éxito.\n\n$nh_holy_raid_full_victory_terms_desc$"
+ nh_holy_conquest_cb_victory_desc:0 "[SCOPE.sC('attacker').GetUIName] gana la guerra de saqueo religioso contra [SCOPE.sC('defender').GetUIName].\n\n$nh_holy_raid_full_victory_terms_desc$"
+ nh_holy_conquest_cb_white_peace_desc_defender:0 "Ponéis fin a la guerra de saqueo de [SCOPE.sC('attacker').GetUIName] mediante una paz blanca.\n\n$nh_holy_raid_white_peace_terms_desc$"
+ nh_holy_conquest_cb_white_peace_desc:0 "La guerra de saqueo religioso termina con un fracaso religioso del atacante.\n\n$nh_holy_raid_white_peace_terms_desc$"
+ nh_holy_conquest_cb_defeat_desc_defender:0 "Derrotáis a [SCOPE.sC('attacker').GetUIName] en la guerra de saqueo religioso.\n\n$nh_holy_raid_defense_victory_terms_desc$"
+ nh_holy_conquest_cb_defeat_desc_attacker:0 "Vuestra guerra de saqueo contra [SCOPE.sC('defender').GetUIName] ha fracasado.\n\n$nh_holy_raid_defense_victory_terms_desc$"
+ nh_holy_conquest_cb_defeat_desc:0 "[SCOPE.sC('defender').GetUIName] derrota a [SCOPE.sC('attacker').GetUIName] en la guerra de saqueo religioso.\n\n$nh_holy_raid_defense_victory_terms_desc$"
+
+ # CB Cost Reasons
+ CB_HOLY_WAR_COST:0 "Guerra de saqueo religioso"
+ CB_CONQUEST_COST:0 "Guerra de saqueo religioso"
+
+ # Fervor Reasons
+ fervor_holy_conquest_declared:0 "Guerra de saqueo religioso declarada"
+ fervor_holy_conquest_victory:0 "Victoria en una guerra de saqueo religioso"
+ fervor_holy_conquest_defeat:0 "Derrota en una guerra de saqueo religioso"
+ fervor_holy_conquest_white_peace:0 "Fracaso religioso por paz blanca"
+ fervor_holy_conquest_defense_victory:0 "Guerra de saqueo religioso repelida"
+
+ # Outcome terms
+ nh_holy_raid_gold_terms_desc:0 "El derrotado paga al vencedor el mayor importe entre 24 ingresos mensuales no negativos y el 10 % de su oro personal disponible, sin superar sus reservas disponibles. Sin oro disponible no hay pago; esta indemnización no genera nuevas deudas."
+ nh_holy_raid_full_victory_terms_desc:0 "La fe del vencedor gana 15 puntos porcentuales de fervor; la del derrotado pierde 5.\n$nh_holy_raid_gold_terms_desc$\nEl vencedor recibe hasta tres miembros disponibles de la corte del derrotado de al menos 18 años, más cinco nuevos cautivos de entre 30 y 50 años, ambos incluidos, con la fe, el rito exacto y la cultura del derrotado. Se encarcelan en la mazmorra del vencedor según las reglas normales.\nEl derrotado recibe $nh_holy_raid_odins_curse_modifier$ durante nueve años. No se transfieren tierras, títulos ni vasallos. Se mantienen las demás consecuencias normales de la guerra y la tregua.\nTras cualquier desenlace normal de la guerra, el mismo atacante no puede declarar otro saqueo religioso contra el mismo gobernante durante un año."
+ nh_holy_raid_white_peace_terms_desc:0 "La paz blanca supone un fracaso religioso para el atacante: su fe pierde 20 puntos porcentuales de fervor y recibe $nh_holy_raid_odins_curse_modifier$ durante tres años. El fervor de la fe del defensor no cambia. No hay indemnización adicional, nuevos cautivos ni transferencias de tierras, títulos o vasallos. Se mantienen las demás consecuencias normales de la guerra y la tregua.\nTras cualquier desenlace normal de la guerra, el mismo atacante no puede declarar otro saqueo religioso contra el mismo gobernante durante un año."
+ nh_holy_raid_defense_victory_terms_desc:0 "La fe del defensor gana 15 puntos de fervor; la del atacante pierde 25.\n$nh_holy_raid_gold_terms_desc$\nEl atacante derrotado recibe $nh_holy_raid_odins_curse_modifier$ durante nueve años. El defensor no recibe cautivos adicionales; los prisioneros de guerra normales no se ven afectados. No se transfieren tierras, títulos ni vasallos. Siguen aplicándose las demás consecuencias normales y la tregua.\nTras cualquier desenlace normal de la guerra, el mismo atacante no puede declarar otro saqueo religioso contra el mismo gobernante durante un año."
+ nh_holy_raid_cooldown_tt:0 "Debe haber transcurrido un año desde el final de tu último saqueo religioso contra este gobernante. Romper una tregua no permite eludir esta restricción."

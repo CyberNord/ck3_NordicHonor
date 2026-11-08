@@ -1,0 +1,91 @@
+﻿# CB resolution scope; the war-local marker prevents repeated prisoner rewards.
+nh_holy_raid_award_captives_effect = {
+	if = {
+		limit = {
+			exists = scope:war
+			exists = scope:nh_holy_raid_winner
+			exists = scope:nh_holy_raid_loser
+			scope:nh_holy_raid_winner = { is_alive = yes this = scope:attacker }
+			scope:nh_holy_raid_loser = { is_alive = yes }
+			scope:war = {
+				using_cb = nh_holy_conquest_cb
+				primary_attacker = scope:attacker
+				primary_defender = scope:defender
+				NOT = { has_variable = nh_holy_raid_captives_granted }
+			}
+		}
+		scope:war = { set_variable = nh_holy_raid_captives_granted }
+		clear_saved_scope = nh_holy_raid_captive
+		every_in_list = { list = nh_holy_raid_candidates remove_from_list = nh_holy_raid_candidates }
+		scope:nh_holy_raid_loser = {
+			faith = { save_scope_as = nh_holy_raid_captive_faith }
+			rite = { save_scope_as = nh_holy_raid_captive_rite }
+			culture = { save_scope_as = nh_holy_raid_captive_culture }
+			every_courtier = {
+				limit = { nh_holy_raid_real_captive_trigger = yes }
+				add_to_list = nh_holy_raid_candidates
+			}
+		}
+		while = {
+			count = 3
+			if = {
+				limit = { any_in_list = { list = nh_holy_raid_candidates } }
+				random_in_list = {
+					list = nh_holy_raid_candidates
+					limit = { nh_holy_raid_real_captive_trigger = yes }
+					weight = { base = 1 }
+					remove_from_list = nh_holy_raid_candidates
+					save_scope_as = nh_holy_raid_captive
+					nh_holy_raid_imprison_captive_effect = yes
+				}
+			}
+		}
+		while = {
+			count = 5
+			clear_saved_scope = nh_holy_raid_captive
+			create_character = {
+				gender_female_chance = 50
+				age = { integer_range = { min = 30 max = 50 } }
+				faith = scope:nh_holy_raid_captive_faith
+				rite = scope:nh_holy_raid_captive_rite
+				culture = scope:nh_holy_raid_captive_culture
+				dynasty = none
+				employer = scope:nh_holy_raid_winner
+				after_creation = { save_scope_as = nh_holy_raid_captive }
+			}
+			if = {
+				limit = {
+					exists = scope:nh_holy_raid_captive
+					scope:nh_holy_raid_captive = {
+						is_alive = yes
+						age >= 30
+						age <= 50
+						faith = scope:nh_holy_raid_captive_faith
+						rite = scope:nh_holy_raid_captive_rite
+						culture = scope:nh_holy_raid_captive_culture
+						has_dynasty = no
+					}
+				}
+				scope:nh_holy_raid_captive = { nh_holy_raid_imprison_captive_effect = yes }
+			}
+			else = { debug_log = "NordicHonor holy raid: captive creation or identity validation failed" }
+		}
+		every_in_list = { list = nh_holy_raid_candidates remove_from_list = nh_holy_raid_candidates }
+		clear_saved_scope = nh_holy_raid_captive
+		clear_saved_scope = nh_holy_raid_captive_faith
+		clear_saved_scope = nh_holy_raid_captive_rite
+		clear_saved_scope = nh_holy_raid_captive_culture
+	}
+}
+
+# Character scope: selected captive. Native imprisonment keeps ordinary interactions available.
+nh_holy_raid_imprison_captive_effect = {
+	save_scope_as = nh_holy_raid_captive
+	scope:nh_holy_raid_winner = {
+		imprison = { target = scope:nh_holy_raid_captive type = dungeon }
+	}
+	if = {
+		limit = { NOT = { is_imprisoned_by = scope:nh_holy_raid_winner } }
+		debug_log = "NordicHonor holy raid: captive imprisonment failed"
+	}
+}

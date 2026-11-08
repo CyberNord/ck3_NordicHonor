@@ -1,0 +1,36 @@
+﻿l_korean:
+ # Casus Belli Names
+ NH_HOLY_CONQUEST_WAR_NAME:0 "종교 약탈 전쟁"
+ NH_HOLY_CONQUEST_WAR_NAME_BASE:0 "종교 약탈 전쟁"
+ NH_HOLY_CONQUEST_CB_NAME:0 "종교 약탈 전쟁"
+
+ # CB Descriptions
+ nh_holy_conquest_cb:0 "종교 약탈 전쟁"
+ nh_holy_conquest_cb_desc:0 "오딘의 영광을 위해 이교의 성소로 진군합니다. 적들이 만물의 아버지의 힘을 두려워하게 하십시오."
+
+ # Victory/Defeat Descriptions
+ nh_holy_conquest_cb_victory_desc_attacker:0 "[SCOPE.sC('defender').GetUIName]에 대한 당신의 약탈 전쟁이 성공합니다.\n\n$nh_holy_raid_full_victory_terms_desc$"
+ nh_holy_conquest_cb_victory_desc:0 "[SCOPE.sC('attacker').GetUIName] 측이 [SCOPE.sC('defender').GetUIName]에 대한 종교 약탈 전쟁에서 승리합니다.\n\n$nh_holy_raid_full_victory_terms_desc$"
+ nh_holy_conquest_cb_white_peace_desc_defender:0 "당신은 [SCOPE.sC('attacker').GetUIName]의 약탈 전쟁을 무조건 평화로 끝냅니다.\n\n$nh_holy_raid_white_peace_terms_desc$"
+ nh_holy_conquest_cb_white_peace_desc:0 "종교 약탈 전쟁이 공격자의 종교적 실패로 끝납니다.\n\n$nh_holy_raid_white_peace_terms_desc$"
+ nh_holy_conquest_cb_defeat_desc_defender:0 "당신은 종교 약탈 전쟁에서 [SCOPE.sC('attacker').GetUIName] 측을 물리칩니다.\n\n$nh_holy_raid_defense_victory_terms_desc$"
+ nh_holy_conquest_cb_defeat_desc_attacker:0 "[SCOPE.sC('defender').GetUIName]에 대한 당신의 약탈 전쟁이 실패했습니다.\n\n$nh_holy_raid_defense_victory_terms_desc$"
+ nh_holy_conquest_cb_defeat_desc:0 "[SCOPE.sC('defender').GetUIName] 측이 종교 약탈 전쟁에서 [SCOPE.sC('attacker').GetUIName] 측을 물리칩니다.\n\n$nh_holy_raid_defense_victory_terms_desc$"
+
+ # CB Cost Reasons
+ CB_HOLY_WAR_COST:0 "종교 약탈 전쟁"
+ CB_CONQUEST_COST:0 "종교 약탈 전쟁"
+
+ # Fervor Reasons
+ fervor_holy_conquest_declared:0 "종교 약탈 전쟁 선포"
+ fervor_holy_conquest_victory:0 "종교 약탈 전쟁 승리"
+ fervor_holy_conquest_defeat:0 "종교 약탈 전쟁 패배"
+ fervor_holy_conquest_white_peace:0 "무조건 평화로 인한 종교적 실패"
+ fervor_holy_conquest_defense_victory:0 "종교 약탈 전쟁 격퇴"
+
+ # Outcome terms
+ nh_holy_raid_gold_terms_desc:0 "패자는 음수가 아닌 월수입의 24배와 보유한 개인 금화의 10% 중 큰 금액을 승자에게 지불합니다. 지급액은 사용 가능한 금화를 넘지 않습니다. 사용 가능한 금화가 없으면 지급하지 않으며, 이 배상으로 새로운 부채가 생기지 않습니다."
+ nh_holy_raid_full_victory_terms_desc:0 "승자의 신앙은 열성이 15%p 증가하고, 패자의 신앙은 5%p 감소합니다.\n$nh_holy_raid_gold_terms_desc$\n승자는 패자의 궁정에서 붙잡을 수 있는 18세 이상 인물 최대 세 명과 새로 생성된 30~50세 포로 다섯 명을 받습니다. 생성된 포로는 패자의 신앙, 정확한 교파와 문화를 따릅니다. 이들은 일반 포로 규칙에 따라 승자의 지하 감옥에 수감됩니다.\n패자는 9년 동안 $nh_holy_raid_odins_curse_modifier$ 효과를 받습니다. 영토, 작위, 봉신은 이전되지 않습니다. 다른 일반 전쟁 결과와 휴전은 그대로 적용됩니다.\n일반적인 전쟁 종결 후 같은 공격자는 1년 동안 같은 통치자에게 종교 약탈 전쟁을 다시 선포할 수 없습니다."
+ nh_holy_raid_white_peace_terms_desc:0 "무조건 평화는 공격자의 종교적 실패입니다. 공격자의 신앙은 열성이 20%p 감소하고, 공격자는 3년 동안 $nh_holy_raid_odins_curse_modifier$ 효과를 받습니다. 방어자 신앙의 열성은 변하지 않습니다. 추가 배상금이나 새로운 포로는 없으며 영토, 작위, 봉신도 이전되지 않습니다. 다른 일반 전쟁 결과와 휴전은 그대로 적용됩니다.\n일반적인 전쟁 종결 후 같은 공격자는 1년 동안 같은 통치자에게 종교 약탈 전쟁을 다시 선포할 수 없습니다."
+ nh_holy_raid_defense_victory_terms_desc:0 "방어자의 신앙은 열성을 15 얻고, 공격자의 신앙은 열성을 25 잃습니다.\n$nh_holy_raid_gold_terms_desc$\n패배한 공격자는 9년 동안 $nh_holy_raid_odins_curse_modifier$ 효과를 받습니다. 방어자는 추가 포로를 얻지 않으며, 일반 전쟁 포로는 영향을 받지 않습니다. 영토, 작위, 봉신은 이전되지 않습니다. 다른 일반 전쟁 결과와 휴전은 그대로 적용됩니다.\n일반적인 전쟁 종결 후 같은 공격자는 1년 동안 같은 통치자에게 종교 약탈 전쟁을 다시 선포할 수 없습니다."
+ nh_holy_raid_cooldown_tt:0 "이 통치자를 상대로 벌인 마지막 종교 약탈 전쟁이 끝난 뒤 1년이 지나야 합니다. 휴전을 파기해도 이 제한을 우회할 수 없습니다."

@@ -62,3 +62,8 @@
  # Assembly results and Saxon founding rewards
  nh_old_saxony_conversion_modifier:0 "Restaurador de la antigua fe"
  nh_old_saxony_conversion_modifier_desc:0 "La conversión religiosa del condado avanza un 300% más rápido (cuatro veces el ritmo aplicable). Este modificador personal caduca como máximo a los 100 años y no se hereda."
+
+ # Religious war outcomes
+ nh_holy_raid_odins_curse_modifier:0 "Maldición bélica de Odín"
+ nh_holy_raid_odins_curse_modifier_desc:0 "Durante el plazo indicado: Este gobernante sufre la ira de Odín tras un fracaso religioso: −20 de opinión general, −2 de piedad mensual y −1 de legitimidad mensual cuando corresponda. Una nueva aplicación conserva la fecha de vencimiento más lejana."
+ nh_holy_raid_captives_tt:0 "El atacante victorioso encarcela en la mazmorra hasta a tres adultos disponibles de la corte del derrotado y a cinco nuevos cautivos de entre 30 y 50 años. Los cautivos creados comparten la fe, el rito exacto y la cultura del derrotado."

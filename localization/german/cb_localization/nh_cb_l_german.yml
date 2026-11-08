@@ -1,0 +1,36 @@
+﻿l_german:
+ # Casus Belli Names
+ NH_HOLY_CONQUEST_WAR_NAME:0 "Religiöser Plünderungskrieg"
+ NH_HOLY_CONQUEST_WAR_NAME_BASE:0 "Religiöser Plünderungskrieg"
+ NH_HOLY_CONQUEST_CB_NAME:0 "Religiöser Plünderungskrieg"
+
+ # CB Descriptions
+ nh_holy_conquest_cb:0 "Religiöser Plünderungskrieg"
+ nh_holy_conquest_cb_desc:0 "Für Odins Ruhm ziehen wir gegen fremde Heiligtümer. Unsere Feinde sollen die Macht des Allvaters fürchten."
+
+ # Victory/Defeat Descriptions
+ nh_holy_conquest_cb_victory_desc_attacker:0 "Euer Plünderungskrieg gegen [SCOPE.sC('defender').GetUIName] ist erfolgreich.\n\n$nh_holy_raid_full_victory_terms_desc$"
+ nh_holy_conquest_cb_victory_desc:0 "[SCOPE.sC('attacker').GetUIName] gewinnt den religiösen Plünderungskrieg gegen [SCOPE.sC('defender').GetUIName].\n\n$nh_holy_raid_full_victory_terms_desc$"
+ nh_holy_conquest_cb_white_peace_desc_defender:0 "Ihr beendet den Plünderungskrieg von [SCOPE.sC('attacker').GetUIName] durch weißen Frieden.\n\n$nh_holy_raid_white_peace_terms_desc$"
+ nh_holy_conquest_cb_white_peace_desc:0 "Der religiöse Plünderungskrieg endet mit einem religiösen Misserfolg des Angreifers.\n\n$nh_holy_raid_white_peace_terms_desc$"
+ nh_holy_conquest_cb_defeat_desc_defender:0 "Ihr besiegt [SCOPE.sC('attacker').GetUIName] im religiösen Plünderungskrieg.\n\n$nh_holy_raid_defense_victory_terms_desc$"
+ nh_holy_conquest_cb_defeat_desc_attacker:0 "Euer Plünderungskrieg gegen [SCOPE.sC('defender').GetUIName] ist gescheitert.\n\n$nh_holy_raid_defense_victory_terms_desc$"
+ nh_holy_conquest_cb_defeat_desc:0 "[SCOPE.sC('defender').GetUIName] besiegt [SCOPE.sC('attacker').GetUIName] im religiösen Plünderungskrieg.\n\n$nh_holy_raid_defense_victory_terms_desc$"
+
+ # CB Cost Reasons
+ CB_HOLY_WAR_COST:0 "Religiöser Plünderungskrieg"
+ CB_CONQUEST_COST:0 "Religiöser Plünderungskrieg"
+
+ # Fervor Reasons
+ fervor_holy_conquest_declared:0 "Religiöser Plünderungskrieg erklärt"
+ fervor_holy_conquest_victory:0 "Religiösen Plünderungskrieg gewonnen"
+ fervor_holy_conquest_defeat:0 "Religiösen Plünderungskrieg verloren"
+ fervor_holy_conquest_white_peace:0 "Religiöser Misserfolg durch weißen Frieden"
+ fervor_holy_conquest_defense_victory:0 "Religiösen Plünderungskrieg abgewehrt"
+
+ # Outcome terms
+ nh_holy_raid_gold_terms_desc:0 "Der Verlierer zahlt dem Sieger den höheren Betrag aus 24 nichtnegativen Monatseinkommen und 10 % seines verfügbaren persönlichen Goldes, höchstens jedoch seinen verfügbaren Goldbestand. Ohne verfügbares Gold entfällt die Zahlung; diese Entschädigung erzeugt keine neuen Schulden."
+ nh_holy_raid_full_victory_terms_desc:0 "Der Glaube des Siegers erhält +15 Prozentpunkte Eifer; der Glaube des Verlierers verliert 5 Prozentpunkte.\n$nh_holy_raid_gold_terms_desc$\nDer Sieger erhält bis zu drei verfügbare Hofangehörige des Verlierers ab 18 Jahren sowie fünf neue Gefangene im Alter von 30 bis einschließlich 50 Jahren mit Glauben, genauem Ritus und Kultur des Verlierers. Sie werden im Kerker des Siegers inhaftiert und unterliegen den normalen Gefangenenregeln.\nDer Verlierer steht neun Jahre unter $nh_holy_raid_odins_curse_modifier$. Es werden weder Land noch Titel oder Vasallen übertragen. Die übrigen normalen Kriegsfolgen und die Waffenruhe bleiben bestehen.\nNach jedem regulären Kriegsabschluss ist ein weiterer religiöser Plünderungskrieg desselben Angreifers gegen denselben Herrscher für ein Jahr gesperrt."
+ nh_holy_raid_white_peace_terms_desc:0 "Der weiße Frieden ist ein religiöser Misserfolg des Angreifers: Sein Glaube verliert 20 Prozentpunkte Eifer, und er steht drei Jahre unter $nh_holy_raid_odins_curse_modifier$. Der Eifer des Glaubens des Verteidigers bleibt unverändert. Es gibt keine zusätzliche Goldentschädigung, keine neuen Gefangenen und keine Land-, Titel- oder Vasallenübertragung. Die übrigen normalen Kriegsfolgen und die Waffenruhe bleiben bestehen.\nNach jedem regulären Kriegsabschluss ist ein weiterer religiöser Plünderungskrieg desselben Angreifers gegen denselben Herrscher für ein Jahr gesperrt."
+ nh_holy_raid_defense_victory_terms_desc:0 "Der Glaube des Verteidigers gewinnt 15 Eiferpunkte; der Glaube des Angreifers verliert 25 Eiferpunkte.\n$nh_holy_raid_gold_terms_desc$\nDer unterlegene Angreifer erhält $nh_holy_raid_odins_curse_modifier$ für neun Jahre. Der Verteidiger erhält keine zusätzlichen Gefangenen; gewöhnliche Kriegsgefangene bleiben unberührt. Land, Titel und Vasallen werden nicht übertragen. Andere normale Kriegsfolgen und der Waffenstillstand gelten weiterhin.\nNach jedem regulären Kriegsabschluss ist ein weiterer religiöser Plünderungskrieg desselben Angreifers gegen denselben Herrscher für ein Jahr gesperrt."
+ nh_holy_raid_cooldown_tt:0 "Seit dem Ende Eures letzten religiösen Plünderungskriegs gegen diesen Herrscher muss ein Jahr vergangen sein. Diese Sperre kann nicht durch Waffenstillstandsbruch umgangen werden."

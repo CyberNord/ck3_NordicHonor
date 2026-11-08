@@ -62,3 +62,8 @@
  # Assembly results and Saxon founding rewards
  nh_old_saxony_conversion_modifier:0 "Erneuerer des alten Glaubens"
  nh_old_saxony_conversion_modifier_desc:0 "Der Gründer führt die religiöse Erneuerung an. „Gemeinde bekehren“ schreitet mit diesem persönlichen Modifier 300% schneller voran (vierfacher ansonsten geltender Fortschritt). Er endet spätestens nach 100 Jahren und wird nicht vererbt."
+
+ # Religious war outcomes
+ nh_holy_raid_odins_curse_modifier:0 "Odins Kriegsfluch"
+ nh_holy_raid_odins_curse_modifier_desc:0 "Für die angezeigte Dauer: Dieser Herrscher trägt den Zorn Odins nach einem religiösen Misserfolg: −20 allgemeine Meinung, −2 monatliche Frömmigkeit und −1 monatliche Legitimität, sofern diese Mechanik anwendbar ist. Eine erneute Vergabe erhält das spätere Ablaufdatum."
+ nh_holy_raid_captives_tt:0 "Der siegreiche Angreifer nimmt bis zu drei verfügbare erwachsene Hofangehörige des Verlierers und fünf neue Gefangene im Alter von 30 bis 50 Jahren in seinen Kerker auf. Die neuen Gefangenen folgen dem Glauben und Ritus des Verlierers und teilen dessen Kultur."

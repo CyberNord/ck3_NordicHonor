@@ -1,0 +1,36 @@
+﻿l_simp_chinese:
+ # Casus Belli Names
+ NH_HOLY_CONQUEST_WAR_NAME:0 "宗教劫掠战争"
+ NH_HOLY_CONQUEST_WAR_NAME_BASE:0 "宗教劫掠战争"
+ NH_HOLY_CONQUEST_CB_NAME:0 "宗教劫掠战争"
+
+ # CB Descriptions
+ nh_holy_conquest_cb:0 "宗教劫掠战争"
+ nh_holy_conquest_cb_desc:0 "为了奥丁的荣耀，我们向异教圣所进军。让敌人畏惧众神之父的力量。"
+
+ # Victory/Defeat Descriptions
+ nh_holy_conquest_cb_victory_desc_attacker:0 "你针对[SCOPE.sC('defender').GetUIName]的劫掠战争获胜。\n\n$nh_holy_raid_full_victory_terms_desc$"
+ nh_holy_conquest_cb_victory_desc:0 "[SCOPE.sC('attacker').GetUIName]在针对[SCOPE.sC('defender').GetUIName]的宗教劫掠战争中获胜。\n\n$nh_holy_raid_full_victory_terms_desc$"
+ nh_holy_conquest_cb_white_peace_desc_defender:0 "你以无条件和平结束了[SCOPE.sC('attacker').GetUIName]的劫掠战争。\n\n$nh_holy_raid_white_peace_terms_desc$"
+ nh_holy_conquest_cb_white_peace_desc:0 "宗教劫掠战争以进攻者的宗教失败告终。\n\n$nh_holy_raid_white_peace_terms_desc$"
+ nh_holy_conquest_cb_defeat_desc_defender:0 "你在宗教劫掠战争中击败了[SCOPE.sC('attacker').GetUIName]。\n\n$nh_holy_raid_defense_victory_terms_desc$"
+ nh_holy_conquest_cb_defeat_desc_attacker:0 "你针对[SCOPE.sC('defender').GetUIName]的劫掠战争失败。\n\n$nh_holy_raid_defense_victory_terms_desc$"
+ nh_holy_conquest_cb_defeat_desc:0 "[SCOPE.sC('defender').GetUIName]在宗教劫掠战争中击败了[SCOPE.sC('attacker').GetUIName]。\n\n$nh_holy_raid_defense_victory_terms_desc$"
+
+ # CB Cost Reasons
+ CB_HOLY_WAR_COST:0 "宗教劫掠战争"
+ CB_CONQUEST_COST:0 "宗教劫掠战争"
+
+ # Fervor Reasons
+ fervor_holy_conquest_declared:0 "发动宗教劫掠战争"
+ fervor_holy_conquest_victory:0 "宗教劫掠战争胜利"
+ fervor_holy_conquest_defeat:0 "宗教劫掠战争失败"
+ fervor_holy_conquest_white_peace:0 "无条件和平导致宗教失败"
+ fervor_holy_conquest_defense_victory:0 "击退宗教劫掠战争"
+
+ # Outcome terms
+ nh_holy_raid_gold_terms_desc:0 "败者向胜者支付以下两项中的较大值：非负月收入的24倍，或可用个人金钱的10%。付款不超过实际可用金钱；没有可用金钱时不付款，这笔赔偿不会产生新债务。"
+ nh_holy_raid_full_victory_terms_desc:0 "胜者的信仰获得15个百分点宗教热情，败者的信仰失去5个百分点。\n$nh_holy_raid_gold_terms_desc$\n胜者获得败者宫廷中最多三名可被俘获的18岁及以上成员，以及五名新生成的30至50岁（含两端）俘虏。生成的俘虏拥有败者的信仰、确切礼仪和文化，并按普通囚犯规则关入胜者的地牢。\n败者受到为期9年的$nh_holy_raid_odins_curse_modifier$。领土、头衔和封臣均不会转移。其他常规战争后果与停战仍然适用。\n每次战争正常结束后，同一进攻方在1年内不能再次对同一统治者发动宗教劫掠战争。"
+ nh_holy_raid_white_peace_terms_desc:0 "无条件和平对进攻者而言是宗教上的失败：进攻者的信仰失去20个百分点宗教热情，进攻者受到为期3年的$nh_holy_raid_odins_curse_modifier$。防御者信仰的宗教热情不变。不支付额外赔偿，不产生新俘虏，也不转移领土、头衔或封臣。其他常规战争后果与停战仍然适用。\n每次战争正常结束后，同一进攻方在1年内不能再次对同一统治者发动宗教劫掠战争。"
+ nh_holy_raid_defense_victory_terms_desc:0 "防守方的信仰获得15点宗教热情，进攻方的信仰失去25点。\n$nh_holy_raid_gold_terms_desc$\n战败的进攻方获得持续9年的$nh_holy_raid_odins_curse_modifier$。防守方不会获得额外的俘虏，普通战俘不受影响。不会转移土地、头衔或封臣。其他常规战争后果与停战协议仍然适用。\n每次战争正常结束后，同一进攻方在1年内不能再次对同一统治者发动宗教劫掠战争。"
+ nh_holy_raid_cooldown_tt:0 "你对该统治者上一次宗教劫掠战争结束后必须经过1年。撕毁停战协议也无法绕过此限制。"

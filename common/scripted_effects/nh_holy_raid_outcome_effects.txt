@@ -1,0 +1,79 @@
+﻿# Local CB outcome scopes identify the current living main parties.
+nh_holy_raid_full_victory_effect = {
+	clear_saved_scope = nh_holy_raid_winner
+	clear_saved_scope = nh_holy_raid_loser
+	if = {
+		limit = {
+			exists = $WINNER$
+			exists = $LOSER$
+			$WINNER$ = { is_alive = yes NOT = { this = $LOSER$ } }
+			$LOSER$ = { is_alive = yes }
+		}
+		$WINNER$ = { save_scope_as = nh_holy_raid_winner }
+		$LOSER$ = { save_scope_as = nh_holy_raid_loser }
+		scope:nh_holy_raid_winner = {
+			faith = {
+				change_fervor = { value = 15 desc = fervor_holy_conquest_victory }
+			}
+		}
+		scope:nh_holy_raid_loser = {
+			faith = {
+				change_fervor = { value = $FERVOR_LOSS$ desc = fervor_holy_conquest_defeat }
+			}
+			nh_holy_raid_pay_reparations_effect = yes
+			nh_holy_raid_apply_war_curse_effect = { YEARS = 9 }
+		}
+		if = {
+			limit = { scope:nh_holy_raid_winner = { this = scope:attacker } }
+			custom_tooltip = nh_holy_raid_captives_tt
+			nh_holy_raid_award_captives_effect = yes
+		}
+		nh_holy_raid_start_opponent_cooldown_effect = yes
+	}
+}
+
+# Character scope: payer; the recipient is the resolved local winner.
+nh_holy_raid_pay_reparations_effect = {
+	save_scope_value_as = { name = nh_holy_raid_payment value = nh_holy_raid_reparations_value }
+	if = {
+		limit = { scope:nh_holy_raid_payment > 0 }
+		pay_short_term_gold = { target = scope:nh_holy_raid_winner gold = scope:nh_holy_raid_payment }
+	}
+}
+
+# White peace has no winner; only the living attacker receives the religious loss.
+nh_holy_raid_white_peace_effect = {
+	clear_saved_scope = nh_holy_raid_winner
+	clear_saved_scope = nh_holy_raid_loser
+	if = {
+		limit = { exists = scope:attacker scope:attacker = { is_alive = yes } }
+		scope:attacker = {
+			save_scope_as = nh_holy_raid_loser
+			faith = {
+				change_fervor = { value = -20 desc = fervor_holy_conquest_white_peace }
+			}
+			nh_holy_raid_apply_war_curse_effect = { YEARS = 3 }
+		}
+		nh_holy_raid_start_opponent_cooldown_effect = yes
+	}
+}
+
+# Character scope: losing ruler. Native non-stacking modifiers keep the later expiry.
+nh_holy_raid_apply_war_curse_effect = {
+	add_character_modifier = { modifier = nh_holy_raid_odins_curse_modifier years = $YEARS$ }
+}
+
+# CB scope: a timed target entry persists without a global pulse or scheduled event.
+nh_holy_raid_start_opponent_cooldown_effect = {
+	if = {
+		limit = {
+			exists = scope:attacker
+			exists = scope:defender
+			scope:attacker = { is_alive = yes NOT = { this = scope:defender } }
+			scope:defender = { is_alive = yes }
+		}
+		scope:attacker = {
+			add_to_variable_list = { name = nh_holy_raid_recent_targets target = scope:defender years = 1 }
+		}
+	}
+}

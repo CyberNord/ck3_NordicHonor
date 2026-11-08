@@ -1,0 +1,85 @@
+﻿# Character scope: the defender's actual rite and parent faith must be organized.
+nh_holy_raid_target_religion_trigger = {
+	exists = faith
+	exists = rite
+	faith ?= {
+		exists = religion
+		NOT = { religion = religion:germanic_religion }
+		NOT = { has_doctrine_parameter = unreformed }
+	}
+	rite ?= {
+		exists = faith
+		NOT = { rite_has_parameter = unreformed }
+	}
+	faith = rite.faith
+}
+
+# County scope: only the additional maritime route is restricted to this region.
+nh_holy_raid_operational_coast_trigger = {
+	is_coastal_county = yes
+	exists = title_province
+	title_province ?= {
+		OR = {
+			geographical_region = world_europe_west
+			geographical_region = world_europe_north
+		}
+	}
+}
+
+# Character scope: attacker; scope:defender is the opposing primary ruler.
+nh_holy_raid_reach_trigger = {
+	OR = {
+		character_is_realm_neighbor = scope:defender
+		scope:defender ?= {
+			any_sub_realm_county = {
+				nh_holy_raid_operational_coast_trigger = yes
+				save_temporary_scope_as = nh_holy_raid_target_coast
+				scope:attacker ?= {
+					# Reject distant realms before comparing their individual coastal counties.
+					realm_to_title_distance_squared = {
+						target = scope:nh_holy_raid_target_coast
+						value <= squared_distance_large
+					}
+					any_sub_realm_county = {
+						nh_holy_raid_operational_coast_trigger = yes
+						squared_distance = {
+							target = scope:nh_holy_raid_target_coast
+							value <= squared_distance_large
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+# Empty or character scope: both CB primary-party scopes are required.
+nh_holy_raid_access_trigger = {
+	exists = scope:attacker
+	exists = scope:defender
+	scope:attacker ?= {
+		is_alive = yes
+		rite = rite:odinstru_pagan
+		ALL_FALSE = {
+			top_liege = scope:defender.top_liege
+			liege = scope:defender
+		}
+	}
+	scope:defender ?= {
+		is_alive = yes
+		nh_holy_raid_target_religion_trigger = yes
+	}
+	scope:attacker ?= { nh_holy_raid_reach_trigger = yes }
+}
+
+# CB scope: only the same attacker's recently completed target wars block declaration.
+nh_holy_raid_cooldown_ready_trigger = {
+	scope:attacker = {
+		trigger_if = {
+			limit = { has_variable_list = nh_holy_raid_recent_targets }
+			NOT = {
+				is_target_in_variable_list = { name = nh_holy_raid_recent_targets target = scope:defender }
+			}
+		}
+	}
+}

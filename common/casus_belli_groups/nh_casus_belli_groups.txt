@@ -1,5 +1,4 @@
 ﻿# Nordic Honor - CB Groups
 
 nh_religious_wars = {
-	nh_holy_conquest_cb = yes
 }

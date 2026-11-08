@@ -1,31 +1,36 @@
 ﻿l_english:
  # Casus Belli Names
- NH_HOLY_CONQUEST_WAR_NAME:0 "Holy Conquest for [TITLE.GetNameNoTierNoTooltip|U]"
- NH_HOLY_CONQUEST_WAR_NAME_BASE:0 "Holy Conquest"
- NH_HOLY_CONQUEST_CB_NAME:0 "Holy Conquest"
- 
+ NH_HOLY_CONQUEST_WAR_NAME:0 "Religious Raid"
+ NH_HOLY_CONQUEST_WAR_NAME_BASE:0 "Religious Raid"
+ NH_HOLY_CONQUEST_CB_NAME:0 "Religious Raid"
+
  # CB Descriptions
- nh_holy_conquest_cb:0 "Holy Conquest"
- nh_holy_conquest_cb_desc:0 "Óðinnstrú faithful may wage holy conquest against infidels to claim entire duchies in the name of the Allfather. This aggressive form of holy war demonstrates uncompromising religious zeal."
- 
+ nh_holy_conquest_cb:0 "Religious Raid"
+ nh_holy_conquest_cb_desc:0 "For Odin's glory, we march against foreign shrines. Let our enemies fear the Allfather's might."
+
  # Victory/Defeat Descriptions
- nh_holy_conquest_cb_victory_desc_attacker:0 "You have conquered [TITLE.GetNameNoTier] in the name of Óðinnstrú, converting the land and subjugating the faithless."
- nh_holy_conquest_cb_victory_desc:0 "[SCOPE.sC('attacker').GetUIName] has conquered [TITLE.GetNameNoTier] through holy conquest, imposing Óðinnstrú upon the defeated."
- 
- nh_holy_conquest_cb_white_peace_desc_defender:0 "You have held firm against [SCOPE.sC('attacker').GetUIName]'s holy conquest. The war ends inconclusively."
- nh_holy_conquest_cb_white_peace_desc:0 "The holy conquest for [TITLE.GetNameNoTier] ends without a clear victor."
- 
- nh_holy_conquest_cb_defeat_desc_defender:0 "You have repelled [SCOPE.sC('attacker').GetUIName]'s holy conquest, defending your lands and faith."
- nh_holy_conquest_cb_defeat_desc_attacker:0 "Your holy conquest has failed. The Allfather's will was not strong enough."
- nh_holy_conquest_cb_defeat_desc:0 "[SCOPE.sC('attacker').GetUIName]'s holy conquest has been defeated by [SCOPE.sC('defender').GetUIName]."
- 
+ nh_holy_conquest_cb_victory_desc_attacker:0 "Your raid against [SCOPE.sC('defender').GetUIName] succeeds.\n\n$nh_holy_raid_full_victory_terms_desc$"
+ nh_holy_conquest_cb_victory_desc:0 "[SCOPE.sC('attacker').GetUIName] wins the religious raid against [SCOPE.sC('defender').GetUIName].\n\n$nh_holy_raid_full_victory_terms_desc$"
+ nh_holy_conquest_cb_white_peace_desc_defender:0 "You end [SCOPE.sC('attacker').GetUIName]'s raid with a white peace.\n\n$nh_holy_raid_white_peace_terms_desc$"
+ nh_holy_conquest_cb_white_peace_desc:0 "The religious raid ends in a religious failure for the attacker.\n\n$nh_holy_raid_white_peace_terms_desc$"
+ nh_holy_conquest_cb_defeat_desc_defender:0 "You defeat [SCOPE.sC('attacker').GetUIName] in the religious raid.\n\n$nh_holy_raid_defense_victory_terms_desc$"
+ nh_holy_conquest_cb_defeat_desc_attacker:0 "Your raid against [SCOPE.sC('defender').GetUIName] has failed.\n\n$nh_holy_raid_defense_victory_terms_desc$"
+ nh_holy_conquest_cb_defeat_desc:0 "[SCOPE.sC('defender').GetUIName] defeats [SCOPE.sC('attacker').GetUIName] in the religious raid.\n\n$nh_holy_raid_defense_victory_terms_desc$"
+
  # CB Cost Reasons
- CB_HOLY_WAR_COST:0 "Holy War"
- CB_CONQUEST_COST:0 "Conquest"
- 
+ CB_HOLY_WAR_COST:0 "Religious Raid"
+ CB_CONQUEST_COST:0 "Religious Raid"
+
  # Fervor Reasons
- fervor_holy_conquest_declared:0 "Holy Conquest Declared"
- fervor_holy_conquest_victory:0 "Holy Conquest Victory"
- fervor_holy_conquest_defeat:0 "Holy Conquest Defeat"
- fervor_holy_conquest_white_peace:0 "Holy Conquest Stalemate"
- fervor_holy_conquest_defense_victory:0 "Defended Against Holy Conquest"
+ fervor_holy_conquest_declared:0 "Religious Raid Declared"
+ fervor_holy_conquest_victory:0 "Religious Raid Victory"
+ fervor_holy_conquest_defeat:0 "Religious Raid Defeat"
+ fervor_holy_conquest_white_peace:0 "Religious Failure at White Peace"
+ fervor_holy_conquest_defense_victory:0 "Repelled a Religious Raid"
+
+ # Outcome terms
+ nh_holy_raid_gold_terms_desc:0 "The loser pays the winner the greater of 24 nonnegative monthly incomes and 10% of their available personal gold, capped at their available gold. No payment is made without available gold; these reparations create no new debt."
+ nh_holy_raid_full_victory_terms_desc:0 "The winner's faith gains 15 percentage points of fervor; the loser's faith loses 5 percentage points.\n$nh_holy_raid_gold_terms_desc$\nThe winner receives up to three available members of the loser's court aged 18 or older, plus five new captives aged 30–50 inclusive who share the loser's faith, exact rite and culture. They are imprisoned in the winner's dungeon under normal prisoner rules.\nThe loser receives $nh_holy_raid_odins_curse_modifier$ for nine years. No land, titles or vassals are transferred. Other normal war consequences and the truce still apply.\nAfter any regular war outcome, the same attacker cannot declare another religious raid against the same ruler for one year."
+ nh_holy_raid_white_peace_terms_desc:0 "White peace is a religious failure for the attacker: their faith loses 20 percentage points of fervor, and they receive $nh_holy_raid_odins_curse_modifier$ for three years. The defender's faith fervor is unchanged. There are no additional reparations, new captives or transfers of land, titles or vassals. Other normal war consequences and the truce still apply.\nAfter any regular war outcome, the same attacker cannot declare another religious raid against the same ruler for one year."
+ nh_holy_raid_defense_victory_terms_desc:0 "The defender's faith gains 15 percentage points of fervor; the attacker's faith loses 25 percentage points.\n$nh_holy_raid_gold_terms_desc$\nThe defeated attacker receives $nh_holy_raid_odins_curse_modifier$ for nine years. The defender receives no additional captives; ordinary prisoners of war are unaffected. No land, titles or vassals are transferred. Other normal war consequences and the truce still apply.\nAfter any regular war outcome, the same attacker cannot declare another religious raid against the same ruler for one year."
+ nh_holy_raid_cooldown_tt:0 "A year must have passed since the end of your last religious raid against this ruler. Breaking a truce cannot bypass this restriction."

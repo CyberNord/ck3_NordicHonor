@@ -120,3 +120,12 @@ nh_thing_diplomacy_modifier = {
 nh_old_saxony_conversion_modifier = {
 	icon = piety_positive
 }
+
+# Religious war defeat; monthly contributions use the ruler's native resource mechanics.
+nh_holy_raid_odins_curse_modifier = {
+	icon = asatru_raven_negative
+	stacking = no
+	general_opinion = -20
+	monthly_piety = -2
+	monthly_legitimacy_add = -1
+}

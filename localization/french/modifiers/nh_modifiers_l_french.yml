@@ -62,3 +62,8 @@
  # Assembly results and Saxon founding rewards
  nh_old_saxony_conversion_modifier:0 "Restaurateur de la vieille foi"
  nh_old_saxony_conversion_modifier_desc:0 "La conversion religieuse du comté progresse 300% plus vite (quatre fois le rythme applicable). Ce modificateur personnel expire au plus tard après 100 ans et ne se transmet pas aux héritiers."
+
+ # Religious war outcomes
+ nh_holy_raid_odins_curse_modifier:0 "Malédiction guerrière d'Odin"
+ nh_holy_raid_odins_curse_modifier_desc:0 "Pendant la durée indiquée : Ce dirigeant subit la colère d'Odin après un échec religieux : −20 d'opinion générale, −2 de piété mensuelle et −1 de légitimité mensuelle lorsque cette mécanique s'applique. Une nouvelle attribution conserve la date d'expiration la plus tardive."
+ nh_holy_raid_captives_tt:0 "L'attaquant victorieux emprisonne au cachot jusqu'à trois adultes disponibles de la cour du vaincu et cinq nouveaux captifs âgés de 30 à 50 ans. Les captifs créés partagent la foi, le rite exact et la culture du vaincu."
