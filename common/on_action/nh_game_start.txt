@@ -6,6 +6,7 @@ on_game_start = {
 	on_actions = {
 		nh_on_game_start_conversion
 		nh_on_game_start_rollo
+		nh_on_game_start_ivar_perks
 	}
 }
 
@@ -152,5 +153,68 @@ nh_on_game_start_rollo = {
 				add_dynasty_perk = fp1_adventure_legacy_1
 			}
 		 }
+	}
+}
+
+# Historical Ivar: fixed 867 start perks, guarded against repeated initialization.
+nh_on_game_start_ivar_perks = {
+	trigger = {
+		game_start_date = 867.1.1
+		current_date = 867.1.1
+		exists = character:163111
+	}
+	effect = {
+		character:163111 = {
+			if = {
+				limit = {
+					is_alive = yes
+					NOT = { has_character_flag = nh_ivar_torturer_start_initialized }
+				}
+				if = {
+					limit = { NOT = { has_perk = dark_insights_perk } }
+					add_perk = dark_insights_perk
+				}
+				if = {
+					limit = { NOT = { has_perk = divine_retribution_perk } }
+					add_perk = divine_retribution_perk
+				}
+				if = {
+					limit = { NOT = { has_perk = dreadful_perk } }
+					add_perk = dreadful_perk
+				}
+				if = {
+					limit = { NOT = { has_perk = thriving_in_chaos_perk } }
+					add_perk = thriving_in_chaos_perk
+				}
+				if = {
+					limit = { NOT = { has_perk = malice_implicit_perk } }
+					add_perk = malice_implicit_perk
+				}
+				if = {
+					limit = { NOT = { has_perk = torturer_perk } }
+					add_perk = torturer_perk
+				}
+				# The trait is added only if the capstone grant did not already apply it.
+				if = {
+					limit = {
+						has_perk = torturer_perk
+						NOT = { has_trait = torturer }
+					}
+					add_trait = torturer
+				}
+				if = {
+					limit = {
+						has_perk = dark_insights_perk
+						has_perk = divine_retribution_perk
+						has_perk = dreadful_perk
+						has_perk = thriving_in_chaos_perk
+						has_perk = malice_implicit_perk
+						has_perk = torturer_perk
+						has_trait = torturer
+					}
+					add_character_flag = nh_ivar_torturer_start_initialized
+				}
+			}
+		}
 	}
 }
