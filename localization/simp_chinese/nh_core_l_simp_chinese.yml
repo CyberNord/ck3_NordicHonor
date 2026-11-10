@@ -7,3 +7,25 @@
 
  # Assembly results and Saxon founding rewards
  nh_old_saxony_huscarls_name:0 "古萨克森侍卫"
+
+ # Nordic Honor bookmark
+ bm_867_nh_nordic_honor:0 "Nordic Honor"
+ bm_867_nh_nordic_honor_desc:0 "TODO"
+ nh_bookmark_ivar:0 "无骨者伊瓦尔"
+ nh_bookmark_ivar_desc:0 "TODO"
+ nh_bookmark_ivar_subheading:0 "TODO"
+ nh_bookmark_dyre:0 "基辅的迪雷"
+ nh_bookmark_dyre_desc:0 "TODO"
+ nh_bookmark_dyre_subheading:0 "TODO"
+ nh_bookmark_olafr:0 "莱昂的奥拉夫"
+ nh_bookmark_olafr_desc:0 "TODO"
+ nh_bookmark_olafr_subheading:0 "TODO"
+ nh_bookmark_rollo:0 "罗洛"
+ nh_bookmark_rollo_desc:0 "TODO"
+ nh_bookmark_rollo_subheading:0 "TODO"
+ nh_bookmark_audr:0 "深谋者奥德"
+ nh_bookmark_audr_desc:0 "TODO"
+ nh_bookmark_audr_subheading:0 "TODO"
+ nh_bookmark_sverker:0 "翁厄曼兰的斯韦克尔"
+ nh_bookmark_sverker_desc:0 "TODO"
+ nh_bookmark_sverker_subheading:0 "TODO"

@@ -61,14 +61,14 @@
  nh.1005.option.a.desc: "Et Wotan nous guidera vers la Victoire !" #
 
    # Rollo's Adventure [nh.1011 to  .1012]
- nh.1011.t:0 "Choix de la cible"
- nh.1011.desc:0 "Alors que vous mettez les voiles avec votre redoutable armée, une question se pose : où la puissance des Vikings va-t-elle se déchaîner ? Les terres de Normandie, avec leurs richesses inexploitées et leur potentiel de conquête ? Ou peut-être l'île de Sardaigne, où le pillage et la gloire attendent les intrépides ? Ou encore, les terres fertiles de l'Essex, dont les défenses sont faibles, offrent une opportunité séduisante."
- nh.1011.option.opponent_normandy_option.desc:0 "La Normandie : Les terres fertiles des Francs trembleront sous nos bottes."
- nh.1011.option.opponent_normandy_option_tooltip.desc:0 "Sélectionnez cette option pour mener les forces de Rollo à envahir la Normandie, dans le but d'établir un bastion viking sur ces terres fertiles."
- nh.1011.option.opponent_sardinia_option.desc:0 "La Sardaigne : Une île mûre pour la conquête, dont les rivages témoigneront de notre puissance viking."
- nh.1011.option.opponent_sardinia_option_tooltip.desc:0 "Choisissez cette option pour guider l'expédition de Rollo en Sardaigne, où les richesses et la gloire attendent dans les terres méditerranéennes généreuses."
- nh.1011.option.opponent_essex_option.desc:0 "Essex : Un royaume vulnérable, qui sera un tremplin pour de plus grandes conquêtes."
- nh.1011.option.opponent_essex_option_tooltip.desc:0 "Choisissez cette option pour mener les forces de Rollo en Essex, en exploitant les faibles défenses de cette terre fertile comme tremplin pour d'autres campagnes vikings."
+ nh.1011.t:0 "Un nouveau foyer"
+ nh.1011.desc:0 "Notre troupe est prête. Où chercher notre nouveau foyer : en Normandie, en Sardaigne ou en Essex ? Nous affronterons le souverain actuel ; la guerre décidera de notre réussite et des terres acquises."
+ nh.1011.option.opponent_normandy_option.desc:0 "Normandie"
+ nh.1011.option.opponent_normandy_option_tooltip.desc:0 "Lance une invasion d'aventurier dans le duché de Normandie contre le souverain actuel de Rouen. La victoire est nécessaire pour s'établir."
+ nh.1011.option.opponent_sardinia_option.desc:0 "Sardaigne"
+ nh.1011.option.opponent_sardinia_option_tooltip.desc:0 "Lance une invasion d'aventurier dans le duché de Sardaigne contre le souverain actuel de Cagliari. Un duché non créé reste une destination possible."
+ nh.1011.option.opponent_essex_option.desc:0 "Essex"
+ nh.1011.option.opponent_essex_option_tooltip.desc:0 "Lance une invasion d'aventurier dans le duché d'Essex contre le souverain actuel de Middlesex. La victoire est nécessaire pour s'établir."
 
  nh.1012.t:0 "L'offre de la Normandie"
  nh.1012.desc:0 "Alors que vos forces vikings conquièrent les terres de Normandie, la nouvelle de vos rapides victoires parvient au roi de France. Impressionné par votre force et votre ambition, [francish_king.GetTitledFirstName] envoie des émissaires avec une proposition remarquable. Ils vous offrent de vastes terres, des titres de noblesse et la possibilité d'épouser la fille du roi.\nEn contrepartie, [actor.GetTitledFirstName] se convertit au christianisme et jure fidélité à la couronne franque. Cette décision revêt une grande importance, car elle implique l'abandon de vos anciens dieux et de vos traditions.\nCependant, après cette victoire, je pourrais être en mesure de modifier le contrat en ma faveur..."

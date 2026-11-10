@@ -1,0 +1,370 @@
+﻿# Rollo's one-shot mission; AI and decision entry share the same safety gates.
+nh_rollo_begin_adventure_effect = {
+	if = {
+		limit = {
+			nh_rollo_mission_available_trigger = yes
+			nh_rollo_any_adventure_target_valid_trigger = yes
+		}
+		add_character_flag = nh_rollo_mission_started
+		add_to_global_variable_list = {
+			name = unavailable_unique_decisions
+			target = flag:nh_rollos_adventure_decision
+		}
+		save_scope_as = actor
+		trigger_event = nh.1011
+	}
+}
+
+# The pending references identify this declaration in the native war-start callback.
+nh_rollo_start_adventure_war_effect = {
+	if = {
+		limit = {
+			has_character_flag = nh_rollo_mission_started
+			nh_rollo_adventure_target_valid_trigger = { COUNTY = $COUNTY$ TITLE = $TITLE$ }
+		}
+		add_character_flag = nh_rollo_mission_war_started
+		set_variable = { name = nh_rollo_pending_target value = $TITLE$ days = 1 }
+		set_variable = { name = nh_rollo_pending_defender value = $COUNTY$.holder.top_liege days = 1 }
+		start_war = {
+			cb = ep3_laamp_adventurer_duchy_invasion
+			target = $COUNTY$.holder.top_liege
+			target_title = $TITLE$
+		}
+	}
+}
+
+# War-scoped entry only: retain the native FP1 bonus conditions and war binding.
+nh_rollo_fp1_adventure_troops_effect = {
+	scope:attacker = {
+		if = {
+			limit = {
+				OR = {
+					fp1_va_eligible_for_scandinavian_troops_trigger = yes
+					dynasty ?= { has_dynasty_perk = fp1_adventure_legacy_1 }
+				}
+				NOT = { has_variable = va_cb_tally }
+			}
+			domicile.domicile_location.barony = { save_scope_as = capital_barony }
+			send_interface_toast = {
+				type = msg_troops_gained
+				title = fp1_varangian_adventurer_conquest.troops_raised.tt
+				left_icon = scope:attacker
+				if = {
+					limit = { fp1_va_eligible_for_scandinavian_troops_trigger = yes }
+					if = {
+						limit = { varangian_adventurers_bonus_levies_value = 1 }
+						spawn_army = {
+							men_at_arms = {
+								type = varangian_veterans
+								stacks = 1
+							}
+							levies = 100
+							inheritable = yes
+							location = scope:attacker.domicile.domicile_location
+							war = scope:war
+							war_keep_on_attacker_victory = yes
+							save_scope_as = new_army
+							name = scandi_adventurer_event_troops
+						}
+					}
+					if = {
+						limit = { varangian_adventurers_bonus_levies_value = 2 }
+						spawn_army = {
+							men_at_arms = {
+								type = varangian_veterans
+								stacks = 3
+							}
+							levies = 100
+							inheritable = yes
+							location = scope:attacker.domicile.domicile_location
+							war = scope:war
+							war_keep_on_attacker_victory = yes
+							save_scope_as = new_army
+							name = scandi_adventurer_event_troops
+						}
+					}
+					if = {
+						limit = { varangian_adventurers_bonus_levies_value = 3 }
+						spawn_army = {
+							men_at_arms = {
+								type = varangian_veterans
+								stacks = 3
+							}
+							men_at_arms = {
+								type = bondi
+								stacks = 2
+							}
+							levies = 100
+							inheritable = yes
+							location = scope:attacker.domicile.domicile_location
+							war = scope:war
+							war_keep_on_attacker_victory = yes
+							save_scope_as = new_army
+							name = scandi_adventurer_event_troops
+						}
+					}
+					if = {
+						limit = { varangian_adventurers_bonus_levies_value = 4 }
+						spawn_army = {
+							men_at_arms = {
+								type = varangian_veterans
+								stacks = 3
+							}
+							men_at_arms = {
+								type = bondi
+								stacks = 4
+							}
+							levies = 100
+							inheritable = yes
+							location = scope:attacker.domicile.domicile_location
+							war = scope:war
+							war_keep_on_attacker_victory = yes
+							save_scope_as = new_army
+							name = scandi_adventurer_event_troops
+						}
+					}
+					if = {
+						limit = { varangian_adventurers_bonus_levies_value = 5 }
+						spawn_army = {
+							men_at_arms = {
+								type = varangian_veterans
+								stacks = 3
+							}
+							men_at_arms = {
+								type = bondi
+								stacks = 4
+							}
+							men_at_arms = {
+								type = vigmen
+								stacks = 2
+							}
+							levies = 100
+							inheritable = yes
+							location = scope:attacker.domicile.domicile_location
+							war = scope:war
+							war_keep_on_attacker_victory = yes
+							save_scope_as = new_army
+							name = scandi_adventurer_event_troops
+						}
+					}
+					if = {
+						limit = { varangian_adventurers_bonus_levies_value = 6 }
+						spawn_army = {
+							men_at_arms = {
+								type = varangian_veterans
+								stacks = 3
+							}
+							men_at_arms = {
+								type = bondi
+								stacks = 4
+							}
+							men_at_arms = {
+								type = vigmen
+								stacks = 4
+							}
+							levies = 100
+							inheritable = yes
+							location = scope:attacker.domicile.domicile_location
+							war = scope:war
+							war_keep_on_attacker_victory = yes
+							save_scope_as = new_army
+							name = scandi_adventurer_event_troops
+						}
+					}
+					if = {
+						limit = { varangian_adventurers_bonus_levies_value = 7 }
+						spawn_army = {
+							men_at_arms = {
+								type = varangian_veterans
+								stacks = 3
+							}
+							men_at_arms = {
+								type = bondi
+								stacks = 4
+							}
+							men_at_arms = {
+								type = vigmen
+								stacks = 6
+							}
+							levies = 100
+							inheritable = yes
+							location = scope:attacker.domicile.domicile_location
+							war = scope:war
+							war_keep_on_attacker_victory = yes
+							save_scope_as = new_army
+							name = scandi_adventurer_event_troops
+						}
+					}
+					if = {
+						limit = { varangian_adventurers_bonus_levies_value = 8 }
+						spawn_army = {
+							men_at_arms = {
+								type = varangian_veterans
+								stacks = 3
+							}
+							men_at_arms = {
+								type = bondi
+								stacks = 4
+							}
+							men_at_arms = {
+								type = vigmen
+								stacks = 8
+							}
+							levies = 100
+							inheritable = yes
+							location = scope:attacker.domicile.domicile_location
+							war = scope:war
+							war_keep_on_attacker_victory = yes
+							save_scope_as = new_army
+							name = scandi_adventurer_event_troops
+						}
+					}
+					if = {
+						limit = { varangian_adventurers_bonus_levies_value = 9 }
+						spawn_army = {
+							men_at_arms = {
+								type = varangian_veterans
+								stacks = 3
+							}
+							men_at_arms = {
+								type = bondi
+								stacks = 4
+							}
+							men_at_arms = {
+								type = vigmen
+								stacks = 8
+							}
+							men_at_arms = {
+								type = huscarl
+								stacks = 2
+							}
+							levies = 100
+							inheritable = yes
+							location = scope:attacker.domicile.domicile_location
+							war = scope:war
+							war_keep_on_attacker_victory = yes
+							save_scope_as = new_army
+							name = scandi_adventurer_event_troops
+						}
+					}
+					if = {
+						limit = { varangian_adventurers_bonus_levies_value >= 10 }
+						spawn_army = {
+							men_at_arms = {
+								type = varangian_veterans
+								stacks = 3
+							}
+							men_at_arms = {
+								type = bondi
+								stacks = 4
+							}
+							men_at_arms = {
+								type = vigmen
+								stacks = 8
+							}
+							men_at_arms = {
+								type = huscarl
+								stacks = 4
+							}
+							levies = 100
+							inheritable = yes
+							location = scope:attacker.domicile.domicile_location
+							war = scope:war
+							war_keep_on_attacker_victory = yes
+							save_scope_as = new_army
+							name = scandi_adventurer_event_troops
+						}
+					}
+				}
+				if = {
+					limit = {
+						dynasty = { has_dynasty_perk = fp1_adventure_legacy_1 }
+					}
+					spawn_army = {
+						men_at_arms = {
+							type = varangian_veterans
+							stacks = 4
+						}
+						men_at_arms = {
+							type = vigmen
+							stacks = 4
+						}
+						men_at_arms = {
+							type = bondi
+							stacks = 1
+						}
+						levies = 100
+						inheritable = yes
+						location = scope:attacker.domicile.domicile_location
+						war = scope:war
+						war_keep_on_attacker_victory = yes
+						save_scope_as = new_army
+						name = scandi_adventurer_event_troops
+					}
+				}
+			}
+		}
+	}
+}
+
+# FP1 benefits absent from EP3; retain native conditions in the original war scopes.
+nh_rollo_fp1_adventure_victory_context_effect = {
+	add_legitimacy_attacker_victory_effect = yes
+	scope:attacker = { accolade_attacker_war_end_glory_gain_med_effect = yes }
+}
+
+# Called one day after native war resolution, after camp and title cleanup.
+nh_rollo_finish_adventure_victory_effect = {
+	if = {
+		limit = {
+			this = character:242
+			is_alive = yes
+			has_character_flag = nh_rollo_victory_pending
+			NOT = { has_character_flag = nh_rollo_victory_resolved }
+		}
+		add_character_flag = nh_rollo_victory_resolved
+		remove_character_flag = nh_rollo_victory_pending
+		if = {
+			limit = {
+				is_landed = yes
+				exists = var:nh_rollo_victory_target
+				var:nh_rollo_victory_target = {
+					any_in_de_jure_hierarchy = {
+						tier = tier_county
+						holder = root
+					}
+				}
+			}
+			add_gold = var:nh_rollo_victory_bounty
+			if = {
+				limit = { has_variable = va_cb_tally }
+				change_variable = { name = va_cb_tally add = 1 }
+			}
+			else = { set_variable = { name = va_cb_tally value = 2 } }
+			if = {
+				limit = {
+					is_ai = yes
+					var:nh_rollo_victory_target = title:d_normandy
+					has_title = title:d_normandy
+					exists = capital_province
+					NOT = { has_character_flag = nh_rollo_ai_normandy_rewarded }
+				}
+				add_character_flag = nh_rollo_ai_normandy_rewarded
+				hidden_effect = {
+					add_character_modifier = nh_rollo_ai_normandy_modifier
+					spawn_army = {
+						name = event_troop_rollo_name
+						men_at_arms = { type = varangian_veterans stacks = 10 }
+						men_at_arms = { type = vigmen stacks = 5 }
+						men_at_arms = { type = bondi stacks = 5 }
+						location = capital_province
+						origin = capital_province
+						inheritable = no
+					}
+				}
+			}
+		}
+		remove_variable = nh_rollo_victory_target
+		remove_variable = nh_rollo_victory_bounty
+	}
+}

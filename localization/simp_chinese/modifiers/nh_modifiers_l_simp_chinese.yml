@@ -67,3 +67,5 @@
  nh_holy_raid_odins_curse_modifier:0 "奥丁的战争诅咒"
  nh_holy_raid_odins_curse_modifier_desc:0 "在显示的持续时间内：这位统治者因宗教上的失败招致奥丁的愤怒：一般好感−20、每月虔诚−2，以及在适用该机制时每月正统性−1。再次受到诅咒时，保留较晚的到期日期。"
  nh_holy_raid_captives_tt:0 "获胜的进攻方将败者宫廷中最多三名可被俘获的成年人，以及五名新生成的30至50岁俘虏关入地牢。新生成的俘虏拥有败者的信仰、确切礼仪和文化。"
+ nh_rollo_ai_normandy_modifier:0 "稳固统治"
+ nh_rollo_ai_normandy_modifier_desc:0 "统治者已站稳脚跟。"

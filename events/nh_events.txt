@@ -636,14 +636,18 @@ nh.1005 = {
 # Rollo's Adventure
 nh.1011 = {
 	type = character_event
-	trigger = { this = character:242 is_alive = yes is_landed = yes }
+	trigger = {
+		nh_rollo_adventurer_eligible_trigger = yes
+		has_character_flag = nh_rollo_mission_started
+		NOT = { has_character_flag = nh_rollo_mission_war_started }
+	}
 	title = nh.1011.t
 	desc = nh.1011.desc
 	theme = war
 
 	right_portrait = {
 		character = scope:attacker
- 		animation = aggressive_axe
+		animation = aggressive_axe
 	}
 
 	lower_right_portrait = scope:opponent_normandy_option
@@ -673,33 +677,10 @@ nh.1011 = {
 			save_scope_as = opponent_essex_option
 		}
 
-		# Give Rollo an army
-		spawn_army = {
-			name = event_troop_rollo_name
-			levies = 500
-			men_at_arms = {
-				type = varangian_veterans
-				stacks = 5
-			}
-			men_at_arms = {
-				type = vigmen
-				stacks = 3
-			}
-			men_at_arms = {
-				type = bondi
-				stacks = 7
-			}
-			location = province:252
-			origin = province:252
-			inheritable = no
-		}
-		# make AI Rollo stronger
+		# Mission armies are granted once at the current camp.
 		if = {
-			limit = { is_ai = yes }
-				add_character_modifier = {
-				modifier = nh_rollo_special_ai_modifier
-				years = 9
-			}
+			limit = { NOT = { has_character_flag = nh_rollo_mission_troops_given } }
+			add_character_flag = nh_rollo_mission_troops_given
 			spawn_army = {
 				name = event_troop_rollo_name
 				levies = 500
@@ -707,9 +688,36 @@ nh.1011 = {
 					type = varangian_veterans
 					stacks = 5
 				}
-				location = province:252
-				origin = province:252
+				men_at_arms = {
+					type = vigmen
+					stacks = 3
+				}
+				men_at_arms = {
+					type = bondi
+					stacks = 7
+				}
+				location = domicile.domicile_location
+				origin = domicile.domicile_location
 				inheritable = no
+			}
+			# Additional AI mission army and temporary combat modifier.
+			if = {
+				limit = { is_ai = yes }
+				add_character_modifier = {
+					modifier = nh_rollo_special_ai_modifier
+					years = 9
+				}
+				spawn_army = {
+					name = event_troop_rollo_name
+					levies = 500
+					men_at_arms = {
+						type = varangian_veterans
+						stacks = 5
+					}
+					location = domicile.domicile_location
+					origin = domicile.domicile_location
+					inheritable = no
+				}
 			}
 		}
 
@@ -724,14 +732,7 @@ nh.1011 = {
 		}
 
 		# Resolve ownership again at the click; never attack the stale portrait.
-		if = {
-			limit = { nh_rollo_adventure_target_valid_trigger = { COUNTY = title:c_rouen TITLE = title:d_normandy } }
-			start_war = {
-				cb = fp1_varangian_adventurer_conquest
-				target = title:c_rouen.holder.top_liege
-				target_title = title:d_normandy
-			}
-		}
+		nh_rollo_start_adventure_war_effect = { COUNTY = title:c_rouen TITLE = title:d_normandy }
 
 		ai_chance = {base = 100}
 	}
@@ -743,14 +744,7 @@ nh.1011 = {
 		trigger = {
 			nh_rollo_adventure_target_valid_trigger = { COUNTY = title:c_cagliari TITLE = title:d_sardinia }
 		}
-		if = {
-			limit = { nh_rollo_adventure_target_valid_trigger = { COUNTY = title:c_cagliari TITLE = title:d_sardinia } }
-			start_war = {
-				cb = fp1_varangian_adventurer_conquest
-				target = title:c_cagliari.holder.top_liege
-				target_title = title:d_sardinia
-			}
-		}
+		nh_rollo_start_adventure_war_effect = { COUNTY = title:c_cagliari TITLE = title:d_sardinia }
 		ai_chance = {base = 0}
 	}
 
@@ -761,14 +755,7 @@ nh.1011 = {
 		trigger = {
 			nh_rollo_adventure_target_valid_trigger = { COUNTY = title:c_middlesex TITLE = title:d_bedford }
 		}
-		if = {
-			limit = { nh_rollo_adventure_target_valid_trigger = { COUNTY = title:c_middlesex TITLE = title:d_bedford } }
-			start_war = {
-				cb = fp1_varangian_adventurer_conquest
-				target = title:c_middlesex.holder.top_liege
-				target_title = title:d_bedford
-			}
-		}
+		nh_rollo_start_adventure_war_effect = { COUNTY = title:c_middlesex TITLE = title:d_bedford }
 		ai_chance = {base = 0}
 	}
 

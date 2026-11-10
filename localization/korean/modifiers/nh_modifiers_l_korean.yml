@@ -67,3 +67,5 @@
  nh_holy_raid_odins_curse_modifier:0 "오딘의 전쟁 저주"
  nh_holy_raid_odins_curse_modifier_desc:0 "표시된 기간 동안 적용됩니다. 종교적 실패로 오딘의 분노를 산 통치자입니다. 일반 의견 −20, 매월 신앙도 −2, 해당 체계를 사용하는 경우 매월 정통성 −1을 받습니다. 저주를 다시 받으면 더 늦은 만료일이 유지됩니다."
  nh_holy_raid_captives_tt:0 "승리한 공격자는 패자의 궁정에서 붙잡을 수 있는 성인 최대 세 명과 새로 생성된 30~50세 포로 다섯 명을 지하 감옥에 가둡니다. 생성된 포로는 패자와 동일한 신앙, 정확한 교파, 문화를 가집니다."
+ nh_rollo_ai_normandy_modifier:0 "확고한 통치"
+ nh_rollo_ai_normandy_modifier_desc:0 "통치자가 확고한 기반을 마련했습니다."

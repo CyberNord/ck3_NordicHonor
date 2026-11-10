@@ -1,0 +1,115 @@
+﻿# Historical characters share the normal 867 world state.
+bm_867_nh_nordic_honor = {
+	start_date = 867.1.1
+	is_playable = yes
+	group = bm_group_867
+	# The native DLC filter applies to the entire bookmark, including Rollo.
+	requires_dlc_flag = landless_adventurer
+	weight = { value = -1 }
+
+	character = {
+		name = nh_bookmark_ivar
+		history_id = 163111
+		character_design_type = none
+		type = male
+		birth = 845.2.7
+		title = d_western_isles
+		government = tribal_government
+		culture = norse
+		religion = odinstru_pagan
+		dynasty_house = house_british_isles_ivaring
+		dynasty_splendor_level = 1
+
+		difficulty = BOOKMARK_CHARACTER_DIFFICULTY_MEDIUM
+		position = { 270 180 }
+		animation = personality_bold
+	}
+
+	character = {
+		name = nh_bookmark_dyre
+		history_id = 6811
+		character_design_type = none
+		type = male
+		birth = 845.1.1
+		title = d_kiev
+		government = tribal_government
+		culture = norse
+		religion = heidinn_pagan
+		dynasty_house = house_oskyldr
+		dynasty_splendor_level = 1
+
+		difficulty = BOOKMARK_CHARACTER_DIFFICULTY_MEDIUM
+		position = { 730 180 }
+		animation = personality_bold
+	}
+
+	character = {
+		name = nh_bookmark_olafr
+		history_id = 303404
+		character_design_type = none
+		type = male
+		birth = 832.1.1
+		title = c_french_leon
+		government = feudal_government
+		culture = norse
+		religion = odinstru_pagan
+
+		difficulty = BOOKMARK_CHARACTER_DIFFICULTY_MEDIUM
+		position = { 1190 180 }
+		animation = personality_bold
+	}
+
+	character = {
+		name = nh_bookmark_rollo
+		history_id = 242
+		character_design_type = none
+		type = male
+		birth = 846.6.6
+		title = d_laamp_hrolfr
+		government = landless_adventurer_government
+		culture = norse
+		religion = norse_pagan
+		dynasty = 752
+		dynasty_splendor_level = 1
+
+		difficulty = BOOKMARK_CHARACTER_DIFFICULTY_MEDIUM
+		position = { 270 590 }
+		animation = personality_bold
+	}
+
+	character = {
+		name = nh_bookmark_audr
+		history_id = 168609
+		character_design_type = none
+		type = female
+		birth = 833.1.1
+		title = c_vestisland
+		government = tribal_government
+		culture = norse
+		religion = ginnregla_pagan
+		dynasty = 9612
+		dynasty_splendor_level = 1
+
+		difficulty = BOOKMARK_CHARACTER_DIFFICULTY_MEDIUM
+		position = { 730 590 }
+		animation = personality_bold
+	}
+
+	character = {
+		name = nh_bookmark_sverker
+		history_id = 167722
+		character_design_type = none
+		type = male
+		birth = 845.1.1
+		title = c_angermanland
+		government = tribal_government
+		culture = norse
+		religion = natturugudtruar_pagan
+		dynasty = 1031
+		dynasty_splendor_level = 1
+
+		difficulty = BOOKMARK_CHARACTER_DIFFICULTY_MEDIUM
+		position = { 1190 590 }
+		animation = personality_bold
+	}
+}

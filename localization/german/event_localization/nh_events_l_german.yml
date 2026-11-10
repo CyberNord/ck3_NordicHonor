@@ -61,14 +61,14 @@
  nh.1005.option.a.desc:0 "And Wotan will guide us to Victory!"
 
  # Rollo's Adventure [nh.1011 to  .1012]
- nh.1011.t:0 "Choosing the Target"
- nh.1011.desc:0 "As you set sail with your formidable warband, the question arises: where shall our Viking might be unleashed? The lands of Normandy, with their untapped riches and potential for conquest? Or perhaps the island of Sardinia, where plunder and glory await the fearless? Alternatively, the fertile lands of Essex, with its weak defenses, offer an enticing opportunity. "
- nh.1011.option.opponent_normandy_option.desc:0 "Normandy: The fertile lands of the Franks shall tremble beneath our boots."
- nh.1011.option.opponent_normandy_option_tooltip.desc:0 "Select this option to lead Rollo's forces to invade Normandy, seeking to establish a Viking stronghold in these fruitful lands."
- nh.1011.option.opponent_sardinia_option.desc:0 "Sardinia: An island ripe for the taking, its shores shall bear witness to our Viking might."
- nh.1011.option.opponent_sardinia_option_tooltip.desc:0 "Choose this option to guide Rollo's expedition to Sardinia, where riches and glory await in the bountiful Mediterranean lands."
- nh.1011.option.opponent_essex_option.desc:0 "Essex: A vulnerable realm, it shall be a stepping stone to greater conquests."
- nh.1011.option.opponent_essex_option_tooltip.desc:0 "Choose this option to lead Rollo's forces to Essex, exploiting the weak defenses of this fertile land as a springboard for further Viking campaigns."
+ nh.1011.t:0 "Ein neues Heim"
+ nh.1011.desc:0 "Unsere Kriegerschar ist bereit. Welches Ziel soll unser neues Heim werden: die Normandie, Sardinien oder Essex? Wir greifen den dortigen Herrscher an; unser Erfolg und die tatsächliche Landnahme werden im Krieg entschieden."
+ nh.1011.option.opponent_normandy_option.desc:0 "Normandie"
+ nh.1011.option.opponent_normandy_option_tooltip.desc:0 "Beginnt eine Abenteurerinvasion im Herzogtum Normandie gegen den aktuellen Herrn von Rouen. Nur ein Sieg ermöglicht die native Landnahme."
+ nh.1011.option.opponent_sardinia_option.desc:0 "Sardinien"
+ nh.1011.option.opponent_sardinia_option_tooltip.desc:0 "Beginnt eine Abenteurerinvasion im Herzogtum Sardinien gegen den aktuellen Herrn von Cagliari. Ein unbesetzter Herzogstitel verhindert die Zielwahl nicht."
+ nh.1011.option.opponent_essex_option.desc:0 "Essex"
+ nh.1011.option.opponent_essex_option_tooltip.desc:0 "Beginnt eine Abenteurerinvasion im Herzogtum Essex gegen den aktuellen Herrn von Middlesex. Nur ein Sieg ermöglicht die native Landnahme."
 
  nh.1012.t:0 "The Offer of Normandy"
  nh.1012.desc:0 "As your Viking forces conquer the lands of Normandy, news of your swift victories reaches the French King. Impressed by your strength and ambition, [francish_king.GetTitledFirstName] sends emissaries with a remarkable proposition. They offer you vast lands, noble titles, and the chance to marry the King's daughter.\nHowever, in return, [actor.GetTitledFirstName] convert to Christianity and pledge loyalty to the Frankish crown. This decision carries great significance, as it means forsaking your ancient gods and traditions.\nHowever, after this victory I might be in the right position to alter the contract to my favor..."

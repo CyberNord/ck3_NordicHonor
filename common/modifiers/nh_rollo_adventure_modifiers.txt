@@ -1,0 +1,7 @@
+﻿# Permanent personal bonus. Native hide_effects hides values, not the modifier entry.
+nh_rollo_ai_normandy_modifier = {
+	stacking = no
+	hide_effects = yes
+	defender_advantage = 50
+	monthly_income = 10
+}

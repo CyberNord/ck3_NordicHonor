@@ -1,0 +1,90 @@
+﻿# Global pulse is rootless; only the historical character is inspected.
+yearly_global_pulse = { on_actions = { nh_rollo_ai_adventure_action } }
+quarterly_playable_pulse = { on_actions = { nh_rollo_ai_quarterly_adventure_action } }
+nh_rollo_ai_quarterly_adventure_action = {
+	trigger = { this = character:242 is_ai = yes }
+	on_actions = { nh_rollo_ai_adventure_action }
+}
+nh_rollo_ai_adventure_action = {
+	trigger = {
+		exists = character:242
+		character:242 = {
+			is_ai = yes
+			nh_rollo_mission_available_trigger = yes
+			nh_rollo_adventure_target_valid_trigger = { COUNTY = title:c_rouen TITLE = title:d_normandy }
+		}
+	}
+	effect = { character:242 = { nh_rollo_begin_adventure_effect = yes } }
+}
+
+on_war_started = { on_actions = { nh_rollo_adventure_war_started_action } }
+nh_rollo_adventure_war_started_action = {
+	trigger = {
+		exists = scope:war
+		exists = scope:attacker
+		exists = scope:defender
+		scope:war = {
+			using_cb = ep3_laamp_adventurer_duchy_invasion
+			NOT = { has_variable = nh_rollo_mission_war }
+		}
+		scope:attacker = {
+			this = character:242
+			has_character_flag = nh_rollo_mission_war_started
+			exists = var:nh_rollo_pending_target
+			exists = var:nh_rollo_pending_defender
+			var:nh_rollo_pending_defender = scope:defender
+		}
+		any_in_list = {
+			list = target_titles
+			this = scope:attacker.var:nh_rollo_pending_target
+		}
+	}
+	effect = {
+		scope:war = {
+			set_variable = nh_rollo_mission_war
+			set_variable = { name = nh_rollo_mission_target value = scope:attacker.var:nh_rollo_pending_target }
+		}
+		scope:attacker = {
+			remove_variable = nh_rollo_pending_target
+			remove_variable = nh_rollo_pending_defender
+		}
+		nh_rollo_fp1_adventure_troops_effect = yes
+	}
+}
+
+# Effects can still inspect scope:war on this tick; events run after its destruction.
+on_war_won_attacker = { on_actions = { nh_rollo_adventure_victory_action } }
+nh_rollo_adventure_victory_action = {
+	trigger = {
+		exists = scope:war
+		scope:war = {
+			has_variable = nh_rollo_mission_war
+			NOT = { has_variable = nh_rollo_outcome_processed }
+		}
+		scope:attacker = { this = character:242 is_alive = yes }
+	}
+	effect = {
+		scope:war = { set_variable = nh_rollo_outcome_processed }
+		nh_rollo_fp1_adventure_victory_context_effect = yes
+		scope:attacker = {
+			set_variable = { name = nh_rollo_victory_target value = scope:war.var:nh_rollo_mission_target }
+			set_variable = { name = nh_rollo_victory_bounty value = varangian_adventures_bounty_amount_value }
+			add_character_flag = nh_rollo_victory_pending
+			trigger_event = { id = nh_rollo.0001 days = 1 }
+		}
+	}
+}
+
+on_war_won_defender = { on_actions = { nh_rollo_adventure_failed_action } }
+on_war_white_peace = { on_actions = { nh_rollo_adventure_failed_action } }
+on_war_invalidated = { on_actions = { nh_rollo_adventure_failed_action } }
+nh_rollo_adventure_failed_action = {
+	trigger = {
+		exists = scope:war
+		scope:war = {
+			has_variable = nh_rollo_mission_war
+			NOT = { has_variable = nh_rollo_outcome_processed }
+		}
+	}
+	effect = { scope:war = { set_variable = nh_rollo_outcome_processed } }
+}

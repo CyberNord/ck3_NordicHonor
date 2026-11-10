@@ -4,42 +4,20 @@ on_game_start = {
 	events = {
 	}
 	on_actions = {
-		nh_on_game_start_conversion
+		nh_on_game_start_setup
 		nh_on_game_start_rollo
 		nh_on_game_start_ivar_perks
 	}
 }
 
-nh_on_game_start_conversion = {
+# Historical start troops, nickname, trait and county cultures.
+nh_on_game_start_setup = {
 	effect = {
 		if = {
 			limit = {
 				game_start_date <= 993.1.1
 			}
-
-			# Náttúruguðtrúar
-			title:c_sjeltie = { set_county_rite = rite:natturugudtruar_pagan }
-			title:c_ubmejeiednuo = { set_county_rite = rite:natturugudtruar_pagan }
-			title:c_pite = { set_county_rite = rite:natturugudtruar_pagan }
-			title:c_jahkamakke = { set_county_rite = rite:natturugudtruar_pagan }
-			title:c_biton = { set_county_rite = rite:natturugudtruar_pagan }
-			title:c_angermanland = { set_county_rite = rite:natturugudtruar_pagan }
-
-			character:167722 = {set_character_rite = rite:natturugudtruar_pagan}
-			character:167723 = {set_character_rite = rite:natturugudtruar_pagan}
-			character:167725 = {set_character_rite = rite:natturugudtruar_pagan}
-			character:167726 = {set_character_rite = rite:natturugudtruar_pagan}
-			character:167728 = {set_character_rite = rite:natturugudtruar_pagan}
-			character:167729 = {set_character_rite = rite:natturugudtruar_pagan}
-
-			# Giñnregla
-			title:c_sudurland = { set_county_rite = rite:ginnregla_pagan }
-			title:c_vestisland = { set_county_rite = rite:ginnregla_pagan }
-			title:c_austisland = { set_county_rite = rite:ginnregla_pagan }
-			title:c_nordrland = { set_county_rite = rite:ginnregla_pagan }
-
 			character:180257 = {
-				set_character_rite = rite:ginnregla_pagan
 				spawn_army = {
 					name = event_troop_default_name
 					men_at_arms = {
@@ -50,28 +28,12 @@ nh_on_game_start_conversion = {
 					origin = province:4
 					inheritable = no
 				}
-			}	
-			character:180258 = {set_character_rite = rite:ginnregla_pagan}
+			}
 			character:168609 = {
-				set_character_rite = rite:ginnregla_pagan
 				remove_nickname = yes
 				give_nickname = nick_nh_wise
-				}									# needs christ decision
-			character:168331 = {set_character_rite = rite:ginnregla_pagan}
-			character:168332 = {set_character_rite = rite:ginnregla_pagan}
-			character:168333 = {set_character_rite = rite:ginnregla_pagan}
-
-			# Heiðinn
-			title:c_korsun = { set_county_rite = rite:heidinn_pagan }
-			title:c_kiev = { set_county_rite = rite:heidinn_pagan }
-			title:c_chornobyl = { set_county_rite = rite:heidinn_pagan }
-			title:c_zvyahel = { set_county_rite = rite:heidinn_pagan }
-			title:c_zhytomyr = { set_county_rite = rite:heidinn_pagan }
-
-			character:6871 = {set_character_rite = rite:heidinn_pagan}
-			character:6872 = {set_character_rite = rite:heidinn_pagan}
+			}
 			character:6811 = {
-				set_character_rite = rite:heidinn_pagan
 				add_trait = einherjar
 				spawn_army = {
 					name = event_troop_default_name
@@ -84,69 +46,23 @@ nh_on_game_start_conversion = {
 					inheritable = yes
 				}
 			}
-
-			# Óðinnstrú
-			character:163111 = {set_character_rite = rite:odinstru_pagan}	# Ivar
-			character:306011 = {set_character_rite = rite:odinstru_pagan} # Feydis
-			character:168500 = {set_character_rite = rite:odinstru_pagan}
-			character:6864 = {set_character_rite = rite:odinstru_pagan}
-			character:40608 = {set_character_rite = rite:odinstru_pagan}
-			character:40609 = {set_character_rite = rite:odinstru_pagan}
-			character:6814 = {set_character_rite = rite:odinstru_pagan}
-
-			title:c_inner_hebrides = { 
-				set_county_rite = rite:odinstru_pagan
+			title:c_inner_hebrides = {
 				set_county_culture = culture:norse
-				}	
-			title:c_argyll = { 
-				set_county_rite = rite:odinstru_pagan
-				# set_county_culture = culture:norse 
-				}
-
-			# Aengland - Asatrú
-			title:c_east_riding = { 
-				set_county_rite = rite:norse_pagan
+			}
+			title:c_east_riding = {
 				set_county_culture = culture:norse
-				}
-			title:c_north_riding = { 
-				set_county_rite = rite:norse_pagan
+			}
+			title:c_north_riding = {
 				set_county_culture = culture:norse
-				}
-			title:c_west_riding = { 
-				set_county_rite = rite:norse_pagan
-				}	
-
-			# Brittany
-			title:c_french_leon = { 
-				set_county_rite = rite:norse_pagan
-				# set_county_culture = culture:norse 
-				}
+			}
 		}
 	}
 }
 
+
 nh_on_game_start_rollo = {
 	effect = {
-		if = {
-			limit = {
-				game_start_date <= 870.1.1
-				game_start_date >= 860.1.1
-			}
-			#Create the title
-			create_title_and_vassal_change = {
-				type = granted
-				save_scope_as = title_change
-				add_claim_on_loss = no
-			}
-
-			title:c_rogalandi = {
-				change_title_holder = {
-					holder = character:242
-					change = scope:title_change
-				}
-			}
-			resolve_title_and_vassal_change = scope:title_change
-		}
+		
 		character:242 = {
 			dynasty = {
 				add_dynasty_prestige = 250

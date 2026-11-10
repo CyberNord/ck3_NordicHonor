@@ -1,12 +1,48 @@
 ﻿# Rollo's scripted event war
-nh_rollo_adventure_target_valid_trigger = {
+nh_rollo_adventurer_eligible_trigger = {
+	has_dlc_feature = roads_to_power
 	is_alive = yes
 	this = character:242
-	is_landed = yes
-	is_at_war = no
+	religion = religion:germanic_religion
+	faith = { has_doctrine_parameter = unreformed }
+	is_landed = no
+	government_has_flag = government_is_landless_adventurer
 	top_liege = this
-	highest_held_title_tier <= tier_duchy
-	NOT = { government_has_flag = government_is_landless_adventurer }
+	exists = domicile.domicile_location
+	is_capable_adult = yes
+	is_imprisoned = no
+	is_at_war = no
+	NOT = { exists = involved_activity }
+	OR = {
+		is_ai = no
+		AND = {
+			is_ai = yes
+			current_date >= 905.1.1
+			prestige_level >= 2
+		}
+	}
+}
+
+nh_rollo_mission_available_trigger = {
+	nh_rollo_adventurer_eligible_trigger = yes
+	NOT = { has_character_flag = nh_rollo_mission_started }
+	NOT = {
+		is_target_in_global_variable_list = {
+			name = unavailable_unique_decisions
+			target = flag:nh_rollos_adventure_decision
+		}
+	}
+}
+
+# Ownership is resolved at selection and again immediately before declaration.
+nh_rollo_adventure_target_valid_trigger = {
+	nh_rollo_adventurer_eligible_trigger = yes
+	NOT = { has_character_flag = nh_rollo_mission_war_started }
+	OR = {
+		is_ai = no
+		$TITLE$ = { this = title:d_normandy }
+	}
+	exists = $TITLE$
 	exists = $COUNTY$.holder
 	exists = $COUNTY$.holder.top_liege
 	$COUNTY$.holder.top_liege = {
@@ -20,6 +56,14 @@ nh_rollo_adventure_target_valid_trigger = {
 			exists = holder
 			holder.top_liege = $COUNTY$.holder.top_liege
 		}
+	}
+}
+
+nh_rollo_any_adventure_target_valid_trigger = {
+	OR = {
+		nh_rollo_adventure_target_valid_trigger = { COUNTY = title:c_rouen TITLE = title:d_normandy }
+		nh_rollo_adventure_target_valid_trigger = { COUNTY = title:c_cagliari TITLE = title:d_sardinia }
+		nh_rollo_adventure_target_valid_trigger = { COUNTY = title:c_middlesex TITLE = title:d_bedford }
 	}
 }
 

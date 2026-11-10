@@ -1,0 +1,423 @@
+# Historical character identities and religious affiliations.
+# Priority 1 replaces base attributes; existing dated history remains additive.
+
+167722 = {
+	name = "Sverker"
+	dynasty = 1031
+	rite = "norse_pagan"
+	culture = "norse"
+	father = 167721
+	history_override_priority = 1
+	845.1.1 = { birth = "845.1.1" }
+	867.1.1 = {
+		faith = natturugudtruar_pagan
+		rite = natturugudtruar_pagan
+	}
+}
+
+167723 = {
+	name = "Maer"
+	female = yes
+	rite = "norse_pagan"
+	culture = "norse"
+	history_override_priority = 1
+	850.1.1 = { birth = "850.1.1" }
+	867.1.1 = {
+		faith = natturugudtruar_pagan
+		rite = natturugudtruar_pagan
+	}
+}
+
+167725 = {
+	name = "LA_vrrohas"
+	rite = "finnish_pagan"
+	culture = sami
+	history_override_priority = 1
+	845.1.1 = { birth = yes }
+	867.1.1 = {
+		faith = natturugudtruar_pagan
+		rite = natturugudtruar_pagan
+	}
+}
+
+167726 = {
+	name = "A_llet"
+	female = yes
+	rite = "finnish_pagan"
+	culture = sami
+	history_override_priority = 1
+	850.1.1 = { birth = yes }
+	867.1.1 = {
+		faith = natturugudtruar_pagan
+		rite = natturugudtruar_pagan
+	}
+}
+
+167728 = {
+	name = "Viggu"
+	dynasty = 1043301
+	rite = "finnish_pagan"
+	culture = "sami"
+	father = 167727
+	history_override_priority = 1
+	845.1.1 = { birth = "845.1.1" }
+	867.1.1 = {
+		faith = natturugudtruar_pagan
+		rite = natturugudtruar_pagan
+	}
+}
+
+167729 = {
+	name = "Giste"
+	female = yes
+	rite = "finnish_pagan"
+	culture = "sami"
+	history_override_priority = 1
+	850.1.1 = { birth = "850.1.1" }
+	867.1.1 = {
+		faith = natturugudtruar_pagan
+		rite = natturugudtruar_pagan
+	}
+}
+
+180257 = {
+	name = "GarT_ar"
+	dynasty = 1042061
+	rite = "norse_pagan"
+	culture = "norse"
+	history_override_priority = 1
+	825.3.21 = { birth = "825.3.21" }
+	867.1.1 = {
+		faith = norse_pagan
+		rite = ginnregla_pagan
+	}
+}
+
+180258 = {
+	name = "Uni"
+	dynasty = 1042061
+	rite = "norse_pagan"
+	culture = "norse"
+	father = 180257
+	history_override_priority = 1
+	850.6.11 = { birth = "850.6.11" }
+	867.1.1 = {
+		faith = norse_pagan
+		rite = ginnregla_pagan
+	}
+}
+
+168609 = {
+	name = "AuT_r"
+	female = yes
+	dynasty = 9612
+	rite = "norse_pagan"
+	culture = "norse"
+	father = 168610
+	mother = 168612
+	learning = 10
+	diplomacy = 8
+	trait = brave
+	trait = generous
+	trait = arrogant
+	trait = intellect_good_1
+	trait = education_learning_3
+	history_override_priority = 1
+	833.1.1 = { birth = yes }
+	867.1.1 = {
+		faith = norse_pagan
+		rite = ginnregla_pagan
+	}
+}
+
+168331 = {
+	name = "O_ysteinn"
+	dynasty = 9612
+	rite = "norse_pagan"
+	culture = "norse"
+	father = 168330
+	mother = 168609
+	history_override_priority = 1
+	851.1.1 = { birth = "850.1.1" }
+	867.1.1 = {
+		faith = norse_pagan
+		rite = ginnregla_pagan
+	}
+}
+
+168332 = {
+	name = "T_orsteinn"
+	dynasty = 9612
+	rite = "norse_pagan"
+	culture = "norse"
+	father = 168330
+	mother = 168609
+	history_override_priority = 1
+	850.1.1 = { birth = "851.1.1" }
+	867.1.1 = {
+		faith = norse_pagan
+		rite = ginnregla_pagan
+	}
+}
+
+168333 = {
+	name = "Karl"
+	dynasty = 9612
+	rite = "norse_pagan"
+	culture = "norse"
+	father = 168330
+	mother = 168609
+	history_override_priority = 1
+	852.1.1 = { birth = "852.1.1" }
+	867.1.1 = {
+		faith = norse_pagan
+		rite = ginnregla_pagan
+	}
+}
+
+6871 = {
+	name = "Halfdan"
+	dynasty_house = house_oskyldr
+	rite = norse_pagan
+	culture = norse
+	father = 6811
+	mother = 6872
+	history_override_priority = 1
+	864.1.1 = { birth = yes }
+	867.1.1 = {
+		faith = heidinn_pagan
+		rite = heidinn_pagan
+	}
+}
+
+6872 = {
+	name = "Sif"
+	female = yes
+	rite = norse_pagan
+	culture = norse
+	history_override_priority = 1
+	847.1.1 = { birth = yes }
+	867.1.1 = {
+		faith = heidinn_pagan
+		rite = heidinn_pagan
+	}
+}
+
+6811 = {
+	name = "Dyre"
+	dna = "6811_dyre_kiev"
+	dynasty_house = house_oskyldr
+	rite = "norse_pagan"
+	culture = norse
+	diplomacy = 9
+	martial = 9
+	stewardship = 6
+	intrigue = 3
+	learning = 3
+	trait = cynical
+	trait = greedy
+	trait = gregarious
+	trait = education_diplomacy_4
+	trait = intellect_good_3
+	trait = bastard_founder
+	father = 163112
+	history_override_priority = 1
+	845.1.1 = { birth = yes }
+	867.1.1 = {
+		faith = heidinn_pagan
+		rite = heidinn_pagan
+	}
+}
+
+163111 = {
+	name = Ivar
+	dna = 163111_ivar_the_boneless
+	dynasty_house = house_british_isles_ivaring
+	rite = norse_pagan
+	culture = norse
+	martial = 6
+	stewardship = 8
+	diplomacy = 6
+	intrigue = 12
+	learning = 3
+	prowess = 6
+	trait = ambitious
+	trait = callous
+	trait = vengeful
+	trait = one_legged
+	trait = viking
+	trait = education_martial_4
+	sexuality = heterosexual
+	father = 163109
+	mother = 6836
+	history_override_priority = 1
+	845.2.7 = { birth = yes }
+	867.1.1 = {
+		faith = norse_pagan
+		rite = odinstru_pagan
+	}
+}
+
+306011 = {
+	name = Freydi_s
+	dna = 306011_freydis
+	female = yes
+	rite = norse_pagan
+	culture = norse
+	trait = beauty_good_2
+	trait = deceitful
+	trait = lustful
+	trait = ambitious
+	trait = education_intrigue_3
+	learning = 8
+	history_override_priority = 1
+	840.1.1 = { birth = yes }
+	867.1.1 = {
+		faith = norse_pagan
+		rite = odinstru_pagan
+	}
+}
+
+168500 = {
+	name = "GuT_friT_"
+	dynasty_house = house_british_isles_ivaring
+	rite = "norse_pagan"
+	culture = norse
+	father = 163111
+	mother = 306011
+	history_override_priority = 1
+	867.1.1 = {
+		birth = yes
+		faith = norse_pagan
+		rite = odinstru_pagan
+	}
+}
+
+6864 = {
+	name = "Aslaug"
+	dynasty_house = house_british_isles_ivaring
+	female = yes
+	rite = "norse_pagan"
+	culture = norse
+	trait = beauty_good_1
+	father = 163111
+	mother = 306011
+	history_override_priority = 1
+	866.1.1 = { birth = yes }
+	867.1.1 = {
+		faith = norse_pagan
+		rite = odinstru_pagan
+	}
+}
+
+40608 = {
+	name = "Sigtrygg"
+	dynasty_house = house_british_isles_ivaring
+	rite = "norse_pagan"
+	culture = norse
+	father = 163111
+	mother = 306011
+	trait = beauty_good_2
+	trait = charming
+	history_override_priority = 1
+	864.1.1 = { birth = yes }
+	867.1.1 = {
+		faith = norse_pagan
+		rite = odinstru_pagan
+	}
+}
+
+40609 = {
+	name = "SigfroT_"
+	dynasty_house = house_british_isles_ivaring
+	rite = "norse_pagan"
+	culture = norse
+	father = 163111
+	mother = 306011
+	trait = bossy
+	history_override_priority = 1
+	862.1.1 = { birth = yes }
+	867.1.1 = {
+		faith = norse_pagan
+		rite = odinstru_pagan
+	}
+}
+
+6814 = {
+	name = "Barid"
+	dynasty_house = house_british_isles_ivaring
+	rite = "norse_pagan"
+	culture = norse
+	father = 163111
+	mother = 306011
+	trait = gregarious
+	trait = charming
+	trait = beauty_good_1
+	history_override_priority = 1
+	858.1.1 = { birth = yes }
+	867.1.1 = {
+		faith = norse_pagan
+		rite = odinstru_pagan
+	}
+}
+
+
+303404 = {
+	name = "Olafr"
+	rite = "norse_pagan"
+	culture = "norse"
+	history_override_priority = 1
+	832.1.1 = {
+		birth = yes
+	}
+	867.1.1 = {
+		faith = norse_pagan
+		rite = odinstru_pagan
+	}
+}
+
+600 = {
+	name = "Yngvar"
+	dynasty = 705
+	rite = norse_pagan
+	culture = norse
+	father = 40605
+	mother = 6863
+	history_override_priority = 1
+	875.1.1 = {
+		birth = yes
+		faith = heidinn_pagan
+		rite = heidinn_pagan
+	}
+}
+
+602 = {
+	name = "Sviatoslav"
+	dynasty = 705
+	rite = "norse_pagan"
+	culture = "russian"
+	trait = education_martial_2
+	father = 600
+	mother = 601
+	history_override_priority = 1
+	942.1.2 = {
+		birth = "942.1.2"
+		faith = heidinn_pagan
+		rite = heidinn_pagan
+	}
+}
+
+604 = {
+	name = "Yaropolk"
+	dynasty = 705
+	rite = "norse_pagan"
+	culture = "russian"
+	father = 602
+	mother = 599
+	history_override_priority = 1
+	958.1.2 = {
+		birth = "958.1.2"
+		faith = heidinn_pagan
+		rite = heidinn_pagan
+	}
+}

@@ -790,6 +790,9 @@ nh_rollos_adventure_decision = {
 
 
 	is_shown = {
+		has_dlc_feature = roads_to_power
+		government_has_flag = government_is_landless_adventurer
+		OR = { is_ai = no current_date >= 905.1.1 }
 		is_lowborn = no
 		religion = religion:germanic_religion
 
@@ -809,6 +812,7 @@ nh_rollos_adventure_decision = {
 	}
 
 	is_valid = {
+		nh_rollo_mission_available_trigger = yes
 		# Do not spend the existing one-shot cost if all targets are already invalid.
 		OR = {
 			nh_rollo_adventure_target_valid_trigger = { COUNTY = title:c_rouen TITLE = title:d_normandy }
@@ -847,20 +851,9 @@ nh_rollos_adventure_decision = {
 		}
 	}
 
-	effect = {
-		trigger_event = nh.1011
-		save_scope_as = actor
+	effect = { nh_rollo_begin_adventure_effect = yes }
 
-		if = {
-			limit = { this = character:242 }
-			add_to_global_variable_list = {
-				name = unavailable_unique_decisions
-				target = flag:nh_rollos_adventure_decision
-			}
-		}
-	}
-
-	ai_potential = { prestige_level >= 2 }
+	ai_potential = { current_date >= 905.1.1 prestige_level >= 2 }
 
 	ai_will_do = {
 		base = 100

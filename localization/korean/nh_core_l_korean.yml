@@ -7,3 +7,25 @@
 
  # Assembly results and Saxon founding rewards
  nh_old_saxony_huscarls_name:0 "옛 작센의 허스칼"
+
+ # Nordic Honor bookmark
+ bm_867_nh_nordic_honor:0 "Nordic Honor"
+ bm_867_nh_nordic_honor_desc:0 "TODO"
+ nh_bookmark_ivar:0 "골 없는 이바르"
+ nh_bookmark_ivar_desc:0 "TODO"
+ nh_bookmark_ivar_subheading:0 "TODO"
+ nh_bookmark_dyre:0 "키이우의 뒤레"
+ nh_bookmark_dyre_desc:0 "TODO"
+ nh_bookmark_dyre_subheading:0 "TODO"
+ nh_bookmark_olafr:0 "레옹의 올라프"
+ nh_bookmark_olafr_desc:0 "TODO"
+ nh_bookmark_olafr_subheading:0 "TODO"
+ nh_bookmark_rollo:0 "롤로"
+ nh_bookmark_rollo_desc:0 "TODO"
+ nh_bookmark_rollo_subheading:0 "TODO"
+ nh_bookmark_audr:0 "현명한 아우드"
+ nh_bookmark_audr_desc:0 "TODO"
+ nh_bookmark_audr_subheading:0 "TODO"
+ nh_bookmark_sverker:0 "옹에르만란드의 스베르케르"
+ nh_bookmark_sverker_desc:0 "TODO"
+ nh_bookmark_sverker_subheading:0 "TODO"

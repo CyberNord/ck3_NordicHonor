@@ -1,0 +1,14 @@
+﻿namespace = nh_rollo
+
+# Native EP3 resolution owns all title, government and camp transitions.
+nh_rollo.0001 = {
+	type = character_event
+	hidden = yes
+	trigger = {
+		this = character:242
+		is_alive = yes
+		has_character_flag = nh_rollo_victory_pending
+		NOT = { has_character_flag = nh_rollo_victory_resolved }
+	}
+	immediate = { nh_rollo_finish_adventure_victory_effect = yes }
+}

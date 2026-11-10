@@ -36,10 +36,10 @@
  nh_form_old_saxia_kingdom_decision_confirm: "Créer l'ancien royaume de Saxe"
  nh_form_old_saxia_kingdom_decision_tooltip: "Cette décision créera l'ancien royaume de Saxe et fera revivre les anciennes coutumes païennes de notre peuple."
 
- nh_rollos_adventure_decision: "Le chemin de Rollo vers l'immortalité"
- nh_rollos_adventure_decision_desc: "Au plus profond de mon âme, je ressens un appel de [ROOT.Char.GetFaith.HighGodName], qui me pousse à explorer au-delà des frontières de la Norvège. Des histoires de pays lointains me sont parvenues, pleines d'opportunités et de grandeur. Il est temps pour moi de me lancer dans une aventure varangienne épique qui laissera une trace durable dans l'histoire."
+ nh_rollos_adventure_decision: "La voie de la gloire de Rollon"
+ nh_rollos_adventure_decision_desc: "Aventurier sans terre, je rassemble une troupe dans mon camp. Pour 500 pièces d'or et 2 000 points de prestige, je peux chercher une seule fois un nouveau foyer en Normandie, en Sardaigne ou en Essex. Seule une campagne victorieuse permet une installation selon les règles d'une invasion d'aventurier."
  nh_rollos_adventure_decision_confirm: "[ROOT.Char.GetFaith.HighGodName] me guidera."
- nh_rollos_adventure_decision_tooltip: "Embarquez pour une aventure varangienne en terre étrangère."
+ nh_rollos_adventure_decision_tooltip: "Préparer une campagne unique avec Rollon, aventurier sans terre."
  
 nh_gotland_policy_decision: "Commerce ou raid"
  nh_gotland_policy_decision_desc: "En tant que souverain de Gotland, je suis confronté à une décision cruciale pour l'avenir de mon royaume. Je peux choisir de donner la priorité aux échanges et au commerce, en favorisant la croissance économique et les échanges culturels, ou je peux opter pour les raids et les conquêtes, en libérant l'esprit viking pour amasser des richesses et du pouvoir grâce à des expéditions audacieuses."

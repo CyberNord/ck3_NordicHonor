@@ -64,3 +64,5 @@
  nh_holy_raid_odins_curse_modifier:0 "Odin's War Curse"
  nh_holy_raid_odins_curse_modifier_desc:0 "For the indicated duration: This ruler bears Odin's wrath after a religious failure: −20 general opinion, −2 monthly piety and −1 monthly legitimacy where applicable. Renewing the curse keeps the later expiry date."
  nh_holy_raid_captives_tt:0 "The victorious attacker imprisons up to three available adult members of the loser's court and five newly generated captives aged 30–50 in the dungeon. The generated captives share the loser's faith, exact rite and culture."
+ nh_rollo_ai_normandy_modifier:0 "Established Rule"
+ nh_rollo_ai_normandy_modifier_desc:0 "The ruler has established a firm foothold."
