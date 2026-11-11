@@ -19,7 +19,7 @@ bm_867_nh_nordic_honor = {
 		dynasty_splendor_level = 1
 
 		difficulty = BOOKMARK_CHARACTER_DIFFICULTY_MEDIUM
-		position = { 200 180 }
+		position = { 350 450 }
 		animation = personality_bold
 	}
 
@@ -36,8 +36,8 @@ bm_867_nh_nordic_honor = {
 		dynasty_house = house_oskyldr
 		dynasty_splendor_level = 1
 
-		difficulty = BOOKMARK_CHARACTER_DIFFICULTY_MEDIUM
-		position = { 530 180 }
+		difficulty = nh_bookmark_difficulty_hard
+		position = { 1560 840 }
 		animation = personality_bold
 	}
 
@@ -51,9 +51,11 @@ bm_867_nh_nordic_honor = {
 		government = feudal_government
 		culture = norse
 		religion = odinstru_pagan
+		dynasty = nh_inn_hviti
+		dynasty_splendor_level = 1
 
-		difficulty = BOOKMARK_CHARACTER_DIFFICULTY_MEDIUM
-		position = { 860 180 }
+		difficulty = nh_bookmark_difficulty_hard
+		position = { 400 820 }
 		animation = personality_bold
 	}
 
@@ -70,8 +72,8 @@ bm_867_nh_nordic_honor = {
 		dynasty = 752
 		dynasty_splendor_level = 1
 
-		difficulty = BOOKMARK_CHARACTER_DIFFICULTY_MEDIUM
-		position = { 270 590 }
+		difficulty = BOOKMARK_CHARACTER_DIFFICULTY_EASY
+		position = { 1050 660 }
 		animation = personality_bold
 	}
 
@@ -88,8 +90,8 @@ bm_867_nh_nordic_honor = {
 		dynasty = 9612
 		dynasty_splendor_level = 1
 
-		difficulty = BOOKMARK_CHARACTER_DIFFICULTY_MEDIUM
-		position = { 730 590 }
+		difficulty = BOOKMARK_CHARACTER_DIFFICULTY_EASY
+		position = { 350 150 }
 		animation = personality_bold
 	}
 
@@ -106,8 +108,8 @@ bm_867_nh_nordic_honor = {
 		dynasty = 1031
 		dynasty_splendor_level = 1
 
-		difficulty = BOOKMARK_CHARACTER_DIFFICULTY_MEDIUM
-		position = { 1190 590 }
+		difficulty = nh_bookmark_difficulty_hard
+		position = { 1040 150 }
 		animation = personality_bold
 	}
 
@@ -125,7 +127,7 @@ bm_867_nh_nordic_honor = {
 		dynasty_splendor_level = 1
 
 		difficulty = BOOKMARK_CHARACTER_DIFFICULTY_MEDIUM
-		position = { 1190 180 }
+		position = { 1000 400 }
 		animation = personality_bold
 	}
 }

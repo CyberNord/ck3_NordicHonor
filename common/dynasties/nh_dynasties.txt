@@ -1,0 +1,4 @@
+﻿nh_inn_hviti = {
+	name = nh_dynn_inn_hviti
+	culture = norse
+}

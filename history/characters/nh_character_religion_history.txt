@@ -364,6 +364,7 @@
 
 303404 = {
 	name = "Olafr"
+	dynasty = nh_inn_hviti
 	rite = "norse_pagan"
 	culture = "norse"
 	history_override_priority = 1
@@ -371,6 +372,7 @@
 		birth = yes
 	}
 	867.1.1 = {
+		give_nickname = nick_the_white
 		faith = norse_pagan
 		rite = odinstru_pagan
 	}
