@@ -1,4 +1,4 @@
-# Historical character identities and religious affiliations.
+﻿# Historical character identities and religious affiliations.
 # Priority 1 replaces base attributes; existing dated history remains additive.
 
 167722 = {

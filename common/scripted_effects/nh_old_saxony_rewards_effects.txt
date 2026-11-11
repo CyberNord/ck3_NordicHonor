@@ -37,7 +37,12 @@ nh_create_irmunsul_relic_effect = {
 			wealth = scope:wealth
 			quality = scope:quality
 			modifier = artifact_placeholder_modifier
-			history = { type = created location = title:c_paderborn.title_province }
+			history = {
+				type = created
+				actor = scope:owner
+				recipient = scope:owner
+				location = title:c_paderborn.title_province
+			}
 			save_scope_as = nh_irmunsul
 		}
 		if = {
