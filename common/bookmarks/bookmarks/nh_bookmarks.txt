@@ -21,7 +21,7 @@ bm_867_nh_nordic_honor = {
 		dynasty_splendor_level = 1
 
 		difficulty = BOOKMARK_CHARACTER_DIFFICULTY_MEDIUM
-		position = { 270 180 }
+		position = { 200 180 }
 		animation = personality_bold
 	}
 
@@ -39,7 +39,7 @@ bm_867_nh_nordic_honor = {
 		dynasty_splendor_level = 1
 
 		difficulty = BOOKMARK_CHARACTER_DIFFICULTY_MEDIUM
-		position = { 730 180 }
+		position = { 530 180 }
 		animation = personality_bold
 	}
 
@@ -55,7 +55,7 @@ bm_867_nh_nordic_honor = {
 		religion = odinstru_pagan
 
 		difficulty = BOOKMARK_CHARACTER_DIFFICULTY_MEDIUM
-		position = { 1190 180 }
+		position = { 860 180 }
 		animation = personality_bold
 	}
 
@@ -110,6 +110,24 @@ bm_867_nh_nordic_honor = {
 
 		difficulty = BOOKMARK_CHARACTER_DIFFICULTY_MEDIUM
 		position = { 1190 590 }
+		animation = personality_bold
+	}
+
+	character = {
+		name = nh_bookmark_haraldr
+		history_id = 144000
+		character_design_type = none
+		type = male
+		birth = 850.1.1
+		title = c_vestfold
+		government = tribal_government
+		culture = norse
+		religion = norse_pagan
+		dynasty = 499
+		dynasty_splendor_level = 1
+
+		difficulty = BOOKMARK_CHARACTER_DIFFICULTY_MEDIUM
+		position = { 1190 180 }
 		animation = personality_bold
 	}
 }
