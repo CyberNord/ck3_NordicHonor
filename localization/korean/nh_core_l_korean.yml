@@ -37,3 +37,17 @@
  nh_dynn_inn_hviti:0 "Inn hvíti"
 
  nh_bookmark_difficulty_hard:0 "#difficulty_hard 어려움#!"
+
+ # Post-reform cosmetic customization
+ nh_reform_cosmetic_title:0 "개혁된 신앙의 이름과 상징"
+ nh_reform_cosmetic_explanation:0 "이름, 설명, 신도 명칭을 한 번 무료로 변경할 수 있습니다. 기존 전통에 맞는 개혁 상징은 고정됩니다. 교리와 신조는 변경되지 않습니다."
+ nh_reform_cosmetic_save:0 "무료로 저장"
+ nh_reform_cosmetic_cancel:0 "나중에 계속"
+ nh_reform_cosmetic_decision:0 "개혁된 신앙 이름 짓기"
+ nh_reform_cosmetic_decision_desc:0 "개혁된 신앙의 이름과 설명을 정합니다. 알맞은 개혁 상징은 고정되며 종교 규칙은 변경되지 않습니다."
+ nh_reform_cosmetic_decision_tooltip:0 "일회성 외형 편집기를 엽니다."
+ nh_reform_cosmetic_decision_confirm:0 "꾸미기"
+ nh_reform_cosmetic.0001.t:0 "새로워진 신앙의 이름"
+ nh_reform_cosmetic.0001.desc:0 "개혁이 완료되었다. 이제 새로워진 신앙의 이름과 설명을 한 번 정할 수 있다. 기존 전통의 상징은 유지된다. 비용은 없으며 교리나 신조는 변경되지 않는다."
+ nh_reform_cosmetic.0001.a:0 "이름과 설명 꾸미기"
+ nh_reform_cosmetic.0001.b:0 "나중에 처리하겠다"

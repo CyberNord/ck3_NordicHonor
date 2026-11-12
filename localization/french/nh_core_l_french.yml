@@ -37,3 +37,17 @@
  nh_dynn_inn_hviti:0 "Inn hvíti"
 
  nh_bookmark_difficulty_hard:0 "#difficulty_hard Difficile#!"
+
+ # Post-reform cosmetic customization
+ nh_reform_cosmetic_title:0 "Nom et symbole de la foi réformée"
+ nh_reform_cosmetic_explanation:0 "Vous pouvez modifier une seule fois et gratuitement les noms, la description et les noms des fidèles. Le symbole réformé de votre ancienne tradition est fixé. Les principes et les doctrines restent inchangés."
+ nh_reform_cosmetic_save:0 "Enregistrer gratuitement"
+ nh_reform_cosmetic_cancel:0 "Continuer plus tard"
+ nh_reform_cosmetic_decision:0 "Nommer la foi réformée"
+ nh_reform_cosmetic_decision_desc:0 "Donnez un nom et une description à votre foi réformée. Son symbole est fixé ; les règles religieuses restent inchangées."
+ nh_reform_cosmetic_decision_tooltip:0 "Ouvrir la personnalisation esthétique unique."
+ nh_reform_cosmetic_decision_confirm:0 "Personnaliser"
+ nh_reform_cosmetic.0001.t:0 "Un nom pour la foi renouvelée"
+ nh_reform_cosmetic.0001.desc:0 "La réforme est achevée. Je peux maintenant donner une seule fois des noms et une description à la foi renouvelée. Le symbole de mon ancienne tradition sera conservé. Cela ne coûte rien et ne modifie ni principes ni doctrines."
+ nh_reform_cosmetic.0001.a:0 "Personnaliser les noms et la description"
+ nh_reform_cosmetic.0001.b:0 "Je m’en occuperai plus tard"

@@ -1,0 +1,47 @@
+﻿nh_reform_cosmetic_mode_gui = {
+ scope = character
+ is_shown = { nh_reform_cosmetic_pending_trigger = yes }
+}
+nh_reform_cosmetic_begin_gui = {
+ scope = character
+ is_shown = { nh_reform_cosmetic_context_trigger = yes }
+ is_valid = { nh_reform_cosmetic_context_trigger = yes }
+ effect = { add_character_flag = nh_reform_cosmetic_active }
+}
+nh_reform_cosmetic_context_gui = {
+ scope = character
+ is_shown = { nh_reform_cosmetic_context_trigger = yes }
+ is_valid = {
+  nh_reform_cosmetic_context_trigger = yes
+  has_character_flag = nh_reform_cosmetic_active
+ }
+}
+nh_reform_cosmetic_cancel_gui = {
+ scope = character
+ is_shown = { has_character_flag = nh_reform_cosmetic_active }
+ is_valid = { always = yes }
+ effect = { remove_character_flag = nh_reform_cosmetic_active }
+}
+# The assigned player enters this workflow through its event or decision.
+nh_reform_cosmetic_reedit_gui = {
+ scope = character
+ is_shown = {
+  NOT = {
+   AND = {
+    exists = scope:nh_cosmetic_rite
+    trigger_if = {
+     limit = { exists = scope:nh_cosmetic_rite }
+     scope:nh_cosmetic_rite = { nh_reform_cosmetic_owned_rite_trigger = yes }
+    }
+   }
+  }
+ }
+}
+# Holy-site markers use the completed main rite's icon for this reform only.
+nh_reform_cosmetic_map_icon_gui = {
+ scope = faith
+ is_shown = {
+  exists = main_rite
+  main_rite = { has_variable = nh_reform_cosmetic_completed }
+ }
+}

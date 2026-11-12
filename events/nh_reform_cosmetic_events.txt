@@ -1,0 +1,13 @@
+﻿namespace = nh_reform_cosmetic
+nh_reform_cosmetic.0001 = {
+ type = character_event
+ theme = faith
+ title = nh_reform_cosmetic.0001.t
+ desc = nh_reform_cosmetic.0001.desc
+ trigger = { nh_reform_cosmetic_pending_trigger = yes }
+ option = {
+  name = nh_reform_cosmetic.0001.a
+  nh_reform_cosmetic_open_effect = yes
+ }
+ option = { name = nh_reform_cosmetic.0001.b }
+}

@@ -1,0 +1,12 @@
+﻿nh_reform_cosmetic_decision = {
+ picture = { reference = "gfx/interface/illustrations/decisions/decision_personal_religious.dds" }
+ confirm_text = nh_reform_cosmetic_decision_confirm
+ desc = nh_reform_cosmetic_decision_desc
+ selection_tooltip = nh_reform_cosmetic_decision_tooltip
+ is_shown = { nh_reform_cosmetic_pending_trigger = yes }
+ is_valid = { nh_reform_cosmetic_pending_trigger = yes }
+ effect = { nh_reform_cosmetic_open_effect = yes }
+ ai_check_interval = 0
+ ai_potential = { always = no }
+ ai_will_do = { base = 0 }
+}

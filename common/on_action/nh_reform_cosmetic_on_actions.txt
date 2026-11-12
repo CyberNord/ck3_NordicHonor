@@ -1,0 +1,35 @@
+﻿on_faith_created = { on_actions = { nh_reform_cosmetic_grant_action } }
+nh_reform_cosmetic_grant_action = {
+ trigger = {
+  religion = religion:germanic_religion
+  NOT = { has_doctrine_parameter = unreformed }
+  exists = scope:founder
+  exists = scope:old_faith
+  exists = scope:old_rite
+  exists = main_rite
+  scope:old_faith = {
+   religion = religion:germanic_religion
+   has_doctrine_parameter = unreformed
+  }
+  scope:founder = { is_alive = yes is_ai = no faith = root }
+  main_rite = { NOT = { has_variable = nh_reform_cosmetic_registered } }
+  scope:old_rite = { OR = { this = rite:norse_pagan this = rite:forn_sidr_pagan this = rite:woden_sidr_pagan this = rite:ginnregla_pagan this = rite:natturugudtruar_pagan this = rite:odinstru_pagan this = rite:heidinn_pagan this = rite:gothic_pagan } }
+ }
+ effect = { nh_reform_cosmetic_grant_effect = yes }
+}
+on_rite_updated = { on_actions = { nh_reform_cosmetic_updated_action } }
+nh_reform_cosmetic_updated_action = {
+ trigger = {
+  exists = scope:consume_rite_edit_token
+  exists = var:nh_reform_cosmetic_owner
+  NOR = {
+   has_variable = nh_reform_cosmetic_completed
+   has_variable = nh_reform_cosmetic_failed
+  }
+  var:nh_reform_cosmetic_owner = {
+   exists = var:nh_reform_cosmetic_target
+   var:nh_reform_cosmetic_target = root
+  }
+ }
+ effect = { nh_reform_cosmetic_finish_effect = yes }
+}
