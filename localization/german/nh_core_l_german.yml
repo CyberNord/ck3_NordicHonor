@@ -37,3 +37,17 @@
  nh_dynn_inn_hviti:0 "Inn hvíti"
 
  nh_bookmark_difficulty_hard:0 "#difficulty_hard Schwer#!"
+
+ # Post-reform cosmetic customization
+ nh_reform_cosmetic_title:0 "Name und Symbol des reformierten Glaubens"
+ nh_reform_cosmetic_explanation:0 "Du kannst Namen, Beschreibung und Anhängerbezeichnungen einmalig kostenlos anpassen. Das Reformzeichen deiner bisherigen Tradition steht fest. Glaubensgrundsätze und Doktrinen bleiben unverändert."
+ nh_reform_cosmetic_save:0 "Kostenlos speichern"
+ nh_reform_cosmetic_cancel:0 "Später fortsetzen"
+ nh_reform_cosmetic_decision:0 "Reformierten Glauben benennen"
+ nh_reform_cosmetic_decision_desc:0 "Gib deinem reformierten Glauben Namen und Beschreibung. Das passende Reformzeichen steht fest; religiöse Regeln werden nicht verändert."
+ nh_reform_cosmetic_decision_tooltip:0 "Die einmalige kosmetische Nachbearbeitung öffnen."
+ nh_reform_cosmetic_decision_confirm:0 "Gestalten"
+ nh_reform_cosmetic.0001.t:0 "Ein Name für den erneuerten Glauben"
+ nh_reform_cosmetic.0001.desc:0 "Die Reform ist vollbracht. Nun kann ich dem erneuerten Glauben einmalig Namen und Beschreibung geben. Das Zeichen meiner bisherigen Tradition bleibt erhalten. Diese Gestaltung kostet nichts und ändert keine Glaubensgrundsätze oder Doktrinen."
+ nh_reform_cosmetic.0001.a:0 "Namen und Beschreibung gestalten"
+ nh_reform_cosmetic.0001.b:0 "Ich kümmere mich später darum"

@@ -1,0 +1,93 @@
+﻿# Called in the new faith scope, with the native founder and old_rite scopes.
+nh_reform_cosmetic_grant_effect = {
+ main_rite = {
+  save_scope_as = nh_cosmetic_new_rite
+  set_variable = nh_reform_cosmetic_registered
+  set_variable = { name = nh_reform_cosmetic_owner value = scope:founder }
+  set_variable = { name = nh_reform_cosmetic_source value = scope:old_rite }
+ }
+ scope:founder = {
+  set_variable = { name = nh_reform_cosmetic_target value = scope:nh_cosmetic_new_rite }
+  remove_character_flag = nh_reform_cosmetic_active
+  if = {
+   limit = { scope:old_rite = rite:norse_pagan }
+   set_variable = { name = nh_reform_cosmetic_icon value = flag:germanic_reformed }
+  }
+  if = {
+   limit = { scope:old_rite = rite:forn_sidr_pagan }
+   set_variable = { name = nh_reform_cosmetic_icon value = flag:forn_sidr_reformed }
+  }
+  if = {
+   limit = { scope:old_rite = rite:woden_sidr_pagan }
+   set_variable = { name = nh_reform_cosmetic_icon value = flag:saxon_reformed }
+  }
+  if = {
+   limit = { scope:old_rite = rite:ginnregla_pagan }
+   set_variable = { name = nh_reform_cosmetic_icon value = flag:ginnregla_reformed }
+  }
+  if = {
+   limit = { scope:old_rite = rite:natturugudtruar_pagan }
+   set_variable = { name = nh_reform_cosmetic_icon value = flag:natturugudtruar_reformed }
+  }
+  if = {
+   limit = { scope:old_rite = rite:odinstru_pagan }
+   set_variable = { name = nh_reform_cosmetic_icon value = flag:odinstru_reformed }
+  }
+  if = {
+   limit = { scope:old_rite = rite:heidinn_pagan }
+   set_variable = { name = nh_reform_cosmetic_icon value = flag:heidinn_reformed }
+  }
+  if = {
+   limit = { scope:old_rite = rite:gothic_pagan }
+   set_variable = { name = nh_reform_cosmetic_icon value = flag:gothic_reformed }
+  }
+  trigger_event = { id = nh_reform_cosmetic.0001 days = 1 }
+ }
+}
+# Seed the new rite once; reopening preserves any subsequently saved text.
+nh_reform_cosmetic_prefill_effect = {
+ if = {
+  limit = {
+   NOT = { has_variable = nh_reform_cosmetic_texts_v2_initialized }
+   exists = var:nh_reform_cosmetic_source
+  }
+  var:nh_reform_cosmetic_source = { save_scope_as = nh_cosmetic_source }
+  set_rite_name = {
+   name = "[nh_cosmetic_source.GetNameNoTooltip]"
+   desc = "[nh_cosmetic_source.GetDescription]"
+   adjective = "[nh_cosmetic_source.GetAdjectiveNoTooltip]"
+   adherent = "[nh_cosmetic_source.GetAdherentNameNoTooltip]"
+   adherent_plural = "[nh_cosmetic_source.GetAdherentNamePluralNoTooltip]"
+  }
+  set_variable = nh_reform_cosmetic_texts_v2_initialized
+  remove_variable = nh_reform_cosmetic_texts_initialized
+ }
+}
+nh_reform_cosmetic_open_effect = {
+ if = {
+  limit = { nh_reform_cosmetic_pending_trigger = yes }
+  save_scope_as = nh_cosmetic_player
+  close_view = { view = rite_creation player = scope:nh_cosmetic_player }
+  add_character_flag = nh_reform_cosmetic_active
+  var:nh_reform_cosmetic_target = {
+   nh_reform_cosmetic_prefill_effect = yes
+   open_view_data = { view = rite_creation player = scope:nh_cosmetic_player }
+  }
+ }
+}
+# This native callback is delayed; the GUI also latches the submit button locally.
+nh_reform_cosmetic_finish_effect = {
+ var:nh_reform_cosmetic_owner = { save_scope_as = nh_cosmetic_player }
+ if = {
+  limit = { exists = scope:changed_tenets_or_doctrines }
+  set_variable = nh_reform_cosmetic_failed
+  debug_log = "NH cosmetic edit rejected: native callback changed tenets or doctrines."
+ }
+ else = { set_variable = nh_reform_cosmetic_completed }
+ scope:nh_cosmetic_player = {
+  remove_character_flag = nh_reform_cosmetic_active
+  close_view = { view = rite_creation player = scope:nh_cosmetic_player }
+  remove_variable = nh_reform_cosmetic_target
+  remove_variable = nh_reform_cosmetic_icon
+ }
+}

@@ -1,0 +1,56 @@
+﻿# A grant belongs to one living player and one newly reformed main rite.
+nh_reform_cosmetic_pending_trigger = {
+ is_ai = no
+ is_alive = yes
+ exists = var:nh_reform_cosmetic_target
+ exists = var:nh_reform_cosmetic_icon
+ trigger_if = {
+  limit = { exists = var:nh_reform_cosmetic_target }
+  rite = var:nh_reform_cosmetic_target
+  var:nh_reform_cosmetic_target = {
+   exists = var:nh_reform_cosmetic_owner
+   trigger_if = {
+    limit = { exists = var:nh_reform_cosmetic_owner }
+    var:nh_reform_cosmetic_owner = prev
+   }
+   NOR = {
+    has_variable = nh_reform_cosmetic_completed
+    has_variable = nh_reform_cosmetic_failed
+   }
+   faith = { NOT = { has_doctrine_parameter = unreformed } }
+  }
+ }
+}
+nh_reform_cosmetic_access_trigger = {
+ nh_reform_cosmetic_pending_trigger = yes
+ has_character_flag = nh_reform_cosmetic_active
+}
+nh_reform_cosmetic_context_trigger = {
+ nh_reform_cosmetic_pending_trigger = yes
+ exists = scope:nh_cosmetic_rite
+ trigger_if = {
+  limit = { exists = scope:nh_cosmetic_rite exists = var:nh_reform_cosmetic_target }
+  scope:nh_cosmetic_rite = var:nh_reform_cosmetic_target
+ }
+}
+# In rite scope, root is the player assigned to this cosmetic workflow.
+nh_reform_cosmetic_owned_rite_trigger = {
+ has_variable = nh_reform_cosmetic_registered
+ exists = var:nh_reform_cosmetic_owner
+ trigger_if = {
+  limit = { exists = var:nh_reform_cosmetic_owner }
+  var:nh_reform_cosmetic_owner = root
+ }
+}
+# In rite scope, root is the character whose editing access is being checked.
+nh_reform_cosmetic_edit_closed_trigger = {
+ OR = {
+  has_variable = nh_reform_cosmetic_completed
+  has_variable = nh_reform_cosmetic_failed
+ }
+ exists = var:nh_reform_cosmetic_owner
+ trigger_if = {
+  limit = { exists = var:nh_reform_cosmetic_owner }
+  var:nh_reform_cosmetic_owner = root
+ }
+}

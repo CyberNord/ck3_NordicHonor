@@ -37,3 +37,17 @@
  nh_dynn_inn_hviti:0 "Inn hvíti"
 
  nh_bookmark_difficulty_hard:0 "#difficulty_hard Сложно#!"
+
+ # Post-reform cosmetic customization
+ nh_reform_cosmetic_title:0 "Название и символ реформированной конфессии"
+ nh_reform_cosmetic_explanation:0 "Вы можете один раз бесплатно изменить название, описание и наименования последователей. Символ реформированной прежней традиции задан заранее. Догматы и доктрины не изменятся."
+ nh_reform_cosmetic_save:0 "Сохранить бесплатно"
+ nh_reform_cosmetic_cancel:0 "Продолжить позже"
+ nh_reform_cosmetic_decision:0 "Назвать реформированную конфессию"
+ nh_reform_cosmetic_decision_desc:0 "Дайте реформированной конфессии название и описание. Её символ задан заранее; религиозные правила не изменятся."
+ nh_reform_cosmetic_decision_tooltip:0 "Открыть однократное изменение оформления."
+ nh_reform_cosmetic_decision_confirm:0 "Настроить"
+ nh_reform_cosmetic.0001.t:0 "Название для обновлённой конфессии"
+ nh_reform_cosmetic.0001.desc:0 "Реформа завершена. Теперь я могу один раз задать названия и описание обновлённой конфессии. Символ моей прежней традиции будет сохранён. Это бесплатно и не меняет догматы или доктрины."
+ nh_reform_cosmetic.0001.a:0 "Настроить названия и описание"
+ nh_reform_cosmetic.0001.b:0 "Я займусь этим позже"

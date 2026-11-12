@@ -1,0 +1,8 @@
+﻿# The native cost and doctrine checks still apply to this editor permission.
+can_edit_rite = {
+ NOT = { rite = { nh_reform_cosmetic_edit_closed_trigger = yes } }
+ OR = {
+  can_edit_rite_trigger = yes
+  nh_reform_cosmetic_access_trigger = yes
+ }
+}

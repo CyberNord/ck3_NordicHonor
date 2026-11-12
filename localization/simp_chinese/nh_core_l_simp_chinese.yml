@@ -37,3 +37,17 @@
  nh_dynn_inn_hviti:0 "Inn hvíti"
 
  nh_bookmark_difficulty_hard:0 "#difficulty_hard 困难#!"
+
+ # Post-reform cosmetic customization
+ nh_reform_cosmetic_title:0 "改革信仰的名称与标志"
+ nh_reform_cosmetic_explanation:0 "你可以免费修改一次名称、描述和信徒称谓。与你原有传统对应的改革标志固定不变。信条和教义保持不变。"
+ nh_reform_cosmetic_save:0 "免费保存"
+ nh_reform_cosmetic_cancel:0 "稍后继续"
+ nh_reform_cosmetic_decision:0 "命名改革后的信仰"
+ nh_reform_cosmetic_decision_desc:0 "为改革后的信仰赋予名称和描述。对应的改革标志固定不变，宗教规则保持不变。"
+ nh_reform_cosmetic_decision_tooltip:0 "打开仅可使用一次的外观编辑界面。"
+ nh_reform_cosmetic_decision_confirm:0 "自定义"
+ nh_reform_cosmetic.0001.t:0 "新生信仰之名"
+ nh_reform_cosmetic.0001.desc:0 "改革已经完成。现在我可以为新生的信仰设定一次名称和描述。我原有传统的标志将得到保留。此举不收取费用，也不会更改任何信条或教义。"
+ nh_reform_cosmetic.0001.a:0 "自定义名称和描述"
+ nh_reform_cosmetic.0001.b:0 "我稍后再处理"
