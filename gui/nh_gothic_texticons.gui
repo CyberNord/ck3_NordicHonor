@@ -1,0 +1,109 @@
+texticon = {
+	icon = gothic_icon
+	iconsize = {
+		texture = "gfx/interface/icons/faith/gothic.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = gothic_reformed_icon
+	iconsize = {
+		texture = "gfx/interface/icons/faith/gothic_reformed.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = saxon_icon
+	iconsize = {
+		texture = "gfx/interface/icons/faith/saxon.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = saxon_reformed_icon
+	iconsize = {
+		texture = "gfx/interface/icons/faith/saxon_reformed.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = odinstru_new_icon
+	iconsize = {
+		texture = "gfx/interface/icons/faith/odinstru_new.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = odinstru_new_reformed_icon
+	iconsize = {
+		texture = "gfx/interface/icons/faith/odinstru_new_reformed.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = forn_sidr_reformed_icon
+	iconsize = {
+		texture = "gfx/interface/icons/faith/forn_sidr_reformed.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = ginnregla_reformed_icon
+	iconsize = {
+		texture = "gfx/interface/icons/faith/ginnregla_reformed.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = natturugudtruar_reformed_icon
+	iconsize = {
+		texture = "gfx/interface/icons/faith/natturugudtruar_reformed.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = odinstru_reformed_icon
+	iconsize = {
+		texture = "gfx/interface/icons/faith/odinstru_reformed.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = heidinn_reformed_icon
+	iconsize = {
+		texture = "gfx/interface/icons/faith/heidinn_reformed.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}

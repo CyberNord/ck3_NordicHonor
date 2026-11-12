@@ -26,7 +26,7 @@ forn_sidr_pagan = {
 woden_sidr_pagan = {
 	faith = forn_sidr_pagan
 	color = { 0.6 0.4 0.2 }
-	icon = forn_sidr
+	icon = saxon
 
 	tenets = { tenet_sanctity_of_nature tenet_ritual_celebrations tenet_ancestor_worship}
 	doctrines = {
@@ -185,8 +185,7 @@ gothic_pagan = {
 	name = gothic_pagan
 	desc = gothic_pagan_desc
 	color = { 0.46 0.32 0.16 }
-	# Shares the Heiðinn icon.
-	icon = heidinn
+	icon = gothic
 	create = yes
 	convert = yes
 	history = no
