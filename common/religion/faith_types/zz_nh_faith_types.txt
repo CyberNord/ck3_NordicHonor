@@ -100,8 +100,8 @@ heidinn_pagan = {
 	faith_details = {
 		religion = germanic_religion
 		color = { 0.4 0.6 0 }
-		icon = heidinn
-		reformed_icon = heidinn_reformed
+		icon = gothic
+		reformed_icon = gothic_reformed
 	}
 
 	eminent_holy_sites = { konugardr gniezno breclav }
