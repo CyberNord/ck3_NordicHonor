@@ -5,7 +5,7 @@
 	}
 }
 
-custom_iceland= {
+nh_iceland_region = {
 	duchies = {
 		# k_norway
 		d_iceland

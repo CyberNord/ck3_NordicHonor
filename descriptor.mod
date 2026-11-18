@@ -7,5 +7,5 @@ tags={
 	"Alternative History"
 }
 name="Nordic Honor"
-supported_version="1.20.*"
+supported_version="1.21.*"
 remote_file_id="2992171720"

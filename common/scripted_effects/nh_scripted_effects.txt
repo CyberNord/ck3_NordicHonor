@@ -425,23 +425,23 @@ nh_convert_county_forced_effect = {
 				exists = scope:nh_conversion_mass_action
 				scope:nh_conversion_mass_action = yes
 			}
-			# Compute an integer target before changing the county development.
-			change_development_level = {
-				value = development_level
+			# Compute an integer target before changing the county prosperity.
+			change_prosperity_level = {
+				value = prosperity_level
 				multiply = 0.5
 				floor = yes
-				subtract = development_level
+				subtract = prosperity_level
 			}
 		}
 		else_if = {
 			limit = { scope:converter.rite = rite:odinstru_pagan }
-			change_development_level = {
-				subtract = { value = development_level multiply = 0.15 }
+			change_prosperity_level = {
+				subtract = { value = prosperity_level multiply = 0.15 }
 			}
 		}
 		else = {
-			change_development_level = {
-				subtract = { value = development_level multiply = 0.20 }
+			change_prosperity_level = {
+				subtract = { value = prosperity_level multiply = 0.20 }
 			}
 		}
 		

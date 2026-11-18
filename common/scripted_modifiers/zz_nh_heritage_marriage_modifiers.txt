@@ -3,10 +3,10 @@ marriage_ai_accept_faith_hostility_modifier = {
 	#########
 	# FAITH #
 	#########
-	modifier = { # A recipient will be reluctant (to differing degrees) to agree to marriages sent from an puppet_or_actor of a different faith
+	modifier = {
+		NOT = { nh_christian_heritage_marriage_pair_trigger = { CHARACTER_1 = scope:puppet_or_actor CHARACTER_2 = scope:recipient } } # A recipient will be reluctant (to differing degrees) to agree to marriages sent from an puppet_or_actor of a different faith
 		#Same faith is always fully accepted, so we can skip the hostility level check below
 		scope:recipient.faith != scope:puppet_or_actor.faith
-		NOT = { nh_christian_heritage_marriage_pair_trigger = { CHARACTER_1 = scope:puppet_or_actor CHARACTER_2 = scope:recipient } } # Event heritage waives only this religious penalty.
 		# Nomads care little of Faith within the Steppe, and Tributaries are willing to marry them, too.
 		trigger_if = {
 			limit = {
@@ -35,6 +35,8 @@ marriage_ai_accept_faith_hostility_modifier = {
 			}
 		}
 
+		#Same faith is always fully accepted, so we can skip the hostility level check below
+		scope:recipient.faith != scope:puppet_or_actor.faith
 		scope:recipient.rite = {
 			rite_hostility_level = {
 				target = scope:puppet_or_actor.rite
@@ -65,17 +67,17 @@ marriage_ai_accept_faith_hostility_modifier = {
 						}
 					}
 					subtract = 15
-				}
-				if = {
-					limit = {
-						scope:recipient.rite = {
-							rite_hostility_level = {
-								target = scope:puppet_or_actor.rite
-								value >= faith_hostility_prevents_marriage_level
+					if = {
+						limit = {
+							scope:recipient.rite = {
+								rite_hostility_level = {
+									target = scope:puppet_or_actor.rite
+									value >= faith_hostility_prevents_marriage_level
+								}
 							}
 						}
+						subtract = 975
 					}
-					subtract = 975
 				}
 			}
 		}

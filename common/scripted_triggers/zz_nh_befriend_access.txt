@@ -25,6 +25,7 @@ can_use_befriend_scheme_trigger = {
 			is_house_head = yes
 		}
 		has_perk = befriend_perk
+		has_character_modifier = gdp_toast_to_relations_modifier
 		AND = {
 			dynasty ?= {
 				has_dynasty_perk = fp1_adventure_legacy_5
@@ -37,9 +38,9 @@ can_use_befriend_scheme_trigger = {
 			has_struggle_phase_parameter = struggle_unlocks_befriend_schemes_for_everyone
 		}
 		AND = {
-			government_has_flag = government_is_clan
-			is_in_same_clan_as_trigger = { CHARACTER = $TARGET$ }
-			house = { has_house_unity_stage = harmonious }
+			government_has_flag = government_uses_house_unity
+			house ?= { has_house_unity_parameter = unity_unlock_befriend_scheme }
+			$TARGET$.house ?= house
 		}
 		government_has_flag = government_is_nomadic
 	}

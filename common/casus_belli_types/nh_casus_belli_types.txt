@@ -116,8 +116,11 @@ nh_holy_conquest_cb = {
 			accolade_attacker_war_end_glory_gain_med_effect = yes
 		}
 		
-		# Legitimacy gain
-		add_legitimacy_attacker_victory_effect = yes
+		# Legitimacy only; this raid transfers no titles or republic possessions.
+		war_end_legitimacy_effect = {
+			WINNER = scope:attacker
+			LOSER = scope:defender
+		}
 
 		# Prestige for attacker
 		scope:attacker = {

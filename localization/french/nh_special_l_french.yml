@@ -1,4 +1,4 @@
 ﻿l_french:
- nh_has_all_tribal_innovation: "A #V 85 %#! de toutes les époques tribales militaires et civiques [innovations|E]."
+ nh_has_all_tribal_innovation: "Possède au moins #V 85 %#! des [innovations|E] militaires et civiques de l’ère tribale (#V 13 sur 15#!)"
  nh_faith_is_unreformed: "[CHARACTER.GetFaith.GetName] est fidèle aux anciennes méthodes."
  nh_within_viking_age: "Vous êtes à l'intérieur ou à portée de l'âge des Vikings."

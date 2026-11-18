@@ -463,7 +463,7 @@ nh_convert_whole_realm_to_feudalism_decision = {
 		}
 		prestige_level >= 5
 		capital_province.county = {
-			development_level >= nh_convert_to_feudalism_development_requirement
+			prosperity_level >= nh_convert_to_feudalism_development_requirement
 		}
 
 		custom_description = { #You need to have 85% of all (non-regional/unique) tribal innovations!
@@ -471,20 +471,21 @@ nh_convert_whole_realm_to_feudalism_decision = {
 			subject = root.culture
 			culture = {
 				calc_true_if = {
-					amount >= 12
+					amount >= 13
 					has_innovation = innovation_motte
 					has_innovation = innovation_catapult
 					has_innovation = innovation_barracks
 					has_innovation = innovation_mustering_grounds
 					has_innovation = innovation_bannus
 					has_innovation = innovation_quilted_armor
+					has_innovation = innovation_pattern_welding
 					has_innovation = innovation_gavelkind
 					has_innovation = innovation_crop_rotation
 					has_innovation = innovation_city_planning
 					has_innovation = innovation_casus_belli
 					has_innovation = innovation_plenary_assemblies
 					has_innovation = innovation_ledger
-					has_innovation = innovation_development_01
+					has_innovation = innovation_prosperity_01
 					has_innovation = innovation_currency_01
 				}
 			}
@@ -728,10 +729,6 @@ nh_form_old_saxia_kingdom_decision = {
 				name = unavailable_unique_decisions
 				target = flag:flag_formed_old_saxia_kingdom
 			}
-			set_global_variable = {
-				name = flag_formed_old_saxia_kingdom
-				value = root
-			}
 		}
 	}
 
@@ -941,7 +938,7 @@ nh_iceland_first_great_ting = {
 		rite = rite:ginnregla_pagan
 		any_held_title = {
 			tier = tier_county
-			title_province = { geographical_region = custom_iceland}
+			title_province = { geographical_region = nh_iceland_region}
 		}
 
 		#Not repeatable.
@@ -966,13 +963,13 @@ nh_iceland_first_great_ting = {
 		# hold relevant titles
 		has_title = title:d_iceland
 		highest_held_title_tier <= tier_duchy
-		# completely_controls_region = custom_iceland
+		# completely_controls_region = nh_iceland_region
 		OR = {
 			AND = {
 				is_ai = yes
 				any_held_title = {
 					tier = tier_county
-					title_province = { geographical_region = custom_iceland}
+					title_province = { geographical_region = nh_iceland_region}
 				}
 			}
 			AND = {
@@ -1032,10 +1029,6 @@ nh_iceland_first_great_ting = {
 				name = unavailable_unique_decisions
 				target = flag:nh_iceland_first_great_ting
 			}
-			set_global_variable = {
-				name = nh_iceland_first_great_ting
-				value = root
-			}
 		}
 	}
 
@@ -1061,7 +1054,7 @@ nh_iceland_yearly_ting = {
 		is_lowborn = no
 		any_held_title = {
 			tier = tier_county
-			title_province = { geographical_region = custom_iceland}
+			title_province = { geographical_region = nh_iceland_region}
 		}
 	}
 

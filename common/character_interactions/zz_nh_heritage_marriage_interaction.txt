@@ -12,11 +12,7 @@ arrange_marriage_interaction = {
 	use_diplomatic_range = {
 		trigger_if = {
 			limit = { exists = scope:secondary_actor.betrothed }
-			NOT = {
-				scope:secondary_actor = {
-					betrothed = scope:secondary_recipient
-				}
-			}
+			scope:secondary_actor.betrothed != scope:secondary_recipient
 		}
 	}
 
@@ -100,29 +96,20 @@ arrange_marriage_interaction = {
 					is_betrothed = yes
 					betrothed = scope:recipient
 				}
-
 				save_scope_as = secondary_actor
 			}
 		}
-
 		scope:recipient = {
 			if = {
 				limit = {
 					is_betrothed = yes
 					betrothed.matchmaker = scope:puppet_or_actor
 					is_adult = yes
-					betrothed = {
-						is_adult = yes
-					}
+					betrothed = { is_adult = yes }
 				}
-
 				save_scope_as = secondary_recipient
-				matchmaker = {
-					save_scope_as = recipient
-				}
-				betrothed = {
-					save_scope_as = secondary_actor
-				}
+				matchmaker = { save_scope_as = recipient }
+				betrothed = { save_scope_as = secondary_actor }
 			}
 
 			# marriage interactions are special, and code sets scopes in an unusual way
@@ -131,9 +118,18 @@ arrange_marriage_interaction = {
 			# make sure redirect solves this issue
 			if = {
 				limit = {
+					NOT = { exists = scope:secondary_recipient }
 					exists = matchmaker
 					this = matchmaker
-					NOT = { exists = scope:secondary_recipient }
+					scope:actor = {
+						NOR = {
+							government_has_flag = government_is_landless_adventurer
+							AND = {
+								government_has_flag = government_is_merchant
+								NOT = { scope:recipient = { government_has_flag = government_is_merchant } }
+							}
+						}
+					}
 				}
 				save_scope_as = secondary_recipient
 			}
@@ -143,9 +139,7 @@ arrange_marriage_interaction = {
 					NOT = { this = matchmaker }
 				}
 				save_scope_as = secondary_recipient
-				matchmaker = {
-					save_scope_as = recipient
-				}
+				matchmaker = { save_scope_as = recipient }
 			}
 		}
 	}
@@ -157,6 +151,9 @@ arrange_marriage_interaction = {
 					trigger_if = {
 						limit = { exists = scope:secondary_recipient }
 						can_marry_character_trigger = { CHARACTER = scope:secondary_recipient }
+					}
+					trigger_else = {
+						can_marry_trigger = yes
 					}
 				}
 				add_to_list = characters
@@ -173,6 +170,9 @@ arrange_marriage_interaction = {
 						limit = { exists = scope:secondary_recipient }
 						can_marry_character_trigger = { CHARACTER = scope:secondary_recipient }
 					}
+					trigger_else = {
+						can_marry_trigger = yes
+					}
 				}
 				add_to_list = characters
 			}
@@ -187,6 +187,9 @@ arrange_marriage_interaction = {
 					trigger_if = {
 						limit = { exists = scope:secondary_recipient }
 						can_marry_character_trigger = { CHARACTER = scope:secondary_recipient }
+					}
+					trigger_else = {
+						can_marry_trigger = yes
 					}
 				}
 				add_to_list = characters
@@ -206,6 +209,9 @@ arrange_marriage_interaction = {
 						trigger_if = {
 							limit = { exists = scope:secondary_recipient }
 							can_marry_character_trigger = { CHARACTER = scope:secondary_recipient }
+						}
+						trigger_else = {
+							can_marry_trigger = yes
 						}
 					}
 					add_to_list = characters
@@ -231,6 +237,9 @@ arrange_marriage_interaction = {
 								limit = { exists = scope:secondary_recipient }
 								can_marry_character_trigger = { CHARACTER = scope:secondary_recipient }
 							}
+							trigger_else = {
+								can_marry_trigger = yes
+							}
 						}
 						add_to_list = characters
 					}
@@ -254,6 +263,9 @@ arrange_marriage_interaction = {
 									limit = { exists = scope:secondary_recipient }
 									can_marry_character_trigger = { CHARACTER = scope:secondary_recipient }
 								}
+								trigger_else = {
+									can_marry_trigger = yes
+								}
 							}
 							add_to_list = characters
 						}
@@ -271,6 +283,9 @@ arrange_marriage_interaction = {
 						limit = { exists = scope:secondary_actor }
 						can_marry_character_trigger = { CHARACTER = scope:secondary_actor }
 					}
+					trigger_else = {
+						can_marry_trigger = yes
+					}
 				}
 				add_to_list = characters
 			}
@@ -279,6 +294,9 @@ arrange_marriage_interaction = {
 					trigger_if = {
 						limit = { exists = scope:secondary_actor }
 						can_marry_character_trigger = { CHARACTER = scope:secondary_actor }
+					}
+					trigger_else = {
+						can_marry_trigger = yes
 					}
 				}
 				add_to_list = characters
@@ -289,6 +307,9 @@ arrange_marriage_interaction = {
 						limit = { exists = scope:secondary_actor }
 						can_marry_character_trigger = { CHARACTER = scope:secondary_actor }
 					}
+					trigger_else = {
+						can_marry_trigger = yes
+					}
 				}
 				add_to_list = characters
 			}
@@ -298,6 +319,9 @@ arrange_marriage_interaction = {
 					trigger_if = {
 						limit = { exists = scope:secondary_actor }
 						can_marry_character_trigger = { CHARACTER = scope:secondary_actor }
+					}
+					trigger_else = {
+						can_marry_trigger = yes
 					}
 				}
 				add_to_list = characters
@@ -383,6 +407,23 @@ arrange_marriage_interaction = {
 				desc = INFLUENCE_INTERACTION_ACCEPTANCE_SEND_OPTION
 			}
 		}
+
+		gold = {
+			value = 0
+			if = {
+				limit = {
+					exists = scope:puppet_or_actor
+					exists = scope:recipient
+					scope:puppet_or_actor = {
+						government_has_flag = government_is_merchant
+						is_ai = no
+					}
+					scope:recipient = { NOT = { government_has_flag = government_is_merchant } }
+					scope:secondary_recipient ?= { is_lowborn = no }
+				}
+				add = merchant_marriage_gold_value
+			}
+		}
 	}
 
 	# actor, recipient ... characters arranging the marriage
@@ -392,7 +433,7 @@ arrange_marriage_interaction = {
 		scope:puppet_or_actor ?= {
 			OR = {
 				is_ruler = yes #Can arrange marriages for others
-				# Courtiers may use the interaction only for characters they can marry.
+				#You're just a courtier? Only use the interaction on characters you can marry
 				can_marry_character_trigger = { CHARACTER = scope:recipient }
 			}
 		}
@@ -473,12 +514,54 @@ arrange_marriage_interaction = {
 				scope:recipient = scope:puppet_or_actor
 			}
 		}
+
+		#Merchants may marry other merchants, a patron courtier requested through the request_marriage option of merchant_patron_request_interaction, or someone already betrothed
+		trigger_if = {
+			limit = {
+				scope:actor = { government_has_flag = government_is_merchant }
+			}
+			trigger_if = {
+				limit = {
+					OR = {
+						scope:recipient = { government_has_flag = government_is_merchant }
+						scope:actor = {
+							is_target_in_variable_list = {
+								name = patron_marriage
+								target = scope:recipient
+							}
+						}
+						scope:recipient = {
+							is_betrothed = yes
+							betrothed = {
+								OR = {
+									scope:actor = this
+									scope:secondary_actor ?= this
+								}
+							}
+						}
+						scope:secondary_recipient ?= {
+							is_betrothed = yes
+							betrothed = {
+								OR = {
+									scope:actor = this
+									scope:secondary_actor ?= this
+								}
+							}
+						}
+					}
+				}
+				always = yes
+			}
+			trigger_else = {
+				scope:recipient = scope:actor
+			}
+		}
 	}
 
 	is_valid_showing_failures_only = {
 		pam_ai_marriage_respects_clerical_restraint_trigger = yes
 		#If we're opening this interaction through the interaction menu (i.e. not all scopes exist yet)
-		# Duplicate marriage-availability warning disabled.
+		#This was giving double-warnings about a marry-able character existing so it's commented out for now
 		#custom_description = {
 		#	text = character_to_marry_exists
 		#	object = scope:recipient
@@ -599,7 +682,7 @@ arrange_marriage_interaction = {
 				bp2_valid_for_standard_interactions_trigger = yes
 			}
 		}
-		# Apply regent acceptance conditions.
+		# Account for regents being bolshy.
 		marriage_interaction_non_loyal_diarchs_refuse_secondary_marriage_trigger = { TARGET = secondary_actor }
 		marriage_interaction_non_loyal_diarchs_refuse_secondary_marriage_trigger = { TARGET = secondary_recipient }
 		marriage_interaction_non_loyal_diarchs_refuse_secondary_marriage_trigger = { TARGET = puppet_or_actor }
@@ -675,9 +758,7 @@ arrange_marriage_interaction = {
 			limit = {
 				scope:puppet_or_actor = {
 					is_ai = yes
-					culture = {
-						has_cultural_parameter = dislikes_marrying_outside_of_culture
-					}
+					culture = { has_cultural_parameter = dislikes_marrying_outside_of_culture }
 				}
 			}
 			OR = {
@@ -779,6 +860,30 @@ arrange_marriage_interaction = {
 			}
 			if = {
 				limit = {
+					government_has_flag = government_is_merchant
+					is_ai = no
+					scope:recipient = {
+						NOT = { government_has_flag = government_is_merchant }
+					}
+					scope:secondary_recipient ?= { is_lowborn = no }
+				}
+				scope:recipient = {
+					add_gold = merchant_marriage_gold_value
+				}
+				if = {
+					limit = {
+						scope:secondary_recipient = {
+							OR = {
+								this = scope:recipient
+								is_close_or_extended_family_of = scope:recipient
+							}
+						}
+					}
+					add_prestige = merchant_marriage_prestige_value
+				}
+			}
+			if = {
+				limit = {
 					has_variable = grand_wedding_promise_pending
 				}
 				remove_variable = grand_wedding_promise_pending
@@ -792,6 +897,18 @@ arrange_marriage_interaction = {
 				}
 				remove_list_variable = {
 					name = contact_list_marriage
+					target = scope:recipient
+				}
+			}
+			if = {
+				limit = {
+					is_target_in_variable_list = {
+						name = patron_marriage
+						target = scope:recipient
+					}
+				}
+				remove_list_variable = {
+					name = patron_marriage
 					target = scope:recipient
 				}
 			}
@@ -809,6 +926,17 @@ arrange_marriage_interaction = {
 					has_variable = grand_wedding_promise_pending
 				}
 				remove_variable = grand_wedding_promise_pending
+			}
+			if = {
+				limit = {
+					government_has_flag = government_is_merchant
+					is_ai = no
+					scope:recipient = {
+						NOT = { government_has_flag = government_is_merchant }
+					}
+					scope:secondary_recipient ?= { is_lowborn = no }
+				}
+				add_gold = merchant_marriage_gold_value
 			}
 		}
 		scope:secondary_actor = {
@@ -836,8 +964,13 @@ arrange_marriage_interaction = {
 
 		is_shown = {
 			scope:puppet_or_actor = { #Can organize a Grand Wedding
-				highest_held_title_tier > tier_barony
-				is_landed_or_landless_administrative_or_theocratic = yes
+				OR = {
+					AND = {
+						highest_held_title_tier > tier_barony
+						is_landed_or_landless_administrative_or_theocratic = yes
+					}
+					government_has_flag = government_is_merchant
+				}
 				trigger_if = {
 					limit = {
 						is_ai = yes

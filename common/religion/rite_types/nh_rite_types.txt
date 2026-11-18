@@ -163,6 +163,8 @@ norse_pagan = {
 	}
 
 	doctrines = {
+		doctrine_diet_unrestricted
+		doctrine_alcohol_permitted
 		unreformed_faith_doctrine
 	}
 

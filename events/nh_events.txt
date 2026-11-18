@@ -1845,7 +1845,7 @@ nh.2013 = {
 			}
 			add_dread = 10
 			scope:target_county = {
-				change_development_level = -1
+				change_prosperity_level = -1
 			}
 		}
 	}

@@ -1,4 +1,4 @@
 ﻿l_korean:
- nh_has_all_tribal_innovation:0 "Has #V 85%#! of all Military & Civic Tribal Era [innovations|E]" 
+ nh_has_all_tribal_innovation:0 "부족 시대 군사 및 사회 [innovations|E]의 #V 85%#! 이상 보유 (#V 15개 중 13개#!)"
  nh_faith_is_unreformed:0 "[CHARACTER.GetFaith.GetName] is true to the old ways"
  nh_within_viking_age:0 "You are within or adjacent to the Viking Age."

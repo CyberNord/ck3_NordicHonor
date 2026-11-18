@@ -1,35 +1,36 @@
 ﻿# Gotland
 nh_county_trade_modifier = {
 	icon = economy_positive
-	development_growth_factor = medium_development_growth_gain
-	tax_mult = 0.30
+	prosperity_growth_factor = medium_prosperity_growth_gain
+	all_tax_mult = 0.30
 }
 
 nh_county_raid_modifier = {
 	icon = martial_positive
-	monthly_county_control_growth_add = 0.5
-	development_growth_factor = -0.1
+	monthly_control_change_when_below_baseline_add = 0.5
+	monthly_control_change_when_above_baseline_add = 0.5
+	prosperity_growth_factor = -0.1
 }
 
 nh_county_defence_modifier = {
-	icon = county_modifier_development_positive
+	icon = county_modifier_prosperity_positive
 	additional_fort_level = 2
 	defender_holding_advantage = 10
-	county_opinion_add = 10
+	popular_opinion_add = 10
 }
 
 # Thingvellir
 nh_tinvellir_county_modifier = {
 	icon = diplomacy_positive
-	county_opinion_add = 30
+	popular_opinion_add = 30
 	travel_danger = -5
 }
 
 # v1.2 - Forced Conversion
 nh_forced_conversion = {
 	icon = county_modifier_opinion_negative
-	county_opinion_add = -15
-	development_growth_factor = -0.75
+	popular_opinion_add = -15
+	prosperity_growth_factor = -0.75
 	levy_size = -0.50
-	tax_mult = -0.90
+	all_tax_mult = -0.90
 }
