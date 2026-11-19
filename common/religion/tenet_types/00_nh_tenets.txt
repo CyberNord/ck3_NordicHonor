@@ -1,0 +1,46 @@
+﻿# v1.2 - Víghugr
+nh_tenet_vighugr = {
+	icon = tenet_vighugr_faith
+
+	# Core selection is restricted independently of personal belief selection.
+	can_pick = { religion = religion:germanic_religion }
+	can_pick_as_personal_tenet = { always = yes }
+
+	piety_cost = {
+		if = {
+			limit = { this = rite:odinstru_pagan }
+			value = faith_tenet_cost_low
+		}
+		else = { value = faith_tenet_cost_high }
+		if = {
+			limit = { rite_has_tenet = nh_tenet_vighugr }
+			multiply = faith_unchanged_doctrine_cost_mult
+		}
+	}
+
+	character_modifier = {
+		prowess = 4
+		tolerance_advantage_mod = 8
+		levy_size = 0.2
+	}
+
+	clergy_modifier = { prowess = 2 }
+
+	parameters = {
+		clergy_can_fight
+		nh_holy_raid_allowed
+		nh_forced_conversion_allowed
+		nh_vighugr_foreign_conversion_bonus
+	}
+
+	traits = {
+		virtues = { zealous = { weight = 25 scale = 2 } }
+		sins = { cynical = { weight = 25 scale = 2 } }
+	}
+
+	personal_tenet_modifier = {
+		prowess = 2
+		monthly_piety_gain_mult = 0.1
+	}
+	personal_tenet_parameters = { nh_odins_call_available }
+}

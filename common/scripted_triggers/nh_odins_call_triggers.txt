@@ -1,0 +1,42 @@
+﻿# v1.2 - Odins Ruf
+# Character scope: personal belief and an unspent lifetime choice.
+nh_odins_call_actor_valid_trigger = {
+	is_alive = yes
+	is_capable_adult = yes
+	has_personal_tenet_flag = nh_odins_call_available
+	NOT = { has_character_flag = nh_odins_call_completed }
+	trigger_if = {
+		limit = { is_ai = yes }
+		is_female = no
+		age <= 45
+	}
+}
+
+nh_odins_call_conversion_valid_trigger = {
+	nh_odins_call_actor_valid_trigger = yes
+	NOT = { religion = religion:germanic_religion }
+	piety >= nh_odins_call_conversion_cost
+	exists = rite:odinstru_pagan
+	rite:odinstru_pagan = { rite_has_parameter = unreformed }
+}
+
+nh_odins_call_blessing_valid_trigger = {
+	nh_odins_call_actor_valid_trigger = yes
+	religion = religion:germanic_religion
+	piety >= nh_odins_call_blessing_cost
+}
+
+nh_odins_call_refusal_valid_trigger = {
+	nh_odins_call_actor_valid_trigger = yes
+	NOT = { religion = religion:germanic_religion }
+}
+
+nh_odins_call_ai_eligible_trigger = {
+	nh_odins_call_actor_valid_trigger = yes
+	is_female = no
+	age <= 45
+	OR = {
+		nh_odins_call_conversion_valid_trigger = yes
+		nh_odins_call_blessing_valid_trigger = yes
+	}
+}

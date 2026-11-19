@@ -104,7 +104,7 @@ odinstru_pagan = {
 	color = { 0 0.1 0.1 }
 	icon = odinstru
 
-	tenets = { tenet_warmonger tenet_unrelenting_faith }
+	tenets = { nh_tenet_vighugr tenet_warmonger }
 	doctrines = {
 		# germanic faith group
 		special_faith_stadfast_heritage

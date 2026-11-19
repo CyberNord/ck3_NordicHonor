@@ -389,4 +389,15 @@ court_chaplain_conversion_factors = {
 		}
 		multiply = { value = 4 desc = nh_old_saxony_conversion_modifier }
 	}
+
+	# Core Víghugr affects only counties outside the Germanic religion.
+	if = {
+		limit = {
+			exists = scope:councillor_liege.rite
+			scope:councillor_liege.rite = { rite_has_tenet = nh_tenet_vighugr }
+			exists = scope:county.faith
+			scope:county.faith = { NOT = { religion = religion:germanic_religion } }
+		}
+		multiply = { value = 1.3 desc = doctrine_parameter_nh_vighugr_foreign_conversion_bonus }
+	}
 }

@@ -1,0 +1,35 @@
+﻿# v1.2 - Odins Ruf
+nh_odins_call_conversion_cost = 3000
+nh_odins_call_blessing_cost = 1000
+
+# Character scope; count each held trait against the target rite's actual virtues and sins.
+nh_odins_call_ai_chance_value = {
+	value = 0
+	every_character_trait = {
+		if = {
+			limit = { rite:odinstru_pagan = { trait_is_virtue_rite = prev } }
+			add = 2
+		}
+		if = {
+			limit = { rite:odinstru_pagan = { trait_is_sin_rite = prev } }
+			subtract = 10
+		}
+	}
+	if = {
+		limit = { culture = { has_cultural_pillar = heritage_north_germanic } }
+		add = 6
+	}
+	else_if = {
+		limit = {
+			culture = {
+				OR = {
+					has_cultural_pillar = heritage_central_germanic
+					has_cultural_pillar = heritage_west_germanic
+				}
+			}
+		}
+		add = 4
+	}
+	min = 0
+	max = 100
+}

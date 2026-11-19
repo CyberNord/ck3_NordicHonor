@@ -17,8 +17,8 @@
  nh_rollo_special_ai_modifier:0 "Le destin de Rollo"
  nh_rollo_special_ai_modifier_desc: "Les dieux le favorisent dans son voyage."
 
- nh_odins_blessing_modifier:0 "Béni par Odin"
- nh_odins_blessing_modifier_desc:0 "Ce personnage a été béni par Odin, qui lui a accordé sagesse, courage et les faveurs de l'Allfather."
+ nh_odins_blessing_modifier:0 "Bénédiction d'Odin"
+ nh_odins_blessing_modifier_desc:0 "Le Père de tous a accordé à ce personnage un regard éclairé et des paroles de poids. La sagesse et des actes glorieux accompagnent sa route."
  nh_thors_blessing_modifier:0 "Protégé par Thor"
  nh_thors_blessing_modifier_desc:0 "Sous la protection de Thor, ce personnage est à l'abri du danger et gagne en force et en résistance lors des combats."
  nh_freyas_blessing_modifier:0 "Béni par Freya"

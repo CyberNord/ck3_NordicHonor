@@ -59,7 +59,7 @@ nh_holy_raid_access_trigger = {
 	exists = scope:defender
 	scope:attacker ?= {
 		is_alive = yes
-		rite = rite:odinstru_pagan
+		rite = { rite_has_parameter = nh_holy_raid_allowed }
 		ALL_FALSE = {
 			top_liege = scope:defender.top_liege
 			liege = scope:defender

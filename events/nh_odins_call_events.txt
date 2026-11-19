@@ -1,0 +1,92 @@
+﻿# v1.2 - Odins Ruf
+namespace = nh_odins_call
+
+nh_odins_call.0001 = {
+	type = character_event
+	title = nh_odins_call.0001.t
+	desc = nh_odins_call.0001.desc
+	theme = faith
+	left_portrait = root
+	trigger = {
+		nh_odins_call_actor_valid_trigger = yes
+		NOT = { religion = religion:germanic_religion }
+	}
+	option = {
+		name = nh_odins_call.0001.convert
+		trigger = { nh_odins_call_conversion_valid_trigger = yes }
+		show_as_unavailable = { always = yes }
+		nh_odins_call_convert_effect = yes
+		ai_chance = { base = 100 }
+	}
+	option = {
+		name = nh_odins_call.not_now
+		is_cancel_option = yes
+		ai_chance = {
+			base = 100
+			modifier = { factor = 0 nh_odins_call_conversion_valid_trigger = yes }
+		}
+	}
+	option = {
+		name = nh_odins_call.0001.refuse
+		trigger = { nh_odins_call_refusal_valid_trigger = yes }
+		nh_odins_call_refuse_effect = yes
+		ai_chance = { base = 0 }
+	}
+}
+
+nh_odins_call.0002 = {
+	type = character_event
+	title = nh_odins_call.0002.t
+	desc = nh_odins_call.0002.desc
+	theme = faith
+	left_portrait = root
+	trigger = {
+		nh_odins_call_actor_valid_trigger = yes
+		religion = religion:germanic_religion
+	}
+	option = {
+		name = nh_odins_call.0002.bless
+		trigger = { nh_odins_call_blessing_valid_trigger = yes }
+		show_as_unavailable = { always = yes }
+		nh_odins_call_bless_effect = yes
+		ai_chance = { base = 100 }
+	}
+	option = {
+		name = nh_odins_call.not_now
+		is_cancel_option = yes
+		ai_chance = {
+			base = 100
+			modifier = { factor = 0 nh_odins_call_blessing_valid_trigger = yes }
+		}
+	}
+}
+
+nh_odins_call.0003 = {
+	type = character_event
+	title = nh_odins_call.0003.t
+	desc = nh_odins_call.0003.desc
+	theme = faith
+	left_portrait = root
+	trigger = { is_alive = yes has_character_flag = nh_odins_call_completed }
+	option = { name = nh_odins_call.0003.accept }
+}
+
+nh_odins_call.0004 = {
+	type = character_event
+	title = nh_odins_call.0004.t
+	desc = nh_odins_call.0004.desc
+	theme = faith
+	left_portrait = root
+	trigger = { is_alive = yes has_character_flag = nh_odins_call_completed }
+	option = { name = nh_odins_call.0004.accept }
+}
+
+nh_odins_call.0005 = {
+	type = character_event
+	title = nh_odins_call.0005.t
+	desc = nh_odins_call.0005.desc
+	theme = faith
+	left_portrait = root
+	trigger = { is_alive = yes has_character_flag = nh_odins_call_completed }
+	option = { name = nh_odins_call.0005.accept }
+}

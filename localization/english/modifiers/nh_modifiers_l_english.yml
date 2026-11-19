@@ -12,8 +12,8 @@
  nh_rollo_special_ai_modifier:0 "Rollo's destiny"
  nh_rollo_special_ai_modifier_desc: "The gods favour him on his journey."
 
- nh_odins_blessing_modifier:0 "Blessed by Odin"
- nh_odins_blessing_modifier_desc:0 "This character has been blessed by Odin, granting them wisdom, courage, and the favor of the Allfather."
+ nh_odins_blessing_modifier:0 "Odin's Blessing"
+ nh_odins_blessing_modifier_desc:0 "The Allfather has granted this character keen insight and words that carry weight. Wisdom and celebrated deeds accompany their path."
  nh_thors_blessing_modifier:0 "Protected by Thor"
  nh_thors_blessing_modifier_desc:0 "Under the protection of Thor, this character is shielded from harm and gains strength and resilience in battles."
  nh_freyas_blessing_modifier:0 "Blessed by Freya"

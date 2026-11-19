@@ -17,8 +17,8 @@
  nh_rollo_special_ai_modifier:0 "Судьба Ролло"
  nh_rollo_special_ai_modifier_desc: "Боги благоволят ему в его путешествии."
 
- nh_odins_blessing_modifier:0 "Благословен Одином"
- nh_odins_blessing_modifier_desc:0 "Этот персонаж был благословлен Одином, что дарует ему мудрость, мужество и благоволение Всевышнего."
+ nh_odins_blessing_modifier:0 "Благословение Одина"
+ nh_odins_blessing_modifier_desc:0 "Всеотец даровал этому персонажу проницательность и веское слово. Мудрость и славные деяния сопровождают его путь."
  nh_thors_blessing_modifier:0 "Под защитой Тора"
  nh_thors_blessing_modifier_desc:0  "Под защитой Тора, этот персонаж защищен от вреда и обретает силу и стойкость в битвах."
  nh_freyas_blessing_modifier:0 "Благословен Фрейей"

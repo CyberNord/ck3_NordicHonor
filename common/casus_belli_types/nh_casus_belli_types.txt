@@ -1,5 +1,5 @@
 ﻿# Nordic Honor - Religious Conquest Casus Belli
-# Restricted to the Óðinnstrú rite.
+# Unlocked by the current rite's core-tenet parameter.
 
 nh_holy_conquest_cb = {
 	icon = county_conquest_cb
@@ -12,8 +12,7 @@ nh_holy_conquest_cb = {
 	defender_score_from_battles_scale = 150
 
 	allowed_for_character = {
-		# Must be Óðinnstrú
-		rite = rite:odinstru_pagan
+		rite = { rite_has_parameter = nh_holy_raid_allowed }
 		
 		# Basic conquest CB requirements
 		can_use_conquest_cbs_trigger = yes

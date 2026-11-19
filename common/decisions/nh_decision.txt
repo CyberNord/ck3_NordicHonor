@@ -1253,10 +1253,7 @@ nh_odinstru_force_conversion = {
 
 	is_shown = {
 		is_lowborn = no
-		OR = {
-			rite = rite:odinstru_pagan
-			rite = rite:norse_pagan
-		}
+		rite = { rite_has_parameter = nh_forced_conversion_allowed }
 		
 		any_held_title = {
 			tier = tier_county

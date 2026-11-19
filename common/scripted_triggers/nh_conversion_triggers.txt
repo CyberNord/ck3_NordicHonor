@@ -2,7 +2,7 @@
 nh_forced_conversion_actor_valid_trigger = {
 	is_alive = yes
 	is_lowborn = no
-	OR = { rite = rite:odinstru_pagan rite = rite:norse_pagan }
+	rite = { rite_has_parameter = nh_forced_conversion_allowed }
 	is_at_war = no
 	piety_level >= 2
 	is_capable_adult = yes

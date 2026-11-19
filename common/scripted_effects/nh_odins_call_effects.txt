@@ -1,0 +1,36 @@
+﻿# v1.2 - Odins Ruf
+# Recheck current eligibility when resolving an event option, including saved or duplicate windows.
+nh_odins_call_convert_effect = {
+	if = {
+		limit = { nh_odins_call_conversion_valid_trigger = yes }
+		set_character_faith = rite:odinstru_pagan.faith
+		set_character_rite = rite:odinstru_pagan
+		if = {
+			limit = { faith = rite:odinstru_pagan.faith rite = rite:odinstru_pagan }
+			add_character_flag = nh_odins_call_completed
+			add_piety = { value = nh_odins_call_conversion_cost multiply = -1 }
+			trigger_event = nh_odins_call.0003
+		}
+	}
+}
+
+nh_odins_call_bless_effect = {
+	if = {
+		limit = { nh_odins_call_blessing_valid_trigger = yes }
+		add_character_flag = nh_odins_call_completed
+		add_piety = { value = nh_odins_call_blessing_cost multiply = -1 }
+		add_character_modifier = { modifier = nh_odins_blessing_modifier years = 20 }
+		trigger_event = nh_odins_call.0004
+	}
+}
+
+nh_odins_call_refuse_effect = {
+	if = {
+		limit = { nh_odins_call_refusal_valid_trigger = yes }
+		add_character_flag = nh_odins_call_completed
+		# Renown belongs to the existing dynasty; a dynastyless character has no recipient.
+		dynasty ?= { add_dynasty_prestige = 100 }
+		add_learning_lifestyle_perk_points = 1
+		trigger_event = nh_odins_call.0005
+	}
+}
