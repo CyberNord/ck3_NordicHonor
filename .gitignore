@@ -23,3 +23,7 @@ desktop.ini
 
 # Local editor files
 *.code-workspace
+
+# Local Testng & Documentation
+tools/
+docs/
