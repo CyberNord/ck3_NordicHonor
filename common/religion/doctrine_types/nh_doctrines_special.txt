@@ -69,3 +69,32 @@ special_faith_traitor_heritage = {
 		tenet_adaptive_conversion_resistance
 	}
 }
+
+# v1.2 - Honorable Death
+nh_honorable_death_allowed = {
+	doctrine_group_type = nh_honorable_death
+	icon = last_duel_allowed
+	index = 0
+	visible = yes
+	is_shown = { religion = religion:germanic_religion }
+	parameters = { nh_last_duel_allowed }
+	character_modifier = { prowess = 2 }
+	traits = {
+		virtues = {
+			einherjar = { weight = 1 scale = 1 }
+		}
+	}
+}
+
+nh_honorable_death_forbidden = {
+	doctrine_group_type = nh_honorable_death
+	icon = last_duel_forbidden
+	index = 1
+	visible = yes
+	is_shown = { religion = religion:germanic_religion }
+	parameters = { nh_last_duel_forbidden }
+	character_modifier = {
+		martial = 2
+		learning = 2
+	}
+}

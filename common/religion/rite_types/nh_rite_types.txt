@@ -9,6 +9,7 @@ forn_sidr_pagan = {
 	tenets = { tenet_sanctity_of_nature tenet_esotericism }
 	# germanic faith group: Nordic Similarity is inherited from the religion.
 	doctrines = {
+		nh_honorable_death_allowed
 		unreformed_faith_doctrine
 		#Main Group
 		doctrine_pluralism_righteous
@@ -30,6 +31,7 @@ woden_sidr_pagan = {
 
 	tenets = { tenet_sanctity_of_nature tenet_ritual_celebrations tenet_ancestor_worship}
 	doctrines = {
+		nh_honorable_death_allowed
 		unreformed_faith_doctrine
 		doctrine_pluralism_righteous
 	}
@@ -46,6 +48,7 @@ ginnregla_pagan = {
 	# germanic faith group: Nordic Similarity is inherited from the religion.
 	# Rite doctrines.
 	doctrines = {
+		nh_honorable_death_forbidden
 		unreformed_faith_doctrine
 		doctrine_clerical_function_alms_and_pacification
 		doctrine_pluralism_righteous
@@ -80,6 +83,7 @@ natturugudtruar_pagan = {
 
 	tenets = { tenet_ancestor_worship tenet_sanctity_of_nature }
 	doctrines = {
+		nh_honorable_death_forbidden
 		# germanic faith group: Staðfast replaces the inherited Nordic Similarity.
 		special_faith_stadfast_heritage
 		unreformed_faith_doctrine
@@ -106,6 +110,7 @@ odinstru_pagan = {
 
 	tenets = { nh_tenet_vighugr tenet_warmonger }
 	doctrines = {
+		nh_honorable_death_allowed
 		# germanic faith group
 		special_faith_stadfast_heritage
 		unreformed_faith_doctrine
@@ -139,6 +144,7 @@ heidinn_pagan = {
 	tenets = { tenet_sanctity_of_nature tenet_warmonger }
 	# germanic faith group: Nordic Similarity is inherited from the religion.
 	doctrines = {
+		nh_honorable_death_allowed
 		unreformed_faith_doctrine
 	}
 
@@ -163,6 +169,7 @@ norse_pagan = {
 	}
 
 	doctrines = {
+		nh_honorable_death_allowed
 		doctrine_diet_unrestricted
 		doctrine_alcohol_permitted
 		unreformed_faith_doctrine
@@ -198,5 +205,5 @@ gothic_pagan = {
 		fallback_tenet = tenet_human_sacrifice
 	}
 	# Other doctrines are inherited from the parent religion and faith.
-	doctrines = { unreformed_faith_doctrine }
+	doctrines = { unreformed_faith_doctrine nh_honorable_death_allowed }
 }

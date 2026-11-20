@@ -222,3 +222,12 @@
  gothic_pagan_adherent:0 "pagano gótico"
  gothic_pagan_adherent_plural:0 "paganos góticos"
  gothic_pagan_desc:0 "Esta tradición gótica precristiana pertenece a Erþtrú. Une la firmeza guerrera, las fiestas de sacrificio y la veneración de los antepasados. Los godos históricos habían abandonado sus antiguas creencias mucho antes de 867; este rito extinto representa una recuperación alternativa deliberada."
+
+# Honorable Death
+ nh_honorable_death_name:0 "Muerte honorable"
+ nh_honorable_death_allowed_name:0 "Muerte honorable: permitida"
+ nh_honorable_death_allowed_desc:0 "Una muerte honorable en combate es el camino a Valhöll. Cuando las fuerzas flaquean, un último duelo ofrece un final digno a la vida de un guerrero."
+ nh_honorable_death_forbidden_name:0 "Muerte honorable: prohibida"
+ nh_honorable_death_forbidden_desc:0 "Solo Odín elige a quienes entran en Valhöll. Grandes guerreros, gobernantes sabios y eruditos pueden oír su llamada; forzar un último duelo es una afrenta bárbara a su juicio."
+ doctrine_parameter_nh_last_duel_allowed:0 "El último duelo está permitido."
+ doctrine_parameter_nh_last_duel_forbidden:0 "El último duelo está prohibido. Einherjar no es una virtud ni un pecado."

@@ -38,16 +38,16 @@ last_duel_decision = {
 		OR = {
 			AND = {
 				age >= 60
-				religion = religion:germanic_religion
+				rite = { rite_has_doctrine = nh_honorable_death_allowed }
 			}
 			AND = {
 				age >= 18
-				religion = religion:germanic_religion
+				rite = { rite_has_doctrine = nh_honorable_death_allowed }
 				has_trait = cancer
 			}
 			AND = {
 				age >= 30
-				religion = religion:germanic_religion
+				rite = { rite_has_doctrine = nh_honorable_death_allowed }
 				has_trait = infirm
 			}
 		}

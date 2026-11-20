@@ -58,7 +58,6 @@ germanic_religion = {
 
 	traits = {
 		virtues = {
-			einherjar = { weight = 1 scale = 1 }
 			brave = { weight = 50 scale = 2 }
 			wrathful = { weight = 20 scale = 1 }
 			vengeful = { weight = 20 scale = 1 }

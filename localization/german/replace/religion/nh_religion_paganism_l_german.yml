@@ -222,3 +222,12 @@
  gothic_pagan_adherent:0 "gotischer Heide"
  gothic_pagan_adherent_plural:0 "gotische Heiden"
  gothic_pagan_desc:0 "Diese vorchristliche gotische Überlieferung gehört zu Erþtrú. Sie verbindet kriegerische Standhaftigkeit, Opferfeste und die Verehrung der Ahnen. Die historischen Goten hatten ihre früheren Glaubensformen lange vor 867 aufgegeben; dieser erloschene Ritus stellt eine bewusste alternative Wiederbelebung dar."
+
+# Honorable Death
+ nh_honorable_death_name:0 "Ehrenhafter Tod"
+ nh_honorable_death_allowed_name:0 "Ehrenhafter Tod: Erlaubt"
+ nh_honorable_death_allowed_desc:0 "Ein ehrenhafter Tod im Kampf führt nach Valhalla. Wenn die Kräfte schwinden, gewährt ein letztes Duell den würdigen Abschluss eines Kriegerlebens."
+ nh_honorable_death_forbidden_name:0 "Ehrenhafter Tod: Verboten"
+ nh_honorable_death_forbidden_desc:0 "Odin allein erwählt jene, die in Valhalla einkehren. Große Krieger, weise Herrscher und Gelehrte können seinen Ruf vernehmen; ein erzwungenes letztes Duell gilt als barbarischer Frevel."
+ doctrine_parameter_nh_last_duel_allowed:0 "Das Letzte Duell ist erlaubt."
+ doctrine_parameter_nh_last_duel_forbidden:0 "Das Letzte Duell ist verboten. Einherjar gilt weder als Tugend noch als Sünde."

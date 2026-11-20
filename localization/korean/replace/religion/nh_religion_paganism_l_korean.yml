@@ -222,3 +222,12 @@
  gothic_pagan_adherent:0 "고트 이교도"
  gothic_pagan_adherent_plural:0 "고트 이교도들"
  gothic_pagan_desc:0 "Erþtrú에 속한 기독교 이전 고트 전통이다. 전사의 굳건함, 희생 제의와 조상 숭배를 아우른다. 역사 속 고트인들은 867년보다 훨씬 전에 옛 믿음을 떠났다. 이 사라진 의례는 의도적인 대체 역사적 부흥을 나타낸다."
+
+# Honorable Death
+ nh_honorable_death_name:0 "명예로운 죽음"
+ nh_honorable_death_allowed_name:0 "명예로운 죽음: 허용"
+ nh_honorable_death_allowed_desc:0 "전장에서 맞는 명예로운 죽음은 발홀로 향하는 길이다. 기력이 쇠할 때 마지막 결투는 전사의 삶에 걸맞은 끝을 선사한다."
+ nh_honorable_death_forbidden_name:0 "명예로운 죽음: 금지"
+ nh_honorable_death_forbidden_desc:0 "발홀에 들 자는 오직 오딘만이 정한다. 위대한 전사와 현명한 군주, 학자도 그의 부름을 받을 수 있다. 마지막 결투를 강요하는 것은 오딘의 판단을 모독하는 야만적 행위이다."
+ doctrine_parameter_nh_last_duel_allowed:0 "마지막 결투가 허용됩니다."
+ doctrine_parameter_nh_last_duel_forbidden:0 "마지막 결투가 금지됩니다. 에인헤랴르는 미덕도 죄악도 아닙니다."

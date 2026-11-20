@@ -2,6 +2,7 @@
 # Age-related ailments and low prowess do not bar this final fight.
 # Check each illness separately: cancer does not excuse a second disease.
 nh_last_duel_initiator_valid_trigger = {
+	rite = { rite_has_doctrine = nh_honorable_death_allowed }
 	is_alive = yes
 	is_imprisoned = no
 	is_at_war = no

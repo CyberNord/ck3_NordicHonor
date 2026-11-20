@@ -1,6 +1,6 @@
 ﻿l_german:
  nh_tenet_vighugr_name:0 "Víghugr"
- nh_tenet_vighugr_desc:0 "Religiöser Eifer und Kampfbereitschaft erfüllen jene, die Krieg als heilige Pflicht begreifen. Standhaft im Glauben und furchtlos im Kampf streben sie nach einem Platz in Valhöll."
+ nh_tenet_vighugr_desc:0 "Religiöser Eifer und Kampfbereitschaft erfüllen jene, die Krieg als heilige Pflicht begreifen. Standhaft im Glauben und furchtlos im Kampf streben sie nach einem Platz in Valhalla."
  doctrine_parameter_nh_holy_raid_allowed:0 "Erlaubt religiöse Plünderungskriege, wenn der aktuelle Ritus Víghugr als Kern-Grundsatz besitzt."
  doctrine_parameter_nh_forced_conversion_allowed:0 "Erlaubt die Zwangsbekehrung, wenn der aktuelle Ritus Víghugr als Kern-Grundsatz besitzt."
  doctrine_parameter_nh_vighugr_foreign_conversion_bonus:0 "+30 % Bekehrungsgeschwindigkeit für Grafschaften nichtgermanischer Religionen durch den Rat des Herrschers."

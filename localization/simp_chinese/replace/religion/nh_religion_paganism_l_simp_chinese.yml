@@ -222,3 +222,12 @@
  gothic_pagan_adherent:0 "哥特异教徒"
  gothic_pagan_adherent_plural:0 "哥特异教徒"
  gothic_pagan_desc:0 "这一基督教传入前的哥特传统属于Erþtrú，结合了战士的坚定、献祭节庆与祖先崇拜。历史上的哥特人早在867年之前就已放弃旧有信仰；这一消亡的礼仪代表一次有意构想的另类历史复兴。"
+
+# Honorable Death
+ nh_honorable_death_name:0 "光荣之死"
+ nh_honorable_death_allowed_name:0 "光荣之死：允许"
+ nh_honorable_death_allowed_desc:0 "在战斗中光荣地死去是通往瓦尔哈拉之路。当力量逐渐衰退，最后的决斗能让战士的一生获得体面的终结。"
+ nh_honorable_death_forbidden_name:0 "光荣之死：禁止"
+ nh_honorable_death_forbidden_desc:0 "唯有奥丁决定谁能进入瓦尔哈拉。伟大的战士、贤明的统治者与学者都可能听见他的召唤；强求最后的决斗，是亵渎其裁决的野蛮之举。"
+ doctrine_parameter_nh_last_duel_allowed:0 "允许最后的决斗。"
+ doctrine_parameter_nh_last_duel_forbidden:0 "禁止最后的决斗。英灵勇士既不被视为美德，也不被视为罪恶。"
