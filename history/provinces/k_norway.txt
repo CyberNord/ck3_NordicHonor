@@ -1916,7 +1916,7 @@
 
 	867.1.1 = {
 		# NH early-start religious affiliation.
-		faith = norse_pagan
+		faith = ginnregla_pagan
 		rite = ginnregla_pagan
 
 		districts = {
@@ -2017,7 +2017,7 @@
 
 	867.1.1 = {
 		# NH early-start religious affiliation.
-		faith = norse_pagan
+		faith = ginnregla_pagan
 		rite = ginnregla_pagan
 
 		districts = {
@@ -2088,7 +2088,7 @@
 
 	867.1.1 = {
 		# NH early-start religious affiliation.
-		faith = norse_pagan
+		faith = ginnregla_pagan
 		rite = ginnregla_pagan
 
 		districts = {
@@ -2166,7 +2166,7 @@
 
 	867.1.1 = {
 		# NH early-start religious affiliation.
-		faith = norse_pagan
+		faith = ginnregla_pagan
 		rite = ginnregla_pagan
 
 		districts = {

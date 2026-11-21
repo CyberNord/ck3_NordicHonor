@@ -1290,7 +1290,7 @@
 
 	867.1.1 = {
 		# NH early-start religious affiliation.
-		faith = norse_pagan
+		faith = odinstru_pagan
 		rite = odinstru_pagan
 
 		districts = {
@@ -1307,6 +1307,7 @@
 
 	895.1.1 = {
 		#Incorporated into Mann & the Isles in 886-ish, then give it a decade for the conversion job to root out the last of the local holdouts.
+		faith = odinstru_pagan
 		rite = odinstru_pagan
 		rite = odinstru_pagan
 	}
@@ -1585,7 +1586,7 @@
 
 	867.1.1 = {
 		# NH early-start religious affiliation.
-		faith = norse_pagan
+		faith = odinstru_pagan
 		rite = odinstru_pagan
 
 		districts = {
@@ -1597,6 +1598,7 @@
 
 	890.1.1 = {
 		#Presumably went a little earlier than the last holdouts in Iona.
+		faith = odinstru_pagan
 		rite = odinstru_pagan
 		rite = odinstru_pagan
 	}

@@ -1,7 +1,7 @@
-﻿# Unique Forn-Siðr holy-site relic.
+﻿# Unique Irminsūl relic for the continental and insular traditions.
 nh_irmunsul_template = {
 	can_equip = { always = yes }
-	can_benefit = { faith = faith:forn_sidr_pagan }
-	is_holy_relic = { this = faith:forn_sidr_pagan }
+	can_benefit = { OR = { faith = faith:irminsul_pagan faith = faith:forn_sidr_pagan } }
+	is_holy_relic = { OR = { this = faith:irminsul_pagan this = faith:forn_sidr_pagan } }
 	unique = yes
 }

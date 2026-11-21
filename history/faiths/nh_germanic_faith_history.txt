@@ -1,9 +1,15 @@
-﻿# Vanilla _faith_history.info: main-rite core tenets are automatically permitted.
-# Permit the established branch traditions as well, rather than treating them as unknown.
-# DLC-locked entries are ignored automatically when that DLC is not active.
+﻿# Main-rite core tenets are implicitly permitted by the engine.
+# Preserve inherited tenet permissions from the regional traditions.
+# Entries requiring inactive DLC are ignored by native faith history.
+
 norse_pagan = {
 	1.1.1 = {
 		permitted = {
+			tenet_warmonger
+			tenet_gruesome_festivals
+			tenet_human_sacrifice
+			tenet_bhakti
+			tenet_ancestor_worship
 			tenet_unrelenting_faith
 			tenet_astrology
 			tenet_communal_identity
@@ -11,3 +17,93 @@ norse_pagan = {
 	}
 }
 
+odinstru_pagan = {
+	1.1.1 = {
+		permitted = {
+			tenet_warmonger
+			tenet_gruesome_festivals
+			tenet_human_sacrifice
+			tenet_bhakti
+			tenet_ancestor_worship
+			tenet_unrelenting_faith
+			tenet_astrology
+			tenet_communal_identity
+		}
+	}
+	867.1.1 = {
+		known = { tenet_legalism tenet_religious_legal_pronouncements }
+	}
+}
+
+ginnregla_pagan = {
+	1.1.1 = {
+		permitted = {
+			tenet_warmonger
+			tenet_gruesome_festivals
+			tenet_human_sacrifice
+			tenet_bhakti
+			tenet_ancestor_worship
+			tenet_unrelenting_faith
+			tenet_astrology
+			tenet_communal_identity
+		}
+	}
+	867.1.1 = {
+		known = { tenet_legalism tenet_religious_legal_pronouncements }
+	}
+}
+
+erptru_pagan = {
+	1.1.1 = {
+		permitted = {
+			tenet_sanctity_of_nature
+			tenet_warmonger
+			tenet_gruesome_festivals
+			tenet_human_sacrifice
+		}
+	}
+}
+
+gothic_pagan = {
+	1.1.1 = {
+		permitted = {
+			tenet_sanctity_of_nature
+			tenet_warmonger
+			tenet_gruesome_festivals
+			tenet_human_sacrifice
+		}
+	}
+}
+
+irminsul_pagan = {
+	1.1.1 = {
+		permitted = {
+			tenet_sanctity_of_nature
+			tenet_esotericism
+			tenet_gruesome_festivals
+			tenet_human_sacrifice
+		}
+	}
+}
+
+forn_sidr_pagan = {
+	1.1.1 = {
+		permitted = {
+			tenet_sanctity_of_nature
+			tenet_esotericism
+			tenet_gruesome_festivals
+			tenet_human_sacrifice
+		}
+	}
+}
+
+natturugudtruar_pagan = {
+	1.1.1 = {
+		permitted = {
+			tenet_ancestor_worship
+			tenet_sanctity_of_nature
+			tenet_bhakti
+			tenet_astrology
+		}
+	}
+}

@@ -542,7 +542,7 @@
 
 	867.1.1 = {
 		# NH early-start religious affiliation.
-		faith = norse_pagan
+		faith = odinstru_pagan
 		rite = odinstru_pagan
 
 		districts = {

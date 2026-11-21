@@ -88,7 +88,7 @@
 	history_override_priority = 1
 	825.3.21 = { birth = "825.3.21" }
 	867.1.1 = {
-		faith = norse_pagan
+		faith = ginnregla_pagan
 		rite = ginnregla_pagan
 	}
 }
@@ -102,7 +102,7 @@
 	history_override_priority = 1
 	850.6.11 = { birth = "850.6.11" }
 	867.1.1 = {
-		faith = norse_pagan
+		faith = ginnregla_pagan
 		rite = ginnregla_pagan
 	}
 }
@@ -125,7 +125,7 @@
 	history_override_priority = 1
 	833.1.1 = { birth = yes }
 	867.1.1 = {
-		faith = norse_pagan
+		faith = ginnregla_pagan
 		rite = ginnregla_pagan
 	}
 }
@@ -140,7 +140,7 @@
 	history_override_priority = 1
 	851.1.1 = { birth = "850.1.1" }
 	867.1.1 = {
-		faith = norse_pagan
+		faith = ginnregla_pagan
 		rite = ginnregla_pagan
 	}
 }
@@ -155,7 +155,7 @@
 	history_override_priority = 1
 	850.1.1 = { birth = "851.1.1" }
 	867.1.1 = {
-		faith = norse_pagan
+		faith = ginnregla_pagan
 		rite = ginnregla_pagan
 	}
 }
@@ -170,7 +170,7 @@
 	history_override_priority = 1
 	852.1.1 = { birth = "852.1.1" }
 	867.1.1 = {
-		faith = norse_pagan
+		faith = ginnregla_pagan
 		rite = ginnregla_pagan
 	}
 }
@@ -185,8 +185,8 @@
 	history_override_priority = 1
 	864.1.1 = { birth = yes }
 	867.1.1 = {
-		faith = heidinn_pagan
-		rite = heidinn_pagan
+		faith = erptru_pagan
+		rite = erptru_pagan
 	}
 }
 
@@ -198,8 +198,8 @@
 	history_override_priority = 1
 	847.1.1 = { birth = yes }
 	867.1.1 = {
-		faith = heidinn_pagan
-		rite = heidinn_pagan
+		faith = erptru_pagan
+		rite = erptru_pagan
 	}
 }
 
@@ -224,8 +224,8 @@
 	history_override_priority = 1
 	845.1.1 = { birth = yes }
 	867.1.1 = {
-		faith = heidinn_pagan
-		rite = heidinn_pagan
+		faith = erptru_pagan
+		rite = erptru_pagan
 	}
 }
 
@@ -253,7 +253,7 @@
 	history_override_priority = 1
 	845.2.7 = { birth = yes }
 	867.1.1 = {
-		faith = norse_pagan
+		faith = odinstru_pagan
 		rite = odinstru_pagan
 	}
 }
@@ -273,7 +273,7 @@
 	history_override_priority = 1
 	840.1.1 = { birth = yes }
 	867.1.1 = {
-		faith = norse_pagan
+		faith = odinstru_pagan
 		rite = odinstru_pagan
 	}
 }
@@ -288,7 +288,7 @@
 	history_override_priority = 1
 	867.1.1 = {
 		birth = yes
-		faith = norse_pagan
+		faith = odinstru_pagan
 		rite = odinstru_pagan
 	}
 }
@@ -305,7 +305,7 @@
 	history_override_priority = 1
 	866.1.1 = { birth = yes }
 	867.1.1 = {
-		faith = norse_pagan
+		faith = odinstru_pagan
 		rite = odinstru_pagan
 	}
 }
@@ -322,7 +322,7 @@
 	history_override_priority = 1
 	864.1.1 = { birth = yes }
 	867.1.1 = {
-		faith = norse_pagan
+		faith = odinstru_pagan
 		rite = odinstru_pagan
 	}
 }
@@ -338,7 +338,7 @@
 	history_override_priority = 1
 	862.1.1 = { birth = yes }
 	867.1.1 = {
-		faith = norse_pagan
+		faith = odinstru_pagan
 		rite = odinstru_pagan
 	}
 }
@@ -356,7 +356,7 @@
 	history_override_priority = 1
 	858.1.1 = { birth = yes }
 	867.1.1 = {
-		faith = norse_pagan
+		faith = odinstru_pagan
 		rite = odinstru_pagan
 	}
 }
@@ -373,7 +373,7 @@
 	}
 	867.1.1 = {
 		give_nickname = nick_the_white
-		faith = norse_pagan
+		faith = odinstru_pagan
 		rite = odinstru_pagan
 	}
 }
@@ -388,8 +388,8 @@
 	history_override_priority = 1
 	875.1.1 = {
 		birth = yes
-		faith = heidinn_pagan
-		rite = heidinn_pagan
+		faith = erptru_pagan
+		rite = erptru_pagan
 	}
 }
 
@@ -404,8 +404,8 @@
 	history_override_priority = 1
 	942.1.2 = {
 		birth = "942.1.2"
-		faith = heidinn_pagan
-		rite = heidinn_pagan
+		faith = erptru_pagan
+		rite = erptru_pagan
 	}
 }
 
@@ -419,7 +419,7 @@
 	history_override_priority = 1
 	958.1.2 = {
 		birth = "958.1.2"
-		faith = heidinn_pagan
-		rite = heidinn_pagan
+		faith = erptru_pagan
+		rite = erptru_pagan
 	}
 }

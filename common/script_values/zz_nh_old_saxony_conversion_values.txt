@@ -178,8 +178,8 @@ court_chaplain_conversion_factors = {
 	# Faster conversion for FP2 Hostility ending, if county is in Iberia and faith was involved
 	if = {
 		limit = {
-			exists = scope:councillor.liege.house
-			scope:councillor.liege.house = {
+			exists = scope:councillor_liege.house
+			scope:councillor_liege.house = {
 				OR = {
 					has_house_modifier = fp2_struggle_hostility_house_faith_modifier
 					has_house_modifier = fp2_struggle_hostility_house_combined_modifier
@@ -199,8 +199,8 @@ court_chaplain_conversion_factors = {
 	# Faster conversion of infidels for FP2 Council Toledo Conversion
 	if = {
 		limit = {
-			scope:councillor.liege = { has_character_modifier = fp2_council_conversion_modifier }
-			scope:county.religion != scope:councillor.liege.religion
+			scope:councillor_liege = { has_character_modifier = fp2_council_conversion_modifier }
+			scope:county.religion != scope:councillor_liege.religion
 		}
 		multiply = {
 			value = council_toledo_conversion_modifier_value
@@ -210,10 +210,10 @@ court_chaplain_conversion_factors = {
 	# Faster conversion of heretics for FP2 Council Toledo Heresies
 	if = {
 		limit = {
-			scope:councillor.liege = { has_character_modifier = fp2_council_conversion_modifier }
+			scope:councillor_liege = { has_character_modifier = fp2_council_conversion_modifier }
 			scope:county.rite != rite:mozarabic_church
 			scope:county.faith = {
-				religion = scope:councillor.liege.religion
+				religion = scope:councillor_liege.religion
 				NOT = { exists = religious_head }
 			}
 		}
@@ -226,7 +226,7 @@ court_chaplain_conversion_factors = {
 	# Faster conversion of Persian counties with the FP3 Promote Persian Scripture decision
 	if = {
 		limit = {
-			scope:councillor.liege = { 
+			scope:councillor_liege = { 
 				has_character_modifier = fp3_promoted_persian_scripture_modifier 
 				is_ai = no #this is so that we don't get AI converting and homogenizing Persia too quickly
 			}
@@ -245,16 +245,16 @@ court_chaplain_conversion_factors = {
 			switch = {
 				trigger = global_var:fp3_struggle_ending_assertion_school
 				flag:sunni = {
-					scope:councillor.liege.rite = { rite_has_doctrine = muhammad_succession_sunni_doctrine }
+					scope:councillor_liege.rite = { rite_has_doctrine = muhammad_succession_sunni_doctrine }
 				}
 				flag:shia = {
-					scope:councillor.liege.rite = { rite_has_doctrine = muhammad_succession_shia_doctrine }
+					scope:councillor_liege.rite = { rite_has_doctrine = muhammad_succession_shia_doctrine }
 				}
 				flag:muhakkima = {
-					scope:councillor.liege.rite = { rite_has_doctrine = muhammad_succession_muhakkima_doctrine }
+					scope:councillor_liege.rite = { rite_has_doctrine = muhammad_succession_muhakkima_doctrine }
 				}
 				flag:zandaqa = {
-					scope:councillor.liege.rite = { rite_has_doctrine = muhammad_succession_zandaqa_doctrine }
+					scope:councillor_liege.rite = { rite_has_doctrine = muhammad_succession_zandaqa_doctrine }
 				}
 			}
 		}
@@ -266,7 +266,7 @@ court_chaplain_conversion_factors = {
 	# Court events
 	if = {	#court.6010
 		limit = {
-			scope:councillor.liege = {
+			scope:councillor_liege = {
 				var:6010_harsh_conversion ?= scope:county.faith
 			}
 		}
@@ -277,7 +277,7 @@ court_chaplain_conversion_factors = {
 	}
 	if = {	#court.6010
 		limit = {
-			scope:councillor.liege = {
+			scope:councillor_liege = {
 				var:6010_tolerant_conversion ?= scope:county.faith
 			}
 		}
@@ -292,7 +292,7 @@ court_chaplain_conversion_factors = {
 			scope:county ?= {
 				has_county_modifier = buddhist_teachings_conversion_modifier
 			}
-			scope:councillor.liege.religion = religion:buddhism_religion 
+			scope:councillor_liege.religion = religion:buddhism_religion 
 		}
 		multiply = {
 			value = 2

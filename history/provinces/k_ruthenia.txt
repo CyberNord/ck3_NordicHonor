@@ -10,8 +10,8 @@
 
 	867.1.1 = {
 		# NH early-start religious affiliation.
-		faith = heidinn_pagan
-		rite = heidinn_pagan
+		faith = erptru_pagan
+		rite = erptru_pagan
 
 
 		province_size = 4
@@ -33,7 +33,7 @@
 		holding = castle_holding
 	}
 	989.9.15 = {
-		rite = heidinn_pagan
+		rite = erptru_pagan
 	}
 	1024.1.1 = {
 		districts = {
@@ -348,8 +348,8 @@
 
 	867.1.1 = {
 		# NH early-start religious affiliation.
-		faith = heidinn_pagan
-		rite = heidinn_pagan
+		faith = erptru_pagan
+		rite = erptru_pagan
 
 		districts = {
 			district = {
@@ -362,7 +362,7 @@
 		holding = castle_holding
 	}
 	989.9.15 = {
-		rite = heidinn_pagan
+		rite = erptru_pagan
 	}
 	1054.7.16 = {
 		rite = slavic_rite
@@ -488,8 +488,8 @@
 
 	867.1.1 = {
 		# NH early-start religious affiliation.
-		faith = heidinn_pagan
-		rite = heidinn_pagan
+		faith = erptru_pagan
+		rite = erptru_pagan
 
 		districts = {
 			district = {
@@ -502,7 +502,7 @@
 		holding = castle_holding
 	}
 	989.9.15 = {
-		rite = heidinn_pagan
+		rite = erptru_pagan
 	}
 	1054.7.16 = {
 		rite = slavic_rite
@@ -665,8 +665,8 @@
 
 	867.1.1 = {
 		# NH early-start religious affiliation.
-		faith = heidinn_pagan
-		rite = heidinn_pagan
+		faith = erptru_pagan
+		rite = erptru_pagan
 
 		districts = {
 			district = {
@@ -679,7 +679,7 @@
 		holding = castle_holding
 	}
 	989.9.15 = {
-		rite = heidinn_pagan
+		rite = erptru_pagan
 	}
 	1054.7.16 = {
 		rite = slavic_rite
@@ -835,8 +835,8 @@
 
 	867.1.1 = {
 		# NH early-start religious affiliation.
-		faith = heidinn_pagan
-		rite = heidinn_pagan
+		faith = erptru_pagan
+		rite = erptru_pagan
 
 		districts = {
 			district = {
@@ -846,7 +846,7 @@
 	}
 
 	989.9.15 = {
-		rite = heidinn_pagan
+		rite = erptru_pagan
 	}
 	1054.7.16 = {
 		rite = slavic_rite

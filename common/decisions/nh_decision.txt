@@ -120,35 +120,24 @@ nh_rome_hs_decision = {
 
 	ai_check_interval = 300
 
-	# only shown if faith is unreformed
+	# Seven original faiths can unlock this site.
 	is_shown = {
 		is_playable_character = yes
 		OR = {
-			rite = rite:norse_pagan
-			rite = rite:odinstru_pagan
+			faith = faith:norse_pagan
+			faith = faith:odinstru_pagan
+			faith = faith:ginnregla_pagan
+			faith = faith:erptru_pagan
+			faith = faith:gothic_pagan
+			faith = faith:irminsul_pagan
 			faith = faith:forn_sidr_pagan
 		}
 		faith = { NOR = {
 			is_faith_holy_site = holy_site:joromaborg
 			is_faith_holy_site = holy_site:rome
 		} }
-		# Unlocks are shared by every rite of the same faith, even if the site is later abandoned.
-		NOR = {
-			AND = {
-				faith = faith:norse_pagan
-				is_target_in_global_variable_list = {
-					name = unavailable_unique_decisions
-					target = flag:nh_rome_hs_norse_decision
-				}
-			}
-			AND = {
-				faith = faith:forn_sidr_pagan
-				is_target_in_global_variable_list = {
-					name = unavailable_unique_decisions
-					target = flag:nh_rome_hs_forn_sidr_decision
-				}
-			}
-		}
+		# The marker survives ruler changes and abandonment of the site.
+		faith = { NOT = { has_variable = nh_rome_holy_site_unlocked } }
 	}
 
 	is_valid ={
@@ -192,23 +181,7 @@ nh_rome_hs_decision = {
 			add_dynasty_prestige = 1000
 		}
 
-		#Can only happen once per faith
-		if = {
-			limit = { faith = faith:norse_pagan }
-			add_to_global_variable_list = {
-				name = unavailable_unique_decisions
-				target = flag:nh_rome_hs_norse_decision
-			}
-		}
-		else_if = {
-			limit = { faith = faith:forn_sidr_pagan }
-			add_to_global_variable_list = {
-				name = unavailable_unique_decisions
-				target = flag:nh_rome_hs_forn_sidr_decision
-			}
-		}
-
-
+		faith = { set_variable = { name = nh_rome_holy_site_unlocked value = yes } }
 	}
 
 	ai_potential = {always = yes}
@@ -229,35 +202,24 @@ nh_constantinople_hs_decision = {
 
 	ai_check_interval = 300
 
-	# only shown if faith is unreformed
+	# Seven original faiths can unlock this site.
 	is_shown = {
 		is_playable_character = yes
 		OR = {
-			rite = rite:norse_pagan
-			rite = rite:odinstru_pagan
-			faith = faith:heidinn_pagan
+			faith = faith:norse_pagan
+			faith = faith:odinstru_pagan
+			faith = faith:ginnregla_pagan
+			faith = faith:erptru_pagan
+			faith = faith:gothic_pagan
+			faith = faith:irminsul_pagan
+			faith = faith:forn_sidr_pagan
 		}
 		faith = { NOR = {
 			is_faith_holy_site = holy_site:miklagard
 			is_faith_holy_site = holy_site:constantinople
 		} }
-		# Unlocks are shared by every rite of the same faith, even if the site is later abandoned.
-		NOR = {
-			AND = {
-				faith = faith:norse_pagan
-				is_target_in_global_variable_list = {
-					name = unavailable_unique_decisions
-					target = flag:nh_constantinople_hs_norse_decision
-				}
-			}
-			AND = {
-				faith = faith:heidinn_pagan
-				is_target_in_global_variable_list = {
-					name = unavailable_unique_decisions
-					target = flag:nh_constantinople_hs_heidinn_decision
-				}
-			}
-		}
+		# The marker survives ruler changes and abandonment of the site.
+		faith = { NOT = { has_variable = nh_constantinople_holy_site_unlocked } }
 	}
 
 	is_valid ={
@@ -301,23 +263,7 @@ nh_constantinople_hs_decision = {
 			add_dynasty_prestige = 1000
 		}
 
-		#Can only happen once per faith
-		if = {
-			limit = { faith = faith:norse_pagan }
-			add_to_global_variable_list = {
-				name = unavailable_unique_decisions
-				target = flag:nh_constantinople_hs_norse_decision
-			}
-		}
-		else_if = {
-			limit = { faith = faith:heidinn_pagan }
-			add_to_global_variable_list = {
-				name = unavailable_unique_decisions
-				target = flag:nh_constantinople_hs_heidinn_decision
-			}
-		}
-
-
+		faith = { set_variable = { name = nh_constantinople_holy_site_unlocked value = yes } }
 	}
 
 	ai_potential = {always = yes}
@@ -1141,7 +1087,7 @@ nh_odinstru_raise_elite_warriors = {
 		is_at_war = no
 		piety_level >= 3
 		highest_held_title_tier >= tier_duchy
-		# Fervor belongs to the shared faith, including its other rites.
+		# Fervor belongs to the character's actual faith.
 		faith = { fervor >= 5 }
 
 		custom_description = {
@@ -1258,6 +1204,7 @@ nh_odinstru_force_conversion = {
 		any_held_title = {
 			tier = tier_county
 			NOT = { title_province.faith = root.faith }
+			NOT = { title_province.faith.religion = religion:germanic_religion }
 		}
 	}
 
@@ -1281,6 +1228,7 @@ nh_odinstru_force_conversion = {
 			any_held_title = {
 				tier = tier_county
 				NOT = { title_province.faith = root.faith }
+				NOT = { title_province.faith.religion = religion:germanic_religion }
 			}
 		}
 	}

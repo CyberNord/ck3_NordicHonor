@@ -325,7 +325,10 @@ nh.0111 = {
 	option = {
 		name = nh.0111.a
 		if = {
-			limit = { scope:champion = scope:player_heir_option }
+			limit = {
+				exists = scope:player_heir_option
+				scope:champion = scope:player_heir_option
+			}
 			scope:champion = {
 				remove_trait = kinslayer_3
 				add_trait = einherjar }
@@ -346,7 +349,7 @@ nh.0111 = {
 		}
 		
 
-		dynasty = {
+		dynasty ?= {
 			add_dynasty_prestige = 50
 		}
 
@@ -420,7 +423,7 @@ nh.1002 ={
 	}
 }
 
-# Náttúruguðtrúar christian peace event
+# Landvætti Christian coexistence event
 nh.1003 ={
 	type = character_event
 	title = nh.1003.t
@@ -484,6 +487,7 @@ nh.1004 = {
 				faith = faith:norse_pagan
 				NOT = { rite = rite:ginnregla_pagan }
 			}
+			set_character_faith = rite:ginnregla_pagan.faith
 			set_character_rite = rite:ginnregla_pagan
 		}
 		give_nickname = nick_nh_pagan_special
@@ -583,7 +587,7 @@ nh.1004 = {
 	}
 }
 
-# Recreate Old Saxia - Saxenreich and convert to Forn Siðr
+# Recreate Old Saxia and convert to Irminsūl
 nh.1005 = {
 	type = character_event
 	title = nh.1005.t
@@ -619,7 +623,7 @@ nh.1005 = {
 		}
 		add_trait = zealous
 
-		root = { nh_story_convert_to_rite_effect = { RITE = rite:forn_sidr_pagan } }
+		root = { nh_story_convert_to_rite_effect = { RITE = rite:irminsul_pagan } }
 
 		# Only a successful founder receives the one-time rewards.
 		if = {
@@ -1041,7 +1045,7 @@ nh.1015 = {
 		custom_tooltip = nh_althing_religion_preview
 
 		hidden_effect = {
-			faith:norse_pagan = {
+			rite:ginnregla_pagan.faith = {
 				every_faith_ruler = {
 					limit = { rite = rite:ginnregla_pagan }
 					random_list = {
@@ -1098,7 +1102,7 @@ nh.1015 = {
 		custom_tooltip = nh_althing_result_nh_thing_trade_modifier
 
 		hidden_effect = {
-			faith:norse_pagan = {
+			rite:ginnregla_pagan.faith = {
 				every_faith_ruler = {
 					limit = { rite = rite:ginnregla_pagan }
 					nh_althing_personal_reward_effect = { MODIFIER = nh_thing_trade_modifier YEARS = 3 DESCRIPTION = nh_althing_result_nh_thing_trade_modifier }
@@ -1130,7 +1134,7 @@ nh.1015 = {
 		custom_tooltip = nh_althing_result_nh_thing_build_modifier
 
 		hidden_effect = {
-			faith:norse_pagan = {
+			rite:ginnregla_pagan.faith = {
 				every_faith_ruler = {
 					limit = { rite = rite:ginnregla_pagan }
 					nh_althing_personal_reward_effect = { MODIFIER = nh_thing_build_modifier YEARS = 3 DESCRIPTION = nh_althing_result_nh_thing_build_modifier }
@@ -1162,7 +1166,7 @@ nh.1015 = {
 		custom_tooltip = nh_althing_result_nh_thing_diplomacy_modifier
 
 		hidden_effect = {
-			faith:norse_pagan = {
+			rite:ginnregla_pagan.faith = {
 				every_faith_ruler = {
 					limit = { rite = rite:ginnregla_pagan }
 					nh_althing_personal_reward_effect = { MODIFIER = nh_thing_diplomacy_modifier YEARS = 3 DESCRIPTION = nh_althing_result_nh_thing_diplomacy_modifier }
@@ -1359,6 +1363,7 @@ nh.2011 = {
 			limit = {
 				tier = tier_county
 				NOT = { title_province.faith = scope:converter.faith }
+				NOT = { title_province.faith.religion = religion:germanic_religion }
 			}
 			add_to_list = nh_convertible_counties
 		}

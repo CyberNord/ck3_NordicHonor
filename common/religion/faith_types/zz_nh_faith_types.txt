@@ -1,8 +1,8 @@
-﻿# One targeted norse_pagan object override plus three additive NordicHonor faiths.
-# Core tenets and rite-specific doctrines belong to the explicit main rites.
-# Rome and Constantinople are intentionally absent until their conquest decisions.
+﻿# Eight independent Germanic faiths, each with its own scripted main rite.
+# Core tenets and rite-specific doctrines are defined on the main rites.
+# Rome and Constantinople are unlocked by their conquest decisions.
 
-# Æsirtrú: the shared faith of Ásatrú, Óðinnstrú and Gíñnregla.
+# Æsirtrú
 norse_pagan = {
 	main_rite = norse_pagan
 	faith_details = {
@@ -16,11 +16,125 @@ norse_pagan = {
 	holy_sites = { thingvellir lejre zeeland konugardr }
 }
 
-# Irminsul: parent faith of Forn Siðr and Wōden Siðr.
-forn_sidr_pagan = {
-	main_rite = forn_sidr_pagan
-	# Historical tradition remains available without starting followers.
-	# Vanilla historical=yes keeps it available as a dead faith, including its rites.
+# Óðinnstrú
+odinstru_pagan = {
+	main_rite = odinstru_pagan
+	historical = yes
+	faith_details = {
+		religion = germanic_religion
+		color = { 0 0.1 0.1 }
+		icon = odinstru
+		reformed_icon = odinstru_reformed
+	}
+
+	eminent_holy_sites = { uppsala ranaheim jorvik }
+	holy_sites = { thingvellir lejre zeeland konugardr }
+	localization = {
+		ReligiousHeadName = nh_odinstru_religious_head_title
+		ReligiousHeadNameFemale = nh_odinstru_religious_head_title_female
+		ReligiousHeadTitleName = nh_odinstru_religious_head_title_name
+	}
+}
+
+# Gíñnregla
+ginnregla_pagan = {
+	main_rite = ginnregla_pagan
+	historical = yes
+	faith_details = {
+		religion = germanic_religion
+		color = { 0.45 0.63 0.76 }
+		icon = ginnregla
+		reformed_icon = ginnregla_reformed
+	}
+
+	eminent_holy_sites = { uppsala ranaheim jorvik }
+	holy_sites = { thingvellir lejre zeeland konugardr }
+	localization = {
+
+		PriestMale = ginnregla_priest_male
+		PriestMalePlural = ginnregla_priest_male_plural
+		PriestFemale = ginnregla_priest_female
+		PriestFemalePlural = ginnregla_priest_female_plural
+		PriestNeuter = ginnregla_priest_neuter
+		PriestNeuterPlural = ginnregla_priest_neuter_plural
+	}
+}
+
+# Erþtrú
+erptru_pagan = {
+	main_rite = erptru_pagan
+	historical = yes
+	faith_details = {
+		religion = germanic_religion
+		color = { 0.4 0.6 0 }
+		icon = heidinn
+		reformed_icon = heidinn_reformed
+	}
+
+	eminent_holy_sites = { konugardr gniezno breclav }
+	holy_sites = { heiligenberg paderborn }
+
+	localization = {
+		#HighGodName
+		HighGodName = heidinn_high_god_name
+		HighGodName2 = heidinn_high_god_name
+		HighGodNamePossessive = heidinn_high_god_name_possessive
+
+		#FertilityGod
+		FertilityGodName = heidinn_fertility_god_name
+		FertilityGodNamePossessive = heidinn_fertility_god_name_possessive
+
+		#KnowledgeGod
+		KnowledgeGodName = heidinn_knowledge_god_name
+		KnowledgeGodNamePossessive = heidinn_knowledge_god_name_possessive
+
+		#WarGod
+		WarGodName = heidinn_war_god_name
+		WarGodNamePossessive = heidinn_war_god_name_possessive
+
+		GoodGodNames = { heidinn_good_god_thor germanic_good_god_baldr heidinn_good_god_freyja heidinn_good_god_tyr germanic_good_god_sif}
+	}
+}
+
+# Gothic / Gutþiuda
+gothic_pagan = {
+	main_rite = gothic_pagan
+	historical = yes
+	faith_details = {
+		religion = germanic_religion
+		color = { 0.46 0.32 0.16 }
+		icon = gothic
+		reformed_icon = gothic_reformed
+	}
+
+	eminent_holy_sites = { konugardr gniezno breclav }
+	holy_sites = { heiligenberg paderborn }
+
+	localization = {
+		#HighGodName
+		HighGodName = heidinn_high_god_name
+		HighGodName2 = heidinn_high_god_name
+		HighGodNamePossessive = heidinn_high_god_name_possessive
+
+		#FertilityGod
+		FertilityGodName = heidinn_fertility_god_name
+		FertilityGodNamePossessive = heidinn_fertility_god_name_possessive
+
+		#KnowledgeGod
+		KnowledgeGodName = heidinn_knowledge_god_name
+		KnowledgeGodNamePossessive = heidinn_knowledge_god_name_possessive
+
+		#WarGod
+		WarGodName = heidinn_war_god_name
+		WarGodNamePossessive = heidinn_war_god_name_possessive
+
+		GoodGodNames = { heidinn_good_god_thor germanic_good_god_baldr heidinn_good_god_freyja heidinn_good_god_tyr germanic_good_god_sif}
+	}
+}
+
+# Irminsūl
+irminsul_pagan = {
+	main_rite = irminsul_pagan
 	historical = yes
 	faith_details = {
 		religion = germanic_religion
@@ -75,10 +189,66 @@ forn_sidr_pagan = {
 	}
 }
 
-# Landvættir: parent faith of Náttúruguðtrúar.
+# Forn Siðr
+forn_sidr_pagan = {
+	main_rite = forn_sidr_pagan
+	historical = yes
+	faith_details = {
+		religion = germanic_religion
+		color = { 0.6 0.4 0.2 }
+		icon = saxon
+		reformed_icon = saxon_reformed
+	}
+
+	eminent_holy_sites = { paderborn heiligenberg hallstatt }
+	holy_sites = { uppsala gniezno }
+
+	localization = {
+		#HighGodName
+		HighGodName = forn_sidr_high_god_name
+		HighGodNamePossessive = forn_sidr_high_god_name_possessive
+		HighGodNameSheHe = CHARACTER_SHEHE_HE
+		HighGodHerselfHimself = CHARACTER_HIMSELF
+		HighGodHerHis = CHARACTER_HERHIS_HIS
+		HighGodNameAlternate = forn_sidr_high_god_alternate
+		HighGodNameAlternatePossessive = forn_sidr_high_god_alternate_possessive
+
+		#FertilityGod
+		FertilityGodName = forn_sidr_fertility_god_name
+		FertilityGodNamePossessive = forn_sidr_fertility_god_name_possessive
+		FertilityGodSheHe = CHARACTER_SHEHE_SHE
+		FertilityGodHerHis = CHARACTER_HERHIS_HER
+		FertilityGodHerHim = CHARACTER_HERHIM_HER
+
+		#KnowledgeGod
+		KnowledgeGodName = forn_sidr_knowledge_god_name
+		KnowledgeGodNamePossessive = forn_sidr_knowledge_god_name_possessive
+		KnowledgeGodSheHe = CHARACTER_SHEHE_HE
+		KnowledgeGodHerHis = CHARACTER_HERHIS_HIS
+		KnowledgeGodHerHim = CHARACTER_HERHIM_HIM
+
+		#WarGod
+		WarGodName = forn_sidr_war_god_name
+		WarGodNamePossessive = forn_sidr_war_god_name_possessive
+		WarGodSheHe = CHARACTER_SHEHE_HE
+		WarGodHerHis = CHARACTER_HERHIS_HIS
+		WarGodHerHim = CHARACTER_HERHIM_HIM
+
+		PantheonTerm = religion_the_gods
+		PantheonTermHasHave = pantheon_term_have
+		GoodGodNames = { forn_sidr_good_god_fairguneis forn_sidr_good_god_ingwaz forn_sidr_good_god_terwing }
+		PriestMale = forn_sidr_priest_male
+		PriestMalePlural = forn_sidr_priest_male_plural
+		PriestFemale = forn_sidr_priest_female
+		PriestFemalePlural = forn_sidr_priest_female_plural
+		PriestNeuter = forn_sidr_priest_neuter
+		PriestNeuterPlural = forn_sidr_priest_neuter_plural
+	}
+}
+
+# Landvætti
 natturugudtruar_pagan = {
 	main_rite = natturugudtruar_pagan
-	# Remain a historical faith when the early-start assignment does not run (1066).
 	historical = yes
 	faith_details = {
 		religion = germanic_religion
@@ -91,41 +261,3 @@ natturugudtruar_pagan = {
 	eminent_holy_sites = { akkel trelleborg perm }
 	holy_sites = { gniezno konugardr }
 }
-
-# Erþtrú: parent faith of Heiðinn and Gotisch.
-heidinn_pagan = {
-	main_rite = heidinn_pagan
-	# Remain a historical faith when the early-start assignment does not run (1066).
-	historical = yes
-	faith_details = {
-		religion = germanic_religion
-		color = { 0.4 0.6 0 }
-		icon = gothic
-		reformed_icon = gothic_reformed
-	}
-
-	eminent_holy_sites = { konugardr gniezno breclav }
-	holy_sites = { heiligenberg paderborn }
-
-	localization = {
-		#HighGodName
-		HighGodName = heidinn_high_god_name
-		HighGodName2 = heidinn_high_god_name
-		HighGodNamePossessive = heidinn_high_god_name_possessive
-
-		#FertilityGod
-		FertilityGodName = heidinn_fertility_god_name
-		FertilityGodNamePossessive = heidinn_fertility_god_name_possessive
-
-		#KnowledgeGod
-		KnowledgeGodName = heidinn_knowledge_god_name
-		KnowledgeGodNamePossessive = heidinn_knowledge_god_name_possessive
-
-		#WarGod
-		WarGodName = heidinn_war_god_name
-		WarGodNamePossessive = heidinn_war_god_name_possessive
-
-		GoodGodNames = { heidinn_good_god_thor germanic_good_god_baldr heidinn_good_god_freyja heidinn_good_god_tyr germanic_good_god_sif}
-	}
-}
-

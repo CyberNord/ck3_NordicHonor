@@ -21,9 +21,10 @@ nh_forced_conversion_owned_county_trigger = {
 	exists = title_province
 }
 
-# County scope: retain the decision's different-faith target rule.
+# County scope: only foreign-religion counties can be forcibly converted.
 nh_forced_conversion_county_valid_trigger = {
 	nh_forced_conversion_owned_county_trigger = yes
 	scope:converter = { nh_forced_conversion_actor_valid_trigger = yes }
 	NOT = { title_province.faith = scope:converter.faith }
+	NOT = { title_province.faith.religion = religion:germanic_religion }
 }

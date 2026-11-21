@@ -32,7 +32,7 @@ bm_867_nh_nordic_honor = {
 		title = d_kiev
 		government = tribal_government
 		culture = norse
-		religion = heidinn_pagan
+		religion = erptru_pagan
 		dynasty_house = house_oskyldr
 		dynasty_splendor_level = 1
 

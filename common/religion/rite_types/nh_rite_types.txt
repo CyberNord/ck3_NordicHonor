@@ -1,165 +1,9 @@
-﻿# Forn Siðr (North German)
-forn_sidr_pagan = {
-	name = nh_rite_forn_sidr_pagan
-	desc = nh_rite_forn_sidr_pagan_desc
-	faith = forn_sidr_pagan
-	color = { 0.94 0.87 0.80 }
-	icon = forn_sidr
+﻿# One main rite per Germanic faith; the faith and rite share an identifier.
 
-	tenets = { tenet_sanctity_of_nature tenet_esotericism }
-	# germanic faith group: Nordic Similarity is inherited from the religion.
-	doctrines = {
-		nh_honorable_death_allowed
-		unreformed_faith_doctrine
-		#Main Group
-		doctrine_pluralism_righteous
-	}
-
-	tenet_selection_pair = {
-		# Gruesome Festivals, else Human Sacrifice.
-		requires_dlc_flag = the_northern_lords
-		tenet = tenet_gruesome_festivals
-		fallback_tenet = tenet_human_sacrifice
-	}
-}
-
-# Wōden Siðr (British Isles)
-woden_sidr_pagan = {
-	faith = forn_sidr_pagan
-	color = { 0.6 0.4 0.2 }
-	icon = saxon
-
-	tenets = { tenet_sanctity_of_nature tenet_ritual_celebrations tenet_ancestor_worship}
-	doctrines = {
-		nh_honorable_death_allowed
-		unreformed_faith_doctrine
-		doctrine_pluralism_righteous
-	}
-}
-
-# Giñnregla (Icelandic)
-# Holy sites are shared with the other Æsirtrú rites at faith level.
-ginnregla_pagan = {
-	faith = norse_pagan
-	color = { 0.45 0.63 0.76 }
-	icon = ginnregla
-
-	tenets = { tenet_astrology tenet_communal_identity }
-	# germanic faith group: Nordic Similarity is inherited from the religion.
-	# Rite doctrines.
-	doctrines = {
-		nh_honorable_death_forbidden
-		unreformed_faith_doctrine
-		doctrine_clerical_function_alms_and_pacification
-		doctrine_pluralism_righteous
-		doctrine_pilgrimage_forbidden
-	}
-
-	tenet_selection_pair = {
-		# Bhakti, else Ancestor Worship.
-		requires_dlc_flag = the_northern_lords
-		tenet = tenet_bhakti
-		fallback_tenet = tenet_ancestor_worship
-	}
-
-	localization = {
-
-		PriestMale = ginnregla_priest_male
-		PriestMalePlural = ginnregla_priest_male_plural
-		PriestFemale = ginnregla_priest_female
-		PriestFemalePlural = ginnregla_priest_female_plural
-		PriestNeuter = ginnregla_priest_neuter
-		PriestNeuterPlural = ginnregla_priest_neuter_plural
-	}
-}
-
-# Náttúruguðtrúarmenn (Skando-Finnic)
-natturugudtruar_pagan = {
-	name = nh_rite_natturugudtruar_pagan
-	desc = nh_rite_natturugudtruar_pagan_desc
-	faith = natturugudtruar_pagan
-	color = { 0.25 0.64 0.21 }
-	icon = natturugudtruar
-
-	tenets = { tenet_ancestor_worship tenet_sanctity_of_nature }
-	doctrines = {
-		nh_honorable_death_forbidden
-		# germanic faith group: Staðfast replaces the inherited Nordic Similarity.
-		special_faith_stadfast_heritage
-		unreformed_faith_doctrine
-		# Rite doctrines.
-		doctrine_clerical_function_alms_and_pacification
-		doctrine_witchcraft_accepted
-		doctrine_pilgrimage_forbidden
-	}
-
-	tenet_selection_pair = {
-		# Bhakti with Astrology as the DLC fallback.
-		requires_dlc_flag = the_northern_lords
-		tenet = tenet_bhakti
-		fallback_tenet = tenet_astrology
-	}
-}
-
-# Óðinnstrú (Odinism)
-# Óðinnstrú-specific tenets and doctrines.
-odinstru_pagan = {
-	faith = norse_pagan
-	color = { 0 0.1 0.1 }
-	icon = odinstru
-
-	tenets = { nh_tenet_vighugr tenet_warmonger }
-	doctrines = {
-		nh_honorable_death_allowed
-		# germanic faith group
-		special_faith_stadfast_heritage
-		unreformed_faith_doctrine
-		#Main Group
-		doctrine_pluralism_fundamentalist
-		#Marriage
-		doctrine_concubines
-		doctrine_bastardry_all
-		#Clerical Functions
-		doctrine_clerical_marriage_disallowed
-		# Pilgrimages are mandatory.
-		doctrine_pilgrimage_mandatory
-	}
-
-	tenet_selection_pair = {
-		# Gruesome Festivals, else Human Sacrifice.
-		requires_dlc_flag = the_northern_lords
-		tenet = tenet_gruesome_festivals
-		fallback_tenet = tenet_human_sacrifice
-	}
-}
-
-# Heiðinn (Baltisch)
-heidinn_pagan = {
-	name = nh_rite_heidinn_pagan
-	desc = nh_rite_heidinn_pagan_desc
-	faith = heidinn_pagan
-	color = { 0.4 0.6 0 }
-	icon = heidinn
-
-	tenets = { tenet_sanctity_of_nature tenet_warmonger }
-	# germanic faith group: Nordic Similarity is inherited from the religion.
-	doctrines = {
-		nh_honorable_death_allowed
-		unreformed_faith_doctrine
-	}
-
-	tenet_selection_pair = {
-		# Gruesome Festivals, else Human Sacrifice.
-		requires_dlc_flag = the_northern_lords
-		tenet = tenet_gruesome_festivals
-		fallback_tenet = tenet_human_sacrifice
-	}
-}
-
-# Ásatrú, the main rite of Æsirtrú.
+# Æsirtrú
 norse_pagan = {
-	name = nh_rite_norse_pagan
-	desc = nh_rite_norse_pagan_desc
+	name = norse_pagan
+	desc = norse_pagan_desc
 	faith = norse_pagan
 
 	color = { 0.4 0.4 0.4 }
@@ -188,11 +32,107 @@ norse_pagan = {
 	}
 }
 
-# Extinct pre-Christian Gothic tradition without 867/1066 followers.
+# Óðinnstrú
+odinstru_pagan = {
+	name = odinstru_pagan
+	desc = odinstru_pagan_desc
+	faith = odinstru_pagan
+	color = { 0 0.1 0.1 }
+	icon = odinstru
+
+	tenets = { nh_tenet_vighugr tenet_warmonger }
+	doctrines = {
+		nh_honorable_death_allowed
+		# germanic faith group
+		special_faith_stadfast_heritage
+		unreformed_faith_doctrine
+		#Main Group
+		doctrine_temporal_head
+		doctrine_theocracy_lay_clergy
+		doctrine_pluralism_fundamentalist
+		#Marriage
+		doctrine_concubines
+		doctrine_bastardry_all
+		#Clerical Functions
+		doctrine_clerical_marriage_disallowed
+		# Pilgrimages are mandatory.
+		doctrine_pilgrimage_mandatory
+	}
+
+	tenet_selection_pair = {
+		# Gruesome Festivals, else Human Sacrifice.
+		requires_dlc_flag = the_northern_lords
+		tenet = tenet_gruesome_festivals
+		fallback_tenet = tenet_human_sacrifice
+	}
+}
+
+# Gíñnregla
+ginnregla_pagan = {
+	name = ginnregla_pagan
+	desc = ginnregla_pagan_desc
+	faith = ginnregla_pagan
+	color = { 0.45 0.63 0.76 }
+	icon = ginnregla
+
+	tenets = { tenet_astrology tenet_communal_identity }
+	# germanic faith group: Nordic Similarity is inherited from the religion.
+	# Rite doctrines.
+	doctrines = {
+		nh_honorable_death_forbidden
+		unreformed_faith_doctrine
+		doctrine_clerical_function_alms_and_pacification
+		doctrine_monasticism_accepted
+		doctrine_pluralism_righteous
+		doctrine_pilgrimage_forbidden
+	}
+
+	tenet_selection_pair = {
+		# Bhakti, else Ancestor Worship.
+		requires_dlc_flag = the_northern_lords
+		tenet = tenet_bhakti
+		fallback_tenet = tenet_ancestor_worship
+	}
+
+	localization = {
+
+		PriestMale = ginnregla_priest_male
+		PriestMalePlural = ginnregla_priest_male_plural
+		PriestFemale = ginnregla_priest_female
+		PriestFemalePlural = ginnregla_priest_female_plural
+		PriestNeuter = ginnregla_priest_neuter
+		PriestNeuterPlural = ginnregla_priest_neuter_plural
+	}
+}
+
+# Erþtrú
+erptru_pagan = {
+	name = erptru_pagan
+	desc = erptru_pagan_desc
+	faith = erptru_pagan
+	color = { 0.4 0.6 0 }
+	icon = heidinn
+
+	tenets = { tenet_sanctity_of_nature tenet_warmonger }
+	# germanic faith group: Nordic Similarity is inherited from the religion.
+	doctrines = {
+		nh_honorable_death_allowed
+		unreformed_faith_doctrine
+	}
+
+	tenet_selection_pair = {
+		# Gruesome Festivals, else Human Sacrifice.
+		requires_dlc_flag = the_northern_lords
+		tenet = tenet_gruesome_festivals
+		fallback_tenet = tenet_human_sacrifice
+	}
+}
+
+# Gothic / Gutþiuda
 gothic_pagan = {
-	faith = heidinn_pagan
 	name = gothic_pagan
 	desc = gothic_pagan_desc
+	faith = gothic_pagan
 	color = { 0.46 0.32 0.16 }
 	icon = gothic
 	create = yes
@@ -206,4 +146,74 @@ gothic_pagan = {
 	}
 	# Other doctrines are inherited from the parent religion and faith.
 	doctrines = { unreformed_faith_doctrine nh_honorable_death_allowed }
+}
+
+# Irminsūl
+irminsul_pagan = {
+	name = irminsul_pagan
+	desc = irminsul_pagan_desc
+	faith = irminsul_pagan
+	color = { 0.94 0.87 0.80 }
+	icon = forn_sidr
+
+	tenets = { tenet_sanctity_of_nature tenet_esotericism }
+	# germanic faith group: Nordic Similarity is inherited from the religion.
+	doctrines = {
+		nh_honorable_death_allowed
+		unreformed_faith_doctrine
+		#Main Group
+		doctrine_pluralism_righteous
+	}
+
+	tenet_selection_pair = {
+		# Gruesome Festivals, else Human Sacrifice.
+		requires_dlc_flag = the_northern_lords
+		tenet = tenet_gruesome_festivals
+		fallback_tenet = tenet_human_sacrifice
+	}
+}
+
+# Forn Siðr
+forn_sidr_pagan = {
+	name = forn_sidr_pagan
+	desc = forn_sidr_pagan_desc
+	faith = forn_sidr_pagan
+	color = { 0.6 0.4 0.2 }
+	icon = saxon
+
+	tenets = { tenet_sanctity_of_nature tenet_ritual_celebrations tenet_ancestor_worship}
+	doctrines = {
+		nh_honorable_death_allowed
+		unreformed_faith_doctrine
+		doctrine_pluralism_righteous
+	}
+}
+
+# Landvætti
+natturugudtruar_pagan = {
+	name = natturugudtruar_pagan
+	desc = natturugudtruar_pagan_desc
+	faith = natturugudtruar_pagan
+	color = { 0.25 0.64 0.21 }
+	icon = natturugudtruar
+
+	tenets = { tenet_ancestor_worship tenet_sanctity_of_nature }
+	doctrines = {
+		nh_honorable_death_forbidden
+		# germanic faith group: Staðfast replaces the inherited Nordic Similarity.
+		special_faith_stadfast_heritage
+		unreformed_faith_doctrine
+		# Rite doctrines.
+		doctrine_clerical_function_alms_and_pacification
+		doctrine_monasticism_accepted
+		doctrine_witchcraft_accepted
+		doctrine_pilgrimage_forbidden
+	}
+
+	tenet_selection_pair = {
+		# Bhakti with Astrology as the DLC fallback.
+		requires_dlc_flag = the_northern_lords
+		tenet = tenet_bhakti
+		fallback_tenet = tenet_astrology
+	}
 }

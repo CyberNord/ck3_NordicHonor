@@ -36,11 +36,17 @@ nh_start_last_duel_effect = {
 # NH owns only the appearance flags here. Either participant may have vanished.
 nh_last_duel_clean_appearance_effect = {
 	scope:actor ?= {
-		remove_character_flag = single_combat_stripped_to_waist
-		remove_character_flag = single_combat_duel_armor
+		if = {
+			limit = { is_alive = yes }
+			remove_character_flag = single_combat_stripped_to_waist
+			remove_character_flag = single_combat_duel_armor
+		}
 	}
 	scope:champion ?= {
-		remove_character_flag = single_combat_stripped_to_waist
-		remove_character_flag = single_combat_duel_armor
+		if = {
+			limit = { is_alive = yes }
+			remove_character_flag = single_combat_stripped_to_waist
+			remove_character_flag = single_combat_duel_armor
+		}
 	}
 }
