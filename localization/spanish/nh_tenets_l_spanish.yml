@@ -3,6 +3,7 @@
  nh_tenet_vighugr_desc:0 "El fervor religioso y la disposición al combate animan a quienes consideran la guerra un deber sagrado. Firmes en la fe e intrépidos en la batalla, aspiran a un lugar en Valhöll."
  doctrine_parameter_nh_holy_raid_allowed:0 "Permite guerras de saqueo religioso cuando el rito actual posee Víghugr como principio fundamental."
  doctrine_parameter_nh_forced_conversion_allowed:0 "Permite la conversión forzosa cuando el rito actual posee Víghugr como principio fundamental."
+ doctrine_parameter_nh_elite_warriors_allowed:0 "Permite la decisión «$nh_odinstru_raise_elite_warriors$» cuando el rito actual posee Víghugr como principio fundamental."
  doctrine_parameter_nh_vighugr_foreign_conversion_bonus:0 "+30 % de velocidad de conversión de condados de religiones no germánicas mediante el consejo del gobernante."
  doctrine_parameter_nh_odins_call_available:0 "Permite la decisión única «Acudir a la llamada de Odín»."
  nh_follow_odins_call_decision:0 "Acudir a la llamada de Odín"

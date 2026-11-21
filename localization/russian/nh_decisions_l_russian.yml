@@ -61,10 +61,10 @@
 
 # Odinstru Elite Warriors Decision
  nh_odinstru_raise_elite_warriors:0 "Summon Odin's Chosen Warriors"
- nh_odinstru_raise_elite_warriors_desc:0 "Как преданный последователь Óðinnstrú, я могу призвать благословение Всеотца и собрать его избранных воинов. Со всего моего государства они приходят сражаться за древних богов.\n\nПомимо золота, престижа и благочестия, этот призыв стоит ровно 5 процентных пунктов [fervor|E]. Потерю рвения несут все обряды нашей общей конфессии."
- nh_odinstru_raise_elite_warriors_tooltip:0 "Elite warriors will gather at your capital based on realm size"
+ nh_odinstru_raise_elite_warriors_desc:0 "В священных рощах стало тихо, но у своего очага я всё ещё слышу старые песни. Я хочу послать гонцов по лесным тропам и попросить тех, кто разделяет мою преданность богам, встать рядом со мной. Пусть Всеотец услышит нас."
+ nh_odinstru_raise_elite_warriors_tooltip:0 "Созывает избранных воинов в вашу столицу; их состав зависит от размера державы."
  nh_odinstru_raise_elite_warriors_confirm:0 "The zealous gather..."
- nh_elite_warriors_holy_sites_requirement:0 "Your Faith is in danger of beeing forgotten"
+ nh_elite_warriors_holy_sites_requirement:0 "Ваша конфессия контролирует не более 3 священных мест"
  nh_elite_warriors_cooldown_requirement:0 "You have not recently raised Elite Warriors"
  nh_odinstru_force_conversion:0 "Force Religious Conversion"
  nh_odinstru_force_conversion_desc:0 "Through fire and blood, we can purge the false faiths from our conquered lands. The sword shall be our argument, and terror our teacher. Those who refuse the old gods will learn obedience through suffering.\n\nThis path is brutal and will bring harsh consequences - reduced prosperity, rebellious subjects, and the scorn of our neighbors. But for true believers of Óðinnstrú, no price is too high to spread the faith of our ancestors."

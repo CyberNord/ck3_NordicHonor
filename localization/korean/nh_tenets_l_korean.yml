@@ -3,6 +3,7 @@
  nh_tenet_vighugr_desc:0 "전쟁을 신성한 의무로 여기는 이들은 종교적 열정과 전투 의지로 가득하다. 굳건한 신앙과 두려움 없는 투지로 발회들에 자리를 얻고자 한다."
  doctrine_parameter_nh_holy_raid_allowed:0 "현재 의례가 Víghugr를 핵심 교리로 보유하면 종교적 약탈 전쟁을 허용한다."
  doctrine_parameter_nh_forced_conversion_allowed:0 "현재 의례가 Víghugr를 핵심 교리로 보유하면 강제 개종을 허용한다."
+ doctrine_parameter_nh_elite_warriors_allowed:0 "현재 의례가 Víghugr를 핵심 교리로 보유하면 ‘$nh_odinstru_raise_elite_warriors$’ 결단을 허용합니다."
  doctrine_parameter_nh_vighugr_foreign_conversion_bonus:0 "통치자의 평의회를 통한 비게르만 종교 영지의 개종 속도 +30%."
  doctrine_parameter_nh_odins_call_available:0 "일생에 한 번 ‘오딘의 부름을 따르다’ 결단을 사용할 수 있습니다."
  nh_follow_odins_call_decision:0 "오딘의 부름을 따르다"

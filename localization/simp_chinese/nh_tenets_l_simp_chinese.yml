@@ -3,6 +3,7 @@
  nh_tenet_vighugr_desc:0 "宗教热忱与战斗意志激励着将战争视为神圣义务的人。他们信仰坚定，作战无畏，渴望在瓦尔哈拉占有一席之地。"
  doctrine_parameter_nh_holy_raid_allowed:0 "当前仪式将Víghugr作为核心教义时，允许发动宗教劫掠战争。"
  doctrine_parameter_nh_forced_conversion_allowed:0 "当前仪式将Víghugr作为核心教义时，允许使用强制改信。"
+ doctrine_parameter_nh_elite_warriors_allowed:0 "当前仪式将Víghugr作为核心教义时，允许使用“$nh_odinstru_raise_elite_warriors$”决议。"
  doctrine_parameter_nh_vighugr_foreign_conversion_bonus:0 "统治者的内阁对非日耳曼宗教伯爵领的改信速度+30%。"
  doctrine_parameter_nh_odins_call_available:0 "解锁一生仅能完成一次的“响应奥丁的召唤”决议。"
  nh_follow_odins_call_decision:0 "响应奥丁的召唤"

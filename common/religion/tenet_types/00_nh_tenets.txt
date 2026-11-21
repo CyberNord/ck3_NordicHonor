@@ -28,6 +28,7 @@ nh_tenet_vighugr = {
 
 	parameters = {
 		clergy_can_fight
+		nh_elite_warriors_allowed
 		nh_holy_raid_allowed
 		nh_forced_conversion_allowed
 		nh_vighugr_foreign_conversion_bonus

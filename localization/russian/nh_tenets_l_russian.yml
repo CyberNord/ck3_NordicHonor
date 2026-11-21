@@ -3,6 +3,7 @@
  nh_tenet_vighugr_desc:0 "Религиозное рвение и готовность к бою воодушевляют тех, кто считает войну священным долгом. Стойкие в вере и бесстрашные в битве, они стремятся занять место в Вальхёлле."
  doctrine_parameter_nh_holy_raid_allowed:0 "Разрешает религиозные грабительские войны, если Víghugr является основным догматом текущего обряда."
  doctrine_parameter_nh_forced_conversion_allowed:0 "Разрешает насильственное обращение, если Víghugr является основным догматом текущего обряда."
+ doctrine_parameter_nh_elite_warriors_allowed:0 "Разрешает решение «$nh_odinstru_raise_elite_warriors$», если Víghugr является основным догматом текущего обряда."
  doctrine_parameter_nh_vighugr_foreign_conversion_bonus:0 "+30 % к скорости обращения графств негерманских религий через совет правителя."
  doctrine_parameter_nh_odins_call_available:0 "Открывает решение «Последовать зову Одина», доступное один раз в жизни."
  nh_follow_odins_call_decision:0 "Последовать зову Одина"

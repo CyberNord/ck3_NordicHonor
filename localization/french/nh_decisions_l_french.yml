@@ -61,10 +61,10 @@ decision_group_type_nordic_honor: "Nordic Honor"
 
 # Odinstru Elite Warriors Decision
  nh_odinstru_raise_elite_warriors:0 "Summon Odin's Chosen Warriors"
- nh_odinstru_raise_elite_warriors_desc:0 "En fidèle adepte d’Óðinnstrú, je peux invoquer la bénédiction du Père de Tout et rassembler ses guerriers élus. Ils viennent de tout mon royaume combattre pour les anciens dieux.\n\nOutre l’or, le prestige et la piété, cet appel coûte exactement 5 points de pourcentage de [fervor|E]. Tous les rites de notre foi commune subissent cette perte de ferveur."
- nh_odinstru_raise_elite_warriors_tooltip:0 "Elite warriors will gather at your capital based on realm size"
+ nh_odinstru_raise_elite_warriors_desc:0 "Les bosquets sacrés se sont tus, mais les anciens chants résonnent encore près de mon foyer. Je veux envoyer des messagers sur les sentiers forestiers et demander à ceux qui partagent ma dévotion de se tenir à mes côtés. Puisse le Père de Tout nous entendre."
+ nh_odinstru_raise_elite_warriors_tooltip:0 "Rassemble des guerriers élus dans votre capitale ; leur composition dépend de la taille du royaume."
  nh_odinstru_raise_elite_warriors_confirm:0 "The zealous gather..."
- nh_elite_warriors_holy_sites_requirement:0 "Your Faith is in danger of beeing forgotten"
+ nh_elite_warriors_holy_sites_requirement:0 "Votre foi ne contrôle pas plus de 3 lieux saints"
  nh_elite_warriors_cooldown_requirement:0 "You have not recently raised Elite Warriors"
  nh_odinstru_force_conversion:0 "Force Religious Conversion"
  nh_odinstru_force_conversion_desc:0 "Through fire and blood, we can purge the false faiths from our conquered lands. The sword shall be our argument, and terror our teacher. Those who refuse the old gods will learn obedience through suffering.\n\nThis path is brutal and will bring harsh consequences - reduced prosperity, rebellious subjects, and the scorn of our neighbors. But for true believers of Óðinnstrú, no price is too high to spread the faith of our ancestors."

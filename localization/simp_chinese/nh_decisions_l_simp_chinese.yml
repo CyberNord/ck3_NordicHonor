@@ -61,10 +61,10 @@
 
 # Odinstru Elite Warriors Decision
  nh_odinstru_raise_elite_warriors:0 "Summon Odin's Chosen Warriors"
- nh_odinstru_raise_elite_warriors_desc:0 "作为Óðinnstrú的虔诚信徒，我可以祈求众神之父的祝福，召集他选中的战士。他们从我的领地各处赶来，为古老诸神而战。\n\n除金钱、威望和虔诚外，这次征召还将消耗整整5个百分点的[fervor|E]。共同信仰下的所有礼仪都将承受这份宗教热情损失。"
- nh_odinstru_raise_elite_warriors_tooltip:0 "Elite warriors will gather at your capital based on realm size"
+ nh_odinstru_raise_elite_warriors_desc:0 "圣林日渐沉寂，炉火旁却仍能听见古老的歌谣。我想派使者沿林间小径出发，请那些与我怀有同样虔敬之心的人站在我身边。愿众神之父听见我们的声音。"
+ nh_odinstru_raise_elite_warriors_tooltip:0 "在首都召集精锐战士，兵种构成取决于领地规模。"
  nh_odinstru_raise_elite_warriors_confirm:0 "The zealous gather..."
- nh_elite_warriors_holy_sites_requirement:0 "Your Faith is in danger of beeing forgotten"
+ nh_elite_warriors_holy_sites_requirement:0 "你的信仰控制的圣地不超过3处"
  nh_elite_warriors_cooldown_requirement:0 "You have not recently raised Elite Warriors"
  nh_odinstru_force_conversion:0 "Force Religious Conversion"
  nh_odinstru_force_conversion_desc:0 "Through fire and blood, we can purge the false faiths from our conquered lands. The sword shall be our argument, and terror our teacher. Those who refuse the old gods will learn obedience through suffering.\n\nThis path is brutal and will bring harsh consequences - reduced prosperity, rebellious subjects, and the scorn of our neighbors. But for true believers of Óðinnstrú, no price is too high to spread the faith of our ancestors."

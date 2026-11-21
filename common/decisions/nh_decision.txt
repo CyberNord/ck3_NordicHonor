@@ -1076,7 +1076,7 @@ nh_odinstru_raise_elite_warriors = {
 
 	is_shown = {
 		is_lowborn = no
-		rite = rite:odinstru_pagan
+		rite = { rite_has_parameter = nh_elite_warriors_allowed }
 		any_held_title = {
 			tier = tier_county
 		}
@@ -1195,7 +1195,7 @@ nh_odinstru_force_conversion = {
 
 	sort_order = 2
 
-	ai_check_interval = 120
+	ai_check_interval = 24
 
 	is_shown = {
 		is_lowborn = no

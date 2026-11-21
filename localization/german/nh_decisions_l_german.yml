@@ -61,10 +61,10 @@
 
 # Odinstru Elite Warriors Decision
  nh_odinstru_raise_elite_warriors:0 "Summon Odin's Chosen Warriors"
- nh_odinstru_raise_elite_warriors_desc:0 "Als treuer Anhänger Óðinnstrús kann ich den Segen des Allvaters erbitten und seine auserwählten Krieger zusammenrufen. Aus meinem Reich kommen sie, um mit Schild und Axt für die alten Götter zu kämpfen.\n\nNeben Gold, Prestige und Frömmigkeit kostet dieser Ruf genau 5 Prozentpunkte [fervor|E]. Alle Riten unseres gemeinsamen Glaubens tragen diesen Eiferverlust mit."
- nh_odinstru_raise_elite_warriors_tooltip:0 "Elite warriors will gather at your capital based on realm size"
+ nh_odinstru_raise_elite_warriors_desc:0 "Die heiligen Haine sind still geworden, doch an meinem Herd höre ich noch immer die alten Lieder. Ich will Boten auf die Waldpfade schicken und jene, die meine Hingabe teilen, bitten, an meiner Seite zu stehen. Möge der Allvater uns hören."
+ nh_odinstru_raise_elite_warriors_tooltip:0 "Ruft auserwählte Krieger in Eure Hauptstadt; ihre Zusammensetzung hängt von der Reichsgröße ab."
  nh_odinstru_raise_elite_warriors_confirm:0 "The zealous gather..."
- nh_elite_warriors_holy_sites_requirement:0 "Your Faith is in danger of beeing forgotten"
+ nh_elite_warriors_holy_sites_requirement:0 "Euer Glaube kontrolliert höchstens 3 heilige Stätten"
  nh_elite_warriors_cooldown_requirement:0 "You have not recently raised Elite Warriors"
  nh_odinstru_force_conversion:0 "Den Glauben mit Gewalt durchsetzen"
  nh_odinstru_force_conversion_desc:0 "Wo unsere Gebete kein Gehör finden, sollen Schwert und Furcht den Glauben unserer Ahnen durchsetzen. Doch unterworfene Menschen vergessen das erlittene Leid nicht: Die Ländereien verarmen, Widerstand regt sich und benachbarte Herrscher werden uns dieses Vorgehen verübeln."

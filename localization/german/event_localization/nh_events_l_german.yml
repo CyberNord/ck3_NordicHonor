@@ -131,7 +131,7 @@ nh.9004.a:0 "Embark on Great Journeys"
 
  # Odinstru Elite Warriors
  nh.2001.t:0 "Elite Warriors Gather"
- nh.2001.desc:0 "Word has spread across my realm of my call to arms. From distant settlements and sacred groves, the most devoted warriors of Óðinnstrú have answered. They arrive bearing runic shields and blessed axes, their eyes burning with religious fervor.\n\nThese are no mere soldiers - they are Odin's chosen, warriors who have dedicated their lives to the Allfather's glory. [ROOT.Char.GetFaith.WarGodName] guides their blades, and [ROOT.Char.GetFaith.HighGodName] whispers strategies in their dreams.\n\nAn army of legend stands ready at [ROOT.Char.GetCapitalLocation.GetTitle.GetNameNoTier]."
+ nh.2001.desc:0 "Meine Boten sind zurückgekehrt. Hinter ihnen kommen Krieger mit verwitterten Schilden und Äxten, deren Schäfte glatt gerieben sind. Einige erzählen von Eiden in heiligen Hainen; andere schweigen und warten mit prüfenden Blicken.\n\nZwischen ihren Stimmen höre ich die alten Gebete. Ob der Allvater sie geschickt hat, vermag ich nicht zu sagen. Doch als ich ihnen zur Begrüßung entgegentrete, fühle ich mich weniger allein."
  nh.2001.a:0 "For Odin and glory!"
  nh.2001.a.tt:0 "The elite warriors are ready for battle"
  nh.2001.b:0 "These warriors shall become legend themselves."

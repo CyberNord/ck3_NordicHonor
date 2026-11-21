@@ -61,10 +61,10 @@
 
 # Odinstru Elite Warriors Decision
  nh_odinstru_raise_elite_warriors:0 "Summon Odin's Chosen Warriors"
- nh_odinstru_raise_elite_warriors_desc:0 "As a devoted follower of Óðinnstrú, I can invoke the Allfather’s blessing and summon his chosen warriors. From across my realm they gather, ready to fight for the old gods with shield and axe.\n\nAlongside gold, prestige and piety, this summons costs exactly 5 percentage points of [fervor|E]. All rites of our shared faith bear this loss of fervor."
- nh_odinstru_raise_elite_warriors_tooltip:0 "Elite warriors will gather at your capital based on realm size"
+ nh_odinstru_raise_elite_warriors_desc:0 "The sacred groves have grown quiet, yet I still hear the old songs at my hearth. I would send messengers along the forest paths and ask those who share my devotion to stand with me. May the Allfather hear us."
+ nh_odinstru_raise_elite_warriors_tooltip:0 "Summon elite warriors at your capital; their composition depends on realm size."
  nh_odinstru_raise_elite_warriors_confirm:0 "The zealous gather..."
- nh_elite_warriors_holy_sites_requirement:0 "Your Faith is in danger of beeing forgotten"
+ nh_elite_warriors_holy_sites_requirement:0 "Your faith controls no more than 3 holy sites"
  nh_elite_warriors_cooldown_requirement:0 "You have not recently raised Elite Warriors"
 
 # Forced Conversion Decision
