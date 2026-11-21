@@ -107,8 +107,8 @@ gothic_pagan = {
 		reformed_icon = gothic_reformed
 	}
 
-	eminent_holy_sites = { konugardr gniezno breclav }
-	holy_sites = { heiligenberg paderborn }
+	eminent_holy_sites = { konugardr nh_ravenna nh_gotland }
+	holy_sites = { kerch nh_slupsk }
 
 	localization = {
 		#HighGodName
@@ -200,8 +200,8 @@ forn_sidr_pagan = {
 		reformed_icon = saxon_reformed
 	}
 
-	eminent_holy_sites = { paderborn heiligenberg hallstatt }
-	holy_sites = { uppsala gniezno }
+	eminent_holy_sites = { jorvik nh_stonehenge nh_jelling }
+	holy_sites = { paderborn lejre }
 
 	localization = {
 		#HighGodName

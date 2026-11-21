@@ -250,3 +250,12 @@
  nh_nordic_heritage_effects_tooltip:0 "$EFFECT_LIST_BULLET$$doctrine_parameter_nh_nordic_befriend_access$"
  nh_stadfast_heritage_effects_tooltip:0 "$EFFECT_LIST_BULLET$$doctrine_parameter_fervor_per_holy_site$"
  nh_sidbrytari_heritage_effects_tooltip:0 "$EFFECT_LIST_BULLET$$doctrine_parameter_nh_christian_marriage_acceptance$\n$EFFECT_LIST_BULLET$$doctrine_parameter_mendicant_preachers_conversion_active$\n$EFFECT_LIST_BULLET$$doctrine_parameter_tenet_adaptive_conversion_resistance$"
+
+ # v1.2 - Forn Siðr holy sites
+ holy_site_nh_stonehenge_name:0 "$building_type_stonehenge_01$"
+ holy_site_nh_jelling_name:0 "$b_jelling$"
+
+ # v1.2 - Gothic holy sites
+ holy_site_nh_ravenna_name:0 "$c_ravenna$"
+ holy_site_nh_gotland_name:0 "$c_gutland$"
+ holy_site_nh_slupsk_name:0 "$b_slupsk$"

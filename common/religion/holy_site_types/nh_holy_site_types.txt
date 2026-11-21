@@ -25,6 +25,11 @@
 ## Kiev
 	# Focal point for Norse activities in Russia & symbolic of their influence in the east.
 
+# Gothic
+## Kerch
+	# Regional reference to the Crimean Goths: Gothic Christian inscriptions at Mangup date to the 9th-10th centuries.
+	# These finds concern Mangup; they do not establish a Gothic sanctuary at Kerch.
+
 # Finnic references: raivola, hiiumaa, akkel.
 # Only actually defined and assigned sites are used by the current faiths.
 
@@ -210,5 +215,161 @@ miklagard = {
 	faith_character_modifier_scaled = {
 		scale = holy_site_total_artifact_rarity
 		cultural_head_fascination_mult = 0.01
+	}
+}
+
+# v1.2 - Forn Siðr holy sites
+
+# Neolithic monument on Salisbury Plain; the main stone setting was erected around 2500 BC.
+# Its prehistoric construction long predates Anglo-Saxon settlement in Britain.
+nh_stonehenge = {
+	county = c_wiltshire
+	barony = b_salisbury
+
+	county_holder_character_modifier = {
+		learning = 2
+	}
+
+	county_modifier_scaled = {
+		scale = holy_site_total_artifact_rarity
+		build_gold_cost = -0.01
+		build_prestige_cost = -0.01
+		build_piety_cost = -0.01
+		prosperity_growth = 0.01
+		religious_tax_mult = holy_site_relic_tax_bonus
+		trade_good_incense_sell_price_mult = holy_site_relic_sell_price_bonus
+		trade_good_copper_sell_price_mult = holy_site_relic_sell_price_bonus
+		trade_good_books_paper_sell_price_mult = holy_site_relic_sell_price_bonus
+	}
+
+	faith_character_modifier = {
+		diplomacy_per_piety_level = 1
+	}
+
+	faith_character_modifier_scaled = {
+		scale = holy_site_total_artifact_rarity
+		monthly_learning_lifestyle_xp_gain_mult = 0.01
+		monthly_diplomacy_lifestyle_xp_gain_mult = 0.01
+	}
+}
+
+# Danish royal centre under Gorm and Harald Bluetooth in the 10th century.
+# The mounds, runestones and church document the transition from paganism to Christianity.
+nh_jelling = {
+	county = c_aarhus
+	barony = b_jelling
+
+	county_holder_character_modifier = {
+		vassal_opinion = 5
+		fellow_vassal_opinion = 5
+	}
+
+	county_modifier_scaled = {
+		scale = holy_site_total_artifact_rarity
+		prosperity_growth = 0.02
+		prosperity_growth_factor = 0.01
+		monthly_control_change = 0.02
+		religious_tax_mult = holy_site_relic_tax_bonus
+		trade_good_incense_sell_price_mult = holy_site_relic_sell_price_bonus
+		trade_good_copper_sell_price_mult = holy_site_relic_sell_price_bonus
+		trade_good_books_paper_sell_price_mult = holy_site_relic_sell_price_bonus
+	}
+
+	faith_character_modifier = {
+		stewardship_per_piety_level = 1
+	}
+
+	faith_character_modifier_scaled = {
+		scale = holy_site_total_artifact_rarity
+		monthly_prestige_gain_mult = 0.02
+	}
+}
+
+# v1.2 - Gothic holy sites
+# Theoderic ruled Ostrogothic Italy from Ravenna in 493-526.
+# The Arian Baptistery documents the Christian worship of the Gothic ruling community.
+# Ravenna uses the native site_of_wisdom modifier package.
+nh_ravenna = {
+	county = c_ravenna
+	barony = b_ravenna
+
+	county_holder_character_modifier = {
+		learning = 2
+	}
+
+	county_modifier_scaled = {
+		scale = holy_site_total_artifact_rarity
+		build_gold_cost = -0.01
+		build_prestige_cost = -0.01
+		build_piety_cost = -0.01
+		prosperity_growth = 0.01
+		religious_tax_mult = holy_site_relic_tax_bonus
+		trade_good_incense_sell_price_mult = holy_site_relic_sell_price_bonus
+		trade_good_copper_sell_price_mult = holy_site_relic_sell_price_bonus
+		trade_good_books_paper_sell_price_mult = holy_site_relic_sell_price_bonus
+	}
+
+	faith_character_modifier = {
+		diplomacy_per_piety_level = 1
+	}
+
+	faith_character_modifier_scaled = {
+		scale = holy_site_total_artifact_rarity
+		monthly_learning_lifestyle_xp_gain_mult = 0.01
+		monthly_diplomacy_lifestyle_xp_gain_mult = 0.01
+	}
+}
+
+# Medieval and Renaissance authors linked Gotland to Gothic origins, partly through similarities in names.
+# Such later origin claims alone cannot establish an ancient migration from the island.
+# Gotland uses the native site_of_ancestors modifier package.
+nh_gotland = {
+	county = c_gutland
+	barony = b_wysbu
+
+	county_holder_character_modifier = {
+		vassal_opinion = 5
+		fellow_vassal_opinion = 5
+	}
+
+	county_modifier_scaled = {
+		scale = holy_site_total_artifact_rarity
+		prosperity_growth = 0.02
+		prosperity_growth_factor = 0.01
+		monthly_control_change = 0.02
+		religious_tax_mult = holy_site_relic_tax_bonus
+		trade_good_incense_sell_price_mult = holy_site_relic_sell_price_bonus
+		trade_good_copper_sell_price_mult = holy_site_relic_sell_price_bonus
+		trade_good_books_paper_sell_price_mult = holy_site_relic_sell_price_bonus
+	}
+
+	faith_character_modifier = {
+		stewardship_per_piety_level = 1
+	}
+
+	faith_character_modifier_scaled = {
+		scale = holy_site_total_artifact_rarity
+		monthly_prestige_gain_mult = 0.02
+	}
+}
+
+# The Wielbark culture developed in Pomerania in the 1st century AD and is commonly associated with the Goths.
+# This is a regional association; it does not identify Slupsk as a Gothic sanctuary.
+# Slupsk uses the existing Gniezno modifier package; ordinary sites apply local bonuses.
+nh_slupsk ={
+	county = c_bialogarda
+	barony = b_slupsk
+	# Regional religious center: administration and steady local development.
+	county_holder_character_modifier = {
+		stewardship = 1
+	}
+	county_modifier_scaled = {
+		scale = 1
+		prosperity_growth_factor = 0.1
+	}
+	faith_character_modifier = {
+
+		stewardship = 2
+		monthly_prestige_gain_mult = 0.05
 	}
 }
